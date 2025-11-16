@@ -53,26 +53,43 @@ world
 
 **Note**: This step should be done AFTER binding characters together, so that shared pages already exist and won't be duplicated.
 
+**Important Constraints**:
+- Pages are numbered 1-12 only (corresponding to the 12 spreads in the story template)
+- Never create pages numbered less than 1 or more than 12
+- Skip all joint/shared pages with other characters
+
 1. Ask the user which character they want to create pages for
+
 2. Load the character file from `characters/` to see which pages already exist in their `story:` list
-3. Determine which pages need to be created:
-   - The story follows `templates/story-template.yaml` which has 12 spreads covering pages 5-28
-   - Check which pages are already listed in the character's `story:` field
-   - **Skip pages that already exist** - these will be shared pages created during the binding step
-   - Create missing pages with sequential numbering to fill gaps
-4. For each page that needs to be created:
-   - Use `templates/page-example.yaml` as the template
-   - Determine which spread the page belongs to based on `templates/story-template.yaml`
-   - Copy the `beat`, `hook`, and `payoff` from the corresponding spread in the story template
-   - Create a simple, bland `description` (1-2 sentences) for what happens on this page
-   - Create a `visual` description based on the world defined in `world.yaml`
-     - **Visual can be very long and detailed** to convey the scene richly
-   - Create a `text` field with the actual page text
-     - **Text must be 2 sentences maximum** - keep it super short and concise
-   - Keep descriptions generic enough to be customized later
-   - Save the page file in `pages/` with the naming convention `cc-pp.yaml` (e.g., `ma-05.yaml`, `cu-07.yaml`)
-5. Update the character's `story:` list to include all the newly created pages in sequential order
-6. **Do not create duplicate pages** - if a shared page already exists from the binding step, reference it instead of creating a new one
+
+3. **Read all joint pages with other characters**:
+   - Identify which pages in the character's `story:` list are shared (filenames with multiple character codes)
+   - For each shared page, read the page file from `pages/`
+   - Note the page number, description, visual, and text for each shared page
+   - These are fixed anchor points that the story must connect
+
+4. **Plan the story arc**:
+   - Think about how to weave a coherent story that connects all the joint pages together
+   - Consider the narrative flow: how does the character get from one joint page to the next?
+   - The solo pages you create must bridge these joint pages into a single flowing narrative
+
+5. **Create pages 1-12**:
+   - Go through pages 1-12 sequentially
+   - **Skip any page numbers that are joint pages** (already created during binding)
+   - For each page that needs to be created:
+     - Use `templates/page-example.yaml` as the template
+     - Determine which spread (1-12) the page belongs to based on `templates/story-template.yaml`
+     - Copy the `beat`, `hook`, and `payoff` from the corresponding spread in the story template
+     - Create a simple, bland `description` (1-2 sentences) for what happens on this page
+     - Create a `visual` description based on the world defined in `world.yaml`
+       - **Visual can be very long and detailed** to convey the scene richly
+     - Create a `text` field with the actual page text
+       - **Text must be 2 sentences maximum** - keep it super short and concise
+     - Make sure the page flows naturally with the joint pages and overall story arc
+     - Keep descriptions generic enough to be customized later
+     - Save the page file in `pages/` with the naming convention `cc-pp.yaml` (e.g., `ma-01.yaml`, `cu-07.yaml`)
+
+6. Update the character's `story:` list to include all newly created pages in sequential order (1-12), with joint pages in their correct positions
 
 ### Showing and Critiquing a Character's Story
 
