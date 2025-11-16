@@ -1,4 +1,4 @@
-# Hansel - A resourceful, brave 8-year-old who loves exploring and problem-solving
+# Hansel - An extremely cute baby boy who loves to walk around and play with shapes
 
 # Id is a two character code for the character
 id: ha
@@ -12,76 +12,72 @@ attributes:
   gender: boy
 
   # How old is the character
-  age: 8
+  age: 0
 
   # List top 3-5 values that motivate this character
   # Examples: Adventure, Creativity, Justice, Family, Knowledge
   core_values_motivations:
-    - Adventure and exploration
-    - Protecting loved ones
-    - Finding clever solutions
-    - Learning about nature and the world
+    - Loving his parents
+    - Exploring through movement
+    - Discovering the physical world
 
   # Summarize the character's personality in 3-5 words or short phrases
   # Examples: Curious, Brave, Cautious, Optimistic, Stubborn
   key_personality_traits:
-    - Resourceful and clever
-    - Brave but cautious
-    - Loyal and protective
-    - Thoughtful problem-solver
-    - Curious about how things work
+    - Extremely cute
+    - Very physical and active
+    - Loves to walk around
+    - Curious about everything
+    - Full of energy
 
   # Activities or skills that reveal the character's interests and talents
   # Examples: Painting, Coding, Hiking, Storytelling, Chess
   # Note: Can inform interactive choices or story branching
   hobbies_interests_skills:
-    - Building things with sticks and stones
-    - Collecting interesting rocks and leaves
-    - Exploring the woods
-    - Reading adventure stories
-    - Drawing maps
-    - Tracking animals
-    - Making tools and contraptions
+    - Playing with solid geometric objects
+    - Walking around and exploring spaces
+    - Picking up blocks and shapes
+    - Stacking things
+    - Knocking things over
 
   # How does this character usually respond to stress, challenge, or reward?
   # Examples: Calm under pressure, Quick to frustration, Reflective and empathetic
   # Note: Useful for scripting dialogue, choices, or character arcs
   emotional_profile_typical_reactions:
-    - Stays calm and thinks through problems
-    - Gets worried when others are in danger
-    - Becomes quiet and focused when challenged
-    - Lights up with pride when solving difficult puzzles
+    - Cries when frustrated or tired
+    - Lights up with huge smiles when happy
+    - Gets excited and bouncy when discovering something new
+    - Reaches for parents when overwhelmed
 
   # How does the character relate to others and the world around them?
   # Examples: Team-oriented, Prefers solitude, Competitive
   # Note: Can shape interactions, alliances, and story outcomes
   social_context_relationships:
-    - Very protective of younger children
-    - Loyal to family and close friends
-    - Prefers small groups to large crowds
-    - Takes responsibility seriously
-    - Enjoys teaching others what he's learned
+    - Deeply attached to his parents
+    - Loves being held and cuddled
+    - Interested in other children
+    - Trusts caregivers completely
 
   # Signature habits, inside jokes, special belongings
   memorable_details:
-    - Always carries a small pouch for collecting treasures
-    - Leaves trail markers wherever he goes
-    - Has messy brown hair that sticks up
-    - Wears practical clothes with lots of pockets
-    - Often chews on a piece of grass while thinking
-    - Has a small scar on his left knee from climbing trees
-    - Keeps a journal of his adventures and discoveries
+    - Extremely cute baby face
+    - Just learning to walk, still a bit wobbly
+    - Loves to carry geometric blocks around
+    - Makes adorable babbling sounds
+    - Has the sweetest giggle
+    - Reaches his arms up when he wants to be picked up
+    - Fascinated by cubes, spheres, and other solid shapes
 
   description: |
-    Hansel is a thoughtful and resourceful 8-year-old boy who sees the world
-    as one big adventure waiting to be explored. He's known for his clever
-    thinking and ability to find solutions to tricky problems. Whether he's
-    building a fort from fallen branches, tracking deer through the forest,
-    or drawing detailed maps of his neighborhood, Hansel approaches everything
-    with curiosity and care. He's especially protective of those younger or
-    smaller than him, taking his role as a big kid seriously. While he loves
-    adventure, Hansel is also cautious and thoughtful, always leaving markers
-    so he can find his way back home.
+    Hansel is an extremely cute baby boy, less than a year old, who is just
+    discovering the joy of walking. He toddles around with determination,
+    exploring every corner of his world. Hansel is very physical and active,
+    always on the move, picking up solid geometric objects like blocks, cubes,
+    and balls to examine and play with. His world revolves around his parents,
+    whom he loves deeply, and the simple joy of movement and discovery. Whether
+    he's stacking blocks, knocking them over, or walking from room to room with
+    a favorite shape clutched in his tiny hands, Hansel approaches each moment
+    with the pure curiosity and delight of early childhood.
 
 # Storybook Pages (ordered list)
 # Initially this list is empty when we create the character, but it
