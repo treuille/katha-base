@@ -46,6 +46,8 @@ world
    - **Text constraint**: Keep the `text` field to 2 sentences maximum
    - **Visual**: The `visual` field can be very long and detailed to convey the scene visually
 7. Insert the page reference into both character files' `story:` lists at the correct position (in order)
+   - **Format**: Use filename only with `.yaml` extension (e.g., `- cu-ma-07.yaml`)
+   - **Do NOT** include the `pages/` folder prefix (e.g., NOT `- pages/cu-ma-07.yaml`)
 8. **Important**: Both characters must reference the exact same page file at the same page number
 9. **Stop here**: Do not create any other pages for these characters at this time
 
@@ -90,6 +92,8 @@ world
      - Save the page file in `pages/` with the naming convention `cc-pp.yaml` (e.g., `ma-01.yaml`, `cu-07.yaml`)
 
 6. Update the character's `story:` list to include all newly created pages in sequential order (1-12), with joint pages in their correct positions
+   - **Format**: Use filename only with `.yaml` extension (e.g., `- cu-01.yaml`, `- cu-ma-07.yaml`)
+   - **Do NOT** include the `pages/` folder prefix (e.g., NOT `- pages/cu-01.yaml`)
 
 ### Showing and Critiquing a Character's Story
 
@@ -202,10 +206,12 @@ All filenames use lowercase with dashes:
   - `name` = character name in lowercase
 - **Pages**: `pages/cc-pp.yaml` (e.g., `ma-01.yaml`, `le-05.yaml`, `cu-01.yaml`)
   - `cc` = two-letter character code
-  - `pp` = two-digit page number
+  - `pp` = two-digit page number (always two digits: 01, 02, ..., 12)
 - **Shared Pages**: `pages/cc-cc-pp.yaml` (e.g., `cu-ma-07.yaml`, `le-ma-07.yaml`)
   - Character codes in alphabetical order
   - Same page number across all involved characters
+
+**Important**: When referencing pages in character files' `story:` lists, use only the filename with `.yaml` extension (e.g., `- cu-01.yaml`), NOT the full path (NOT `- pages/cu-01.yaml`).
 
 ## How It Works
 
