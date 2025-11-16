@@ -6,7 +6,8 @@ Modular storybook system for creating a set of interlocking storybooks for multi
 
 Create interconnected children's stories where each character has their own book, and characters can meet at synchronized page numbers.
 
-**Key concepts:**
+### Key concepts
+
 - Each character is defined in a YAML file with attributes and storylines
 - Characters can share pages at the same page number across their books
 - Story structure follows a 12-spread arc (see `templates/story-template.yaml`)
@@ -27,6 +28,10 @@ pages/cc-pp.yaml (individual scenes, can be shared)
 When characters meet, they share the SAME page at the SAME page number:
 - Maya's book page 7 → `le-ma-07.yaml`
 - Leo's book page 7 → `le-ma-07.yaml` (same file!)
+
+## Getting started
+
+1. Create a new character (see `.claude/claude.md`). Just ask Claude to create a new character for you.
 
 ## Structure
 

@@ -4,6 +4,14 @@
 
 A modular storybook system for creating interconnected children's stories across multiple characters. Each character has their own storybook, and characters can share scenes at the same page numbers, creating an interlocking narrative web.
 
+## Creating a New Character (First Step)
+
+1. Use `templates/character-example.yaml` as the template
+2. Ask the user questions for each field in the template to create their character
+3. Fill in all the answers in a new character file in `characters/`
+4. **Important**: Set `story: []` (empty list) initially since no pages have been created yet
+5. **Do not leak any example data** from the template into the new character
+
 ## Architecture
 
 ```
