@@ -7,60 +7,55 @@ name: The Enchanted Forest
 
 # What makes this world interesting?
 # What draws people in? What's unique or captivating about it?
-what_makes_it_interesting: |
-  The Enchanted Forest is a watery forest world brimming with waterfalls and
-  streams that flow through every corner. Frogs are everywhere, hopping between
-  lily pads and mossy stones, while fish swim mysteriously inside the forest
-  itself, as if the air and water have become one. Living within the trees are
-  strange and unusual characters with long limbs, long noses, and strange eyes
-  that peer out from the shadows and hollows of ancient trunks.
+what_makes_it_interesting:
+  - A watery forest world brimming with waterfalls and streams that flow through every corner
+  - Frogs are everywhere, hopping between lily pads and mossy stones
+  - Fish swim mysteriously inside the forest itself, as if the air and water have become one
+  - Strange and unusual characters with long limbs, long noses, and strange eyes live within the trees
+  - These characters peer out from the shadows and hollows of ancient trunks
 
 # What's the visual style?
 # How does this world look? What's the aesthetic, color palette, atmosphere?
-visual_style: |
-  The world is rendered in highly detailed pattern ink work, with intricate
-  textures and linework forming the foundation of every surface. Soft
-  watercolors wash over the top, creating depth and atmosphere. The watery
-  nature of the forest is emphasized through flowing, organic patterns, with
-  delicate ripples and currents visible throughout. The combination of precise
-  ink details and gentle watercolor washes gives the forest a dreamlike yet
-  tangible quality.
+visual_style:
+  - Highly detailed pattern ink work with intricate textures and linework
+  - Soft watercolors wash over the top, creating depth and atmosphere
+  - Flowing, organic patterns emphasize the watery nature of the forest
+  - Delicate ripples and currents visible throughout
+  - The combination of precise ink details and gentle watercolor washes creates a dreamlike yet tangible quality
 
 # What makes it mysterious?
 # What secrets does this world hold? What questions remain unanswered?
-what_makes_it_mysterious: |
-  The Enchanted Forest feels like an endless maze where you can never quite
-  find your bearings. Paths twist and turn, streams flow in impossible
-  directions, and you never know which way you're going. The deeper you venture,
-  the more lost you become, yet there's always a sense that something wonderful
-  - or strange - awaits around the next bend. The forest keeps its secrets well,
-  revealing them only to those who truly listen.
+what_makes_it_mysterious:
+  - Feels like an endless maze where you can never quite find your bearings
+  - Paths twist and turn, streams flow in impossible directions
+  - You never know which way you're going
+  - The deeper you venture, the more lost you become
+  - There's always a sense that something wonderful or strange awaits around the next bend
+  - The forest keeps its secrets well, revealing them only to those who truly listen
 
 # What might the reader not already know about the world when they first encounter it?
 # What surprising truths or hidden aspects will be revealed over time?
-hidden_aspects: |
-  Beneath the surface of the Enchanted Forest lies a secret underground world
-  within the world. This hidden realm exists in the spaces between tree roots,
-  beneath flowing streams, and in caverns carved by ancient waterways. What
-  appears to be the entire forest is only the beginning - there's an entire
-  world below, waiting to be discovered by those brave or curious enough to
-  seek it out.
+hidden_aspects:
+  - Beneath the surface lies a secret underground world within the world
+  - This hidden realm exists in the spaces between tree roots, beneath flowing streams, and in caverns carved by ancient waterways
+  - What appears to be the entire forest is only the beginning
+  - There's an entire world below, waiting to be discovered by those brave or curious enough to seek it out
 
 # How is it similar to the world that we live in?
 # What familiar elements help readers connect with this world?
-similarities_to_our_world: |
-  In the Enchanted Forest, everyone knows each other and are friends. There's
-  a little house where the family lives, providing a warm and familiar center
-  to the strange world around them. People still gather, share meals, and care
-  for one another. The bonds of friendship and family remain just as important
-  and comforting as in our own world.
+similarities_to_our_world:
+  - Everyone knows each other and are friends
+  - There's a little house where the family lives
+  - The house provides a warm and familiar center to the strange world around them
+  - People still gather, share meals, and care for one another
+  - The bonds of friendship and family remain just as important and comforting as in our own world
 
 # How is it different from the world that we live in?
 # What sets this world apart? What rules or properties make it unique?
-differences_from_our_world: |
-  The Enchanted Forest is much more magical and mysterious than our world.
-  Water flows through the air as easily as through streams, fish swim between
-  trees, and creatures with impossible proportions - long limbs, long noses,
-  strange eyes - make their homes in the forest. The laws of nature bend and
-  shift, creating a place where wonder and impossibility are woven into the
-  very fabric of existence.
+differences_from_our_world:
+  - Much more magical and mysterious than our world
+  - Water flows through the air as easily as through streams
+  - Fish swim between trees
+  - Creatures with impossible proportions (long limbs, long noses, strange eyes) make their homes in the forest
+  - The laws of nature bend and shift
+  - Wonder and impossibility are woven into the very fabric of existence
