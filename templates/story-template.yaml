@@ -1,0 +1,128 @@
+# This template maps out a complete story arc across 12 spreads (24 pages).
+# Each spread includes: the story beat, hook (to create anticipation),
+# and payoff (delivered on the next spread).
+#
+# Based on classic story structure: setup, rising action, midpoint,
+# crisis, climax, and resolution.
+
+# List of spreads in the story
+spreads:
+  # Spread 1 - Opening
+  - spread: 1
+    pages: "5-6"
+    beat: Ordinary world + desire hint
+    description: |
+      main character in familiar setting, slightly restless. We glimpse the emotional
+      want (attention, belonging, adventure).
+    hook: Something new or unusual appears, creating curiosity about what it is.
+    payoff: The discovery is fully revealed, establishing the story goal.
+
+  # Spread 2 - Inciting Incident
+  - spread: 2
+    pages: "7-8"
+    beat: Inciting incident
+    description: |
+      main character discovers something is amiss; decides to help.
+      Stakes are emotional but low.
+    hook: The path forward runs out or becomes unclear, raising uncertainty.
+    payoff: The wider world opens up with multiple options and first plan emerges.
+
+  # Spread 3 - First Attempt
+  - spread: 3
+    pages: "9-10"
+    beat: "Attempt #1 (simple/obvious)"
+    description: |
+      main character tries simple, obvious solutions that don't work.
+      Fun visual gags showing mismatched attempts.
+    hook: Simple solutions fail, prompting the question of who might have better answers.
+    payoff: A wise helper appears who offers new perspective or guidance.
+
+  # Spread 4 - Ask the Expert
+  - spread: 4
+    pages: "11-12"
+    beat: "Attempt #2 (ask the expert)"
+    description: |
+      The wise helper tries to assist—research, knowledge, guidance—but the solution
+      isn't straightforward. We widen the world a bit.
+    hook: Guidance points toward unfamiliar territory with a warning about danger or difficulty.
+    payoff: Journey into new territory begins with dramatic departure from familiar world.
+
+  # Spread 5 - Bigger World
+  - spread: 5
+    pages: "13-14"
+    beat: "Attempt #3 (bigger world / stakes up)"
+    description: |
+      They venture into unfamiliar territory, meet someone unhelpful or misleading
+      (comic antagonist figure). Stakes: danger or time pressure hinted.
+    hook: Questionable character offers confident solution, creating doubt about whether to trust them.
+    payoff: The suggested solution fails spectacularly and obviously wrong.
+
+  # Spread 6 - Midpoint
+  - spread: 6
+    pages: "15-16"
+    beat: "Midpoint: new insight / pattern"
+    description: |
+      main character realizes what doesn't work and begins noticing what does.
+      They collect clues and observe patterns.
+    hook: A pattern or clue emerges, suggesting a new direction based on observation.
+    payoff: New approach is tried based on the insight from previous spread.
+
+  # Spread 7 - Rising Stakes
+  - spread: 7
+    pages: "17-18"
+    beat: "Rising stakes: almost works"
+    description: |
+      They get close to the solution. Things are better,
+      but something is still incomplete or missing.
+    hook: Success is close but incomplete, with a detail revealing what's still needed.
+    payoff: What's missing is revealed to be distant or difficult to reach.
+
+  # Spread 8 - All Is Lost
+  - spread: 8
+    pages: "19-20"
+    beat: "All-is-lost / emotional low"
+    description: |
+      main character is tired, discouraged. External conditions worsen.
+      main character doubts themselves.
+    hook: Self-doubt surfaces, questioning whether continuing is worth it.
+    payoff: Something affirms that the effort matters and creates emotional reconnection.
+
+  # Spread 9 - Inner Shift
+  - spread: 9
+    pages: "21-22"
+    beat: "Deepening choice / inner shift"
+    description: |
+      main character chooses to keep trying, not because they have to, but because they care.
+      They notice a crucial clue they missed earlier.
+    hook: A previously overlooked detail suddenly connects to something from earlier.
+    payoff: Returning to prior element with new understanding makes solution clear.
+
+  # Spread 10 - Climax
+  - spread: 10
+    pages: "23-24"
+    beat: "Climax: big action"
+    description: |
+      They reach the goal destination or moment of truth.
+      The journey's hardest part happens here (physical challenge, emotional decision).
+    hook: Threshold moment with hesitation about taking the final irreversible step.
+    payoff: The choice works and goal is achieved, validating the journey.
+
+  # Spread 11 - Resolution (External)
+  - spread: 11
+    pages: "25-26"
+    beat: "Resolution (external)"
+    description: |
+      The external goal is achieved. main character receives closure or a tangible token
+      representing what was accomplished.
+    hook: Return journey begins with hint of future possibility or unresolved element.
+    payoff: Character is home integrating the gain with visual series button.
+
+  # Spread 12 - Resolution (Emotional)
+  - spread: 12
+    pages: "27-28"
+    beat: "Resolution (emotional) + series button"
+    description: |
+      main character's ordinary world again—but subtly transformed by the journey
+      (new confidence, new connection, new understanding).
+    hook: Final moment of reflection showing ongoing connection or meaning.
+    payoff: Landing complete - ordinary world echoes opening but transformed.

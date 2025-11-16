@@ -1,0 +1,8 @@
+# World Example
+#
+# This file serves as both an example and a schema for creating your world.
+# Eventually we will add a /command which will allow you to create a workd
+# based on a series of prompts
+
+# What's this world called?
+name: Fantasia

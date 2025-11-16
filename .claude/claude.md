@@ -75,45 +75,6 @@ Example:
 
 Both `characters/ma-maya.yaml` and `characters/le-leo.yaml` list this page at position 7.
 
-## Workflow
-
-### 1. Create Your World
-Copy `templates/world-example.yaml` to `world.yaml` at the project root:
-- Fill in your world name
-- Add settings and locations as needed
-- Define world rules and challenges
-- Set themes and tone
-
-### 2. Create Characters
-Use `/new-character` or manually create character files:
-- Add to `characters/` directory
-- Define attributes and relationships
-- Start with empty or placeholder page list
-- Update character index in `world.yaml`
-
-### 3. Map Character Interactions
-In `world.yaml`, plan which characters meet:
-- Identify shared scenes
-- Assign page numbers for interactions
-- Note what happens in each shared scene
-
-### 4. Generate All Pages
-Use `/create-all-pages`:
-- Reads character interaction map from `world.yaml`
-- Follows the story structure defined in `templates/story-template.yaml`
-- Creates all page files based on the 12-spread arc (beats, hooks, and payoffs)
-- Generates both single-character and multi-character pages
-- Includes story content, metadata, and image prompts matching the template structure
-
-### 5. Update Character Page Lists
-After pages are created, update each character file's `pages` array with the correct sequence.
-
-### 6. Iterate
-- Edit individual pages to refine content
-- Adjust character attributes
-- Update interaction mapping
-- Regenerate or manually edit pages as needed
-
 ## File Structure
 
 ```
@@ -132,14 +93,11 @@ katha-base/
 │   └── ...
 ├── templates/
 │   ├── world-example.yaml
-│   ├── character-template.yaml
+│   ├── character-example.yaml
+│   ├── story-template.yaml
 │   └── page-template.yaml
 └── .claude/
-    ├── claude.md              # This file
-    └── commands/
-        ├── new-character.md
-        ├── new-page.md
-        └── create-all-pages.md
+    └── claude.md              # This file
 ```
 
 ## Working with the Graph Structure
@@ -200,20 +158,6 @@ All stories follow the structure defined in `templates/story-template.yaml`:
 - Pages should match the beats, hooks, and payoffs described in the template
 - This ensures consistent story structure across all character books
 
-## Commands
-
-- `/new-character` - Create a new character file
-- `/new-page` - Create a single page (for manual additions)
-- `/create-all-pages` - Generate all pages from character interaction map
-
-## Usage in Claude Code Web
-
-This structure works identically in both local CLI and Claude Code web:
-- All context is in committed files
-- Slash commands work the same way
-- No environment-specific setup required
-- Claude can traverse the graph structure to understand narratives
-
 ## Quick Reference
 
 - **Master document**: `world.yaml` (at root level, copy from `templates/world-example.yaml`)
@@ -221,4 +165,3 @@ This structure works identically in both local CLI and Claude Code web:
 - **Character files**: `characters/cc-name.yaml` (see `templates/character-example.yaml` for structure)
 - **Page files**: `pages/cc-pp.yaml` or `pages/cc-cc-pp.yaml` (see `templates/page-template.yaml` for structure)
 - **Templates**: `templates/*.yaml` (example files that also serve as schemas)
-- **Commands**: `.claude/commands/*.md` (framework files)

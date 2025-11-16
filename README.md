@@ -4,17 +4,18 @@ Modular storybook system for creating a set of interlocking storybooks for multi
 
 ## Overview
 
-Create interconnected children's stories where each character has their own book, and characters can meet at synchronized page numbers. The system allows for:
+Create interconnected children's stories where each character has their own book, and characters can meet at synchronized page numbers.
 
-1. Defining characters with attributes and storylines
-2. Mapping character interactions (who meets whom, at which page numbers)
-3. Generating pages automatically using AI (with story text and image prompts)
-4. Iterating on the complete narrative web all at once
+**Key concepts:**
+- Each character is defined in a YAML file with attributes and storylines
+- Characters can share pages at the same page number across their books
+- Story structure follows a 12-spread arc (see `templates/story-template.yaml`)
+- All content is stored as YAML files with markdown text and image prompts
 
 ## Architecture
 
 ```
-world.md (master: world lore + character links)
+world.yaml (master: world lore + character links)
     ↓
 characters/cc-name.yaml (each character = one storybook)
     ↓
@@ -29,12 +30,11 @@ When characters meet, they share the SAME page at the SAME page number:
 
 ## Structure
 
-- `world.md` - Master document: world lore, settings, character index, interaction map
+- `world.yaml` - Master document: world lore, settings, character index, interaction map (copy from `templates/world-example.yaml`)
 - `characters/` - Character files (each is a storybook with attributes + page list)
 - `pages/` - Individual story pages (YAML with markdown content + image prompts)
-- `docs/*-schema.md` - Structure documentation and validation rules
-- `templates/` - Templates for characters and pages
-- `.claude/` - Project instructions and slash commands
+- `templates/` - Example files that serve as both templates and schemas
+- `.claude/` - Project documentation
 
 ## File Naming
 
@@ -44,32 +44,8 @@ All lowercase with dashes:
 - Solo pages: `ma-01.yaml`, `le-05.yaml`, `cu-01.yaml` (character code + page number)
 - Shared pages: `cu-ma-07.yaml`, `le-ma-07.yaml` (character codes alphabetically + shared page number)
 
-## Workflow
-
-1. **Define the world** - Edit `world.md` with settings, themes, and lore
-2. **Create characters** - Use `/new-character` to add characters to `characters/`
-3. **Map interactions** - In `world.md`, plan which characters meet at which pages
-4. **Generate pages** - Use `/create-all-pages` to create all story pages at once
-5. **Iterate** - Edit pages and characters, regenerate as needed
-
-## Getting Started
-
-1. Fill out `world.md` with your world details
-2. Create character files using `/new-character`
-3. Add character interaction mapping to `world.md`
-4. Run `/create-all-pages` to generate all page files
-5. Review and refine the generated content
-
-## Documentation
-
-See `.claude/claude.md` for detailed architecture and workflow instructions.
-
-- Character schema: `docs/character-schema.md`
-- Page schema: `docs/page-schema.md`
-- Templates: `templates/`
-
-## Commands
-
-- `/new-character` - Create a new character file
-- `/new-page` - Create a single page manually
-- `/create-all-pages` - Generate all pages from character interaction map
+Templates serve as both examples and schemas:
+- **World**: `templates/world-example.yaml` - World structure
+- **Story Arc**: `templates/story-template.yaml` - **SOURCE OF TRUTH** for story structure (12 spreads with beats, hooks, payoffs)
+- **Character**: `templates/character-example.yaml` - Character structure
+- **Page**: `templates/page-template.yaml` - Individual page structure

@@ -1,0 +1,43 @@
+# Page Template
+#
+# Eventually, we will creat a custom /command that can create
+# a bunch of pages all at once.
+
+# Should be equal to the name of the file
+# The means "Cullan spread 1"
+# If we are splitting the spread then we'd have cu-01a and cu-01b as separate files.
+id: cu-03 # The name of the file
+
+# See `templates/story-template.md` for documentation
+# Should match the ID and the filename
+spread: 3
+
+# This is an ultra-short description of where we are in the story.
+# Initially, copy this from `templates/story-template.md` for this thread
+beat: "Attempt #1 (simple/obvious)"
+
+# This is what "hooke them" into the next pages
+# Initially, copy this from `templates/story-template.md` for this thread
+hook: Simple solutions fail, prompting the question of who might have better answers.
+
+# This is what "hooke them" into the next pages
+# Initially, copy this from `templates/story-template.md` for this thread
+payoff: A wise helper appears who offers new perspective or guidance.
+
+# This is a short (1-2 sentences, which describes what you see on the page.
+description: Cullan tries to climb up the ladder but finds it too slippery.
+
+# This what you see in the story
+visual: |
+  Cullan is shown slipping off the ladder, with a look of surprise on his face.
+  The ladder is propped against a tall tree, its rungs glistening with morning dew.
+  In the background, we can see the forest clearing where this takes place, with
+  shafts of golden sunlight filtering through the canopy above. Cullan's arms are
+  windmilling as he tries to regain his balance, his tools scattered below him.
+  His expression captures that exact moment of realization when a simple plan
+  goes awry - eyes wide, mouth forming an "O" of surprise. The composition uses
+  a dynamic diagonal to emphasize the motion and precariousness of the moment.
+
+# This what the text says on the page
+text: |
+  Cullan stepped onto the ladder, but foudnt hat it was to slippery to climb.
