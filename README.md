@@ -35,6 +35,7 @@ For each of these steps, just ask claude to do it for you, and it will prompt yo
 
 1. Create all your characters (suggested to do this one at a time).
 2. Create the world.
+3. Bind characters together by creating shared interaction pages.
 
 ## Structure
 

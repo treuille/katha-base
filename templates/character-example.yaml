@@ -11,7 +11,7 @@ attributes:
   # Name is the full name of the character
   name: Cullan
 
-  # Gender of the boy
+  # Gender of the character
   gender: male
 
   # How old is the character
@@ -61,7 +61,7 @@ attributes:
     - Skinny
     - Shy smile
     - His family call him "Culs"
-    - Love to eat pancakes for breakfast
+    - Loves to eat pancakes for breakfast
 
   description: |
     Cullan is a kind, sensitive, and brave boy. Towards his sister,

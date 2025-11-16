@@ -24,6 +24,21 @@ world
 3. Fill in all the answers in `world.yaml` at the root level
 4. **Do not leak any example data** from the template into the new world
 
+### Binding Two Characters Together
+
+1. Ask the user which two characters should meet/interact
+2. Ask about the nature of their interaction (what happens when they meet?)
+3. Consult `templates/story-template.yaml` to determine which spread makes sense for them to meet
+4. Determine the page number where they'll meet (must be the same for both characters)
+5. Check if the shared page already exists (use alphabetically ordered character codes: e.g., `cu-ma-07.yaml`)
+6. If the page doesn't exist:
+   - Create the shared page in `pages/` with proper naming (character codes alphabetically)
+   - Use `templates/page-example.yaml` as the template
+   - Write the page content so it makes narrative sense whether reading character A's story or character B's story
+   - The text should work from both perspectives
+7. Insert the page reference into both character files' `story:` lists at the correct position (in order)
+8. **Important**: Both characters must reference the exact same page file at the same page number
+
 ## Architecture
 
 ```
