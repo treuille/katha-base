@@ -1,0 +1,72 @@
+# Character file for Cullan
+
+# Id is a two character code for the character
+id: cu
+
+# What do we know about Cullan as a character
+attributes:
+  # Name is the full name of the character
+  name: Cullan
+
+  # Gender of the boy
+  gender: male
+
+  # How old is the character
+  age: 13
+
+  # List top 3-5 values that motivate this character
+  # Examples: Adventure, Creativity, Justice, Family, Knowledge
+  core_values_motivations:
+    - The desire to be seen as a good person
+    - Do things right, drive tasks to successful completion
+    - Love for his family
+
+  # Summarize the character's personality in 3-5 words or short phrases
+  # Examples: Curious, Brave, Cautious, Optimistic, Stubborn
+  key_personality_traits:
+    - Physically brave
+    - Gentle and loving
+    - Introspective and pensive
+
+  # Activities or skills that reveal the character's interests and talents
+  # Examples: Painting, Coding, Hiking, Storytelling, Chess
+  # Note: Can inform interactive choices or story branching
+  hobbies_interests_skills:
+    - Reading long fantasy novels (all by the same author)
+    - Photography
+    - Making puzzles with his mom, Regan
+
+  # How does this character usually respond to stress, challenge, or reward?
+  # Examples: Calm under pressure, Quick to frustration, Reflective and empathetic
+  # Note: Useful for scripting dialogue, choices, or character arcs
+  emotional_profile_typical_reactions:
+    - He can become snappy when stressed or tired
+    - But he can also master his emotions and just get the work done
+    - He really doesn't like getting tired
+
+  # How does the character relate to others and the world around them?
+  # Examples: Team-oriented, Prefers solitude, Competitive
+  # Note: Can shape interactions, alliances, and story outcomes
+  social_context_relationships:
+    - Very loving towards family members
+    - Shy towards people he doesn't know
+
+  # Signature habits, inside jokes, special belongings
+  memorable_details:
+    - Bouncy, curly blonde hair
+    - Piercing blue eyes
+    - Skinny
+    - Shy smile
+    - His family call him "Culs"
+    - Love to eat pancakes for breakfast
+
+  description: |
+    Cullan is a kind, sensitive, and brave boy. Towards his sister,
+    he has a close and protective family bond, with dad vibes. Arthur is
+    Cullan's first cousin. They are like two thieves together, always
+    finding ways to go off into their own little worlds and do things
+    together, just the two of them.
+
+# Storybook Pages (ordered list)
+# Pages will be added here as the story develops
+story: []
