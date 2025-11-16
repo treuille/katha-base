@@ -1,8 +1,67 @@
 # World Example
 #
 # This file serves as both an example and a schema for creating your world.
-# Eventually we will add a /command which will allow you to create a workd
-# based on a series of prompts
+# When creating a new world, ask the user questions based on each field below,
+# then fill in their answers in world.yaml
 
 # What's this world called?
 name: Fantasia
+
+# What makes this world interesting?
+# What draws people in? What's unique or captivating about it?
+what_makes_it_interesting: |
+  Fantasia is a realm where imagination becomes reality, and every thought
+  can reshape the landscape around you. The world responds to creativity and
+  emotion, making it a place of endless wonder and possibility. Ancient magic
+  flows through everything, from the smallest pebble to the grandest mountain,
+  creating a living, breathing tapestry of wonder.
+
+# What's the visual style?
+# How does this world look? What's the aesthetic, color palette, atmosphere?
+visual_style: |
+  The world has a dreamlike, watercolor quality where colors bleed and blend
+  into each other. Soft pastels dominate during peaceful moments, while vibrant
+  jewel tones emerge during times of excitement or danger. Architecture features
+  impossible geometries and gravity-defying structures that seem to defy logic
+  yet feel perfectly natural. Everything has a gentle glow, as if lit by an
+  unseen magical source.
+
+# What makes it mysterious?
+# What secrets does this world hold? What questions remain unanswered?
+what_makes_it_mysterious: |
+  Deep within Fantasia lie the Forgotten Gardens, places where old dreams go
+  when they're no longer remembered. Strange whispers echo from ancient trees,
+  speaking in languages no one understands anymore. Some areas of the world
+  shift and change when no one's looking, and there are doors that appear only
+  to certain people at certain times, leading to places that shouldn't exist.
+
+# What might the reader not already know about the world when they first encounter it?
+# What surprising truths or hidden aspects will be revealed over time?
+hidden_aspects: |
+  While the world seems whimsical and safe on the surface, it has a deeper
+  purpose: it's actually a sanctuary for endangered imaginations from countless
+  other worlds. The inhabitants don't realize they're guardians of something
+  precious and fragile. Every story told in Fantasia strengthens the fabric
+  between worlds, and every act of kindness plants seeds that will grow into
+  new possibilities.
+
+# How is it similar to the world that we live in?
+# What familiar elements help readers connect with this world?
+similarities_to_our_world: |
+  Families still gather for meals and share stories. Children still play and
+  explore. People still feel joy, sadness, fear, and hope. The bonds of
+  friendship and love are just as powerful and important. Day turns to night,
+  seasons change, and life follows rhythms that feel comforting and familiar.
+  The fundamental experiences of growing, learning, and connecting remain
+  universal.
+
+# How is it different from the world that we live in?
+# What sets this world apart? What rules or properties make it unique?
+differences_from_our_world: |
+  In Fantasia, emotions have physical manifestations - happiness might create
+  floating lights, while sadness could summon gentle rain. The laws of physics
+  are more like suggestions, bending to accommodate wonder and impossibility.
+  Time doesn't flow in quite the same way; a moment can stretch into an
+  adventure, or hours can pass in what feels like seconds. Animals can speak
+  if they choose to, and objects might have personalities and preferences of
+  their own.
