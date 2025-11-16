@@ -71,14 +71,16 @@ attributes:
     together, just the two of them.
 
 # Storybook Pages (ordered list)
-# Initially this list is empty when we create the character, but it
-# will get filled after we run the right /commands to get all the pages built.
+# Initially this list is empty when we create the character
+# But more will get added as we follow the story creation steps
+# (see Readme.md).
+# NOTE: Pages should be shown without path `cu-01.yaml` rather than `pages/cu-01.yaml`
 story:
   # First Cullan page
-  - pages/cc-01.yaml
+  - cu-01.yaml
 
   # Second Cullan page
-  - pages/cc-02.yaml
+  - cu-02.yaml
 
   # Example of a shared page with another character
-  - pages/cc-xx-03.yaml
+  - cu-xx-03.yaml
