@@ -33,11 +33,12 @@ if echo "$ORIGIN_URL" | grep -q "katha-base"; then
     exit 1
 fi
 
-# Check if base remote exists
+# Check if base remote exists, if not add it
 if ! git remote get-url base > /dev/null 2>&1; then
-    echo "Error: No 'base' remote found"
-    echo "Add it with: git remote add base https://github.com/treuille/katha-base.git"
-    exit 1
+    echo "Adding 'base' remote..."
+    git remote add base https://github.com/treuille/katha-base.git
+    echo "✓ Added base remote: https://github.com/treuille/katha-base.git"
+    echo ""
 fi
 
 echo "Fetching all remotes..."
