@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Show the full story for a character given their two-digit code.
+Show the full story for a character given their two-letter code.
 
 Usage:
-    python show_story.py <character-code>
+    python3 scripts/show_story.py <character-code>
 
 Example:
-    python show_story.py cu
+    python3 scripts/show_story.py cu
 """
 
 import sys

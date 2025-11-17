@@ -21,10 +21,10 @@ Examples:
 
 ## Image Specifications
 
-- **Aspect Ratio**: 2:1 (wide format) for all backends
-- **Format**: JPEG
+- **Aspect Ratio**: Wide format (2:1 or 3:1 depending on backend)
+- **Format**: JPEG (.jpg)
 - **Resolution**: Varies by backend
-  - OpenAI: 1792x1024 (~2:1 ratio)
+  - OpenAI: 1792x1024 (2:1 ratio)
   - Replicate: 1536x768 (2:1 ratio)
   - Ideogram: 3:1 ratio (backend-dependent resolution)
 
