@@ -65,19 +65,15 @@ attributes:
 
   # Signature habits, inside jokes, special belongings
   memorable_details:
-    - Bouncy, curly blonde hair
-    - Piercing blue eyes
-    - Skinny
-    - Shy smile
     - His family call him "Culs"
     - Loves to eat pancakes for breakfast
 
-  description: |
-    Cullan is a kind, sensitive, and brave boy. Towards his sister,
-    he has a close and protective family bond, with dad vibes. Arthur is
-    Cullan's first cousin. They are like two thieves together, always
-    finding ways to go off into their own little worlds and do things
-    together, just the two of them.
+  # This will be sent to the prompting system.
+  visual_description:
+    - Bouncy, curly blonde hair
+    - Piercing blue eyes
+    - Skinny and physically confident
+    - Shy smile
 
 # Storybook Pages (ordered list)
 # Initially this list is empty when we create the character

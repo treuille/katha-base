@@ -7,53 +7,12 @@
 # What's this world called?
 name: Fantasia
 
-# What makes this world interesting?
-# What draws people in? What's unique or captivating about it?
-what_makes_it_interesting:
-  - Imagination becomes reality - thoughts can reshape the landscape
-  - The world responds to creativity and emotion
-  - Ancient magic flows through everything, from pebbles to mountains
-  - Creates a living, breathing tapestry of wonder and possibility
-
 # What's the visual style?
 # How does this world look? What's the aesthetic, color palette, atmosphere?
+# This is used for prompting the visual system.
 visual_style:
-  - Dreamlike, watercolor quality where colors bleed and blend
-  - Soft pastels during peaceful moments, vibrant jewel tones during excitement or danger
-  - Architecture features impossible geometries and gravity-defying structures
+  - Fine pen and ink style, with dream-like watercolor overlays.
+  - The world is a forest, but very wet, with waterfalls and streams everywhere.
+  - There are lots of magical creatures and details everywhere, mushrooms, small mammels, and strange creatures in the trees.
   - Everything has a gentle glow, as if lit by unseen magical source
 
-# What makes it mysterious?
-# What secrets does this world hold? What questions remain unanswered?
-what_makes_it_mysterious:
-  - The Forgotten Gardens where old dreams go when no longer remembered
-  - Strange whispers from ancient trees in languages no one understands
-  - Areas that shift and change when no one's looking
-  - Doors that appear only to certain people at certain times
-
-# What might the reader not already know about the world when they first encounter it?
-# What surprising truths or hidden aspects will be revealed over time?
-hidden_aspects:
-  - It's actually a sanctuary for endangered imaginations from countless other worlds
-  - Inhabitants don't realize they're guardians of something precious and fragile
-  - Every story told strengthens the fabric between worlds
-  - Every act of kindness plants seeds that will grow into new possibilities
-
-# How is it similar to the world that we live in?
-# What familiar elements help readers connect with this world?
-similarities_to_our_world:
-  - Families gather for meals and share stories
-  - Children play and explore
-  - People feel joy, sadness, fear, and hope
-  - Bonds of friendship and love are powerful and important
-  - Day turns to night, seasons change
-  - Life follows comforting and familiar rhythms
-
-# How is it different from the world that we live in?
-# What sets this world apart? What rules or properties make it unique?
-differences_from_our_world:
-  - Emotions have physical manifestations (happiness creates floating lights, sadness summons rain)
-  - Laws of physics are suggestions, bending to accommodate wonder
-  - Time doesn't flow normally - moments can stretch or hours can pass quickly
-  - Animals can speak if they choose to
-  - Objects might have personalities and preferences
