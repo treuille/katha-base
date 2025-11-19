@@ -2,8 +2,13 @@
 """
 Generate images for storybook pages using various AI models.
 
+NEW STRUCTURE (Post-Refactor):
+- Each page contains 2 images
+- File naming: {char}-{spread}-{page}.yaml (e.g., cu-01-1.yaml)
+- Output naming: {page-id}-img{N}-{backend}.jpg (e.g., cu-01-1-img1-openai.jpg)
+
 Usage:
-    uv run scripts/gen_image.py <model-backend> <page-path>
+    uv run scripts/gen_image.py <model-backend> <page-path> [--image-num <1|2>]
 
 Model Backends:
     openai      - OpenAI gpt-image-1 (generates at 1536x1024, upscales to 3579x2406)
@@ -15,6 +20,9 @@ Model Backends:
 
     (Deprecated backends: replicate, ideogram)
 
+Optional Arguments:
+    --image-num <1|2>  - Generate only a specific image (1 or 2) instead of both
+
 Reference Images:
     The script automatically includes reference images based on the page ID:
     - style-*.jpg: Always included for style
@@ -22,8 +30,9 @@ Reference Images:
       (e.g., cu-1.jpg for Cullan, em-1.jpg for Emer, ha-1.jpg for Hansel)
 
 Examples:
-    uv run scripts/gen_image.py openai pages/cu-01.yaml
-    uv run scripts/gen_image.py prompt pages/cu-ha-02.yaml
+    uv run scripts/gen_image.py openai pages/cu-01-1.yaml
+    uv run scripts/gen_image.py openai pages/cu-01-1.yaml --image-num 1
+    uv run scripts/gen_image.py prompt pages/cu-ha-02-2.yaml
 """
 
 import os
@@ -75,7 +84,7 @@ def print_help():
 
 def validate_args(args):
     """Validate command line arguments."""
-    if len(args) != 3:
+    if len(args) < 3:
         print("Error: Invalid number of arguments\n")
         print_help()
         sys.exit(1)
@@ -83,12 +92,25 @@ def validate_args(args):
     backend = args[1]
     page_path = args[2]
 
+    # Parse optional arguments
+    image_num = None
+    if len(args) > 3:
+        if args[3] == "--image-num" and len(args) > 4:
+            try:
+                image_num = int(args[4])
+                if image_num not in [1, 2]:
+                    print("Error: --image-num must be 1 or 2\n")
+                    sys.exit(1)
+            except ValueError:
+                print("Error: --image-num must be a number (1 or 2)\n")
+                sys.exit(1)
+
     if backend not in BACKENDS:
         print(f"Error: Unknown model backend '{backend}'\n")
         print_help()
         sys.exit(1)
 
-    return backend, page_path
+    return backend, page_path, image_num
 
 
 def check_api_keys(backend: str):
@@ -231,7 +253,12 @@ def load_character_descriptions(page_id: str) -> dict:
 
 
 def load_page_data(page_path: str) -> dict:
-    """Load the page data from a page YAML file."""
+    """Load and validate page data.
+
+    Supports both old and new page structures:
+    - Old: single 'visual' and 'text' fields
+    - New: 'images' array with multiple images
+    """
     page_path = Path(page_path)
 
     if not page_path.exists():
@@ -245,36 +272,59 @@ def load_page_data(page_path: str) -> dict:
         print(f"Error: Failed to load page file: {e}")
         sys.exit(1)
 
-    visual_prompt = page_data.get("visual", "")
-    if not visual_prompt:
-        print(f"Error: No 'visual' field found in {page_path}")
+    # Detect page structure
+    if 'images' in page_data:
+        # New structure with images array
+        if not isinstance(page_data['images'], list):
+            print(f"Error: 'images' field must be a list in {page_path}")
+            sys.exit(1)
+        if len(page_data['images']) == 0:
+            print(f"Error: 'images' array is empty in {page_path}")
+            sys.exit(1)
+        page_data['_structure'] = 'new'
+    elif 'visual' in page_data:
+        # Old structure with single visual/text fields
+        page_data['_structure'] = 'old'
+    else:
+        print(f"Error: Page must have either 'visual' field (old structure) or 'images' array (new structure) in {page_path}")
         sys.exit(1)
 
     return page_data
 
 
 def build_full_prompt(
-    page_data: dict, visual_style: str, references: list, character_descriptions: dict
+    visual: str,
+    text: str,
+    visual_style: str,
+    references: list,
+    character_descriptions: dict,
+    image_context: str = ""
 ) -> str:
-    """Build the complete prompt with visual style and visual content."""
-    visual = page_data.get("visual", "")
-    text = page_data.get("text", "")
+    """Build the complete prompt with visual style and visual content.
 
+    Args:
+        visual: Visual description for this specific image
+        text: Text content for this specific image (2-3 sentences)
+        visual_style: Overall visual style from world.yaml
+        references: Reference images
+        character_descriptions: Character visual descriptions
+        image_context: Additional context (e.g., "Image 1 of 2 on this page")
+    """
     prompt_parts = [
         "Create a beautiful illustration for a children's storybook page.",
-        "Output a single wide image for a two-page spread.",
-        "Do not multiple images or panels, just one cohesive scene.",
+        "Output a single image that captures one moment in the story.",
     ]
+
+    if image_context:
+        prompt_parts.append(f"Context: {image_context}")
 
     # Add text instructions at the top if text is present
     if text:
         prompt_parts.append("")
         prompt_parts.append("IMPORTANT: You MUST include story text as readable typography in the image.")
         prompt_parts.append("The text should be clearly legible, using 16pt font size.")
-        prompt_parts.append("CRITICAL: Do NOT place any text across the 50% vertical centerline of the image.")
-        prompt_parts.append("The center is where the two-page spread folds together - keep text away from this area.")
-        prompt_parts.append("Place text either on the left side or right side, but never spanning across the middle.")
         prompt_parts.append("Integrate the text into the illustration using a font style that matches the storybook aesthetic.")
+        prompt_parts.append("Place the text where it best fits the composition.")
         prompt_parts.append("The exact text to include will be provided at the end of this prompt.")
 
     # Add reference images section
@@ -574,9 +624,9 @@ def main():
         print_help()
         sys.exit(0)
 
-    backend, page_path = validate_args(sys.argv)
+    backend, page_path, specific_image_num = validate_args(sys.argv)
 
-    # Extract page ID from path for output filename (e.g., "pages/cu-ha-02.yaml" -> "cu-ha-02")
+    # Extract page ID from path for output filename (e.g., "pages/cu-ha-02-1.yaml" -> "cu-ha-02-1")
     page_id = Path(page_path).stem
 
     # Check API keys before doing anything
@@ -610,26 +660,98 @@ def main():
     print(f"Loading page: {page_path}")
     page_data = load_page_data(page_path)
 
-    # Build complete prompt
-    prompt = build_full_prompt(page_data, visual_style, references, character_descriptions)
+    # Determine which images to generate
+    if page_data['_structure'] == 'new':
+        # New structure: generate 1 or 2 images based on arguments
+        images_to_generate = []
+        if specific_image_num:
+            # Generate only the specified image
+            if specific_image_num <= len(page_data['images']):
+                images_to_generate.append(specific_image_num)
+            else:
+                print(f"Error: Image {specific_image_num} not found in page (has {len(page_data['images'])} images)")
+                sys.exit(1)
+        else:
+            # Generate all images (typically 2)
+            images_to_generate = list(range(1, len(page_data['images']) + 1))
 
-    # Generate image with selected backend
-    if backend == "openai":
-        output_path = generate_with_openai(prompt, page_id, references)
-    elif backend == "replicate":
-        print("Error: Replicate backend is currently deprecated")
-        print("Use 'openai' or 'prompt' backend instead")
-        sys.exit(1)
-    elif backend == "ideogram":
-        print("Error: Ideogram backend is currently deprecated")
-        print("Use 'openai' or 'prompt' backend instead")
-        sys.exit(1)
-    elif backend == "prompt":
-        output_path = generate_prompt(prompt, page_id)
+        print(f"Page structure: NEW (multiple images)")
+        print(f"Generating {len(images_to_generate)} image(s): {images_to_generate}")
 
-    if backend != "prompt":
-        print(f"\n✓ Image generated successfully!")
-        print(f"  Saved to: {output_path}")
+        output_paths = []
+        for img_num in images_to_generate:
+            img_data = page_data['images'][img_num - 1]
+            visual = img_data.get('visual', '')
+            text = img_data.get('text', '')
+
+            image_context = f"Image {img_num} of {len(page_data['images'])} on this page"
+            print(f"\n--- Generating Image {img_num} ---")
+
+            # Build prompt for this specific image
+            prompt = build_full_prompt(
+                visual=visual,
+                text=text,
+                visual_style=visual_style,
+                references=references,
+                character_descriptions=character_descriptions,
+                image_context=image_context
+            )
+
+            # Generate image with selected backend
+            output_id = f"{page_id}-img{img_num}"
+            if backend == "openai":
+                output_path = generate_with_openai(prompt, output_id, references)
+            elif backend == "replicate":
+                print("Error: Replicate backend is currently deprecated")
+                print("Use 'openai' or 'prompt' backend instead")
+                sys.exit(1)
+            elif backend == "ideogram":
+                print("Error: Ideogram backend is currently deprecated")
+                print("Use 'openai' or 'prompt' backend instead")
+                sys.exit(1)
+            elif backend == "prompt":
+                output_path = generate_prompt(prompt, output_id)
+
+            output_paths.append(output_path)
+
+        if backend != "prompt":
+            print(f"\n✓ Generated {len(output_paths)} image(s) successfully!")
+            for i, path in enumerate(output_paths, 1):
+                print(f"  Image {images_to_generate[i-1]}: {path}")
+
+    else:
+        # Old structure: generate single image (backward compatibility)
+        print(f"Page structure: OLD (single image)")
+        print(f"Generating 1 image")
+
+        visual = page_data.get('visual', '')
+        text = page_data.get('text', '')
+
+        prompt = build_full_prompt(
+            visual=visual,
+            text=text,
+            visual_style=visual_style,
+            references=references,
+            character_descriptions=character_descriptions
+        )
+
+        # Generate image with selected backend
+        if backend == "openai":
+            output_path = generate_with_openai(prompt, page_id, references)
+        elif backend == "replicate":
+            print("Error: Replicate backend is currently deprecated")
+            print("Use 'openai' or 'prompt' backend instead")
+            sys.exit(1)
+        elif backend == "ideogram":
+            print("Error: Ideogram backend is currently deprecated")
+            print("Use 'openai' or 'prompt' backend instead")
+            sys.exit(1)
+        elif backend == "prompt":
+            output_path = generate_prompt(prompt, page_id)
+
+        if backend != "prompt":
+            print(f"\n✓ Image generated successfully!")
+            print(f"  Saved to: {output_path}")
 
 
 if __name__ == "__main__":

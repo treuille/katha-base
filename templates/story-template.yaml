@@ -4,6 +4,18 @@
 #
 # Based on classic story structure: setup, rising action, midpoint,
 # crisis, climax, and resolution.
+#
+# NARRATIVE NODE TYPES:
+# - Solo: Single character's individual journey moment
+# - Meeting: Characters physically converge at same place and time
+# - Mirrored: Characters face parallel challenges; themes intentionally "rhyme"
+# - Resonant: Emotional/energetic ripple connecting characters across distance
+#
+# LAYOUT STRUCTURE:
+# - Each spread = 2 pages (left page and right page)
+# - Each page = 2 images (top and bottom, or left and right arrangement)
+# - Each image = 2-3 sentences of text
+# - Total per story: 12 spreads × 2 pages × 2 images = 48 images
 
 # List of spreads in the story
 spreads:
@@ -11,6 +23,7 @@ spreads:
   - spread: 1
     pages: "5-6"
     beat: Ordinary world + desire hint
+    node_types_allowed: ["solo"]  # Must be character-specific
     description: |
       main character in familiar setting, slightly restless. We glimpse the emotional
       want (attention, belonging, adventure).
@@ -21,6 +34,7 @@ spreads:
   - spread: 2
     pages: "7-8"
     beat: Inciting incident
+    node_types_allowed: ["solo", "resonant"]  # Can be resonant (emotional connection sparks journey)
     description: |
       main character discovers something is amiss; decides to help.
       Stakes are emotional but low.
@@ -31,6 +45,7 @@ spreads:
   - spread: 3
     pages: "9-10"
     beat: "Attempt #1 (simple/obvious)"
+    node_types_allowed: ["solo", "mirrored"]  # Can be mirrored (parallel failed attempts)
     description: |
       main character tries simple, obvious solutions that don't work.
       Fun visual gags showing mismatched attempts.
@@ -41,6 +56,7 @@ spreads:
   - spread: 4
     pages: "11-12"
     beat: "Attempt #2 (ask the expert)"
+    node_types_allowed: ["solo", "meeting", "mirrored"]  # Can be meeting (seek help together)
     description: |
       The wise helper tries to assist—research, knowledge, guidance—but the solution
       isn't straightforward. We widen the world a bit.
@@ -51,6 +67,7 @@ spreads:
   - spread: 5
     pages: "13-14"
     beat: "Attempt #3 (bigger world / stakes up)"
+    node_types_allowed: ["solo", "meeting", "mirrored"]  # Meeting or mirrored for shared challenges
     description: |
       They venture into unfamiliar territory, meet someone unhelpful or misleading
       (comic antagonist figure). Stakes: danger or time pressure hinted.
@@ -61,6 +78,7 @@ spreads:
   - spread: 6
     pages: "15-16"
     beat: "Midpoint: new insight / pattern"
+    node_types_allowed: ["solo", "resonant", "mirrored"]  # Resonant or mirrored for shared insight
     description: |
       main character realizes what doesn't work and begins noticing what does.
       They collect clues and observe patterns.
@@ -71,6 +89,7 @@ spreads:
   - spread: 7
     pages: "17-18"
     beat: "Rising stakes: almost works"
+    node_types_allowed: ["solo", "meeting", "mirrored", "resonant"]  # All types possible
     description: |
       They get close to the solution. Things are better,
       but something is still incomplete or missing.
@@ -81,6 +100,7 @@ spreads:
   - spread: 8
     pages: "19-20"
     beat: "All-is-lost / emotional low"
+    node_types_allowed: ["solo", "meeting", "mirrored", "resonant"]  # Resonant ideal for emotional low
     description: |
       main character is tired, discouraged. External conditions worsen.
       main character doubts themselves.
@@ -91,6 +111,7 @@ spreads:
   - spread: 9
     pages: "21-22"
     beat: "Deepening choice / inner shift"
+    node_types_allowed: ["solo", "resonant", "mirrored"]  # Resonant must follow growth moment
     description: |
       main character chooses to keep trying, not because they have to, but because they care.
       They notice a crucial clue they missed earlier.
@@ -101,6 +122,7 @@ spreads:
   - spread: 10
     pages: "23-24"
     beat: "Climax: big action"
+    node_types_allowed: ["solo", "meeting", "mirrored"]  # Meeting ideal for climactic convergence
     description: |
       They reach the goal destination or moment of truth.
       The journey's hardest part happens here (physical challenge, emotional decision).
@@ -111,6 +133,7 @@ spreads:
   - spread: 11
     pages: "25-26"
     beat: "Resolution (external)"
+    node_types_allowed: ["solo"]  # Must be character-specific
     description: |
       The external goal is achieved. main character receives closure or a tangible token
       representing what was accomplished.
@@ -121,8 +144,94 @@ spreads:
   - spread: 12
     pages: "27-28"
     beat: "Resolution (emotional) + series button"
+    node_types_allowed: ["solo"]  # Must be character-specific
     description: |
       main character's ordinary world again—but subtly transformed by the journey
       (new confidence, new connection, new understanding).
     hook: Final moment of reflection showing ongoing connection or meaning.
     payoff: Landing complete - ordinary world echoes opening but transformed.
+
+# NARRATIVE NODE TYPE SPECIFICATIONS
+# When creating pages with specific node types, include the following metadata:
+
+node_type_schemas:
+  meeting:
+    description: "Characters physically converge at the same place and time"
+    required_fields:
+      - location: "String describing the physical meeting place"
+      - time_context: "String or spread_index indicating when meeting occurs"
+      - shared_action: "Description of what characters do together"
+      - dialogue_packets: "Multi-POV dialogue synchronization data"
+      - cross_book_alignment: "Metadata for same scene from different POVs"
+    example: |
+      node_type: meeting
+      meeting_data:
+        location: "The Ancient Library's central reading room"
+        time_context: "Morning of the third day, spread 7"
+        shared_action: "Characters collaborate to decode an ancient map"
+        dialogue_packets:
+          - character: cu
+            line: "Look at these symbols—they match the ones from the forest!"
+          - character: ma
+            line: "And this marking here... it's the same as my grandmother's pendant."
+        cross_book_alignment:
+          scene_id: "library_map_discovery"
+          pov_variants:
+            - character: cu
+              focus: "Visual details of the map and library architecture"
+            - character: ma
+              focus: "Emotional connection to grandmother's pendant"
+
+  mirrored:
+    description: "Characters face parallel challenges in different places; themes rhyme"
+    required_fields:
+      - shared_theme: "Key thematic element connecting the parallel moments"
+      - scenario_variants: "Different scenarios for each character"
+      - symbolic_motif: "Object or symbol appearing in all stories"
+      - spread_alignment: "Strict requirement: same spread across all books"
+    example: |
+      node_type: mirrored
+      mirrored_data:
+        shared_theme: "Facing fear of heights to reach something precious"
+        scenario_variants:
+          - character: cu
+            scenario: "Climbing the tall oak to rescue a trapped bird"
+            location: "Forest clearing"
+          - character: no
+            scenario: "Ascending library ladder to reach ancient book"
+            location: "Town library"
+        symbolic_motif: "A golden feather that catches the light"
+        spread_alignment: spread_5
+        visual_rhyming:
+          - element: "Upward perspective showing character's determination"
+          - element: "Sweat on brow, hands gripping tightly"
+          - element: "Golden light streaming from above"
+
+  resonant:
+    description: "Emotional or energetic ripple connecting characters across distance"
+    required_fields:
+      - emotional_state_packets: "Emotional state for each character"
+      - ripple_effect: "How one character's shift affects another's world"
+      - symbolic_resonance: "Phenomenon appearing across stories (sky, light, etc.)"
+      - placement_rule: "Must follow a moment of character growth"
+      - temporal_sync: "Indication these moments happen simultaneously"
+    example: |
+      node_type: resonant
+      resonant_data:
+        emotional_state_packets:
+          - character: cu
+            state: "Breakthrough moment of clarity after struggle"
+            trigger: "Realizes the pattern in the forest paths"
+          - character: ma
+            state: "Sudden inexplicable hope and renewed energy"
+            trigger: "Feels warmth and certainty despite setback"
+        ripple_effect: |
+          As Cullan discovers the pattern, Maya—miles away in the village—
+          feels sudden warmth and certainty. The connection isn't explained,
+          but visually mirrored through shared environmental phenomena.
+        symbolic_resonance:
+          phenomenon: "Sky shimmer with golden light"
+          description: "Both characters look up simultaneously to see the same golden light"
+          visual_cue: "Identical sky color and light quality in both images"
+        placement_rule: "Follows Cullan's growth moment in spread 6"
+        temporal_sync: "Same afternoon, different locations"

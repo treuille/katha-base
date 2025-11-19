@@ -2,6 +2,12 @@
 """
 Validation script to check structural integrity of the repository.
 
+NEW STRUCTURE (Post-Refactor):
+- Each spread has 2 pages (24 pages total per character)
+- Each page has 2 images
+- File naming: {char}-{spread}-{page}.yaml (e.g., cu-01-1.yaml)
+- Node types: solo, meeting, mirrored, resonant
+
 Checks:
 - Pages are well formatted
 - All referenced pages exist
@@ -11,6 +17,8 @@ Checks:
 - No missing/stray pages in the pages directory
 - At least one character exists
 - All YAML files are valid
+- Page structure validation (node types, images, etc.)
+- Node type metadata validation
 
 Exit codes:
 - 0: All tests passed
@@ -144,25 +152,39 @@ def test_pages_exist(characters):
 def test_no_overlaps_on_required_solo_spreads(characters):
     """Test that spreads 1, 11, and 12 have no overlaps (are character-specific)."""
     errors_found = False
-    required_solo_positions = [1, 11, 12]
+    required_solo_spreads = [1, 11, 12]
 
     for char_id, char_info in characters.items():
         pages = char_info['data'].get('story', [])
         char_name = char_info['name']
 
-        for pos in required_solo_positions:
-            if pos - 1 < len(pages):  # Check if this position exists
-                page = pages[pos - 1]
-                # Extract page ID (filename without .yaml)
-                page_id = page.replace('.yaml', '')
+        for page in pages:
+            # Extract page ID (filename without .yaml)
+            page_id = page.replace('.yaml', '')
 
-                # Check if page contains multiple character codes
-                parts = page_id.split('-')
-                char_codes = [p for p in parts if len(p) == 2 and p.isalpha()]
+            # Parse new format: {char}-{spread}-{page}.yaml or {char1}-{char2}-{spread}-{page}.yaml
+            parts = page_id.split('-')
 
-                if len(char_codes) > 1:
-                    error(f"{char_name} ({char_id}): Spread {pos} ('{page}') is a joint page with {char_codes} - spreads 1, 11, 12 must be character-specific")
-                    errors_found = True
+            # Check if page contains multiple character codes
+            char_codes = [p for p in parts if len(p) == 2 and p.isalpha()]
+
+            # Extract spread number (should be second-to-last or third-to-last part)
+            spread_num = None
+            if len(parts) >= 3:
+                try:
+                    # Try second-to-last position (for single char: cu-01-1)
+                    spread_num = int(parts[-2])
+                except ValueError:
+                    # Try third-to-last position (for multi char: cu-ma-01-1)
+                    if len(parts) >= 4:
+                        try:
+                            spread_num = int(parts[-2])
+                        except ValueError:
+                            pass
+
+            if spread_num in required_solo_spreads and len(char_codes) > 1:
+                error(f"{char_name} ({char_id}): Spread {spread_num} ('{page}') is a joint page with {char_codes} - spreads 1, 11, 12 must be character-specific")
+                errors_found = True
 
     if not errors_found:
         success("Spreads 1, 11, and 12 are all character-specific (no overlaps)")
@@ -207,30 +229,39 @@ def test_missing_pages(characters):
         pages = char_info['data'].get('story', [])
         char_name = char_info['name']
 
-        # Expected: 12 pages
-        if len(pages) != 12:
-            warning(f"{char_name} ({char_id}): Has {len(pages)} pages, expected 12")
+        # Expected: 24 pages (12 spreads × 2 pages per spread)
+        if len(pages) != 24:
+            warning(f"{char_name} ({char_id}): Has {len(pages)} pages, expected 24 (12 spreads × 2 pages)")
             warnings_found = True
 
-        # Check for sequential numbering (this is a soft check)
-        # Extract page numbers
-        page_numbers = []
+        # Check for sequential spread-page numbering
+        # Expected pattern: spread 1-12, page 1-2 for each spread
+        expected_pages = []
+        for spread in range(1, 13):
+            for page in range(1, 3):
+                expected_pages.append((spread, page))
+
+        # Extract actual spread-page numbers
+        actual_pages = []
         for page in pages:
             page_id = page.replace('.yaml', '')
             parts = page_id.split('-')
-            # Look for the numeric part
-            for part in parts:
-                if part.isdigit():
-                    page_numbers.append(int(part))
-                    break
 
-        if page_numbers:
-            expected = list(range(1, 13))
-            if page_numbers != expected:
-                info(f"{char_name} ({char_id}): Page numbering is {page_numbers}")
+            # Try to extract spread and page numbers
+            try:
+                # For format: cu-01-1.yaml or cu-ma-01-1.yaml
+                if len(parts) >= 3:
+                    spread_num = int(parts[-2])
+                    page_num = int(parts[-1])
+                    actual_pages.append((spread_num, page_num))
+            except ValueError:
+                warning(f"{char_name} ({char_id}): Unable to parse page format: {page}")
+
+        if actual_pages and actual_pages != expected_pages:
+            info(f"{char_name} ({char_id}): Page sequence differs from expected")
 
     if not warnings_found:
-        success("All characters have 12 pages")
+        success("All characters have 24 pages (12 spreads × 2 pages)")
 
     return True  # Warnings don't fail the test
 
@@ -261,6 +292,79 @@ def test_page_yaml_validity(characters):
     return not errors_found
 
 
+def test_page_structure(characters):
+    """Test that pages have proper structure (node type, images, etc.)."""
+    errors_found = False
+    warnings_found = False
+    pages_dir = Path('pages')
+
+    # Collect all referenced pages
+    all_pages = set()
+    for char_id, char_info in characters.items():
+        pages = char_info['data'].get('story', [])
+        all_pages.update(pages)
+
+    for page in all_pages:
+        page_path = pages_dir / page
+        if page_path.exists():
+            try:
+                with open(page_path, 'r') as f:
+                    page_data = yaml.safe_load(f)
+
+                # Check for required fields
+                if 'node_type' not in page_data:
+                    warning(f"Page '{page}' missing 'node_type' field")
+                    warnings_found = True
+                elif page_data['node_type'] not in ['solo', 'meeting', 'mirrored', 'resonant']:
+                    error(f"Page '{page}' has invalid node_type: {page_data['node_type']}")
+                    errors_found = True
+
+                # Check for images array
+                if 'images' not in page_data:
+                    warning(f"Page '{page}' missing 'images' array (new structure requires 2 images per page)")
+                    warnings_found = True
+                else:
+                    images = page_data['images']
+                    if not isinstance(images, list):
+                        error(f"Page '{page}' 'images' field is not a list")
+                        errors_found = True
+                    elif len(images) != 2:
+                        warning(f"Page '{page}' has {len(images)} images, expected 2")
+                        warnings_found = True
+                    else:
+                        # Check each image structure
+                        for i, img in enumerate(images, 1):
+                            if 'visual' not in img:
+                                error(f"Page '{page}' image {i} missing 'visual' field")
+                                errors_found = True
+                            if 'text' not in img:
+                                error(f"Page '{page}' image {i} missing 'text' field")
+                                errors_found = True
+
+                # Validate node-specific metadata
+                node_type = page_data.get('node_type')
+                if node_type == 'meeting' and 'meeting_data' not in page_data:
+                    warning(f"Page '{page}' is a meeting node but missing 'meeting_data'")
+                    warnings_found = True
+                if node_type == 'mirrored' and 'mirrored_data' not in page_data:
+                    warning(f"Page '{page}' is a mirrored node but missing 'mirrored_data'")
+                    warnings_found = True
+                if node_type == 'resonant' and 'resonant_data' not in page_data:
+                    warning(f"Page '{page}' is a resonant node but missing 'resonant_data'")
+                    warnings_found = True
+
+            except Exception as e:
+                # Skip if already caught by YAML validity test
+                pass
+
+    if not errors_found and not warnings_found:
+        success("All pages have proper structure")
+    elif not errors_found:
+        success("Page structure validation passed (with warnings)")
+
+    return not errors_found
+
+
 def main():
     """Run all tests."""
     print("\n" + "="*80)
@@ -281,6 +385,7 @@ def main():
         ("Spreads 1, 11, 12 are character-specific", lambda: test_no_overlaps_on_required_solo_spreads(characters)),
         ("No stray pages in pages directory", lambda: test_no_stray_pages(characters)),
         ("Page YAML files are valid", lambda: test_page_yaml_validity(characters)),
+        ("Page structure validation", lambda: test_page_structure(characters)),
         ("Check for missing pages", lambda: test_missing_pages(characters)),
     ]
 

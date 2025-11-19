@@ -2,12 +2,25 @@
 
 Generate AI illustrations for storybook pages using the `gen_image.py` script.
 
+## NEW STRUCTURE (Post-Refactor)
+
+- Each page contains **2 images**
+- Each image has its own visual description and text (2-3 sentences)
+- By default, the script generates both images per page
+- You can optionally generate a single image using `--image-num`
+
 ## Usage
 
-### Generate a Single Page
+### Generate All Images for a Page (2 images)
 
 ```bash
 uv run scripts/gen_image.py <model-backend> <page-path>
+```
+
+### Generate a Specific Image (1 or 2)
+
+```bash
+uv run scripts/gen_image.py <model-backend> <page-path> --image-num <1|2>
 ```
 
 ### Generate All Pages in Parallel
@@ -18,12 +31,13 @@ uv run scripts/gen_all_images.py [--workers N] [--backend MODEL]
 
 ## Naming Convention
 
-Generated images follow the format: `{page-id}-openai.jpg`
+Generated images follow the format: `{page-id}-img{N}-{backend}.jpg`
 
 Examples:
-- `cu-01-openai.jpg` - Cullan's first page
-- `em-05-openai.jpg` - Emer's fifth page
-- `cu-ha-07-openai.jpg` - Shared page with Cullan and Hansel
+- `cu-01-1-img1-openai.jpg` - Cullan's spread 1, page 1, image 1
+- `cu-01-1-img2-openai.jpg` - Cullan's spread 1, page 1, image 2
+- `em-05-2-img1-openai.jpg` - Emer's spread 5, page 2, image 1
+- `cu-ha-07-1-img1-openai.jpg` - Shared page with Cullan and Hansel
 
 ## Image Specifications
 
@@ -49,10 +63,10 @@ Each image includes:
    - Character reference images (cu-*.jpg, em-*.jpg, etc.) for character appearance
 2. **Visual Style** - Style description from `world.yaml`
 3. **Character Visual Descriptions** - Physical descriptions from character YAML files
-4. **Scene Illustration** - Visual description from the page YAML file
-5. **Story Text** - Embedded as readable typography (avoiding the center fold line)
+4. **Scene Illustration** - Visual description from the specific image's `visual` field
+5. **Story Text** - 2-3 sentences embedded as readable typography
 
-**Important**: Each generated image should be a single frame showing one moment in time. The visual descriptions should NOT include panels, subframes, or multiple scenes. Create one cohesive illustration per page.
+**Important**: Each generated image shows one moment in time (not panels or multiple scenes). Each page contains 2 sequential images that together tell a mini-story within that page.
 
 ## Reference Images
 
@@ -74,8 +88,14 @@ Place your reference images in the `ref-images/` directory following this naming
 ## Examples
 
 ```bash
-# Generate a single page
-uv run scripts/gen_image.py openai pages/cu-01.yaml
+# Generate both images for a page (default behavior)
+uv run scripts/gen_image.py openai pages/cu-01-1.yaml
+
+# Generate only image 1 for a page
+uv run scripts/gen_image.py openai pages/cu-01-1.yaml --image-num 1
+
+# Generate only image 2 for a page
+uv run scripts/gen_image.py openai pages/cu-01-1.yaml --image-num 2
 
 # Generate all pages with default settings (5 workers)
 uv run scripts/gen_all_images.py
@@ -84,7 +104,7 @@ uv run scripts/gen_all_images.py
 uv run scripts/gen_all_images.py --workers 10
 
 # Test mode - show prompt without generating
-uv run scripts/gen_image.py prompt pages/cu-ha-02.yaml
+uv run scripts/gen_image.py prompt pages/cu-ha-02-1.yaml
 ```
 
 ## Output Location

@@ -2,6 +2,12 @@
 """
 Show the full story for a character given their two-letter code.
 
+NEW STRUCTURE (Post-Refactor):
+- Each spread has 2 pages (24 pages total)
+- Each page has 2 images
+- File naming: {char}-{spread}-{page}.yaml
+- Displays node types and metadata
+
 Usage:
     python3 scripts/show_story.py <character-code>
 
@@ -48,7 +54,10 @@ def load_page(page_filename):
 
 
 def show_page(page_filename, char_code, level=3):
-    """Display a single page with the specified heading level."""
+    """Display a single page with the specified heading level.
+
+    Supports both old and new page structures.
+    """
     page_data = load_page(page_filename)
     if not page_data:
         return None
@@ -63,30 +72,85 @@ def show_page(page_filename, char_code, level=3):
     # Determine heading symbols based on level
     page_heading = '#' * level
     content_heading = '#' * (level + 1)
+    image_heading = '#' * (level + 2)
 
     # Display page information
     print(f"{page_heading} Page {page_filename}{joint_note}\n")
+
+    # Node type (new structure)
+    node_type = page_data.get('node_type', None)
+    if node_type:
+        node_emoji = {
+            'solo': '👤',
+            'meeting': '🤝',
+            'mirrored': '🪞',
+            'resonant': '✨'
+        }
+        emoji = node_emoji.get(node_type, '')
+        print(f"**Node Type:** {emoji} {node_type.capitalize()}\n")
 
     # Description
     description = page_data.get('description', 'No description available')
     print(f"{content_heading} Description\n")
     print(f"{description}\n")
 
-    # Visual
-    visual = page_data.get('visual', 'No visual description available')
-    print(f"{content_heading} Visual\n")
-    if isinstance(visual, str):
-        print(f"{visual.strip()}\n")
-    else:
-        print(f"{visual}\n")
+    # Check for new or old structure
+    if 'images' in page_data:
+        # New structure: multiple images
+        images = page_data['images']
+        print(f"{content_heading} Images ({len(images)} total)\n")
 
-    # Text
-    text = page_data.get('text', 'No text available')
-    print(f"{content_heading} Text\n")
-    if isinstance(text, str):
-        print(f"{text.strip()}\n")
+        for i, img_data in enumerate(images, 1):
+            print(f"{image_heading} Image {i}\n")
+
+            # Visual
+            visual = img_data.get('visual', 'No visual description available')
+            print(f"**Visual:**\n")
+            if isinstance(visual, str):
+                print(f"{visual.strip()}\n")
+            else:
+                print(f"{visual}\n")
+
+            # Text
+            text = img_data.get('text', 'No text available')
+            print(f"**Text:**\n")
+            if isinstance(text, str):
+                print(f"{text.strip()}\n")
+            else:
+                print(f"{text}\n")
     else:
-        print(f"{text}\n")
+        # Old structure: single visual/text fields
+        print(f"{content_heading} Visual\n")
+        visual = page_data.get('visual', 'No visual description available')
+        if isinstance(visual, str):
+            print(f"{visual.strip()}\n")
+        else:
+            print(f"{visual}\n")
+
+        print(f"{content_heading} Text\n")
+        text = page_data.get('text', 'No text available')
+        if isinstance(text, str):
+            print(f"{text.strip()}\n")
+        else:
+            print(f"{text}\n")
+
+    # Show node-specific metadata if present
+    if node_type == 'meeting' and 'meeting_data' in page_data:
+        print(f"{content_heading} Meeting Data\n")
+        meeting_data = page_data['meeting_data']
+        print(f"**Location:** {meeting_data.get('location', 'N/A')}\n")
+        print(f"**Shared Action:** {meeting_data.get('shared_action', 'N/A')}\n")
+
+    if node_type == 'mirrored' and 'mirrored_data' in page_data:
+        print(f"{content_heading} Mirrored Data\n")
+        mirrored_data = page_data['mirrored_data']
+        print(f"**Shared Theme:** {mirrored_data.get('shared_theme', 'N/A')}\n")
+        print(f"**Symbolic Motif:** {mirrored_data.get('symbolic_motif', 'N/A')}\n")
+
+    if node_type == 'resonant' and 'resonant_data' in page_data:
+        print(f"{content_heading} Resonant Data\n")
+        resonant_data = page_data['resonant_data']
+        print(f"**Ripple Effect:** {resonant_data.get('ripple_effect', 'N/A')}\n")
 
     return other_chars
 

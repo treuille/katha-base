@@ -10,9 +10,27 @@ Create interconnected children's stories where each character has their own book
 
 - Each character is defined in a YAML file with attributes and storylines
 - Characters can share pages at the same spread number across their books
-- Story structure follows a 12-spread arc (a spread is both pages when you open a book; 12 spreads = 24 pages)
+- **Story structure:**
+  - 12 spreads (a spread is both pages when you open a book)
+  - 2 pages per spread (24 pages total per character)
+  - 2 images per page (48 images total per character)
+  - 2-3 sentences of text per image
+- **Narrative node types:** Solo, Meeting, Mirrored, Resonant (see below)
 - See `templates/story-template.yaml` for the complete story structure
 - All content is stored as YAML files with markdown text and image prompts
+
+### Narrative Node Types
+
+The system supports four types of narrative nodes that define how story moments connect:
+
+- **Solo (👤):** Single character's individual journey moment
+- **Meeting (🤝):** Characters physically converge at the same place and time
+  - Requires: location, shared action, dialogue, cross-book alignment metadata
+- **Mirrored (🪞):** Characters face parallel challenges in different places; themes rhyme
+  - Requires: shared theme, scenario variants, symbolic motif, spread alignment
+- **Resonant (✨):** Emotional/energetic ripple connecting characters across distance
+  - Requires: emotional state packets, ripple effect, symbolic resonance
+  - Must follow a moment of character growth
 
 ## Architecture
 
@@ -26,9 +44,11 @@ pages/cc-pp.yaml (individual scenes, can be shared)
 
 ### Key Concept: Shared Pages
 
-When characters meet, they share the SAME page at the SAME spread number:
-- Maya's book spread 7 → `le-ma-07.yaml`
-- Leo's book spread 7 → `le-ma-07.yaml` (same file!)
+When characters meet or have parallel moments, they share pages at the same spread:
+- Maya's book spread 7, page 1 → `le-ma-07-1.yaml`
+- Leo's book spread 7, page 1 → `le-ma-07-1.yaml` (same file!)
+
+Each spread can contain different node types depending on the story beat (see `templates/story-template.yaml` for which node types are allowed per spread).
 
 ## Getting Started
 
@@ -71,6 +91,8 @@ This validates:
 - Spreads 1, 11, and 12 are character-specific (no overlaps)
 - No stray pages in the pages directory
 - YAML validity
+- Page structure (node types, images array, required fields)
+- Node-specific metadata validation
 
 The script exits with code 0 on success, 1 on failure, with color-coded error messages.
 
@@ -85,11 +107,11 @@ Generate AI illustrations for story pages using the `gen_image.py` script. See [
 - `pages/` - Individual story pages (YAML with markdown content + image prompts)
 - `templates/` - Example files that serve as both templates and schemas
 - `scripts/` - Utility scripts for repository management
-  - `gen_image.py` - Generate illustrations for pages using AI models (usage: `uv run scripts/gen_image.py <backend> <page-path>`)
+  - `gen_image.py` - Generate illustrations for pages using AI models (generates 2 images per page; usage: `uv run scripts/gen_image.py <backend> <page-path> [--image-num 1|2]`)
   - `gen_all_images.py` - Generate illustrations for all pages in parallel (usage: `uv run scripts/gen_all_images.py [--workers N] [--backend MODEL]`)
   - `pull-from-base.sh` - Safely pulls latest changes from katha-base to forked repositories
-  - `show_story.py` - Display a character's complete story with overlap analysis (usage: `python3 scripts/show_story.py <character-code>`)
-  - `validate_structure.py` - Validate repository structure and formatting (usage: `python3 scripts/validate_structure.py`)
+  - `show_story.py` - Display a character's complete story with node types and images (usage: `python3 scripts/show_story.py <character-code>`)
+  - `validate_structure.py` - Validate repository structure, node types, and image arrays (usage: `python3 scripts/validate_structure.py`)
 - `docs/` - Additional documentation
   - `image-generation.md` - Complete guide to generating AI illustrations for storybook pages
 - `ref-images/` - Reference images for style consistency (git-ignored except README)
@@ -100,8 +122,9 @@ Generate AI illustrations for story pages using the `gen_image.py` script. See [
 All lowercase with dashes:
 
 - Characters: `ma-maya.yaml`, `le-leo.yaml`, `cu-cullan.yaml` (two-letter code + name)
-- Solo pages: `ma-01.yaml`, `le-05.yaml`, `cu-01.yaml` (character code + spread number 01-12)
-- Shared pages: `cu-ma-07.yaml`, `le-ma-07.yaml` (character codes alphabetically + spread number)
+- Solo pages: `ma-01-1.yaml`, `le-05-2.yaml`, `cu-01-1.yaml` (character code + spread number 01-12 + page number 1-2)
+- Shared pages: `cu-ma-07-1.yaml`, `le-ma-07-2.yaml` (character codes alphabetically + spread number + page number)
+- Image output: `cu-01-1-img1-openai.jpg`, `cu-01-1-img2-openai.jpg` (page ID + image number + backend)
 
 Templates serve as both examples and schemas:
 - **World**: `templates/world-example.yaml` - World structure

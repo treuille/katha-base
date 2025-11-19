@@ -1,18 +1,32 @@
 # Page Template
 #
+# NEW LAYOUT STRUCTURE (Post-Refactor):
+# - Each spread contains 2 pages (left and right)
+# - Each page contains 2 images
+# - Each image contains 2-3 sentences of text
+# - File naming: {char-code}-{spread}-{page}.yaml (e.g., cu-03-1.yaml for page 1, cu-03-2.yaml for page 2)
+#
 # Eventually, we will create a custom /command that can create
 # a bunch of pages all at once.
 
 # Should be equal to the name of the file
-# This means "Cullan spread 3"
-id: cu-03 # The name of the file
+# This means "Cullan spread 3, page 1"
+id: cu-03-1 # The name of the file
 
 # See `templates/story-template.yaml` for documentation
 # Should match the ID and the filename
 spread: 3
 
+# Page number within the spread (1 or 2)
+# Page 1 = left page, Page 2 = right page when spread is open
+page: 1
+
+# Node type for this page (solo, meeting, mirrored, resonant)
+# See templates/story-template.yaml for allowed node types per spread
+node_type: solo
+
 # This is an ultra-short description of where we are in the story.
-# Initially, copy this from `templates/story-template.yaml` for this thread
+# Initially, copy this from `templates/story-template.yaml` for this spread
 beat: "Attempt #1 (simple/obvious)"
 
 # This is what "hooks them" into the next pages
@@ -26,25 +40,83 @@ payoff: A wise helper appears who offers new perspective or guidance.
 # This is a short (1-2 sentences) which describes what you see on the page.
 description: Cullan tries to climb up the ladder but finds it too slippery.
 
-# This what you see in the story
-# The visual description can be very long and detailed to convey the scene
-# IMPORTANT: Describe a SINGLE INSTANT IN TIME - not a sequence of actions
-# - Describe WHAT is happening at this exact moment (the action, poses, expressions)
-# - Describe WHERE things are (positions, spatial relationships, background details)
-# - Include specific visual details about the world, objects, and environment
-# - Do NOT include stylistic suggestions (those come from world.yaml)
-# - Do NOT describe multiple moments or a sequence of events
-visual: |
-  Cullan is mid-slip, falling backwards off a wooden ladder. His body is angled
-  diagonally, arms spread wide, eyes wide with surprise, mouth open. The ladder
-  is propped against a massive oak tree, its rungs slick with moisture. Below
-  him on the mossy ground lie scattered tools: a coil of rope, a small hammer,
-  and a leather pouch. The forest surrounds them - tall trees with thick trunks,
-  dense undergrowth of ferns, and a small stream visible in the mid-ground. Morning
-  light filters through the canopy creating dappled shadows on the forest floor.
-  Mushrooms grow at the base of nearby trees.
+# Images on this page
+# Each page contains 2 images, arranged top-to-bottom or left-to-right
+# Each image has its own visual description and text (2-3 sentences)
+images:
+  # Image 1 (top or left)
+  - image_number: 1
+    # The visual description can be very long and detailed to convey the scene
+    # IMPORTANT: Describe a SINGLE INSTANT IN TIME - not a sequence of actions
+    # - Describe WHAT is happening at this exact moment (the action, poses, expressions)
+    # - Describe WHERE things are (positions, spatial relationships, background details)
+    # - Include specific visual details about the world, objects, and environment
+    # - Do NOT include stylistic suggestions (those come from world.yaml)
+    # - Do NOT describe multiple moments or a sequence of events
+    visual: |
+      Cullan stands at the base of a massive oak tree, looking up at a wooden ladder
+      propped against its trunk. His hands rest on the ladder's sides, testing its
+      stability. The ladder's rungs glisten with moisture from morning dew. Around
+      him on the mossy ground lie scattered tools: a coil of rope, a small hammer,
+      and a leather pouch. The forest surrounds them - tall trees with thick trunks,
+      dense undergrowth of ferns. Morning light filters through the canopy creating
+      dappled shadows on the forest floor. Mushrooms grow at the base of nearby trees.
 
-# This what the text says on the page
-# IMPORTANT: Keep text to 2 sentences maximum. Be concise.
-text: |
-  Cullan stepped onto the ladder, but found that it was too slippery to climb.
+    # Text for this image
+    # IMPORTANT: Keep text to 2-3 sentences. Be concise but complete.
+    text: |
+      Cullan had a plan: climb the old oak tree and reach the bird's nest at the top.
+      He gripped the ladder with both hands, ready to start his ascent.
+
+  # Image 2 (bottom or right)
+  - image_number: 2
+    visual: |
+      Cullan is mid-slip, falling backwards off the wooden ladder. His body is angled
+      diagonally, arms spread wide, eyes wide with surprise, mouth open in shock. The
+      ladder tilts dangerously against the oak tree, its rungs clearly too slick to
+      grip. His feet have lost contact with the rungs completely. The tools on the
+      ground below are visible in the background. The forest setting remains the same,
+      but the perspective captures the moment of failure - the instant when his confident
+      plan goes wrong.
+
+    text: |
+      The first rung was slippery with dew, and Cullan's foot slid off.
+      Before he could catch himself, he was falling backwards toward the ground.
+
+# Optional: Node-specific metadata (only include if node_type is not "solo")
+# For meeting nodes:
+# meeting_data:
+#   location: "Description of meeting place"
+#   time_context: "When the meeting occurs"
+#   shared_action: "What characters do together"
+#   dialogue_packets:
+#     - character: cu
+#       line: "Character dialogue"
+#   cross_book_alignment:
+#     scene_id: "unique_scene_identifier"
+#     pov_variants:
+#       - character: cu
+#         focus: "What this character's POV emphasizes"
+#
+# For mirrored nodes:
+# mirrored_data:
+#   shared_theme: "Thematic connection"
+#   scenario_variants:
+#     - character: cu
+#       scenario: "This character's parallel scenario"
+#       location: "Where this happens for this character"
+#   symbolic_motif: "Shared visual symbol"
+#   spread_alignment: spread_3
+#
+# For resonant nodes:
+# resonant_data:
+#   emotional_state_packets:
+#     - character: cu
+#       state: "Emotional state"
+#       trigger: "What triggers this state"
+#   ripple_effect: "How emotions connect across distance"
+#   symbolic_resonance:
+#     phenomenon: "Environmental phenomenon"
+#     description: "How it appears"
+#   placement_rule: "Context note"
+#   temporal_sync: "Time relationship"
