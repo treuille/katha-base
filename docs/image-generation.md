@@ -28,8 +28,6 @@ Examples:
 ## Image Specifications
 
 - **Model**: OpenAI gpt-image-1
-- **Aspect Ratio**: 3:2 (landscape)
-- **Resolution**: 1536x1024 pixels
 - **Format**: JPEG (.jpg)
 
 ## Available Backends

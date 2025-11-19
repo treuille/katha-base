@@ -12,7 +12,7 @@
 #   python3 scripts/validate_structure.py
 # ---
 #
-# Id is a two character code for the character
+# Id is a two-letter code for the character
 id: cu
 
 # What do we know about Cullan as a character
