@@ -68,6 +68,12 @@ world
    - The text should work from both perspectives
    - **Text constraint**: Keep the `text` field to 2 sentences maximum
    - **Visual**: The `visual` field can be very long and detailed to convey the scene visually
+     - **IMPORTANT**: Describe a SINGLE INSTANT IN TIME - not a sequence of actions
+     - Describe WHAT is happening at this exact moment (action, poses, expressions)
+     - Describe WHERE things are (positions, spatial relationships, background details)
+     - Include specific visual details about the world, objects, and environment
+     - Do NOT include stylistic suggestions (those come from world.yaml)
+     - Do NOT describe multiple moments, sequences, or panels
 7. Insert the page reference into both character files' `story:` lists at the correct position (in order)
    - **Format**: Use filename only with `.yaml` extension (e.g., `- cu-ma-07.yaml`)
    - **Do NOT** include the `pages/` folder prefix (e.g., NOT `- pages/cu-ma-07.yaml`)
@@ -108,6 +114,12 @@ world
      - Create a simple, bland `description` (1-2 sentences) for what happens on this page
      - Create a `visual` description based on the world defined in `world.yaml`
        - **Visual can be very long and detailed** to convey the scene richly
+       - **IMPORTANT**: Describe a SINGLE INSTANT IN TIME - not a sequence of actions
+       - Describe WHAT is happening at this exact moment (action, poses, expressions)
+       - Describe WHERE things are (positions, spatial relationships, background details)
+       - Include specific visual details about the world, objects, and environment
+       - Do NOT include stylistic suggestions (those come from world.yaml)
+       - Do NOT describe multiple moments, sequences, or panels
      - Create a `text` field with the actual page text
        - **Text must be 2 sentences maximum** - keep it super short and concise
      - Make sure the page flows naturally with the joint pages and overall story arc
