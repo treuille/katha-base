@@ -86,6 +86,7 @@ Generate AI illustrations for story pages using the `gen_image.py` script. See [
 - `templates/` - Example files that serve as both templates and schemas
 - `scripts/` - Utility scripts for repository management
   - `gen_image.py` - Generate illustrations for pages using AI models (usage: `uv run scripts/gen_image.py <backend> <page-path>`)
+  - `gen_all_images.py` - Generate illustrations for all pages in parallel (usage: `uv run scripts/gen_all_images.py [--workers N] [--backend MODEL]`)
   - `pull-from-base.sh` - Safely pulls latest changes from katha-base to forked repositories
   - `show_story.py` - Display a character's complete story with overlap analysis (usage: `python3 scripts/show_story.py <character-code>`)
   - `validate_structure.py` - Validate repository structure and formatting (usage: `python3 scripts/validate_structure.py`)

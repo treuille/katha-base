@@ -4,65 +4,86 @@ Generate AI illustrations for storybook pages using the `gen_image.py` script.
 
 ## Usage
 
+### Generate a Single Page
+
 ```bash
 uv run scripts/gen_image.py <model-backend> <page-path>
 ```
 
+### Generate All Pages in Parallel
+
+```bash
+uv run scripts/gen_all_images.py [--workers N] [--backend MODEL]
+```
+
 ## Naming Convention
 
-Generated images follow the format: `{page-id}-{backend}.jpg`
+Generated images follow the format: `{page-id}-openai.jpg`
 
 Examples:
-- `cu-01-openai.jpg` - Cullan's first page generated with OpenAI DALL-E 3
-- `em-05-replicate.jpg` - Emer's fifth page generated with Replicate SDXL
-- `ha-12-ideogram.jpg` - Hansel's twelfth page generated with Ideogram v3
+- `cu-01-openai.jpg` - Cullan's first page
+- `em-05-openai.jpg` - Emer's fifth page
+- `cu-ha-07-openai.jpg` - Shared page with Cullan and Hansel
 
 ## Image Specifications
 
-- **Aspect Ratio**: Wide format (2:1 or 3:1 depending on backend)
+- **Model**: OpenAI gpt-image-1
+- **Aspect Ratio**: 3:2 (landscape)
+- **Resolution**: 1536x1024 pixels
 - **Format**: JPEG (.jpg)
-- **Resolution**: Varies by backend
-  - OpenAI: 1792x1024 (2:1 ratio)
-  - Replicate: 1536x768 (2:1 ratio)
-  - Ideogram: 3:1 ratio (backend-dependent resolution)
 
 ## Available Backends
 
-- **openai** - OpenAI DALL-E 3
-- **replicate** - Replicate IPAdapter Style SDXL
-  - **Requires** `out-images/cu-01-openai.jpg` as a style reference
-  - Applies the visual style from that reference image to all generations
-  - Generate the reference image with OpenAI first before using Replicate
-- **ideogram** - Ideogram v3
+- **openai** - OpenAI gpt-image-1 (recommended)
+  - Uses reference images from `ref-images/` directory (up to 10 images)
+  - Automatically includes character visual descriptions
+  - Embeds story text as typography in the image
+  - Falls back to standard generation if no reference images found
 - **prompt** - Test mode (displays prompt without generating)
+
+**Note**: The `replicate` and `ideogram` backends are deprecated and no longer functional.
 
 ## What Gets Generated
 
 Each image includes:
-1. **World Visual Style** - Consistent aesthetic from `world.yaml`
-2. **Scene Illustration** - Visual description from the page YAML file
+1. **Reference Images** - Visual style from `ref-images/` directory
+   - World reference images (world-*.jpg) for overall aesthetic
+   - Character reference images (cu-*.jpg, em-*.jpg, etc.) for character appearance
+2. **World Visual Style** - Style description from `world.yaml`
+3. **Character Visual Descriptions** - Physical descriptions from character YAML files
+4. **Scene Illustration** - Visual description from the page YAML file
+5. **Story Text** - Embedded as readable typography (avoiding the center fold line)
 
 **Important**: Each generated image should be a single frame showing one moment in time. The visual descriptions should NOT include panels, subframes, or multiple scenes. Create one cohesive illustration per page.
+
+## Reference Images
+
+The script automatically includes reference images based on the page being generated:
+
+- **World images**: All files matching `ref-images/world-*.jpg` are always included
+- **Character images**: Files matching `ref-images/{character-code}-*.jpg` are included when that character appears
+  - Example: For page `cu-ha-07.yaml`, includes `cu-*.jpg` and `ha-*.jpg`
+
+Place your reference images in the `ref-images/` directory following this naming convention.
 
 ## Setup
 
 1. Copy `.env.example` to `.env`
-2. Add your API keys:
+2. Add your API key:
    - `OPENAI_API_KEY` - For OpenAI backend
-   - `REPLICATE_API_TOKEN` - For Replicate backend
-   - `IDEOGRAM_API_KEY` and `IDEOGRAM_API_URL` - For Ideogram backend
+3. Add reference images to `ref-images/` directory (optional but recommended)
 
 ## Examples
 
 ```bash
-# Generate with OpenAI DALL-E 3
+# Generate a single page
 uv run scripts/gen_image.py openai pages/cu-01.yaml
 
-# Generate with Replicate (requires reference image)
-uv run scripts/gen_image.py replicate pages/em-05.yaml
+# Generate all pages with default settings (5 workers)
+uv run scripts/gen_all_images.py
 
-# Generate with Ideogram
-uv run scripts/gen_image.py ideogram pages/ha-12.yaml
+# Generate all pages with 10 concurrent workers
+uv run scripts/gen_all_images.py --workers 10
 
 # Test mode - show prompt without generating
 uv run scripts/gen_image.py prompt pages/cu-ha-02.yaml
