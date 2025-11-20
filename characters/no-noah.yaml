@@ -52,9 +52,9 @@ story:
   - no-02-1.yaml
   - no-02-2.yaml
 
-  # Spread 3 (pages 9-10)
-  - no-03-1.yaml
-  - no-03-2.yaml
+  # Spread 3 (pages 9-10) - Meeting Node with Ellie
+  - el-no-03-1.yaml
+  - el-no-03-2.yaml
 
   # Spread 4 (pages 11-12)
   - no-04-1.yaml
@@ -64,17 +64,17 @@ story:
   - no-05-1.yaml
   - no-05-2.yaml
 
-  # Spread 6 (pages 15-16)
-  - no-06-1.yaml
-  - no-06-2.yaml
+  # Spread 6 (pages 15-16) - Mirrored Node with Ellie
+  - el-no-06-1.yaml
+  - el-no-06-2.yaml
 
   # Spread 7 (pages 17-18)
   - no-07-1.yaml
   - no-07-2.yaml
 
-  # Spread 8 (pages 19-20)
-  - no-08-1.yaml
-  - no-08-2.yaml
+  # Spread 8 (pages 19-20) - Resonant Node with Ellie
+  - el-no-08-1.yaml
+  - el-no-08-2.yaml
 
   # Spread 9 (pages 21-22)
   - no-09-1.yaml
