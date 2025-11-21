@@ -1,0 +1,44 @@
+# Shared page: Elise and Noah - Spread 9
+# Third Synchrony Node: Witnessing courage
+
+# Should match the filename
+id: el-no-09
+
+# See `templates/story-template.yaml` for documentation
+spread: 9
+
+# Story beat from template
+beat: "Deepening choice / inner shift"
+
+# Hook from template
+hook: A previously overlooked detail suddenly connects to something from earlier.
+
+# Payoff from template
+payoff: Returning to prior element with new understanding makes solution clear.
+
+# Short description of the scene
+description: Noah and Elise witness each other making a brave choice at a moment of truth, each gaining courage from the other's decision.
+
+# Visual description - a single instant in time
+visual: |
+  A circular clearing in Kathaél where the Heart-Loom manifests most strongly—a
+  space where dozens of golden threads spiral upward from the ground like a gentle
+  tornado of light, weaving together above to form a radiant canopy. Noah (12,
+  sandy blond hair, medium build) stands on the left side of the clearing, his
+  right foot lifted mid-step toward the threads, his arms slightly extended forward,
+  his face showing a mixture of determination and wonder. His eyes are open wide,
+  catching the golden glow. Elise (9, slim, graceful, gentle presence) mirrors him
+  on the right side, also stepping forward, her hands reaching out palms-up as if
+  to receive something precious, her expression soft but resolute. They are moving
+  toward the center simultaneously but from different angles—each on their own path,
+  but their movements are synchronized. The golden threads respond to their movement,
+  brightening and swirling more vibrantly. Around the clearing's perimeter, small
+  forest creatures have gathered to watch: rabbits, foxes with luminous eyes, birds
+  perched in low branches. The ground beneath the threads is covered in soft grass
+  that glows faintly. The lighting is warm and hopeful, like dawn breaking. Between
+  Noah and Elise, though they are focused on their own paths, there is a sense of
+  shared presence—an invisible thread connecting their courage.
+
+# Page text - maximum 2 sentences
+text: |
+  As Noah stepped forward, he glimpsed Elise doing the same. Each drew strength from knowing another heart had chosen bravely.

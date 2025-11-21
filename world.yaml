@@ -42,4 +42,11 @@ characters:
 
 # Character interactions and Synchrony Nodes
 # Maps which characters meet at which spread numbers
-interactions: []
+interactions:
+  - characters: [el, no]
+    spreads: [4, 7, 9]
+    description: |
+      Three Synchrony Nodes where Noah and Elise's paths cross:
+      - Spread 4: Seeking guidance at a luminous crossroads
+      - Spread 7: Struggling together at the edge of possibility
+      - Spread 9: Witnessing each other's brave choices

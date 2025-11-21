@@ -1,0 +1,41 @@
+# Shared page: Elise and Noah - Spread 4
+# First Synchrony Node: Seeking guidance
+
+# Should match the filename
+id: el-no-04
+
+# See `templates/story-template.yaml` for documentation
+spread: 4
+
+# Story beat from template
+beat: "Attempt #2 (ask the expert)"
+
+# Hook from template
+hook: Guidance points toward unfamiliar territory with a warning about danger or difficulty.
+
+# Payoff from template
+payoff: Journey into new territory begins with dramatic departure from familiar world.
+
+# Short description of the scene
+description: Noah and Elise cross paths at a luminous crossroads where the Heart-Loom's threads converge, each seeking direction.
+
+# Visual description - a single instant in time
+visual: |
+  A crossroads in Kathaél where multiple forest paths meet beneath an ancient willow
+  tree whose branches glow softly with golden threads from the Heart-Loom. Noah (12
+  years old, sandy blond hair, medium build) stands on the left path, one hand extended
+  toward a shimmering thread that hovers in the air at eye level, his expression
+  focused and curious. Elise (9 years old, slim, graceful) stands on the right path,
+  her head tilted as she observes a different glowing thread, her hand raised gently
+  as if about to touch it. Between them, the threads weave and intersect in midair,
+  creating a soft lattice of golden light. Both children are shown in profile, not
+  quite looking at each other but aware of each other's presence. The ground is soft
+  moss with small luminescent mushrooms dotting the edges of each path. Morning mist
+  rolls through the background forest. The willow's drooping branches frame the scene
+  like a natural archway, their leaves catching the golden glow. Small particles of
+  light drift through the air like fireflies. The atmosphere is hushed, reverent,
+  and filled with gentle magic.
+
+# Page text - maximum 2 sentences
+text: |
+  At the crossroads, Noah and Elise each reached for a glowing thread. Without speaking, they felt the same pull forward—toward something just beyond what they could see.

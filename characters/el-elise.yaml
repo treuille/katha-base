@@ -79,4 +79,16 @@ attributes:
 # But more will get added as we follow the story creation steps
 # (see Readme.md).
 # NOTE: Pages should be shown without path `el-01.yaml` rather than `pages/el-01.yaml`
-story: []
+story:
+  - el-01.yaml
+  - el-02.yaml
+  - el-03.yaml
+  - el-no-04.yaml
+  - el-05.yaml
+  - el-06.yaml
+  - el-no-07.yaml
+  - el-08.yaml
+  - el-no-09.yaml
+  - el-10.yaml
+  - el-11.yaml
+  - el-12.yaml

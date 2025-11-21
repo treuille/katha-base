@@ -1,0 +1,42 @@
+# Shared page: Elise and Noah - Spread 7
+# Second Synchrony Node: Struggling together
+
+# Should match the filename
+id: el-no-07
+
+# See `templates/story-template.yaml` for documentation
+spread: 7
+
+# Story beat from template
+beat: "Rising stakes: almost works"
+
+# Hook from template
+hook: Success is close but incomplete, with a detail revealing what's still needed.
+
+# Payoff from template
+payoff: What's missing is revealed to be distant or difficult to reach.
+
+# Short description of the scene
+description: Noah and Elise meet again while both struggle at the edge of a vast chasm, each nearly giving up until they see the other persisting.
+
+# Visual description - a single instant in time
+visual: |
+  The edge of a misty ravine where a broken bridge of starlight stretches partway
+  across before fading into nothing. Noah (12, sandy blond hair) kneels on the left
+  side of the glowing bridge, both hands pressed against the translucent surface,
+  looking down at where it ends abruptly in midair. His brow is furrowed with
+  frustration and exhaustion. On the right side of the same bridge segment, Elise
+  (9, slim, graceful) sits with her legs dangling over the edge, head bowed, arms
+  wrapped around herself. Between them on the bridge surface, faint golden threads
+  from the Heart-Loom pulse weakly, as if struggling to maintain form. The ravine
+  below them is deep and filled with swirling blue-grey mist. On the far side—
+  distant and hazy—the continuation of their respective paths glows faintly,
+  tantalizingly out of reach. The sky above is twilight, caught between day and
+  night. Small moths with luminescent wings circle around them. The overall mood
+  is weary but not hopeless—both children are tired, but still present, still
+  trying. They are positioned so each can see the other's determination in
+  peripheral vision.
+
+# Page text - maximum 2 sentences
+text: |
+  Noah looked up and saw Elise still there, still trying. In that moment, neither felt quite so alone.
