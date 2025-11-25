@@ -1,0 +1,17 @@
+id: henry
+display_name: Henry
+role: main_character
+
+summary: Loves to bake, loves friends, and loves flying airplanes; enjoys tools like his PC and camera.
+favorite_toys:
+  - Baking tools
+  - PC (full computer)
+  - Camera
+  - Toy airplanes
+
+first_whack_room: library
+second_whack_room: kitchen
+pair_partner: emer
+
+primary_superpower: Warm-hearted maker and chef-engineer who follows checklists and bakes for friends.
+notes: Second-whack hero of the Kitchen haunting and the one who finally captures the spirit in the living room.

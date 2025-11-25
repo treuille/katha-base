@@ -1,0 +1,14 @@
+id: emer
+display_name: Emer
+role: main_character
+
+summary: Joyful, imaginative kid who loves colorful, character-driven play and emotional storytelling.
+favorite_toys:
+  - My Little Pony dolls
+
+first_whack_room: kitchen
+second_whack_room: library
+pair_partner: henry
+
+primary_superpower: Story-weaver who finishes scrambled tales and brings characters to the right homes.
+notes: Second-whack hero of the Library haunting.

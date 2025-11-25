@@ -1,0 +1,15 @@
+id: james
+display_name: James
+role: main_character
+
+summary: Loves art and projects and naturally takes the lead, like giving house tours.
+favorite_toys:
+  - Nintendo Switch
+  - Jellycat plushies
+
+first_whack_room: sun_room
+second_whack_room: stairs
+pair_partner: hansel
+
+primary_superpower: Path-maker and leader who designs clear rituals and routes.
+notes: Second-whack hero of the Stairs haunting.
