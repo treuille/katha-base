@@ -12,6 +12,7 @@ katha-base/
 │
 └── content/          # Story-specific content
     ├── characters/   # Character definitions (6 YAML files)
+    ├── locations/    # Location and room definitions (8 YAML files)
     ├── story/        # Story structure
     │   └── template.yaml  # 23-page narrative template
     ├── ref-images/   # Reference images for visual style
@@ -26,7 +27,8 @@ Contains the abstract framework - scripts, templates, and tools that define how 
 
 Contains the particular content for your specific story:
 
-- **characters/** - Definitions for all six main characters (Arthur, James, Cullan, Hansel, Emer, Henry), each with their unique traits, favorite toys, room assignments, and superpowers
+- **characters/** - Definitions for all six main characters, each with their unique traits, favorite toys, room assignments, and superpowers
+- **locations/** - Definitions for all locations and rooms, each with haunting themes, descriptions, and first/second whack assignments
 - **story/template.yaml** - The shared 23-page narrative template that all six character books follow. Each character experiences the same story beats but with personalized content based on their unique characteristics
 - **ref-images/** - Visual reference images for style and character appearances
 - **out-images/** - Generated illustrations (not committed to repository)

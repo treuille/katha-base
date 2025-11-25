@@ -39,7 +39,7 @@ pages:
     location_mode: by_role
     room_role: first_whack
     story_beat: The main character steps into their first-whack room and senses that something in here is definitely wrong.
-    notes: Room depends on character's first_whack_room.
+    notes: Room depends on character's first whack room (whack_rooms[0]).
 
   - id: p6
     index: 6

@@ -16,6 +16,7 @@ Think of this as the "engine" - it's story-agnostic and reusable.
 ### content/
 The **content** directory contains story-specific material:
 - `characters/` - Character definitions (one YAML file per character)
+- `locations/` - Location and room definitions with haunting themes and whack assignments
 - `story/template.yaml` - The 23-page story template shared across all 6 character books
 - `ref-images/` - Reference images that define the visual style and character appearances
 - `out-images/` - Generated illustrations (git-ignored, user-generated)
