@@ -1,0 +1,12 @@
+id: dining_room
+display_name: Dining Room
+kind: room
+
+haunting_theme: Scrambled feast with mismatched seats, plates, and social tension.
+description_short: Formal dining room where chairs, plates, and moods all slide to the wrong places.
+
+first_whack_kid: cullan
+second_whack_kid: arthur
+
+first_whack_summary: Cullan calms the obvious chaos at the table but leaves the deeper mismatched seating pattern unresolved.
+second_whack_summary: Arthur notices the hidden pattern and rearranges seats and settings into a perfect permutation that restores harmony.

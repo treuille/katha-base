@@ -1,0 +1,12 @@
+id: stairs
+display_name: Stairs
+kind: room
+
+haunting_theme: Steps seem to loop or lead to the wrong doors, and stockings hang in the wrong order.
+description_short: Central staircase where paths repeat and stockings swap names, confusing where anyone is going.
+
+first_whack_kid: hansel
+second_whack_kid: james
+
+first_whack_summary: Hänsel, using his intense pointing, helps restore the stockings to the right spots, but the staircase still feels directionally off.
+second_whack_summary: James creates a clear, creative 'stairs ritual' that turns the staircase into a guided path toward where people truly want to go.
