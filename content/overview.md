@@ -3,7 +3,15 @@
 This document explains **what this project is** at a conceptual level:
 the world, the narrative logic, and how the branching six-book structure hangs together.
 
-It is meant as an orientation guide for a coding agent so it can reason about “what’s going on here” without needing to know any specific prose or page text.
+It is meant as an orientation guide for a coding agent so it can reason about "what's going on here" without needing to know any specific prose or page text.
+
+### File Structure
+
+The project data is organized as:
+
+- `content/characters/` - Character definitions (6 YAML files)
+- `content/locations/` - Location and room definitions (8 YAML files)
+- `content/story/template.yaml` - The shared 23-page narrative template
 
 ---
 
@@ -96,9 +104,9 @@ This creates a **branching-but-synchronized** structure:
 
 A coding agent should think of it like a **shared timeline with character-specific overlays**:
 
-- The YAML for **pages** defines the shared timeline and the “role” of each slot (joint/pair/individual, symbolic room roles).
-- The YAML for **characters** defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
-- The YAML for **rooms** defines how each room behaves and what it means to partially vs. fully fix it.
+- The YAML for **pages** (`content/story/template.yaml`) defines the shared timeline and the "role" of each slot (joint/pair/individual, symbolic room roles).
+- The YAML for **characters** (`content/characters/*.yaml`) defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
+- The YAML for **locations** (`content/locations/*.yaml`) defines how each location behaves and what it means to partially vs. fully fix it.
 
 ---
 
@@ -169,22 +177,22 @@ At the highest altitude, each book goes through these phases:
 
 ## 7. How the Data Is Intended to Be Used
 
-A coding agent should treat the data files (characters, pages, rooms) as **three complementary views** of the same system:
+A coding agent should treat the data files (characters, pages, locations) as **three complementary views** of the same system:
 
-- **Characters** describe:
+- **Characters** (`content/characters/*.yaml`) describe:
   - Who the six kids are.
-  - Which symbolic roles they play (e.g., which room they “own” as their second whack).
+  - Which symbolic roles they play (e.g., which room they "own" as their second whack).
   - Who their swap partner is during the pair section.
 
-- **Rooms** describe:
-  - How the trickster spirit’s influence manifests in each place.
+- **Locations** (`content/locations/*.yaml`) describe:
+  - How the trickster spirit's influence manifests in each place.
   - What it means for that room to be partially vs. fully resolved.
-  - Which child is ultimately the “hero” of that room.
+  - Which child is ultimately the "hero" of that room.
 
-- **Pages** describe:
+- **Pages** (`content/story/template.yaml`) describe:
   - The global linear order of story beats.
-  - For each slot: whether it’s joint, pair, or individual.
-  - Symbolic references to “first whack room”, “second whack room”, and “pair partner”.
+  - For each slot: whether it's joint, pair, or individual.
+  - Symbolic references to "first whack room", "second whack room", and "pair partner".
 
 To build any of the six books, an agent can:
 
@@ -211,9 +219,9 @@ Some ways this architecture can be extended:
   - Assigning them a first/second room combination and a partner.
   - Reusing the same page skeleton.
 
-- **Add more rooms or “facets”** by:
-  - Defining new room files with new mismatch themes.
-  - Inserting additional “first-whack / crossover / second-whack” clusters into the page sequence.
+- **Add more rooms or "facets"** by:
+  - Defining new location files with new mismatch themes.
+  - Inserting additional "first-whack / crossover / second-whack" clusters into the page sequence.
 
 - **Alter the difficulty** by:
   - Changing what “partial success” looks like in each room.
