@@ -1,0 +1,198 @@
+pages:
+  - id: p1
+    index: 1
+    section: Ordinary World
+    page_type: joint          # everyone page
+    location_mode: fixed
+    location: exterior
+    story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house glowing in the distance.
+
+  - id: p2
+    index: 2
+    section: Ordinary World
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: All the kids play happily with their favorite toys around the Christmas tree in a warm, bustling living room.
+
+  - id: p3
+    index: 3
+    section: Ordinary World
+    page_type: individual
+    location_mode: fixed
+    location: living_room
+    story_beat: The main character plays with their favorite toy, glances at the tree, and feels a subtle sense that something about it is wrong.
+    notes: Content customized per main character but always near the tree.
+
+  - id: p4
+    index: 4
+    section: Ordinary World
+    page_type: individual
+    location_mode: fixed
+    location: hallway_from_living_room
+    story_beat: Uneasily, the main character follows a strange feeling or sound away from the tree and toward another part of the house.
+
+  - id: p5
+    index: 5
+    section: First Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: first_whack
+    story_beat: The main character steps into their first-whack room and senses that something in here is definitely wrong.
+    notes: Room depends on character's first_whack_room.
+
+  - id: p6
+    index: 6
+    section: First Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: first_whack
+    story_beat: The haunting escalates and the main character tries a simple, obvious solution based on what seems to make sense at first.
+    notes: Partial solution attempt.
+
+  - id: p7
+    index: 7
+    section: First Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: first_whack
+    story_beat: The room calms down a bit and the haunting is visibly weakened, but something still feels off as the main character leaves.
+    notes: First whack: partial success only.
+
+  - id: p8
+    index: 8
+    section: Crossover / Pair
+    page_type: pair
+    location_mode: fixed
+    location: hallway
+    story_beat: The main character bumps into their room-swap partner in the hall, and they compare the strange things that just happened in their rooms.
+    pair_groups:
+      - [arthur, cullan]
+      - [james, hansel]
+      - [emer, henry]
+
+  - id: p9
+    index: 9
+    section: Crossover / Pair
+    page_type: pair
+    location_mode: fixed
+    location: hallway_near_living_room
+    story_beat: They realize each other's strengths fit the other room better, decide the house is haunted, and agree to swap which room they will tackle next.
+    pair_groups:
+      - [arthur, cullan]
+      - [james, hansel]
+      - [emer, henry]
+
+  - id: p10
+    index: 10
+    section: Second Whack
+    page_type: individual
+    location_mode: fixed
+    location: hallway
+    story_beat: The main character walks with new resolve toward their second-whack room, determined to use what they are truly best at this time.
+
+  - id: p11
+    index: 11
+    section: Second Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: second_whack
+    story_beat: In the new room, the haunting is still present but subtler, and the main character notices a deeper pattern that matches their strongest passion.
+
+  - id: p12
+    index: 12
+    section: Second Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: second_whack
+    story_beat: The main character experiments with a solution based on that passion, and the room begins to respond and improve.
+
+  - id: p13
+    index: 13
+    section: Second Whack
+    page_type: individual
+    location_mode: by_role
+    room_role: second_whack
+    story_beat: Committed fully to their strength, the main character completes the second whack, the haunting in this room dissolves, and the space feels truly right.
+    notes: Second whack: this character is the 'room hero'.
+
+  - id: p14
+    index: 14
+    section: Realizing the Bigger Problem
+    page_type: joint
+    location_mode: fixed
+    location: hallways
+    story_beat: As each kid finishes their room, they drift into the hallways and sense that a larger wrongness is still pulsing through the house.
+
+  - id: p15
+    index: 15
+    section: Realizing the Bigger Problem
+    page_type: joint
+    location_mode: fixed
+    location: hallway_near_living_room
+    story_beat: Nervous but determined, the group talks, masters their fears, and decides they must face whatever is in the living room together.
+
+  - id: p16
+    index: 16
+    section: Realizing the Bigger Problem
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: All the kids gather under the tree, sharing quick snapshots of what happened in their rooms, and realize everything traces back to the tree.
+
+  - id: p17
+    index: 17
+    section: Realizing the Bigger Problem
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: Henry points at the odd ornament, and Regan identifies it as a Tibetan trickster spirit, explaining it must be split into protector and mischievous sides.
+
+  - id: p18
+    index: 18
+    section: Climax
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: The ornament flares and the trickster spirit erupts, growing huge and frightening before the kids decide to fight using their newfound strengths.
+
+  - id: p19
+    index: 19
+    section: Climax
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: In a big action spread, each child uses their room-discovered superpower to weaken, rearrange, and contain the spirit, separating its protective side.
+
+  - id: p20
+    index: 20
+    section: Climax
+    page_type: joint
+    location_mode: fixed
+    location: living_room
+    story_beat: With help from everyone else, Henry completes the final move and traps the mischievous part of the spirit in a special box as a soft glow settles over the tree.
+
+  - id: p21
+    index: 21
+    section: Carrying It Out
+    page_type: joint
+    location_mode: fixed
+    location: driveway
+    story_beat: Outside, Henry flies a small airplane pulling a red sled with the spirit box and the kids piled in, while James directs like a tiny air traffic controller.
+
+  - id: p22
+    index: 22
+    section: Carrying It Out
+    page_type: joint
+    location_mode: fixed
+    location: yard
+    story_beat: They carefully place or hang the box in a chosen outdoor spot where the trickster energy can live safely, and a kind emanation flows back toward the house.
+
+  - id: p23
+    index: 23
+    section: Resolution
+    page_type: joint
+    location_mode: mixed
+    location: house_interior_and_exterior
+    story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other, and the final image shows the peaceful house from outside.
+    notes: Visually can be a combination of interior reflection panel(s) and a closing exterior shot.

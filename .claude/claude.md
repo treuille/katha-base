@@ -15,11 +15,14 @@ Think of this as the "engine" - it's story-agnostic and reusable.
 
 ### content/
 The **content** directory contains story-specific material:
+- `characters/` - Character definitions (one YAML file per character)
+- `story/template.yaml` - The 23-page story template shared across all 6 character books
 - `ref-images/` - Reference images that define the visual style and character appearances
 - `out-images/` - Generated illustrations (git-ignored, user-generated)
-- Future: `world.yaml`, `characters/`, `pages/` for story definitions
 
 This is where the particular story lives - the actual content being illustrated.
+
+**Story Structure**: All six main characters (Arthur, James, Cullan, Hansel, Emer, Henry) share the same 23-page narrative template. Each character experiences the same story beats but with personalized content based on their unique traits, rooms, and superpowers. The template defines page types (individual, pair, or joint), locations, and story beats for the hero's journey.
 
 ## Key Concepts
 
