@@ -4,10 +4,12 @@ description: Check all documentation and templates for inconsistencies and error
 
 Systematically check all template files, example files, README, and scripts for inconsistencies, spelling mistakes, and other errors.
 
+**IMPORTANT**: Skip and ignore all deprecated folders and any files within them. Do not check or report on deprecated content.
+
 Please perform the following checks:
 
 ## 1. File Inventory
-List all files in these directories:
+List all files in these directories (excluding any deprecated folders):
 - `templates/` - All template and example YAML files
 - `README.md` - Main documentation
 - `scripts/` - Utility scripts
