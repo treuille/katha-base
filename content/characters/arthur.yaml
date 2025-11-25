@@ -1,16 +1,27 @@
 id: arthur
-display_name: Arthur
-role: main_character
+name: Arthur
+age: 13
+gender: male
+pronouns:
+  - he
+  - him
 
-summary: Loves Rubik's cubes, Minecraft, and word games; very smart and not very materialistic.
+summary:
+  - loves Rubik's cubes, Minecraft, and word games
+  - very smart and not very materialistic
+  - best friends with Cullan
+
 favorite_toys:
   - Rubik's cubes
   - Scrabble
   - Minecraft
 
-first_whack_room: playroom
-second_whack_room: dining_room
+whack_rooms:
+  - playroom
+  - dining_room
+
 pair_partner: cullan
 
-primary_superpower: Pattern-matcher who restores social and spatial harmony.
-notes: Second-whack hero of the Dining Room haunting.
+superpower: Pattern-matcher who restores social and spatial harmony.
+
+visual: Arthur is a skinny friendly boy with messy curly brown hair.

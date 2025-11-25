@@ -1,15 +1,28 @@
 id: james
-display_name: James
-role: main_character
+name: James
+age: 8
+gender: male
+pronouns:
+  - they
+  - them
 
-summary: Loves art and projects and naturally takes the lead, like giving house tours.
+summary:
+  - loves art and projects and naturally takes the lead, like giving house tours
+  - very forceful with a smiley look
+  - a bit punk with a green streak in his hair
+  - very smart and a tiny bit aggressive
+  - super loving towards Emer and dotes on her
+
 favorite_toys:
   - Nintendo Switch
   - Jellycat plushies
 
-first_whack_room: sun_room
-second_whack_room: stairs
+whack_rooms:
+  - sun_room
+  - stairs
+
 pair_partner: hansel
 
-primary_superpower: Path-maker and leader who designs clear rituals and routes.
-notes: Second-whack hero of the Stairs haunting.
+superpower: Path-maker and leader who designs clear rituals and routes.
+
+visual: James has a forceful, smiley look and is a bit punk with a green streak in their red hair.

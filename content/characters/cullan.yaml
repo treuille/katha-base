@@ -1,15 +1,26 @@
 id: cullan
-display_name: Cullan
-role: main_character
+name: Cullan
+age: 13
+gender: male
+pronouns:
+  - he
+  - him
 
-summary: Loves to play Fortnite and to perform, always with a big joyful smile.
+summary:
+  - shy
+  - physically confident
+  - loves to play Fortnite
+  - best friends with Arthur
+
 favorite_toys:
   - Fortnite on laptop
-  - Putting on performances
 
-first_whack_room: dining_room
-second_whack_room: playroom
+whack_rooms:
+  - dining_room
+  - playroom
+
 pair_partner: arthur
 
-primary_superpower: Game and performance designer who turns chaos into a fun, fair play experience.
-notes: Second-whack hero of the Playroom haunting.
+superpower: Game and performance designer who turns chaos into a fun, fair play experience.
+
+visual: Cullan is shy but physically confident, tall, and skinny handsome, with curly sandy brown hair and piercing ice blue eyes that contain a hidden wisdom.

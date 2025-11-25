@@ -1,15 +1,28 @@
 id: hansel
-display_name: "Hänsel"
-role: main_character
+name: Hänsel
+age: 1
+gender: male
+pronouns:
+  - he
+  - him
 
-summary: A sunny, athletic baby who loves making sounds and communicates by pointing with his bottle, with quiet, purposeful intelligence.
+summary:
+  - a sunny, athletic baby who loves making sounds and communicates by pointing with his bottle
+  - quiet, purposeful intelligence
+  - always laughing and smiling, unless pointing with his baby bottle in which case he's looking purposefully around
+  - communicates by pointing with his baby bottle and staring purposefully at his interlocutor
+  - is either sitting, being held, or crawling
+
 favorite_toys:
   - Baby bottle (used as a pointer)
   - Anything that makes a good banging sound
 
-first_whack_room: stairs
-second_whack_room: sun_room
+whack_rooms:
+  - stairs
+  - sun_room
+
 pair_partner: james
 
-primary_superpower: Silent rhythm-keeper whose focused pointing and movement realign rhythms and light.
-notes: Second-whack hero of the Sun Room haunting.
+superpower: Silent rhythm-keeper whose focused pointing and movement realign rhythms and light.
+
+visual: Hänsel is a solid baby, always laughing and smiling, who sits, crawls, or is being held.

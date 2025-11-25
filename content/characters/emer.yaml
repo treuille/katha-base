@@ -1,14 +1,26 @@
 id: emer
-display_name: Emer
-role: main_character
+name: Emer
+age: 5
+gender: female
+pronouns:
+  - she
+  - her
 
-summary: Joyful, imaginative kid who loves colorful, character-driven play and emotional storytelling.
+summary:
+  - joyful, imaginative kid who loves colorful, character-driven play and emotional storytelling
+  - boisterous, always smiling and laughing unless scared or angry
+  - very emotive, lots of fun
+  - loves dancing and prancing and spinning and singing and putting her hands in the air
+
 favorite_toys:
   - My Little Pony dolls
 
-first_whack_room: kitchen
-second_whack_room: library
+whack_rooms:
+  - kitchen
+  - library
+
 pair_partner: henry
 
-primary_superpower: Story-weaver who finishes scrambled tales and brings characters to the right homes.
-notes: Second-whack hero of the Library haunting.
+superpower: Story-weaver who finishes scrambled tales and brings characters to the right homes.
+
+visual: Emer is boisterous and very emotive, with messy flowing blonde hair to her shoulders and beautiful planet like brown eyes.
