@@ -6,6 +6,7 @@ scripts/__pycache__
 
 # Environment variables with API keys
 .env
+.streamlit/secrets.toml
 
 # Generated images
 out-images/*.jpg
