@@ -6,26 +6,20 @@ A storybook generation system for creating illustrated story pages.
 
 ```
 katha-base/
-├── lib/              # Reusable system components
-│   ├── scripts/      # Image generation and processing scripts
-│   └── templates/    # YAML templates and prompt templates
-│
-└── content/          # Story-specific content
-    ├── characters/   # Character definitions (6 YAML files)
-    ├── locations/    # Location and room definitions (8 YAML files)
-    ├── story/        # Story structure
-    │   └── template.yaml  # 23-page narrative template
-    ├── ref-images/   # Reference images for visual style
-    └── out-images/   # Generated illustrations (git-ignored)
+├── characters/      # Character definitions (6 YAML files)
+├── locations/       # Location and room definitions (8 YAML files)
+├── story/           # Story structure
+│   ├── template.yaml    # 23-page narrative template
+│   └── overview.md      # Story overview and details
+├── ref-images/      # Reference images for visual style
+├── out-images/      # Generated illustrations (git-ignored)
+├── content/         # Additional story content and documentation
+├── scripts/         # Image generation scripts
+├── deprecated/      # Old lib/ structure (archived)
+└── .streamlit/      # Streamlit configuration and secrets
 ```
 
-### lib/
-
-Contains the abstract framework - scripts, templates, and tools that define how the storybook generation system works. These components are reusable across different stories.
-
-### content/
-
-Contains the particular content for your specific story:
+## Story Content
 
 - **characters/** - Definitions for all six main characters, each with their unique traits, favorite toys, room assignments, and superpowers
 - **locations/** - Definitions for all locations and rooms, each with haunting themes, descriptions, and first/second whack assignments
@@ -35,7 +29,7 @@ Contains the particular content for your specific story:
 
 ## Story Template
 
-The `content/story/template.yaml` file defines a 23-page narrative structure shared across all six character books. Each character's book follows the same template with:
+The `story/template.yaml` file defines a 23-page narrative structure shared across all six character books. Each character's book follows the same template with:
 
 - **Page types**: `individual` (solo character focus), `pair` (two characters), or `joint` (all characters together)
 - **Story sections**: Ordinary World → First Whack → Crossover/Pair → Second Whack → Realizing the Bigger Problem → Climax → Carrying It Out → Resolution
@@ -46,5 +40,6 @@ While the template is the same, each character's book personalizes the content b
 ## Setup
 
 1. Copy `.env.example` to `.env` and add your API keys
-2. Add reference images to `content/ref-images/`
-3. Run generation scripts from `lib/scripts/`
+2. Add reference images to `ref-images/`
+3. Configure Google API key in `.streamlit/secrets.toml`
+4. Run image generation via Streamlit app: `streamlit run scripts/jlfreif_gen_image_app.py`

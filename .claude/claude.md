@@ -4,36 +4,45 @@ This is a storybook generation system that creates AI-illustrated story pages.
 
 ## Project Architecture
 
-The project follows a two-directory structure:
+The project uses a flat, content-focused structure where all story elements live at the root level:
 
-### lib/
-The **library** contains reusable, abstract components that define how the system works:
-- `scripts/` - Python scripts for generating images from story definitions
-- `templates/` - YAML and prompt templates for structuring content
+### Root Directory Structure
+```
+katha-base/
+├── characters/      # Character definitions (one YAML per character)
+├── locations/       # Location and room definitions
+├── story/           # Story template and overview
+├── ref-images/      # Visual style and character reference images
+├── out-images/      # Generated illustrations (git-ignored)
+├── scripts/         # Image generation scripts
+├── content/         # Additional documentation and story content
+├── deprecated/      # Archived lib/ structure (old system components)
+└── .streamlit/      # App configuration and API secrets
+```
 
-Think of this as the "engine" - it's story-agnostic and reusable.
+### Key Directories
 
-### content/
-The **content** directory contains story-specific material:
-- `characters/` - Character definitions (one YAML file per character)
-- `locations/` - Location and room definitions with haunting themes and whack assignments
-- `story/template.yaml` - The 23-page story template shared across all 6 character books
-- `ref-images/` - Reference images that define the visual style and character appearances
-- `out-images/` - Generated illustrations (git-ignored, user-generated)
+- **characters/** - Definitions for all six main characters (Arthur, James, Cullan, Hansel, Emer, Henry), each with unique traits, favorite toys, room assignments, and superpowers
+- **locations/** - Location and room definitions with haunting themes and whack assignments
+- **story/** - Contains `template.yaml` (the 23-page story template shared across all 6 character books) and `overview.md`
+- **ref-images/** - Style guides (`style-*.jpg`) and character references (`cu-*.jpg`, etc.) that inform image generation
+- **out-images/** - AI-created illustrations based on story pages (not committed to git)
+- **scripts/** - Active image generation scripts (e.g., `jlfreif_gen_image_app.py` - Streamlit app for generating images)
+- **deprecated/** - Old lib/ structure with previous scripts and templates (archived, not actively used)
 
-This is where the particular story lives - the actual content being illustrated.
-
-**Story Structure**: All six main characters (Arthur, James, Cullan, Hansel, Emer, Henry) share the same 23-page narrative template. Each character experiences the same story beats but with personalized content based on their unique traits, rooms, and superpowers. The template defines page types (individual, pair, or joint), locations, and story beats for the hero's journey.
+**Story Structure**: All six main characters share the same 23-page narrative template. Each character experiences the same story beats but with personalized content based on their unique traits, rooms, and superpowers. The template defines page types (individual, pair, or joint), locations, and story beats for the hero's journey.
 
 ## Key Concepts
 
-- **Reference Images**: Style guides (`style-*.jpg`) and character references (`cu-*.jpg`, etc.) that inform image generation
-- **Generated Images**: AI-created illustrations based on story pages, saved to `content/out-images/`
-- **Separation of Concerns**: `lib/` defines the system, `content/` defines the story
+- **Reference Images**: Style guides and character references in `ref-images/` that inform AI image generation
+- **Generated Images**: AI-created illustrations saved to `out-images/` (using Google Gemini Nano Banana Pro)
+- **Flat Structure**: All story content is at the root level for easy access
+- **Deprecated Code**: Old system components are preserved in `deprecated/` but not actively used
 
 ## Working with this Project
 
 When making changes:
-- System improvements (scripts, templates) go in `lib/`
-- Story content (images, definitions) goes in `content/`
-- Keep the separation clean to enable reuse across different stories
+- Story content (characters, locations, templates) lives at root level
+- Image generation is done via Streamlit app: `streamlit run scripts/jlfreif_gen_image_app.py`
+- Generated images go in `out-images/` (git-ignored)
+- Old code is in `deprecated/` - don't modify unless migrating something back
