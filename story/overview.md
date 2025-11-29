@@ -9,9 +9,9 @@ It is meant as an orientation guide for a coding agent so it can reason about "w
 
 The project data is organized as:
 
-- `content/characters/` - Character definitions (6 YAML files)
-- `content/locations/` - Location and room definitions (8 YAML files)
-- `content/story/template.yaml` - The shared 23-page narrative template
+- `characters/` - Character definitions (6 YAML files)
+- `locations/` - Location and room definitions (8 YAML files)
+- `story/template.yaml` - The shared 23-page narrative template
 
 ---
 
@@ -104,9 +104,9 @@ This creates a **branching-but-synchronized** structure:
 
 A coding agent should think of it like a **shared timeline with character-specific overlays**:
 
-- The YAML for **pages** (`content/story/template.yaml`) defines the shared timeline and the "role" of each slot (joint/pair/individual, symbolic room roles).
-- The YAML for **characters** (`content/characters/*.yaml`) defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
-- The YAML for **locations** (`content/locations/*.yaml`) defines how each location behaves and what it means to partially vs. fully fix it.
+- The YAML for **pages** (`story/template.yaml`) defines the shared timeline and the "role" of each slot (joint/pair/individual, symbolic room roles).
+- The YAML for **characters** (`characters/*.yaml`) defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
+- The YAML for **locations** (`locations/*.yaml`) defines how each location behaves and what it means to partially vs. fully fix it.
 
 ---
 
@@ -179,17 +179,17 @@ At the highest altitude, each book goes through these phases:
 
 A coding agent should treat the data files (characters, pages, locations) as **three complementary views** of the same system:
 
-- **Characters** (`content/characters/*.yaml`) describe:
+- **Characters** (`characters/*.yaml`) describe:
   - Who the six kids are.
   - Which symbolic roles they play (e.g., which room they "own" as their second whack).
   - Who their swap partner is during the pair section.
 
-- **Locations** (`content/locations/*.yaml`) describe:
+- **Locations** (`locations/*.yaml`) describe:
   - How the trickster spirit's influence manifests in each place.
   - What it means for that room to be partially vs. fully resolved.
   - Which child is ultimately the "hero" of that room.
 
-- **Pages** (`content/story/template.yaml`) describe:
+- **Pages** (`story/template.yaml`) describe:
   - The global linear order of story beats.
   - For each slot: whether it's joint, pair, or individual.
   - Symbolic references to "first whack room", "second whack room", and "pair partner".

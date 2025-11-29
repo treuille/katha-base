@@ -1,6 +1,6 @@
 # Katha Base
 
-A storybook generation system for creating illustrated story pages.
+A picture book generation system for creating illustrated story pages.
 
 ## Project Structure
 
@@ -13,8 +13,6 @@ katha-base/
 │   └── overview.md      # Story overview and details
 ├── ref-images/      # Reference images for visual style
 ├── out-images/      # Generated illustrations (git-ignored)
-├── content/         # Additional story content and documentation
-├── scripts/         # Image generation scripts
 ├── deprecated/      # Old lib/ structure (archived)
 └── .streamlit/      # Streamlit configuration and secrets
 ```
@@ -42,4 +40,3 @@ While the template is the same, each character's book personalizes the content b
 1. Copy `.env.example` to `.env` and add your API keys
 2. Add reference images to `ref-images/`
 3. Configure Google API key in `.streamlit/secrets.toml`
-4. Run image generation via Streamlit app: `streamlit run scripts/jlfreif_gen_image_app.py`
