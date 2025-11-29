@@ -19,6 +19,10 @@ whack_rooms:
   - dining_room
   - playroom
 
+favorite_genres:
+  - fantasy
+  - Brandon Sanderson
+
 pair_partner: arthur
 
 superpower: Game designer who turns chaos into a fun, fair play experience.
