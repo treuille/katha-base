@@ -9,10 +9,13 @@ scripts/__pycache__
 .streamlit/secrets.toml
 
 # Generated images
-out-images/**/*.jpg
+out/**/*.jpg
 
 # Reference images
-ref-images/**/*.jpg
+ref/**/*.jpg
+
+# Bakup files
+bak/
 
 # uv/Python virtual environment
 .venv/
