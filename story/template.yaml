@@ -1,5 +1,5 @@
 pages:
-   - id: p1
+   - id: p01
      index: 1
      section: Ordinary World
      page_type: joint
@@ -15,7 +15,7 @@ pages:
      location: exterior
      story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
         glowing in the distance.
-   - id: p2
+   - id: p02
      index: 2
      section: Ordinary World
      page_type: joint
@@ -31,7 +31,7 @@ pages:
      location: living_room
      story_beat: All the kids play happily with their favorite toys around the Christmas
         tree in a warm, bustling living room.
-   - id: p3
+   - id: p03
      index: 3
      section: Ordinary World
      page_type: individual
@@ -41,7 +41,7 @@ pages:
      story_beat: The main character plays with their favorite toy, glances at the
         tree, and feels a subtle sense that something about it is wrong.
      notes: Content customized per main character but always near the tree.
-   - id: p4
+   - id: p04
      index: 4
      section: Ordinary World
      page_type: individual
@@ -50,7 +50,7 @@ pages:
      location: hallway
      story_beat: Uneasily, the main character follows a strange feeling or sound away
         from the tree and toward another part of the house.
-   - id: p5
+   - id: p05
      index: 5
      section: First Attempt
      page_type: individual
@@ -60,7 +60,7 @@ pages:
      story_beat: The main character steps into their first-attempt location and senses
         that something in here is definitely wrong.
      notes: Location depends on character's first attempt location (attempt_locations[0]).
-   - id: p6
+   - id: p06
      index: 6
      section: First Attempt
      page_type: individual
@@ -70,7 +70,7 @@ pages:
      story_beat: The haunting escalates and the main character tries a simple, obvious
         solution based on what seems to make sense at first.
      notes: Partial solution attempt.
-   - id: p7
+   - id: p07
      index: 7
      section: First Attempt
      page_type: individual
@@ -80,7 +80,7 @@ pages:
      story_beat: The room calms down a bit and the haunting is visibly weakened, but
         something still feels off as the main character leaves.
      notes: 'First attempt: partial success only.'
-   - id: p8
+   - id: p08
      index: 8
      section: Crossover / Pair
      page_type: pair
@@ -96,7 +96,7 @@ pages:
              - hansel
         -    - emer
              - henry
-   - id: p9
+   - id: p09
      index: 9
      section: Crossover / Pair
      page_type: pair
