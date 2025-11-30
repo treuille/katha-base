@@ -52,3 +52,66 @@
 - Use "character" not "kid" in data structures (field names like `climax_focus_character`)
 - Use "location" for rooms/places
 - In narrative text (descriptions, summaries), informal terms like "kids" are acceptable and refer to the child characters
+
+## Scripts
+
+### Image Generation (`scripts/gen_image.py`)
+
+Generates illustrations for story pages using AI image generation with reference images.
+
+**Basic Usage:**
+```bash
+uv run scripts/gen_image.py [mode] <page_file>
+```
+
+**Modes:**
+- `prompt` - Display the complete image generation prompt and list all referenced images (useful for debugging/review)
+- `gemini` - Generate the actual image using gemini-3-pro-image-preview model
+
+**Examples:**
+```bash
+# Preview the prompt for page 09
+uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
+
+# Generate the image for page 09
+uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
+```
+
+**How the Prompt is Assembled:**
+
+The script automatically builds a comprehensive prompt by combining:
+
+1. **Visual style** from `story/template.yaml` (`visual` field)
+2. **Character visual descriptions** from `characters/{character_id}.yaml` (`visual` field)
+3. **Location visual descriptions** from `locations/{location_id}.yaml` (`visual` field)
+4. **Page-specific scene** from the page YAML file (`visual` field)
+5. **Reference images** - automatically discovers and includes all matching images:
+   - Style images: `ref/style/style-*.jpg` (always included first)
+   - Character images: `ref/characters/{character_id}-*.jpg`
+   - Location images: `ref/locations/{location_id}-*.jpg`
+   - Object images: `ref/objects/{object_id}-*.jpg`
+
+**Reference Image Labeling:**
+
+Images are labeled in the prompt using a common prompt engineering pattern:
+```
+I have provided 11 reference images:
+
+Image 1: A style reference image showing the illustration style
+Image 2: A style reference image showing the illustration style
+Image 3: A reference picture of Arthur
+Image 4: A reference picture of Arthur
+Image 5: A reference picture of Cullan
+Image 6: A reference picture of the Hallway
+...
+```
+
+**Output:**
+- Images saved to: `out/images/{page_id}.jpg`
+- Aspect ratio: 3:2 (maintains ~1.5 ratio, close to target 3507x2334)
+
+**Requirements:**
+- Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` (for gemini mode)
+- Reference images must exist in `ref/` subdirectories
+- Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `hallway-02.jpg`)
+

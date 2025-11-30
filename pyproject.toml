@@ -3,7 +3,7 @@ name = "katha-base"
 version = "0.1.0"
 description = "Modular storybook system for creating interconnected children's stories"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 dependencies = [
     "pyyaml>=6.0",
     "openai>=1.0.0",
@@ -11,6 +11,7 @@ dependencies = [
     "requests>=2.31.0",
     "python-dotenv>=1.0.0",
     "pillow>=10.4.0",
+    "google-generativeai>=0.8.5",
 ]
 
 [dependency-groups]
