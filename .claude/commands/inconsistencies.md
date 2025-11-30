@@ -2,11 +2,28 @@
 description: Check all documentation and templates for inconsistencies and errors
 ---
 
-Systematically check all template files, example files, README, and scripts for inconsistencies, spelling mistakes, and other errors.
+Run the automated inconsistency checker, then perform manual checks for remaining issues.
+
+## Automated Checks
+
+First, run the automated inconsistency checking script:
+
+```bash
+uv run python scripts/check_inconsistencies.py
+```
+
+This script automatically validates:
+- YAML file syntax and structure
+- Reference images for all locations and characters
+- Image naming conventions (fixes underscore issues)
+
+## Manual Checks
+
+After running the automated script, systematically check for the following:
 
 **IMPORTANT**: Skip and ignore all deprecated folders and any files within them. Do not check or report on deprecated content.
 
-Please perform the following checks:
+Please perform the following manual checks:
 
 ## 1. File Inventory
 List all files in these directories (excluding any deprecated folders):
@@ -56,14 +73,26 @@ List all files in these directories (excluding any deprecated folders):
 - No contradictory instructions
 - Accurate references to project structure
 
-## 4. Quality Checks
+## 4. YAML Validation
+- Verify all YAML files are well-formed and parseable
+- Check for syntax errors (indentation, colons, quotes, etc.)
+- Validate YAML structure consistency across similar file types
+- Ensure no duplicate keys or invalid values
+
+## 5. Reference Image Verification
+- Verify every location has at least one reference image in `ref-images/locations/`
+- Verify every character has at least one reference image in `ref-images/ref-characters/`
+- Check that image filenames follow naming conventions (e.g., `location_name-01.jpg`)
+- Report any locations or characters missing reference images
+
+## 6. Quality Checks
 - Spelling mistakes throughout all files
 - Grammatical errors
 - Inconsistent formatting (spacing, capitalization)
 - Unclear or ambiguous instructions
 - Outdated information
 
-## 5. Report Format
+## 7. Report Format
 
 For each issue found, report:
 1. **File**: Which file contains the issue
