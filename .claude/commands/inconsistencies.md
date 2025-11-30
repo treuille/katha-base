@@ -39,11 +39,11 @@ List all files in these directories (excluding any deprecated folders):
 - Verify all documented naming patterns match actual examples
 - Check file naming format: `id.yaml` or `id-xx.jpg` where:
   - `id` is a multiple letter code, potentially with underscores (e.g., `arthur`, `dining_room`, `sun_room`)
-  - `xx` is a digit number with leading 0 (e.g., `01`, `02`, not `1`, `2`)
+  - `xx` is a two-digit number with leading zero (e.g., `01`, `02`, not `1`, `2`)
 - Verify consistency across character, location, and image files
 
 ### Terminology Consistency
-- Check that terms are used consistently across all files (e.g., "spread" vs "page", "storybook" vs "book")
+- Check that terms are used consistently across all files (use "page" not "spread", "picture book" or "book")
 - Verify technical terms like "YAML", "markdown" are spelled consistently
 - Check that character names in examples match across files
 
