@@ -5,12 +5,27 @@
 
 ## Coding Conventions
 
+### Python Execution
+
+- **Always use `uv run`**: All Python commands must be executed with `uv run python` or `uv run python3`
+- **Package management**: Use `uv add` to add new dependencies to the project
+
 ### File Organization
 
 - **YAML files**: Character and location definitions use YAML format
 - **Flat structure**: All story content lives at root level (characters/, locations/, story/)
 - **Generated content**: AI-created illustrations go in `out-images/` (git-ignored)
 - **Deprecated code**: Old system components in `deprecated/` - don't modify unless migrating back
+
+### File Naming Conventions
+
+- **YAML files**: Use format `id.yaml` where `id` is a multiple letter code, potentially with underscores
+  - Examples: `arthur.yaml`, `dining_room.yaml`, `sun_room.yaml`
+- **Image files**: Must be JPG format, use naming format `id-xx.jpg` where:
+  - `id` is a multiple letter code, potentially with underscores (e.g., `play_room`, `dining_room`)
+  - `xx` is a two-digit number with leading zero (e.g., `01`, `02`, not `1`, `2`)
+  - Always use underscores for multi-word names, dash to separate the number
+  - Examples: `arthur-01.jpg`, `dining_room-01.jpg`, `play_room-02.jpg`
 
 ### Working with Data Files
 
