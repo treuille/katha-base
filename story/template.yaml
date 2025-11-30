@@ -1,3 +1,10 @@
+# Story Template
+# This template defines the shared page-by-page narrative structure for all 6 character books.
+# Individual page files are generated in out/story/ using the naming convention:
+# p{number}-{characters in alphabetical order}.yaml
+# Only the 6 main child characters (arthur, cullan, emer, hansel, henry, james) are included
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+
 visual:
    - Marin Hanford style
    - Do not add more characters than those listed in the page

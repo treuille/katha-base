@@ -1,5 +1,8 @@
-# This is the id of the page which will match out/story/p09-cullan-arthur.yaml.
-# See README.md for details on the naming convention.
+# This is the id of the page which will match out/story/p09-arthur-cullan.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
 id: p09
 
 # Copied over from story/template.yaml
@@ -7,10 +10,10 @@ section: Crossover / Pair
 
 # Copied over from story/template.yaml
 page_type: pair
-# The list of characters, using IDs from characters/
+# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
-   - cullan
    - arthur
+   - cullan
 # Inferred from story/template.yaml
 location: hallway
 
