@@ -1,3 +1,8 @@
+visual:
+   - Marin Hanford style
+   - Do not add more characters than those listed in the page
+   - Include lots of little fun details from the reference location images, well reproduced
+
 pages:
    - id: p01
      index: 1
