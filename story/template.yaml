@@ -2,8 +2,9 @@ visual:
    - Marin Hanford style
    - Do not add more characters than those listed in the page
    - Include lots of little fun details from the reference location images, well reproduced
-
 pages:
+
+   # page 01
    - id: p01
      index: 1
      section: Ordinary World
@@ -20,6 +21,8 @@ pages:
      location: exterior
      story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
         glowing in the distance.
+
+   # page 02
    - id: p02
      index: 2
      section: Ordinary World
@@ -36,6 +39,8 @@ pages:
      location: living_room
      story_beat: All the kids play happily with their favorite toys around the Christmas
         tree in a warm, bustling living room.
+
+   # page 03
    - id: p03
      index: 3
      section: Ordinary World
@@ -46,6 +51,8 @@ pages:
      story_beat: The main character plays with their favorite toy, glances at the
         tree, and feels a subtle sense that something about it is wrong.
      notes: Content customized per main character but always near the tree.
+
+   # page 04
    - id: p04
      index: 4
      section: Ordinary World
@@ -55,6 +62,8 @@ pages:
      location: hallway
      story_beat: Uneasily, the main character follows a strange feeling or sound away
         from the tree and toward another part of the house.
+
+   # page 05
    - id: p05
      index: 5
      section: First Attempt
@@ -65,6 +74,8 @@ pages:
      story_beat: The main character steps into their first-attempt location and senses
         that something in here is definitely wrong.
      notes: Location depends on character's first attempt location (attempt_locations[0]).
+
+   # page 06
    - id: p06
      index: 6
      section: First Attempt
@@ -75,6 +86,8 @@ pages:
      story_beat: The haunting escalates and the main character tries a simple, obvious
         solution based on what seems to make sense at first.
      notes: Partial solution attempt.
+
+   # page 07
    - id: p07
      index: 7
      section: First Attempt
@@ -85,6 +98,8 @@ pages:
      story_beat: The room calms down a bit and the haunting is visibly weakened, but
         something still feels off as the main character leaves.
      notes: 'First attempt: partial success only.'
+
+   # page 08
    - id: p08
      index: 8
      section: Crossover / Pair
@@ -101,6 +116,8 @@ pages:
              - hansel
         -    - emer
              - henry
+
+   # page 09
    - id: p09
      index: 9
      section: Crossover / Pair
@@ -117,6 +134,8 @@ pages:
              - hansel
         -    - emer
              - henry
+
+   # page 10
    - id: p10
      index: 10
      section: Second Attempt
@@ -126,6 +145,8 @@ pages:
      location: hallway
      story_beat: The main character walks with new resolve toward their second-attempt
         location, determined to use what they are truly best at this time.
+
+   # page 11
    - id: p11
      index: 11
      section: Second Attempt
@@ -135,6 +156,8 @@ pages:
      room_role: second_attempt
      story_beat: In the new room, the haunting is still present but subtler, and the
         main character notices a deeper pattern that matches their strongest passion.
+
+   # page 12
    - id: p12
      index: 12
      section: Second Attempt
@@ -144,6 +167,8 @@ pages:
      room_role: second_attempt
      story_beat: The main character experiments with a solution based on that passion,
         and the room begins to respond and improve.
+
+   # page 13
    - id: p13
      index: 13
      section: Second Attempt
@@ -155,6 +180,8 @@ pages:
         second attempt, the haunting in this room dissolves, and the space feels truly
         right.
      notes: "Second attempt: this character is the 'room hero'."
+
+   # page 14
    - id: p14
      index: 14
      section: Realizing the Bigger Problem
@@ -171,6 +198,8 @@ pages:
      location: hallway
      story_beat: As each kid finishes their room, they drift into the hallway and
         sense that a larger wrongness is still pulsing through the house.
+
+   # page 15
    - id: p15
      index: 15
      section: Realizing the Bigger Problem
@@ -187,6 +216,8 @@ pages:
      location: hallway
      story_beat: Nervous but determined, the group talks, masters their fears, and
         decides they must face whatever is in the living room together.
+
+   # page 16
    - id: p16
      index: 16
      section: Realizing the Bigger Problem
@@ -203,6 +234,8 @@ pages:
      location: living_room
      story_beat: All the kids gather under the tree, sharing quick snapshots of what
         happened in their rooms, and realize everything traces back to the tree.
+
+   # page 17
    - id: p17
      index: 17
      section: Realizing the Bigger Problem
@@ -219,6 +252,8 @@ pages:
      location: living_room
      story_beat: Henry points at the odd ornament on the tree, drawing everyone's
         attention to it.
+
+   # page 18
    - id: p18
      index: 18
      section: Realizing the Bigger Problem
@@ -238,6 +273,8 @@ pages:
         Buddhist imagery shimmer in the air as she realizes what the ornament contains.
         She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is
         to scramble things.
+
+   # page 19
    - id: p19
      index: 19
      section: Climax
@@ -255,6 +292,8 @@ pages:
      story_beat: The ornament flares and the spirit erupts, growing huge and blazing
         red. The boys realize it's furious because it's cramped—too big for a bedroom,
         it needs sky!
+
+   # page 20
    - id: p20
      index: 20
      section: Climax
@@ -272,6 +311,8 @@ pages:
      story_beat: In a big action spread, each child uses their room-discovered superpower
         to contain the spirit. They tie it onto the bright red sled—still blazing
         and hilarious, complaining and wiggling. Very funny.
+
+   # page 21
    - id: p21
      index: 21
      section: Sky Procession
@@ -289,6 +330,8 @@ pages:
      story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle
         of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red,
         cleared for takeoff!"
+
+   # page 22
    - id: p22
      index: 22
      section: Sky Procession
@@ -308,6 +351,8 @@ pages:
         the handlebars, pointing exultantly at the sky with his bottle. The plane
         lifts the sled—not too high, just enough for comedic effect—dragging it across
         the lawn, up over a little bump, maybe through some clouds.
+
+   # page 23
    - id: p23
      index: 23
      section: Sky Procession
@@ -327,6 +372,8 @@ pages:
         relaxes. He remembers he's not a monster but a sky guardian who forgot himself.
         The spirit sees himself reflected in the sky (the sky becomes his mirror).
         The house glows with a gentle protective aura instead of scrambled chaos.
+
+   # page 24
    - id: p24
      index: 24
      section: Epilogue

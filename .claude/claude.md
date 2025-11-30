@@ -14,7 +14,8 @@
 
 - **YAML files**: Character and location definitions use YAML format
 - **Flat structure**: All story content lives at root level (characters/, locations/, story/)
-- **Generated content**: AI-created illustrations go in `out-images/` (git-ignored)
+- **Generated content**: AI-created content goes in `out/` (git-ignored) - images in `out/images/`, stories in `out/story/`
+- **Reference images**: Visual references in `ref/` organized by type (characters/, locations/, objects/)
 - **Deprecated code**: Old system components in `deprecated/` - don't modify unless migrating back
 
 ### File Naming Conventions

@@ -80,8 +80,8 @@ List all files in these directories (excluding any deprecated folders):
 - Ensure no duplicate keys or invalid values
 
 ## 5. Reference Image Verification
-- Verify every location has at least one reference image in `ref-images/locations/`
-- Verify every character has at least one reference image in `ref-images/ref-characters/`
+- Verify every location has at least one reference image in `ref/locations/`
+- Verify every character has at least one reference image in `ref/characters/`
 - Check that image filenames follow naming conventions (e.g., `location_name-01.jpg`)
 - Report any locations or characters missing reference images
 

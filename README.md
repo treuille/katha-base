@@ -13,8 +13,13 @@ katha-base/
 ├── story/               # Story structure and narrative design
 │   ├── template.yaml    # Shared narrative template
 │   └── overview.md      # Story world and narrative overview
-├── ref-images/          # Reference images for visual style
-├── out-images/          # Generated illustrations (git-ignored)
+├── ref/                 # Reference images for visual style
+│   ├── characters/      # Character reference images
+│   ├── locations/       # Location reference images
+│   └── objects/         # Object reference images
+├── out/                 # Generated outputs (git-ignored)
+│   ├── images/          # Generated illustrations
+│   └── story/           # Generated story files
 ├── deprecated/          # Archived old structure
 └── .streamlit/          # Streamlit configuration and secrets
 ```
@@ -25,11 +30,16 @@ katha-base/
 - **locations/** - Location and room definitions in YAML format
 - **story/template.yaml** - Shared page-by-page narrative template structure
 - **story/overview.md** - Complete story world description, narrative architecture, and character details
-- **ref-images/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
-- **out-images/** - Generated illustrations (not committed to repository)
+- **ref/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
+  - **ref/characters/** - Character reference images
+  - **ref/locations/** - Location reference images
+  - **ref/objects/** - Object reference images
+- **out/** - Generated outputs (not committed to repository)
+  - **out/images/** - Generated illustrations
+  - **out/story/** - Generated story files
 
 ## Setup
 
 1. Copy `.env.example` to `.env` and add your API keys
-2. Add reference images to `ref-images/`
+2. Add reference images to `ref/` subdirectories (`characters/`, `locations/`, `objects/`)
 3. Configure Google API key in `.streamlit/secrets.toml`
