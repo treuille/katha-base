@@ -5,8 +5,8 @@ kind: room
 haunting_theme: Light, time, and plant needs are out of sync; seasons seem to flicker.
 description_short: Bright room with many windows where the time of day and plant rhythms feel scrambled.
 
-first_whack_kid: james
-second_whack_kid: hansel
-
-first_whack_summary: James rearranges plants into more sensible spots, slowing the time glitches but not fully aligning the room.
-second_whack_summary: Hänsel uses rhythmic taps and purposeful pointing to synchronize light, growth, and time into a steady, peaceful cycle.
+attempts:
+  - character: james
+    summary: James rearranges plants into more sensible spots, slowing the time glitches but not fully aligning the room.
+  - character: hansel
+    summary: Hänsel uses rhythmic taps and purposeful pointing to synchronize light, growth, and time into a steady, peaceful cycle.

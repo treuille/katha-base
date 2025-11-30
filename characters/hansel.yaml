@@ -17,7 +17,7 @@ favorite_toys:
   - Baby bottle (used as a pointer)
   - Anything that makes a good banging sound
 
-whack_rooms:
+attempt_locations:
   - stairs
   - sun_room
 

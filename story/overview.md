@@ -110,28 +110,28 @@ A coding agent should think of it like a **shared timeline with character-specif
 
 ---
 
-## 5. The “Two Whacks” Room Logic
+## 5. The "Two Attempts" Room Logic
 
-Each “haunted” room follows a repeating narrative pattern:
+Each "haunted" room follows a repeating narrative pattern:
 
-1. **First visit (first whack):**
+1. **First visit (first attempt):**
    - A child who does *not* have the perfect strength for this room wanders in by accident.
    - They sense something is wrong and try a **simple, surface-level fix**.
    - This visibly **weakens** the haunting but does not fully resolve it.
 
 2. **Crossover moment:**
    - Kids compare experiences in a pair conversation.
-   - They realize: “You’d probably be better at my room than I am,” and agree to **swap rooms**.
+   - They realize: "You'd probably be better at my room than I am," and agree to **swap rooms**.
 
-3. **Second visit (second whack):**
+3. **Second visit (second attempt):**
    - The child whose strength actually matches that room comes in.
-   - They perceive a **deeper pattern** in what’s wrong and use their core passion to solve it properly.
-   - The room’s echo of the spirit is **fully cleared**, and that child’s self-understanding grows.
+   - They perceive a **deeper pattern** in what's wrong and use their core passion to solve it properly.
+   - The room's echo of the spirit is **fully cleared**, and that child's self-understanding grows.
 
 For a coding agent, the idea is:
 
-- **First whack** = partial success + set-up for another child.
-- **Second whack** = definitive success + character-specific payoff.
+- **First attempt** = partial success + set-up for another child.
+- **Second attempt** = definitive success + character-specific payoff.
 - This pattern is repeated across all haunted rooms with different kids/skills, but the same abstract shape.
 
 ---
@@ -144,18 +144,18 @@ At the highest altitude, each book goes through these phases:
    - We meet the house, the holiday, and all kids at play.
    - The main child begins to feel that something about the tree is “off.”
 
-2. **First Room Phase (First Whacks)**
+2. **First Room Phase (First Attempts)**
    - The main child leaves the tree and stumbles into the *wrong* haunted room for them.
    - They try a simple fix and partly calm it.
 
 3. **Pair Crossover**
    - The main child runs into their designated partner in the hallway.
-   - They swap stories and agree to **swap rooms**, recognizing each other’s strengths.
+   - They swap stories and agree to **swap rooms**, recognizing each other's strengths.
 
-4. **Second Room Phase (Second Whacks)**
+4. **Second Room Phase (Second Attempts)**
    - The main child now heads to the room that really matches their core strength.
    - They see the deeper pattern and solve it properly using their passion.
-   - At this point, each child has “their” room where they are the final hero.
+   - At this point, each child has "their" room where they are the final hero.
 
 5. **Escalation to House-Level Problem**
    - As all rooms settle, the children realize something is still wrong at the house level.
@@ -181,7 +181,7 @@ A coding agent should treat the data files (characters, pages, locations) as **t
 
 - **Characters** (`characters/*.yaml`) describe:
   - Who the six kids are.
-  - Which symbolic roles they play (e.g., which room they "own" as their second whack).
+  - Which symbolic roles they play (e.g., which room they "own" as their second attempt).
   - Who their swap partner is during the pair section.
 
 - **Locations** (`locations/*.yaml`) describe:
@@ -192,7 +192,7 @@ A coding agent should treat the data files (characters, pages, locations) as **t
 - **Pages** (`story/template.yaml`) describe:
   - The global linear order of story beats.
   - For each slot: whether it's joint, pair, or individual.
-  - Symbolic references to "first whack room", "second whack room", and "pair partner".
+  - Symbolic references to "first attempt location", "second attempt location", and "pair partner".
 
 To build any of the six books, an agent can:
 
@@ -201,7 +201,7 @@ To build any of the six books, an agent can:
 3. For each page:
    - If it’s **joint**, drop in shared content (possibly with minor viewpoint tweaks).
    - If it’s **pair**, generate content involving the main character and their partner.
-   - If it’s **individual**, plug in the correct symbolic room (first or second whack) and use that room’s behavior + the main character’s traits to craft the beat.
+   - If it's **individual**, plug in the correct symbolic room (first or second attempt) and use that room's behavior + the main character's traits to craft the beat.
 
 The result is six books that:
 
@@ -221,7 +221,7 @@ Some ways this architecture can be extended:
 
 - **Add more rooms or "facets"** by:
   - Defining new location files with new mismatch themes.
-  - Inserting additional "first-whack / crossover / second-whack" clusters into the page sequence.
+  - Inserting additional "first-attempt / crossover / second-attempt" clusters into the page sequence.
 
 - **Alter the difficulty** by:
   - Changing what “partial success” looks like in each room.

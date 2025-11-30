@@ -20,7 +20,7 @@ katha-base/
 ## Story Content
 
 - **characters/** - Definitions for all six main characters, each with their unique traits, favorite toys, room assignments, and superpowers
-- **locations/** - Definitions for all locations and rooms, each with haunting themes, descriptions, and first/second whack assignments
+- **locations/** - Definitions for all locations and rooms, each with haunting themes, descriptions, and first/second attempt assignments
 - **story/template.yaml** - The shared 23-page narrative template that all six character books follow. Each character experiences the same story beats but with personalized content based on their unique characteristics
 - **ref-images/** - Visual reference images for style and character appearances
 - **out-images/** - Generated illustrations (not committed to repository)
@@ -30,8 +30,8 @@ katha-base/
 The `story/template.yaml` file defines a 23-page narrative structure shared across all six character books. Each character's book follows the same template with:
 
 - **Page types**: `individual` (solo character focus), `pair` (two characters), or `joint` (all characters together)
-- **Story sections**: Ordinary World → First Whack → Crossover/Pair → Second Whack → Realizing the Bigger Problem → Climax → Carrying It Out → Resolution
-- **Location modes**: Fixed locations or role-based (e.g., `first_whack_room` varies per character)
+- **Story sections**: Ordinary World → First Attempt → Crossover/Pair → Second Attempt → Realizing the Bigger Problem → Climax → Carrying It Out → Resolution
+- **Location modes**: Fixed locations or role-based (e.g., `first_attempt_location` varies per character)
 
 While the template is the same, each character's book personalizes the content based on their traits, rooms, and superpowers from their character definition.
 

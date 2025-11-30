@@ -17,7 +17,7 @@ favorite_toys:
   - Scrabble
   - Minecraft
 
-whack_rooms:
+attempt_locations:
   - playroom
   - dining_room
 

@@ -34,30 +34,30 @@ pages:
 
   - id: p5
     index: 5
-    section: First Whack
+    section: First Attempt
     page_type: individual
     location_mode: by_role
-    room_role: first_whack
-    story_beat: The main character steps into their first-whack room and senses that something in here is definitely wrong.
-    notes: Room depends on character's first whack room (whack_rooms[0]).
+    room_role: first_attempt
+    story_beat: The main character steps into their first-attempt location and senses that something in here is definitely wrong.
+    notes: Location depends on character's first attempt location (attempt_locations[0]).
 
   - id: p6
     index: 6
-    section: First Whack
+    section: First Attempt
     page_type: individual
     location_mode: by_role
-    room_role: first_whack
+    room_role: first_attempt
     story_beat: The haunting escalates and the main character tries a simple, obvious solution based on what seems to make sense at first.
     notes: Partial solution attempt.
 
   - id: p7
     index: 7
-    section: First Whack
+    section: First Attempt
     page_type: individual
     location_mode: by_role
-    room_role: first_whack
+    room_role: first_attempt
     story_beat: The room calms down a bit and the haunting is visibly weakened, but something still feels off as the main character leaves.
-    notes: First whack: partial success only.
+    notes: First attempt: partial success only.
 
   - id: p8
     index: 8
@@ -85,36 +85,36 @@ pages:
 
   - id: p10
     index: 10
-    section: Second Whack
+    section: Second Attempt
     page_type: individual
     location_mode: fixed
     location: hallway
-    story_beat: The main character walks with new resolve toward their second-whack room, determined to use what they are truly best at this time.
+    story_beat: The main character walks with new resolve toward their second-attempt location, determined to use what they are truly best at this time.
 
   - id: p11
     index: 11
-    section: Second Whack
+    section: Second Attempt
     page_type: individual
     location_mode: by_role
-    room_role: second_whack
+    room_role: second_attempt
     story_beat: In the new room, the haunting is still present but subtler, and the main character notices a deeper pattern that matches their strongest passion.
 
   - id: p12
     index: 12
-    section: Second Whack
+    section: Second Attempt
     page_type: individual
     location_mode: by_role
-    room_role: second_whack
+    room_role: second_attempt
     story_beat: The main character experiments with a solution based on that passion, and the room begins to respond and improve.
 
   - id: p13
     index: 13
-    section: Second Whack
+    section: Second Attempt
     page_type: individual
     location_mode: by_role
-    room_role: second_whack
-    story_beat: Committed fully to their strength, the main character completes the second whack, the haunting in this room dissolves, and the space feels truly right.
-    notes: Second whack: this character is the 'room hero'.
+    room_role: second_attempt
+    story_beat: Committed fully to their strength, the main character completes the second attempt, the haunting in this room dissolves, and the space feels truly right.
+    notes: Second attempt: this character is the 'room hero'.
 
   - id: p14
     index: 14

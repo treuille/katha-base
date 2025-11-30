@@ -5,8 +5,8 @@ kind: room
 haunting_theme: Recipes, labels, and ingredients are all scrambled and never come out quite right.
 description_short: Busy kitchen where jars are mislabeled, recipes rewrite themselves, and food is almost—but not quite—edible.
 
-first_whack_kid: emer
-second_whack_kid: henry
-
-first_whack_summary: Emer organizes some of the obvious mess and gets a dish to work a bit better, but the underlying recipe logic is still wrong.
-second_whack_summary: Henry invents a new baked treat meant for friends and follows a clear 'pilot-like' checklist, teaching the kitchen what a true recipe should be.
+attempts:
+  - character: emer
+    summary: Emer organizes some of the obvious mess and gets a dish to work a bit better, but the underlying recipe logic is still wrong.
+  - character: henry
+    summary: Henry invents a new baked treat meant for friends and follows a clear 'pilot-like' checklist, teaching the kitchen what a true recipe should be.

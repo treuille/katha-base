@@ -5,8 +5,8 @@ kind: room
 haunting_theme: Games have the wrong pieces and rules, and every match ends in an unsatisfying tie.
 description_short: Lively playroom where board games, toys, and instruments keep changing rules and never let anyone truly win.
 
-first_whack_kid: arthur
-second_whack_kid: cullan
-
-first_whack_summary: Arthur matches pieces to the right boxes and restores basic logic but the games still feel rigged and unresolved.
-second_whack_summary: Cullan designs a cooperative meta-game that uses all the toys fairly and gives the playroom a proper, shared finale.
+attempts:
+  - character: arthur
+    summary: Arthur matches pieces to the right boxes and restores basic logic but the games still feel rigged and unresolved.
+  - character: cullan
+    summary: Cullan designs a cooperative meta-game that uses all the toys fairly and gives the playroom a proper, shared finale.

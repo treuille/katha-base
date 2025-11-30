@@ -21,7 +21,7 @@ katha-base/
 ### Key Directories
 
 - **characters/** - Definitions for all six main characters (Arthur, James, Cullan, Hansel, Emer, Henry), each with unique traits, favorite toys, room assignments, and superpowers
-- **locations/** - Location and room definitions with haunting themes and whack assignments
+- **locations/** - Location and room definitions with haunting themes and attempt assignments
 - **story/** - Contains `template.yaml` (the 23-page story template shared across all 6 character books) and `overview.md`
 - **ref-images/** - Style guides (`style-*.jpg`) and character references (`cu-*.jpg`, etc.) that inform image generation
 - **out-images/** - AI-created illustrations based on story pages (not committed to git)

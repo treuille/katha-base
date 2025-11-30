@@ -5,8 +5,8 @@ kind: room
 haunting_theme: Stories are scrambled, characters wander between books, and endings refuse to stay put.
 description_short: Cozy library where book plots mix together and shelves whisper with unfinished tales.
 
-first_whack_kid: henry
-second_whack_kid: emer
-
-first_whack_summary: Henry re-shelves books and restores some order, quieting a section of the chaos but leaving stories emotionally unfinished.
-second_whack_summary: Emer weaves a new shared ending that ties the scattered characters together, allowing them to return to their correct books.
+attempts:
+  - character: henry
+    summary: Henry re-shelves books and restores some order, quieting a section of the chaos but leaving stories emotionally unfinished.
+  - character: emer
+    summary: Emer weaves a new shared ending that ties the scattered characters together, allowing them to return to their correct books.
