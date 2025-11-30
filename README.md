@@ -25,7 +25,7 @@ katha-base/
 - **locations/** - Location and room definitions in YAML format
 - **story/template.yaml** - Shared page-by-page narrative template structure
 - **story/overview.md** - Complete story world description, narrative architecture, and character details
-- **ref-images/** - Visual reference images for style and character appearances
+- **ref-images/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
 - **out-images/** - Generated illustrations (not committed to repository)
 
 ## Setup

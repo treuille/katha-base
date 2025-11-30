@@ -29,7 +29,7 @@ pages:
     section: Ordinary World
     page_type: individual
     location_mode: fixed
-    location: hallway_from_living_room
+    location: hallway
     story_beat: Uneasily, the main character follows a strange feeling or sound away from the tree and toward another part of the house.
 
   - id: p5
@@ -76,7 +76,7 @@ pages:
     section: Crossover / Pair
     page_type: pair
     location_mode: fixed
-    location: hallway_near_living_room
+    location: hallway
     story_beat: They realize each other's strengths fit the other room better, decide the house is haunted, and agree to swap which room they will tackle next.
     pair_groups:
       - [arthur, cullan]
@@ -121,15 +121,15 @@ pages:
     section: Realizing the Bigger Problem
     page_type: joint
     location_mode: fixed
-    location: hallways
-    story_beat: As each kid finishes their room, they drift into the hallways and sense that a larger wrongness is still pulsing through the house.
+    location: hallway
+    story_beat: As each kid finishes their room, they drift into the hallway and sense that a larger wrongness is still pulsing through the house.
 
   - id: p15
     index: 15
     section: Realizing the Bigger Problem
     page_type: joint
     location_mode: fixed
-    location: hallway_near_living_room
+    location: hallway
     story_beat: Nervous but determined, the group talks, masters their fears, and decides they must face whatever is in the living room together.
 
   - id: p16
@@ -146,7 +146,7 @@ pages:
     page_type: joint
     location_mode: fixed
     location: living_room
-    story_beat: Henry points at the odd ornament, and Regan identifies it as a Tibetan trickster spirit, explaining it must be split into protector and mischievous sides.
+    story_beat: Henry points at the odd ornament, and Regan identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is to scramble things.
 
   - id: p18
     index: 18
@@ -154,7 +154,7 @@ pages:
     page_type: joint
     location_mode: fixed
     location: living_room
-    story_beat: The ornament flares and the trickster spirit erupts, growing huge and frightening before the kids decide to fight using their newfound strengths.
+    story_beat: The ornament flares and the spirit erupts, growing huge and blazing red. The boys realize it's furious because it's cramped—too big for a bedroom, it needs sky!
 
   - id: p19
     index: 19
@@ -162,37 +162,37 @@ pages:
     page_type: joint
     location_mode: fixed
     location: living_room
-    story_beat: In a big action spread, each child uses their room-discovered superpower to weaken, rearrange, and contain the spirit, separating its protective side.
+    story_beat: In a big action spread, each child uses their room-discovered superpower to contain the spirit. They tie it onto the bright red sled—still blazing and hilarious, complaining and wiggling. Very funny.
 
   - id: p20
     index: 20
-    section: Climax
+    section: Sky Procession
     page_type: joint
     location_mode: fixed
-    location: living_room
-    story_beat: With help from everyone else, Henry completes the final move and traps the mischievous part of the spirit in a special box as a soft glow settles over the tree.
+    location: exterior
+    story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
 
   - id: p21
     index: 21
-    section: Carrying It Out
-    page_type: joint
-    location_mode: fixed
-    location: driveway
-    story_beat: Outside, Henry flies a small airplane pulling a red sled with the spirit box and the kids piled in, while James directs like a tiny air traffic controller.
-
-  - id: p22
-    index: 22
-    section: Carrying It Out
+    section: Sky Procession
     page_type: joint
     location_mode: fixed
     location: yard
-    story_beat: They carefully place or hang the box in a chosen outdoor spot where the trickster energy can live safely, and a kind emanation flows back toward the house.
+    story_beat: Cullan and Arthur ride in the sled being dragged by the airplane, holding the deity in a box. Emer trails behind on a tricycle with Hansel on the handlebars, pointing exultantly at the sky with his bottle. The plane lifts the sled—not too high, just enough for comedic effect—dragging it across the lawn, up over a little bump, maybe through some clouds.
+
+  - id: p22
+    index: 22
+    section: Sky Procession
+    page_type: joint
+    location_mode: fixed
+    location: yard
+    story_beat: The moment the spirit is pulled into open space, it transforms—his flames soften into wind, his weapons turn into sparkles, his screaming face relaxes. He remembers he's not a monster but a sky guardian who forgot himself. The spirit sees himself reflected in the sky (the sky becomes his mirror). The house glows with a gentle protective aura instead of scrambled chaos.
 
   - id: p23
     index: 23
-    section: Resolution
+    section: Epilogue
     page_type: joint
     location_mode: mixed
     location: house_interior_and_exterior
-    story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other, and the final image shows the peaceful house from outside.
+    story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other. Each child returns to their ordinary world, slightly changed. The final image shows the peaceful house from outside with a protective glow.
     notes: Visually can be a combination of interior reflection panel(s) and a closing exterior shot.

@@ -13,8 +13,9 @@ It is meant as an orientation guide for a coding agent so it can reason about "w
 
 This repository encodes a **single shared storyworld**:
 
-- **Millbrook** is a real town in upstate New York. Deep in the woods outside the town sits a large house, also called Millbrook, where a woman named Graminy lives.
-- During a **Christmas holiday**, the house becomes mildly haunted after a strange ornament is hung on the Christmas tree.
+- **Millbrook** is a real town in upstate New York. Deep in the woods outside the town sits a large house, also called Millbrook, where **Graminy** lives.
+- During the **early Christmas season**, all of her grandchildren come to the house for the holidays.
+- The house becomes haunted after a strange ornament is hung on the Christmas tree.
 - **Eight characters** inhabit this world:
   - **Six children** (cousins and siblings: Arthur, Cullan, Emer, Hansel, Henry, and James - see `characters/*.yaml`), each with their own point of view and core strength
   - **Dorje Legpa**, a Gyalpo trickster deity (see `characters/dorje_legpa.yaml`) whose magic is about *mismatch* and *scrambled roles*, not gore or horror
@@ -44,12 +45,6 @@ The tone is:
 - There *is* a spirit, but its power is always about **confusion, misalignment, and playfulness** rather than anything truly terrifying.
 - The house feels like a living puzzle box: each room is a facet of the trickster spirit, expressing a different type of “wrongness” that needs to be re-aligned.
 
-You can think of the house as a **small graph**:
-
-- Nodes = rooms (plus the living room hub and the exterior).
-- Edges = hallways / stairs / doors.
-- The Christmas tree is the **source** of the problem; the exterior is the **sink** where the problem is finally discharged.
-
 ---
 
 ## 3. The Core Magical Premise
@@ -60,12 +55,10 @@ The main magical object is a **strange ornament** hung on the Christmas tree.
   - Wrong people in wrong seats
   - Wrong gifts for wrong kids
   - Wrong story endings, wrong game rules, wrong paths, wrong seasons
-- When the ornament is disturbed, Dorje Legpa's energy **fractures into multiple echoes** that slip into different rooms of the house.
-
-Each echo manifests as a **room-specific kind of mismatch**:
-
-- The rooms themselves become "mini-boss habitats."
-- Dorje Legpa's influence is *local* in each room but *global* in effect: the house as a whole feels subtly wrong.
+- At first, something just feels **maybe amiss** in the house—subtle wrongness that builds anticipation and creepiness.
+- This unease **explodes** into distinct problems throughout the house, with each room manifesting its own **specific kind of mismatch**:
+  - The rooms themselves become spaces where Dorje Legpa's influence is most concentrated.
+  - The house as a whole feels subtly wrong, but each room expresses a different facet of the trickster's scrambling power.
 
 Later, Dorje Legpa is:
 
@@ -154,17 +147,30 @@ At the highest altitude, each book goes through these phases:
    - As all rooms settle, the children realize something is still wrong at the house level.
    - This points them back to the living room and the tree.
 
-6. **Living Room Confrontation & Spirit Battle**
+6. **Living Room Confrontation & Spirit Containment**
    - All kids gather, the ornament is identified (Regan identifies it as Dorje Legpa, a Gyalpo trickster deity), and the spirit erupts.
    - Each child uses what they learned in their room in a joint, big-scene sequence.
-   - One child performs the final containment, but it only works because everyone else does their part.
+   - The boys realize the spirit is furious because it's cramped inside the house—too big for a bedroom, it needs sky.
+   - They contain the spirit (still blazing red and hilarious, complaining and wiggling) and tie it onto the bright red sled. Very funny.
 
-7. **Carrying the Spirit Out & Epilogue**
-   - The captured spirit is carried outside in a ritualized way (sled, airplane, etc.).
+7. **The Sky Procession & Spirit Transformation**
+   - **Henry** jumps into the toy airplane, which becomes the "vehicle of sky."
+   - **James** acts as air traffic controller on the ground: "Spirit Sled Three-Seven-Red, cleared for takeoff!"
+   - **Cullan and Arthur** ride in the sled being dragged by the airplane, holding the deity in a box.
+   - **Emer** trails behind on a tricycle with **Hansel** on the handlebars, pointing exultantly at the sky with his bottle.
+   - The plane lifts the sled into the air—not too high, just enough for comedic effect—dragging the spirit across the lawn, up over a little bump, maybe through some clouds.
+   - The moment the spirit is pulled into **open space**, it transforms:
+     - His flames soften into wind
+     - His weapons turn into sparkles
+     - His screaming face relaxes
+     - He remembers he's not a monster—he's actually a sky guardian who forgot himself
+   - The spirit sees himself reflected in the sky (the sky becomes his mirror—a Tibetan-friendly metaphor where the sky itself is the mirror of nature).
    - The house becomes peaceful again, with a gentle protective aura instead of scrambled chaos.
+
+8. **Epilogue**
    - Each child returns to their ordinary world, slightly changed, having learned that:
      - Their **strongest strength** is real and valuable.
-     - The house works best when everyone’s strengths are used in the right places.
+     - The house works best when everyone's strengths are used in the right places.
 
 ---
 
@@ -199,31 +205,4 @@ The result is six books that:
 
 - Share structure and major events.
 - Differ only in viewpoint, room assignments, local problem/solution details, and internal emotional arc.
-
----
-
-## 8. Mental Model for Future Extensions
-
-Some ways this architecture can be extended:
-
-- **Add more kids** by:
-  - Creating a new character file.
-  - Assigning them a first/second room combination and a partner.
-  - Reusing the same page skeleton.
-
-- **Add more rooms or "facets"** by:
-  - Defining new location files with new mismatch themes.
-  - Inserting additional "first-attempt / crossover / second-attempt" clusters into the page sequence.
-
-- **Alter the difficulty** by:
-  - Changing what “partial success” looks like in each room.
-  - Adjusting how obviously each room’s mismatch connects to a given child’s strength.
-
-As long as the **conceptual triangle** stays clear—
-
-- One house (Graminy's home in Millbrook), one spirit source (Dorje Legpa in the ornament), one final banishing place (the exterior)
-- Six children with strong but different passions, plus supporting characters (Dorje Legpa and Regan)
-- One shared spine of beats with joint, pair, and individual slots
-
-—the system should stay coherent while remaining very flexible for generation and experimentation.
 
