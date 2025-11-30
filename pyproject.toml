@@ -10,6 +10,7 @@ dependencies = [
     "replicate>=0.25.0",
     "requests>=2.31.0",
     "python-dotenv>=1.0.0",
+    "pillow>=10.4.0",
 ]
 
 [dependency-groups]
