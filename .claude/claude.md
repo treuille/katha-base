@@ -1,44 +1,32 @@
 # Katha Base - Claude Context
 
-This is a picture book generation system that creates AI-illustrated story pages.
+**For project structure:** See [README.md](../README.md)
+**For story world and narrative details:** See [story/overview.md](../story/overview.md)
 
-## Project Architecture
+## Coding Conventions
 
-The project uses a flat, content-focused structure where all story elements live at the root level:
+### File Organization
 
-### Root Directory Structure
-```
-katha-base/
-├── characters/      # Character definitions (one YAML per character)
-├── locations/       # Location and room definitions
-├── story/           # Story template and overview
-├── ref-images/      # Visual style and character reference images
-├── out-images/      # Generated illustrations (git-ignored)
-├── deprecated/      # Archived lib/ structure (old system components)
-└── .streamlit/      # Streamlit configuration and secrets
-```
+- **YAML files**: Character and location definitions use YAML format
+- **Flat structure**: All story content lives at root level (characters/, locations/, story/)
+- **Generated content**: AI-created illustrations go in `out-images/` (git-ignored)
+- **Deprecated code**: Old system components in `deprecated/` - don't modify unless migrating back
 
-### Key Directories
+### Working with Data Files
 
-- **characters/** - Definitions for all six main characters (Arthur, James, Cullan, Hansel, Emer, Henry), each with unique traits, favorite toys, room assignments, and superpowers
-- **locations/** - Location and room definitions with haunting themes and attempt assignments
-- **story/** - Contains `template.yaml` (the 23-page story template shared across all 6 character books) and `overview.md`
-- **ref-images/** - Style guides (`style-*.jpg`) and character references (`cu-*.jpg`, etc.) that inform image generation
-- **out-images/** - AI-created illustrations based on story pages (not committed to git)
-- **deprecated/** - Old lib/ structure with previous scripts and templates (archived, not actively used)
+- **Character files** (`characters/*.yaml`): Define character attributes, attempt locations, pair partners
+- **Location files** (`locations/*.yaml`): Define room behaviors and attempt sequences
+- **Story template** (`story/template.yaml`): Defines page sequence, types, and story beats
 
-**Story Structure**: All six main characters share the same 23-page narrative template. Each character experiences the same story beats but with personalized content based on their unique traits, rooms, and superpowers. The template defines page types (individual, pair, or joint), locations, and story beats for the hero's journey.
+### Key Patterns
 
-## Key Concepts
+- **Attempt locations**: Characters have `attempt_locations` array (first and second room assignments)
+- **Location attempts**: Haunted rooms have `attempts` array with `character` and `summary` fields
+- **Special locations**: `exterior.yaml` uses `release_lead_character`; `living_room.yaml` uses `climax_focus_character` (climax/finale scenes)
 
-- **Reference Images**: Style guides and character references in `ref-images/` that inform AI image generation
-- **Generated Images**: AI-created illustrations saved to `out-images/` (using Google Gemini Nano Banana Pro)
-- **Flat Structure**: All story content is at the root level for easy access
-- **Deprecated Code**: Old system components are preserved in `deprecated/` but not actively used
+### Terminology
 
-## Working with this Project
-
-When making changes:
-- Story content (characters, locations, templates) lives at root level
-- Generated images go in `out-images/` (git-ignored)
-- Old code is in `deprecated/` - don't modify unless migrating something back
+- Use "attempt" not "whack"
+- Use "character" not "kid" in data structures (field names like `climax_focus_character`)
+- Use "location" for rooms/places
+- In narrative text (descriptions, summaries), informal terms like "kids" are acceptable and refer to the child characters

@@ -5,13 +5,7 @@ the world, the narrative logic, and how the branching six-book structure hangs t
 
 It is meant as an orientation guide for a coding agent so it can reason about "what's going on here" without needing to know any specific prose or page text.
 
-### File Structure
-
-The project data is organized as:
-
-- `characters/` - Character definitions (6 YAML files)
-- `locations/` - Location and room definitions (8 YAML files)
-- `story/template.yaml` - The shared 23-page narrative template
+**For project file structure and organization, see the [README](../README.md).**
 
 ---
 
@@ -19,31 +13,30 @@ The project data is organized as:
 
 This repository encodes a **single shared storyworld**:
 
-- A real-world-ish place called **Millbrook** during a winter holiday.
-- A **single house** that becomes mildly haunted after a strange ornament is hung on the Christmas tree.
-- **Six children**, each with their own point of view and core strength.
-- A **Tibetan trickster spirit** whose magic is about *mismatch* and *scrambled roles*, not gore or horror.
+- **Millbrook** is a real town in upstate New York. Deep in the woods outside the town sits a large house, also called Millbrook, where a woman named Graminy lives.
+- During a **Christmas holiday**, the house becomes mildly haunted after a strange ornament is hung on the Christmas tree.
+- **Eight characters** inhabit this world:
+  - **Six children** (cousins and siblings: Arthur, Cullan, Emer, Hansel, Henry, and James - see `characters/*.yaml`), each with their own point of view and core strength
+  - **Dorje Legpa**, a Gyalpo trickster deity (see `characters/dorje_legpa.yaml`) whose magic is about *mismatch* and *scrambled roles*, not gore or horror
+  - **Regan** (see `characters/regan.yaml`), mother of Cullan and Emer, who identifies the spirit
 
-From this shared world, we want to generate **six parallel picture books**, each one:
+From this shared world, we generate **six parallel picture books**, each one:
 
-- Focusing on a **different child** as the main character.
-- Sharing the **same global sequence of “story beats”** (page slots) as all the others.
-- Diverging in **which rooms they visit**, **which problems they fix**, and **what we see of their inner arc**.
+- Focusing on a **different child** as the main character
+- Sharing the **same global sequence of "story beats"** (page slots) as all the others
+- Diverging in **which rooms they visit**, **which problems they fix**, and **what we see of their inner arc**
 
-In other words: it’s **one story, six perspectives**, all tightly synchronized.
+In other words: it's **one story, six perspectives**, all tightly synchronized.
 
 ---
 
-## 2. The World of Millbrook and the House
+## 2. The House
 
-The physical setting is:
-
-- **Millbrook**, a small, wintry town in the present day.
-- A **large, cozy family house** with:
-  - Social spaces (living room, dining room).
-  - Functional spaces (kitchen, stairs).
-  - “Magic-feeling” spaces (library, playroom, sun room).
-  - The surrounding **yard/driveway** used in the finale.
+Graminy's house is a **large, cozy family home** with:
+- Social spaces (living room, dining room)
+- Functional spaces (kitchen, stairs)
+- "Magic-feeling" spaces (library, playroom, sun room)
+- The surrounding **yard/driveway** used in the finale
 
 The tone is:
 
@@ -63,22 +56,22 @@ You can think of the house as a **small graph**:
 
 The main magical object is a **strange ornament** hung on the Christmas tree.
 
-- It contains a **trickster spirit** whose nature is to scramble things:
+- It contains **Dorje Legpa**, a Gyalpo trickster deity whose nature is to scramble things:
   - Wrong people in wrong seats
   - Wrong gifts for wrong kids
   - Wrong story endings, wrong game rules, wrong paths, wrong seasons
-- When the ornament is disturbed, this energy **fractures into multiple echoes** that slip into different rooms of the house.
+- When the ornament is disturbed, Dorje Legpa's energy **fractures into multiple echoes** that slip into different rooms of the house.
 
 Each echo manifests as a **room-specific kind of mismatch**:
 
-- The rooms themselves become “mini-boss habitats.”
-- The trickster’s influence is *local* in each room but *global* in effect: the house as a whole feels subtly wrong.
+- The rooms themselves become "mini-boss habitats."
+- Dorje Legpa's influence is *local* in each room but *global* in effect: the house as a whole feels subtly wrong.
 
-Later, the spirit is:
+Later, Dorje Legpa is:
 
-1. **Re-concentrated** in the living room during the climax,
-2. **Captured** in a container, and
-3. **Carried outside** to a new, appropriate home, where its protective side can remain while the disruptive side is contained.
+1. **Re-concentrated** in the living room during the climax
+2. **Captured** in a container
+3. **Carried outside** to a new, appropriate home, where the protective side can remain while the disruptive side is contained
 
 ---
 
@@ -162,7 +155,7 @@ At the highest altitude, each book goes through these phases:
    - This points them back to the living room and the tree.
 
 6. **Living Room Confrontation & Spirit Battle**
-   - All kids gather, the ornament is identified, and the trickster spirit erupts.
+   - All kids gather, the ornament is identified (Regan identifies it as Dorje Legpa, a Gyalpo trickster deity), and the spirit erupts.
    - Each child uses what they learned in their room in a joint, big-scene sequence.
    - One child performs the final containment, but it only works because everyone else does their part.
 
@@ -180,14 +173,13 @@ At the highest altitude, each book goes through these phases:
 A coding agent should treat the data files (characters, pages, locations) as **three complementary views** of the same system:
 
 - **Characters** (`characters/*.yaml`) describe:
-  - Who the six kids are.
-  - Which symbolic roles they play (e.g., which room they "own" as their second attempt).
-  - Who their swap partner is during the pair section.
+  - Who the eight characters are (six children, Dorje Legpa, and Regan)
+  - For the six children: which symbolic roles they play (e.g., which room they "own" as their second attempt) and who their swap partner is during the pair section
 
 - **Locations** (`locations/*.yaml`) describe:
-  - How the trickster spirit's influence manifests in each place.
-  - What it means for that room to be partially vs. fully resolved.
-  - Which child is ultimately the "hero" of that room.
+  - How Dorje Legpa's influence manifests in each place
+  - What it means for that room to be partially vs. fully resolved
+  - Which child is ultimately the "hero" of that room
 
 - **Pages** (`story/template.yaml`) describe:
   - The global linear order of story beats.
@@ -229,9 +221,9 @@ Some ways this architecture can be extended:
 
 As long as the **conceptual triangle** stays clear—
 
-- One house, one spirit source, one final banishing place.
-- Six kids with strong but different passions.
-- One shared spine of beats with joint, pair, and individual slots—
+- One house (Graminy's home in Millbrook), one spirit source (Dorje Legpa in the ornament), one final banishing place (the exterior)
+- Six children with strong but different passions, plus supporting characters (Dorje Legpa and Regan)
+- One shared spine of beats with joint, pair, and individual slots
 
-the system should stay coherent while remaining very flexible for generation and experimentation.
+—the system should stay coherent while remaining very flexible for generation and experimentation.
 
