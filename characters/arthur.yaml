@@ -29,4 +29,10 @@ pair_partner: cullan
 
 superpower: Pattern-matcher who restores social and spatial harmony.
 
-visual: Arthur is a skinny friendly boy with messy curly brown hair.
+visual:
+  - skinny friendly boy
+  - messy curly brown hair
+  - quiet but confident smile
+  - always wears a plain heather-grey crewneck t-shirt
+  - always wears loose black-and-white plaid flannel pajama pants
+  - always wears taupe two-strap suede buckle sandals
