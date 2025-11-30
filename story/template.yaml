@@ -1,198 +1,344 @@
 pages:
-  - id: p1
-    index: 1
-    section: Ordinary World
-    page_type: joint          # everyone page
-    location_mode: fixed
-    location: exterior
-    story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house glowing in the distance.
-
-  - id: p2
-    index: 2
-    section: Ordinary World
-    page_type: joint
-    location_mode: fixed
-    location: living_room
-    story_beat: All the kids play happily with their favorite toys around the Christmas tree in a warm, bustling living room.
-
-  - id: p3
-    index: 3
-    section: Ordinary World
-    page_type: individual
-    location_mode: fixed
-    location: living_room
-    story_beat: The main character plays with their favorite toy, glances at the tree, and feels a subtle sense that something about it is wrong.
-    notes: Content customized per main character but always near the tree.
-
-  - id: p4
-    index: 4
-    section: Ordinary World
-    page_type: individual
-    location_mode: fixed
-    location: hallway
-    story_beat: Uneasily, the main character follows a strange feeling or sound away from the tree and toward another part of the house.
-
-  - id: p5
-    index: 5
-    section: First Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: first_attempt
-    story_beat: The main character steps into their first-attempt location and senses that something in here is definitely wrong.
-    notes: Location depends on character's first attempt location (attempt_locations[0]).
-
-  - id: p6
-    index: 6
-    section: First Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: first_attempt
-    story_beat: The haunting escalates and the main character tries a simple, obvious solution based on what seems to make sense at first.
-    notes: Partial solution attempt.
-
-  - id: p7
-    index: 7
-    section: First Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: first_attempt
-    story_beat: The room calms down a bit and the haunting is visibly weakened, but something still feels off as the main character leaves.
-    notes: First attempt- partial success only.
-
-  - id: p8
-    index: 8
-    section: Crossover / Pair
-    page_type: pair
-    location_mode: fixed
-    location: hallway
-    story_beat: The main character bumps into their room-swap partner in the hall, and they compare the strange things that just happened in their rooms.
-    pair_groups:
-      - [arthur, cullan]
-      - [james, hansel]
-      - [emer, henry]
-
-  - id: p9
-    index: 9
-    section: Crossover / Pair
-    page_type: pair
-    location_mode: fixed
-    location: hallway
-    story_beat: They realize each other's strengths fit the other room better, decide the house is haunted, and agree to swap which room they will tackle next.
-    pair_groups:
-      - [arthur, cullan]
-      - [james, hansel]
-      - [emer, henry]
-
-  - id: p10
-    index: 10
-    section: Second Attempt
-    page_type: individual
-    location_mode: fixed
-    location: hallway
-    story_beat: The main character walks with new resolve toward their second-attempt location, determined to use what they are truly best at this time.
-
-  - id: p11
-    index: 11
-    section: Second Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: second_attempt
-    story_beat: In the new room, the haunting is still present but subtler, and the main character notices a deeper pattern that matches their strongest passion.
-
-  - id: p12
-    index: 12
-    section: Second Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: second_attempt
-    story_beat: The main character experiments with a solution based on that passion, and the room begins to respond and improve.
-
-  - id: p13
-    index: 13
-    section: Second Attempt
-    page_type: individual
-    location_mode: by_role
-    room_role: second_attempt
-    story_beat: Committed fully to their strength, the main character completes the second attempt, the haunting in this room dissolves, and the space feels truly right.
-    notes: "Second attempt: this character is the 'room hero'."
-
-  - id: p14
-    index: 14
-    section: Realizing the Bigger Problem
-    page_type: joint
-    location_mode: fixed
-    location: hallway
-    story_beat: As each kid finishes their room, they drift into the hallway and sense that a larger wrongness is still pulsing through the house.
-
-  - id: p15
-    index: 15
-    section: Realizing the Bigger Problem
-    page_type: joint
-    location_mode: fixed
-    location: hallway
-    story_beat: Nervous but determined, the group talks, masters their fears, and decides they must face whatever is in the living room together.
-
-  - id: p16
-    index: 16
-    section: Realizing the Bigger Problem
-    page_type: joint
-    location_mode: fixed
-    location: living_room
-    story_beat: All the kids gather under the tree, sharing quick snapshots of what happened in their rooms, and realize everything traces back to the tree.
-
-  - id: p17
-    index: 17
-    section: Realizing the Bigger Problem
-    page_type: joint
-    location_mode: fixed
-    location: living_room
-    story_beat: Henry points at the odd ornament, and Regan identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is to scramble things.
-
-  - id: p18
-    index: 18
-    section: Climax
-    page_type: joint
-    location_mode: fixed
-    location: living_room
-    story_beat: The ornament flares and the spirit erupts, growing huge and blazing red. The boys realize it's furious because it's cramped—too big for a bedroom, it needs sky!
-
-  - id: p19
-    index: 19
-    section: Climax
-    page_type: joint
-    location_mode: fixed
-    location: living_room
-    story_beat: In a big action spread, each child uses their room-discovered superpower to contain the spirit. They tie it onto the bright red sled—still blazing and hilarious, complaining and wiggling. Very funny.
-
-  - id: p20
-    index: 20
-    section: Sky Procession
-    page_type: joint
-    location_mode: fixed
-    location: driveway
-    story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
-
-  - id: p21
-    index: 21
-    section: Sky Procession
-    page_type: joint
-    location_mode: fixed
-    location: driveway
-    story_beat: Cullan and Arthur ride in the sled being dragged by the airplane, holding the deity in a box. Emer trails behind on a tricycle with Hansel on the handlebars, pointing exultantly at the sky with his bottle. The plane lifts the sled—not too high, just enough for comedic effect—dragging it across the lawn, up over a little bump, maybe through some clouds.
-
-  - id: p22
-    index: 22
-    section: Sky Procession
-    page_type: joint
-    location_mode: fixed
-    location: driveway
-    story_beat: The moment the spirit is pulled into open space, it transforms—his flames soften into wind, his weapons turn into sparkles, his screaming face relaxes. He remembers he's not a monster but a sky guardian who forgot himself. The spirit sees himself reflected in the sky (the sky becomes his mirror). The house glows with a gentle protective aura instead of scrambled chaos.
-
-  - id: p23
-    index: 23
-    section: Epilogue
-    page_type: joint
-    location_mode: fixed
-    location: exterior
-    story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other. Each child returns to their ordinary world, slightly changed. The final image shows the peaceful house from outside with a protective glow.
-    notes: Visually can be a combination of interior reflection panel(s) and a closing exterior shot.
+   - id: p1
+     index: 1
+     section: Ordinary World
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: exterior
+     story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
+        glowing in the distance.
+   - id: p2
+     index: 2
+     section: Ordinary World
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: All the kids play happily with their favorite toys around the Christmas
+        tree in a warm, bustling living room.
+   - id: p3
+     index: 3
+     section: Ordinary World
+     page_type: individual
+     characters: [main_character]
+     location_mode: fixed
+     location: living_room
+     story_beat: The main character plays with their favorite toy, glances at the
+        tree, and feels a subtle sense that something about it is wrong.
+     notes: Content customized per main character but always near the tree.
+   - id: p4
+     index: 4
+     section: Ordinary World
+     page_type: individual
+     characters: [main_character]
+     location_mode: fixed
+     location: hallway
+     story_beat: Uneasily, the main character follows a strange feeling or sound away
+        from the tree and toward another part of the house.
+   - id: p5
+     index: 5
+     section: First Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: first_attempt
+     story_beat: The main character steps into their first-attempt location and senses
+        that something in here is definitely wrong.
+     notes: Location depends on character's first attempt location (attempt_locations[0]).
+   - id: p6
+     index: 6
+     section: First Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: first_attempt
+     story_beat: The haunting escalates and the main character tries a simple, obvious
+        solution based on what seems to make sense at first.
+     notes: Partial solution attempt.
+   - id: p7
+     index: 7
+     section: First Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: first_attempt
+     story_beat: The room calms down a bit and the haunting is visibly weakened, but
+        something still feels off as the main character leaves.
+     notes: 'First attempt: partial success only.'
+   - id: p8
+     index: 8
+     section: Crossover / Pair
+     page_type: pair
+     characters: [main_character, pair_partner]
+     location_mode: fixed
+     location: hallway
+     story_beat: The main character bumps into their room-swap partner in the hall,
+        and they compare the strange things that just happened in their rooms.
+     pair_groups:
+        -    - arthur
+             - cullan
+        -    - james
+             - hansel
+        -    - emer
+             - henry
+   - id: p9
+     index: 9
+     section: Crossover / Pair
+     page_type: pair
+     characters: [main_character, pair_partner]
+     location_mode: fixed
+     location: hallway
+     story_beat: They realize each other's strengths fit the other room better, decide
+        the house is haunted, and agree to swap which room they will tackle next.
+     pair_groups:
+        -    - arthur
+             - cullan
+        -    - james
+             - hansel
+        -    - emer
+             - henry
+   - id: p10
+     index: 10
+     section: Second Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: fixed
+     location: hallway
+     story_beat: The main character walks with new resolve toward their second-attempt
+        location, determined to use what they are truly best at this time.
+   - id: p11
+     index: 11
+     section: Second Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: second_attempt
+     story_beat: In the new room, the haunting is still present but subtler, and the
+        main character notices a deeper pattern that matches their strongest passion.
+   - id: p12
+     index: 12
+     section: Second Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: second_attempt
+     story_beat: The main character experiments with a solution based on that passion,
+        and the room begins to respond and improve.
+   - id: p13
+     index: 13
+     section: Second Attempt
+     page_type: individual
+     characters: [main_character]
+     location_mode: by_role
+     room_role: second_attempt
+     story_beat: Committed fully to their strength, the main character completes the
+        second attempt, the haunting in this room dissolves, and the space feels truly
+        right.
+     notes: "Second attempt: this character is the 'room hero'."
+   - id: p14
+     index: 14
+     section: Realizing the Bigger Problem
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: hallway
+     story_beat: As each kid finishes their room, they drift into the hallway and
+        sense that a larger wrongness is still pulsing through the house.
+   - id: p15
+     index: 15
+     section: Realizing the Bigger Problem
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: hallway
+     story_beat: Nervous but determined, the group talks, masters their fears, and
+        decides they must face whatever is in the living room together.
+   - id: p16
+     index: 16
+     section: Realizing the Bigger Problem
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: All the kids gather under the tree, sharing quick snapshots of what
+        happened in their rooms, and realize everything traces back to the tree.
+   - id: p17
+     index: 17
+     section: Realizing the Bigger Problem
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: Henry points at the odd ornament on the tree, drawing everyone's
+        attention to it.
+   - id: p18
+     index: 18
+     section: Realizing the Bigger Problem
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and
+        surprised in a funny way. Behind her, rainbows, deities, lotuses, and other
+        Buddhist imagery shimmer in the air as she realizes what the ornament contains.
+        She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is
+        to scramble things.
+   - id: p19
+     index: 19
+     section: Climax
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: The ornament flares and the spirit erupts, growing huge and blazing
+        red. The boys realize it's furious because it's cramped—too big for a bedroom,
+        it needs sky!
+   - id: p20
+     index: 20
+     section: Climax
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: living_room
+     story_beat: In a big action spread, each child uses their room-discovered superpower
+        to contain the spirit. They tie it onto the bright red sled—still blazing
+        and hilarious, complaining and wiggling. Very funny.
+   - id: p21
+     index: 21
+     section: Sky Procession
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: driveway
+     story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle
+        of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red,
+        cleared for takeoff!"
+   - id: p22
+     index: 22
+     section: Sky Procession
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: driveway
+     story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
+        holding the deity in a box. Emer trails behind on a tricycle with Hansel on
+        the handlebars, pointing exultantly at the sky with his bottle. The plane
+        lifts the sled—not too high, just enough for comedic effect—dragging it across
+        the lawn, up over a little bump, maybe through some clouds.
+   - id: p23
+     index: 23
+     section: Sky Procession
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: driveway
+     story_beat: The moment the spirit is pulled into open space, it transforms—his
+        flames soften into wind, his weapons turn into sparkles, his screaming face
+        relaxes. He remembers he's not a monster but a sky guardian who forgot himself.
+        The spirit sees himself reflected in the sky (the sky becomes his mirror).
+        The house glows with a gentle protective aura instead of scrambled chaos.
+   - id: p24
+     index: 24
+     section: Epilogue
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+        - regan
+     location_mode: fixed
+     location: exterior
+     story_beat: Back inside, the kids briefly reflect on what they learned about
+        their strengths and each other. Each child returns to their ordinary world,
+        slightly changed. The final image shows the peaceful house from outside with
+        a protective glow.
+     notes: Visually can be a combination of interior reflection panel(s) and a closing
+        exterior shot.
