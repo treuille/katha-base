@@ -10,18 +10,20 @@ Please perform the following checks:
 
 ## 1. File Inventory
 List all files in these directories (excluding any deprecated folders):
-- `templates/` - All template and example YAML files
+- `characters/` - Character YAML files
+- `locations/` - Location YAML files
+- `story/` - Story template and overview
 - `README.md` - Main documentation
-- `scripts/` - Utility scripts
 - `.claude/` - Project documentation
 
 ## 2. Cross-Document Consistency Checks
 
 ### File Naming Conventions
 - Verify all documented naming patterns match actual examples
-- Check character code format (two-letter + name)
-- Check page numbering format (01, 02, not 1, 2)
-- Verify shared page naming (alphabetical character codes)
+- Check file naming format: `id.yaml` or `id-xx.jpg` where:
+  - `id` is a multiple letter code, potentially with underscores (e.g., `arthur`, `dining_room`, `sun_room`)
+  - `xx` is a digit number with leading 0 (e.g., `01`, `02`, not `1`, `2`)
+- Verify consistency across character, location, and image files
 
 ### Terminology Consistency
 - Check that terms are used consistently across all files (e.g., "spread" vs "page", "storybook" vs "book")
@@ -43,17 +45,11 @@ List all files in these directories (excluding any deprecated folders):
 - Up-to-date directory structure
 - Accurate description of workflows
 
-### Template Files
-- Consistent YAML structure across similar files
+### YAML Data Files
+- Consistent YAML structure across similar files (characters, locations, story template)
 - Accurate comments and documentation
 - Example data makes sense and is consistent
 - No contradictory instructions or examples
-
-### Scripts
-- Accurate script descriptions in README
-- Consistent error messages
-- Clear and helpful comments
-- No hardcoded values that should be variables
 
 ### .claude/ Documentation
 - Consistent with README
