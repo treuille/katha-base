@@ -37,7 +37,7 @@ Graminy's house is a **large, cozy family home** with:
 - Social spaces (living room, dining room)
 - Functional spaces (kitchen, stairs)
 - "Magic-feeling" spaces (library, playroom, sun room)
-- The surrounding **yard/driveway** used in the finale
+- The surrounding **driveway and yard** used for the sky procession finale
 
 The tone is:
 

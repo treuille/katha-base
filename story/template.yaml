@@ -169,7 +169,7 @@ pages:
     section: Sky Procession
     page_type: joint
     location_mode: fixed
-    location: exterior
+    location: driveway
     story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
 
   - id: p21
@@ -177,7 +177,7 @@ pages:
     section: Sky Procession
     page_type: joint
     location_mode: fixed
-    location: yard
+    location: driveway
     story_beat: Cullan and Arthur ride in the sled being dragged by the airplane, holding the deity in a box. Emer trails behind on a tricycle with Hansel on the handlebars, pointing exultantly at the sky with his bottle. The plane lifts the sled—not too high, just enough for comedic effect—dragging it across the lawn, up over a little bump, maybe through some clouds.
 
   - id: p22
@@ -185,14 +185,14 @@ pages:
     section: Sky Procession
     page_type: joint
     location_mode: fixed
-    location: yard
+    location: driveway
     story_beat: The moment the spirit is pulled into open space, it transforms—his flames soften into wind, his weapons turn into sparkles, his screaming face relaxes. He remembers he's not a monster but a sky guardian who forgot himself. The spirit sees himself reflected in the sky (the sky becomes his mirror). The house glows with a gentle protective aura instead of scrambled chaos.
 
   - id: p23
     index: 23
     section: Epilogue
     page_type: joint
-    location_mode: mixed
-    location: house_interior_and_exterior
+    location_mode: fixed
+    location: exterior
     story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other. Each child returns to their ordinary world, slightly changed. The final image shows the peaceful house from outside with a protective glow.
     notes: Visually can be a combination of interior reflection panel(s) and a closing exterior shot.

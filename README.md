@@ -8,15 +8,15 @@ A picture book generation system for creating illustrated story pages.
 
 ```
 katha-base/
-├── characters/      # Character definitions
-├── locations/       # Location and room definitions
-├── story/           # Story structure and narrative design
+├── characters/          # Character definitions
+├── locations/           # Location and room definitions
+├── story/               # Story structure and narrative design
 │   ├── template.yaml    # Shared narrative template
 │   └── overview.md      # Story world and narrative overview
-├── ref-images/      # Reference images for visual style
-├── out-images/      # Generated illustrations (git-ignored)
-├── deprecated/      # Archived old structure
-└── .streamlit/      # Streamlit configuration and secrets
+├── ref-images/          # Reference images for visual style
+├── out-images/          # Generated illustrations (git-ignored)
+├── deprecated/          # Archived old structure
+└── .streamlit/          # Streamlit configuration and secrets
 ```
 
 ## Directory Overview
