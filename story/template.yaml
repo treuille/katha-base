@@ -57,7 +57,7 @@ pages:
     location_mode: by_role
     room_role: first_attempt
     story_beat: The room calms down a bit and the haunting is visibly weakened, but something still feels off as the main character leaves.
-    notes: First attempt: partial success only.
+    notes: First attempt- partial success only.
 
   - id: p8
     index: 8
@@ -114,7 +114,7 @@ pages:
     location_mode: by_role
     room_role: second_attempt
     story_beat: Committed fully to their strength, the main character completes the second attempt, the haunting in this room dissolves, and the space feels truly right.
-    notes: Second attempt: this character is the 'room hero'.
+    notes: "Second attempt: this character is the 'room hero'."
 
   - id: p14
     index: 14
