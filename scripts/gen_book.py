@@ -19,7 +19,7 @@ Available styles (see story/styles.yaml):
 This will:
 1. Find all pages featuring the character
 2. Generate images for each page in the specified style
-3. Compile images into a PDF at out/books/{style_id}/{character}-{version}.pdf
+3. Compile images into a PDF at out/books/{character}-{version}-{style_id}.pdf
 """
 
 import sys
@@ -61,19 +61,18 @@ def _get_pages_for_character(character_id: str) -> list[Path]:
     return pages
 
 
-def _get_next_book_version(character_id: str, style_id: str) -> int:
-    """Get the next version number for a character's book in a specific style."""
-    style_dir = BOOKS_DIR / style_id
-    style_dir.mkdir(parents=True, exist_ok=True)
+def _get_next_book_version(character_id: str) -> int:
+    """Get the next version number for a character's book (global across all styles)."""
+    BOOKS_DIR.mkdir(parents=True, exist_ok=True)
 
-    existing = list(style_dir.glob(f'{character_id}-*.pdf'))
+    existing = list(BOOKS_DIR.glob(f'{character_id}-*.pdf'))
     if not existing:
         return 1
 
     # Extract version numbers and find the max
     max_version = 0
     for book_path in existing:
-        match = re.match(rf'{character_id}-(\d+)\.pdf$', book_path.name)
+        match = re.match(rf'{character_id}-(\d+)-\w+\.pdf$', book_path.name)
         if match:
             version = int(match.group(1))
             max_version = max(max_version, version)
@@ -132,11 +131,10 @@ def generate_book(character_id: str, style_id: str) -> Path:
         generated_images.append(image_path)
         print()
 
-    # Create PDF in style-specific directory
-    version = _get_next_book_version(character_id, style_id)
-    style_dir = BOOKS_DIR / style_id
-    style_dir.mkdir(parents=True, exist_ok=True)
-    pdf_path = style_dir / f'{character_id}-{version:02d}.pdf'
+    # Create PDF with style in filename
+    version = _get_next_book_version(character_id)
+    BOOKS_DIR.mkdir(parents=True, exist_ok=True)
+    pdf_path = BOOKS_DIR / f'{character_id}-{version:02d}-{style_id}.pdf'
 
     print("=" * 60)
     print(f"Creating PDF with {len(generated_images)} page(s)...")

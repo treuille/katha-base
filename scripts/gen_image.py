@@ -48,6 +48,10 @@ CONTENT_HEIGHT = 2334
 FULL_WIDTH = 3579      # CONTENT_WIDTH + 2 * BLEED
 FULL_HEIGHT = 2406     # CONTENT_HEIGHT + 2 * BLEED
 BLEED = 36             # Bleed area on all sides
+
+# DEBUG: Limiting reference images to avoid API 500 errors (max ~14 images allowed)
+MAX_STYLE_IMAGES = 1
+MAX_LOCATION_IMAGES = 1
 CENTER_GUTTER = 1789   # Center line for two-page spread fold
 
 
@@ -121,7 +125,7 @@ def _collect_reference_images(page_data, style_id):
     artist = style.get("artist", style_id)
 
     # Collect style reference images first (ref/styles/{style_id}-*.jpg)
-    style_images = sorted(Path("ref/styles").glob(f"{style_id}-*.jpg"))
+    style_images = sorted(Path("ref/styles").glob(f"{style_id}-*.jpg"))[:MAX_STYLE_IMAGES]
     for img_path in style_images:
         images.append(str(img_path))
         image_labels.append(
@@ -147,7 +151,7 @@ def _collect_reference_images(page_data, style_id):
     # Collect location images
     location = page_data.get("location")
     if location:
-        loc_images = sorted(Path("ref/locations").glob(f"{location}-*.jpg"))
+        loc_images = sorted(Path("ref/locations").glob(f"{location}-*.jpg"))[:MAX_LOCATION_IMAGES]
         for img_path in loc_images:
             images.append(str(img_path))
             # Extract the display name from the location YAML
