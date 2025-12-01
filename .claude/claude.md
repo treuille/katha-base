@@ -39,6 +39,10 @@
 - **Character files** (`characters/*.yaml`): Define character attributes, attempt locations, pair partners
 - **Location files** (`locations/*.yaml`): Define room behaviors and attempt sequences
 - **Story template** (`story/template.yaml`): Defines page sequence, types, and story beats
+- **Page files** (`out/story/*.yaml`): Individual page definitions with visual and text content
+  - **Visual field**: 3-5 bullet points describing the scene composition (DO NOT duplicate info from template/characters/locations)
+  - **Text field**: Picture book text, maximum 50 words, matches story_beat
+  - **NEVER use TODO placeholders** - always write complete content
 
 ### Key Patterns
 
@@ -85,7 +89,8 @@ The script automatically builds a comprehensive prompt by combining:
 2. **Character visual descriptions** from `characters/{character_id}.yaml` (`visual` field)
 3. **Location visual descriptions** from `locations/{location_id}.yaml` (`visual` field)
 4. **Page-specific scene** from the page YAML file (`visual` field)
-5. **Reference images** - automatically discovers and includes all matching images:
+5. **Page text to display** from the page YAML file (`text` field) - with explicit instructions to render in image
+6. **Reference images** - automatically discovers and includes all matching images:
    - Style images: `ref/style/style-*.jpg` (always included first)
    - Character images: `ref/characters/{character_id}-*.jpg`
    - Location images: `ref/locations/{location_id}-*.jpg`

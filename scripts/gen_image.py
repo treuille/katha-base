@@ -179,6 +179,11 @@ def build_prompt(page_data):
     if isinstance(page_visual, list):
         page_visual = '\n'.join(f"  - {item}" for item in page_visual)
 
+    # Get page text that should be displayed in the image
+    page_text = page_data.get('text', '')
+    if isinstance(page_text, str):
+        page_text = page_text.strip()
+
     # Build the complete prompt
     prompt = f"""Create an illustration for a children's storybook page.
 
@@ -199,7 +204,19 @@ OVERALL VISUAL STYLE:
     prompt += f"""
 PAGE-SPECIFIC SCENE:
 {page_visual}
+"""
 
+    if page_text:
+        prompt += f"""
+TEXT TO DISPLAY IN THE IMAGE:
+The following text must be included in the illustration with appropriate storybook typography and placement:
+
+"{page_text}"
+
+Please display this text exactly as written in a clear, readable storybook font that fits the Marin Hanford illustration style.
+"""
+
+    prompt += """
 Please create a single illustration that captures this moment in the Marin Hanford illustration style, using the reference images provided to ensure character and location consistency. Include lots of fun little details as shown in the reference images.
 """
 

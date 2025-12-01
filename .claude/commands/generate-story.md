@@ -41,12 +41,19 @@ You are generating story pages for a character's picture book.
 
 7. **Copy the template structure** from @story/page-template.yaml to create each page, filling in:
    - Page metadata (id, section, page_type, characters, location, story_beat) from @story/template.yaml
-   - Leave visual and text fields as TODO placeholders for manual editing
+   - **Write complete visual and text content** for each page based on the story_beat and character
    - Use symbolic room references from the character file (first_attempt_location, second_attempt_location)
 
-8. **Important notes**:
-   - DO NOT copy visual information from @story/template.yaml, @characters/, or @locations/ into the visual field
-   - Leave visual and text fields as TODO placeholders for manual editing
+8. **Writing Visual and Text Content**:
+   - **Visual field**: Write 3-5 bullet points describing the single dramatic image for this page
+     - Focus on composition, character actions, and key visual elements
+     - DO NOT duplicate information from @story/template.yaml, @characters/, or @locations/ (that's added automatically by the image generator)
+     - Frame a specific moment in time that matches the story_beat
+   - **Text field**: Write the picture book text (maximum 50 words)
+     - Write in third person for individual pages, focusing on the main character's experience
+     - Include dialogue where appropriate (use quotes)
+     - Match the tone and content to the story_beat and character's personality
+   - **NEVER use TODO placeholders** - always write complete content
 
 ## Character Consistency
 

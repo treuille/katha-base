@@ -75,10 +75,11 @@ The script assembles a comprehensive image generation prompt by combining:
 1. **Overall visual style** from `story/template.yaml`
 2. **Character visual descriptions** from each character's YAML file (e.g., `characters/arthur.yaml`)
 3. **Location visual descriptions** from the location YAML file (e.g., `locations/hallway.yaml`)
-4. **Page-specific scene description** from the page YAML file
-5. **Reference images** from `ref/style/`, `ref/characters/`, `ref/locations/`, and `ref/objects/`
+4. **Page-specific scene description** from the page YAML file (`visual` field)
+5. **Page text to display** from the page YAML file (`text` field) - instructed to be rendered in the image
+6. **Reference images** from `ref/style/`, `ref/characters/`, `ref/locations/`, and `ref/objects/`
 
-The script automatically finds all reference images matching the characters, locations, and objects in the page, and includes them in the prompt with proper labeling. Style reference images are always included first to establish the overall illustration style.
+The script automatically finds all reference images matching the characters, locations, and objects in the page, and includes them in the prompt with proper labeling. Style reference images are always included first to establish the overall illustration style. The page text is included with explicit instructions to display it in a storybook-appropriate font.
 
 ### Output
 
