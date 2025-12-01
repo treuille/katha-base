@@ -10,555 +10,476 @@
 # - low: Slight chill creeping in, hints of blue at edges, subtle wrongness
 # - medium: Cold blue tones emerging, harsh shadows, geometry slightly off
 # - high: Peak wrongness - cold harsh light, pools of darkness, proportions warped, uncanny
-
 # Story setting description (combined with style-specific prompts from story/styles.yaml)
 visual:
-   - Set in Graminy's large cozy house called Millbrook, deep in the woods of upstate New York
-   - The house has white aluminum siding and no big external chimney
-   - Christmas season atmosphere with festive decorations throughout the house
-   - Story takes place during the day with natural daylight filtering through windows
-   - Through windows, you can see snowy winter scenes of upstate New York - snow-covered trees, woods, and grounds
-   - Warm, cozy interior lighting contrasts with the cold, bright winter landscape outside
-   - Do not add more characters than those listed in the page
-   - Include lots of little fun details from the reference location images, well reproduced
+  - Set in Graminy's large cozy house called Millbrook, deep in the woods of upstate
+    New York
+  - The house has white aluminum siding and no big external chimney
+  - Christmas season atmosphere with festive decorations throughout the house
+  - Story takes place during the day with natural daylight filtering through windows
+  - Through windows, you can see snowy winter scenes of upstate New York - snow-covered
+    trees, woods, and grounds
+  - Warm, cozy interior lighting contrasts with the cold, bright winter landscape
+    outside
+  - Do not add more characters than those listed in the page
 pages:
 
    # page 01
-   - id: p01
-     index: 1
-     section: Ordinary World
-     page_type: joint
-     haunting_level: none
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: exterior
-     story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
-        glowing in the distance. Warm golden light spills from windows.
+  - id: p01
+    index: 1
+    section: Ordinary World
+    page_type: joint
+    haunting_level: none
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: exterior
+    story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
+      glowing in the distance. Warm golden light spills from windows.
 
    # page 02
-   - id: p02
-     index: 2
-     section: Ordinary World
-     page_type: joint
-     haunting_level: none
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: All the kids play happily with their favorite toys around the Christmas
-        tree in a warm, bustling living room. Everything is cozy and golden.
+  - id: p02
+    index: 2
+    section: Ordinary World
+    page_type: joint
+    haunting_level: none
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: All the kids play happily with their favorite toys around the Christmas
+      tree in a warm, bustling living room. Everything is cozy and golden.
 
    # page 03
-   - id: p03
-     index: 3
-     section: Ordinary World
-     page_type: individual
-     haunting_level: low
-     characters: [main_character]
-     location_mode: fixed
-     location: living_room
-     story_beat: The main character plays with their favorite toy, but something
-        about the tree catches their attention—an ornament seems to be watching
-        them specifically, singling them out. A chill runs through them.
-     notes: Build anticipation. The haunting should feel personal and targeted,
-        not random. The character should feel singled out from the others.
-        Visual cues - slight blue tint at edges, warmth beginning to drain.
+  - id: p03
+    index: 3
+    section: Ordinary World
+    page_type: individual
+    haunting_level: low
+    characters: [main_character]
+    location_mode: fixed
+    location: living_room
+    story_beat: The main character plays with their favorite toy, but something about
+      the tree catches their attention—an ornament seems to be watching them specifically,
+      singling them out. A chill runs through them.
+    notes: Build anticipation. The haunting should feel personal and targeted, not
+      random. The character should feel singled out from the others. Visual cues -
+      slight blue tint at edges, warmth beginning to drain.
 
    # page 04
-   - id: p04
-     index: 4
-     section: Ordinary World
-     page_type: individual
-     haunting_level: medium
-     characters: [main_character]
-     location_mode: fixed
-     location: hallway
-     story_beat: The main character follows a strange pull toward another part of
-        the house. The hallway feels subtly wrong—the warm Christmas colors seem
-        to be draining away, replaced by cold blues. Light pools oddly. Angles
-        don't quite match up.
-     notes: Build dread through visual wrongness, not scary sounds or whispers.
-        Temperature shift visible - breath might frost slightly, warm tones fading.
-        Christmas decorations in hallway look slightly tilted, proportions off.
+  - id: p04
+    index: 4
+    section: Ordinary World
+    page_type: individual
+    haunting_level: medium
+    characters: [main_character]
+    location_mode: fixed
+    location: hallway
+    story_beat: The main character follows a strange pull toward another part of the
+      house. The hallway feels subtly wrong—the warm Christmas colors seem to be draining
+      away, replaced by cold blues. Light pools oddly. Angles don't quite match up.
+    notes: Build dread through visual wrongness, not scary sounds or whispers. Temperature
+      shift visible - breath might frost slightly, warm tones fading. Christmas decorations
+      in hallway look slightly tilted, proportions off.
 
    # page 05
-   - id: p05
-     index: 5
-     section: First Attempt
-     page_type: individual
-     haunting_level: medium
-     characters: [main_character]
-     location_mode: by_role
-     room_role: first_attempt
-     story_beat: The main character steps into the room and sees something dangerous—
-        candles have clustered together in one corner, flames burning too high,
-        too close to curtains and decorations. A fire hazard that could burn down
-        the whole house. The room feels cold despite the flames.
-     notes: Location depends on character's first attempt location (attempt_locations[0]).
-        Physical danger stakes - fire risk to the house. Cold blue light from
-        windows contrasts with warm but threatening candle flames.
+  - id: p05
+    index: 5
+    section: First Attempt
+    page_type: individual
+    haunting_level: medium
+    characters: [main_character]
+    location_mode: by_role
+    room_role: first_attempt
+    story_beat: The main character steps into the room and sees something dangerous—
+      candles have clustered together in one corner, flames burning too high, too
+      close to curtains and decorations. A fire hazard that could burn down the whole
+      house. The room feels cold despite the flames.
+    notes: Location depends on character's first attempt location (attempt_locations[0]).
+      Physical danger stakes - fire risk to the house. Cold blue light from windows
+      contrasts with warm but threatening candle flames.
 
    # page 06
-   - id: p06
-     index: 6
-     section: First Attempt
-     page_type: individual
-     haunting_level: high
-     characters: [main_character]
-     location_mode: by_role
-     room_role: first_attempt
-     story_beat: The character uses their speed/strength to blow out candles and
-        move them apart, but they keep sliding back together, clustering again.
-        The harder they work, the faster the candles return to dangerous positions.
-        Shadows deepen, geometry warps further.
-     notes: The character's obvious talent works temporarily but misses the point.
-        Peak visual haunting - harsh shadows, cold blue dominant, angles wrong.
+  - id: p06
+    index: 6
+    section: First Attempt
+    page_type: individual
+    haunting_level: high
+    characters: [main_character]
+    location_mode: by_role
+    room_role: first_attempt
+    story_beat: The character uses their speed/strength to blow out candles and move
+      them apart, but they keep sliding back together, clustering again. The harder
+      they work, the faster the candles return to dangerous positions. Shadows deepen,
+      geometry warps further.
+    notes: The character's obvious talent works temporarily but misses the point.
+      Peak visual haunting - harsh shadows, cold blue dominant, angles wrong.
 
    # page 07
-   - id: p07
-     index: 7
-     section: First Attempt
-     page_type: individual
-     haunting_level: high
-     characters: [main_character]
-     location_mode: by_role
-     room_role: first_attempt
-     story_beat: The candles keep clustering despite their efforts. The character
-        realizes brute force isn't the answer—the candles aren't fighting them,
-        they're being unfairly distributed. Something else is needed. They leave
-        the room troubled, knowing their obvious skill wasn't the right tool.
-     notes: 'First attempt: partial success only. Character realizes the problem
-        is about fairness, not speed. Visual haunting remains high as they exit.'
+  - id: p07
+    index: 7
+    section: First Attempt
+    page_type: individual
+    haunting_level: high
+    characters: [main_character]
+    location_mode: by_role
+    room_role: first_attempt
+    story_beat: The candles keep clustering despite their efforts. The character realizes
+      brute force isn't the answer—the candles aren't fighting them, they're being
+      unfairly distributed. Something else is needed. They leave the room troubled,
+      knowing their obvious skill wasn't the right tool.
+    notes: 'First attempt: partial success only. Character realizes the problem is
+      about fairness, not speed. Visual haunting remains high as they exit.'
 
    # page 08
-   - id: p08
-     index: 8
-     section: Crossover / Pair
-     page_type: pair
-     haunting_level: high
-     characters: [main_character, pair_partner]
-     location_mode: fixed
-     location: hallway
-     story_beat: The main character bumps into their pair partner in the hall.
-        The hallway is at peak wrongness—cold, tilted, shadows pooling strangely.
-        The main character describes what they just experienced in their room.
-     pair_groups:
-        -    - arthur
-             - cullan
-        -    - james
-             - hansel
-        -    - emer
-             - henry
-     notes: First of five pair pages. Main character speaks, partner listens.
+  - id: p08
+    index: 8
+    section: Crossover / Pair
+    page_type: pair
+    haunting_level: high
+    characters: [main_character, pair_partner]
+    location_mode: fixed
+    location: hallway
+    story_beat: The main character bumps into their pair partner in the hall. The
+      hallway is at peak wrongness—cold, tilted, shadows pooling strangely. The main
+      character describes what they just experienced in their room.
+    pair_groups:
+      -   - arthur
+          - cullan
+      -   - james
+          - hansel
+      -   - emer
+          - henry
+    notes: First of five pair pages. Main character speaks, partner listens.
 
    # page 09
-   - id: p09
-     index: 9
-     section: Crossover / Pair
-     page_type: pair
-     haunting_level: high
-     characters: [main_character, pair_partner]
-     location_mode: fixed
-     location: hallway
-     story_beat: The pair partner describes what happened in their room. Both
-        realize they faced similar but different challenges. The hallway around
-        them feels frozen, light harsh and wrong.
-     pair_groups:
-        -    - arthur
-             - cullan
-        -    - james
-             - hansel
-        -    - emer
-             - henry
-     notes: Second pair page. Partner speaks, main character listens.
+  - id: p09
+    index: 9
+    section: Crossover / Pair
+    page_type: pair
+    haunting_level: high
+    characters: [main_character, pair_partner]
+    location_mode: fixed
+    location: hallway
+    story_beat: The pair partner describes what happened in their room. Both realize
+      they faced similar but different challenges. The hallway around them feels frozen,
+      light harsh and wrong.
+    pair_groups:
+      -   - arthur
+          - cullan
+      -   - james
+          - hansel
+      -   - emer
+          - henry
+    notes: Second pair page. Partner speaks, main character listens.
 
    # page 10
-   - id: p10
-     index: 10
-     section: Crossover / Pair
-     page_type: pair
-     haunting_level: high
-     characters: [main_character, pair_partner]
-     location_mode: fixed
-     location: hallway
-     story_beat: They compare notes, realizing the connections between their
-        experiences. A dawning understanding begins—something is very wrong
-        with this house. The visual wrongness is at its peak around them.
-     pair_groups:
-        -    - arthur
-             - cullan
-        -    - james
-             - hansel
-        -    - emer
-             - henry
-     notes: Third pair page. Dawning realization begins.
+  - id: p10
+    index: 10
+    section: Crossover / Pair
+    page_type: pair
+    haunting_level: high
+    characters: [main_character, pair_partner]
+    location_mode: fixed
+    location: hallway
+    story_beat: They compare notes, realizing the connections between their experiences.
+      A dawning understanding begins—something is very wrong with this house. The
+      visual wrongness is at its peak around them.
+    pair_groups:
+      -   - arthur
+          - cullan
+      -   - james
+          - hansel
+      -   - emer
+          - henry
+    notes: Third pair page. Dawning realization begins.
 
    # page 11
-   - id: p11
-     index: 11
-     section: Crossover / Pair
-     page_type: pair
-     haunting_level: high
-     characters: [main_character, pair_partner]
-     location_mode: fixed
-     location: hallway
-     story_beat: The realization crystallizes—"This house is haunted." They look
-        at each other with a mix of fear and determination. The cold blue light
-        and warped geometry emphasize the moment's weight.
-     pair_groups:
-        -    - arthur
-             - cullan
-        -    - james
-             - hansel
-        -    - emer
-             - henry
-     notes: Fourth pair page. Full realization of haunting.
+  - id: p11
+    index: 11
+    section: Crossover / Pair
+    page_type: pair
+    haunting_level: high
+    characters: [main_character, pair_partner]
+    location_mode: fixed
+    location: hallway
+    story_beat: The realization crystallizes—"This house is haunted." They look at
+      each other with a mix of fear and determination. The cold blue light and warped
+      geometry emphasize the moment's weight.
+    pair_groups:
+      -   - arthur
+          - cullan
+      -   - james
+          - hansel
+      -   - emer
+          - henry
+    notes: Fourth pair page. Full realization of haunting.
 
    # page 12
-   - id: p12
-     index: 12
-     section: Crossover / Pair
-     page_type: pair
-     haunting_level: high
-     characters: [main_character, pair_partner]
-     location_mode: fixed
-     location: hallway
-     story_beat: They realize each other's strengths fit the other room better
-        and agree to swap which room they will tackle next. A spark of hope
-        despite the cold, wrong hallway around them.
-     pair_groups:
-        -    - arthur
-             - cullan
-        -    - james
-             - hansel
-        -    - emer
-             - henry
-     notes: Fifth pair page. Decision to swap rooms.
+  - id: p12
+    index: 12
+    section: Crossover / Pair
+    page_type: pair
+    haunting_level: high
+    characters: [main_character, pair_partner]
+    location_mode: fixed
+    location: hallway
+    story_beat: They realize each other's strengths fit the other room better and
+      agree to swap which room they will tackle next. A spark of hope despite the
+      cold, wrong hallway around them.
+    pair_groups:
+      -   - arthur
+          - cullan
+      -   - james
+          - hansel
+      -   - emer
+          - henry
+    notes: Fifth pair page. Decision to swap rooms.
 
    # page 13
-   - id: p13
-     index: 13
-     section: Second Attempt
-     page_type: individual
-     haunting_level: high
-     characters: [main_character]
-     location_mode: fixed
-     location: hallway
-     story_beat: The character walks toward their second room with new understanding.
-        From ahead, they hear something ominous—a hint of the challenge waiting.
-        But this time they know what they're truly capable of.
-     notes: Build anticipation again. The character should sense something
-        specific from the room ahead. Haunting still high but determination growing.
+  - id: p13
+    index: 13
+    section: Second Attempt
+    page_type: individual
+    haunting_level: high
+    characters: [main_character]
+    location_mode: fixed
+    location: hallway
+    story_beat: The character walks toward their second room with new understanding.
+      From ahead, they hear something ominous—a hint of the challenge waiting. But
+      this time they know what they're truly capable of.
+    notes: Build anticipation again. The character should sense something specific
+      from the room ahead. Haunting still high but determination growing.
 
    # page 14
-   - id: p14
-     index: 14
-     section: Second Attempt
-     page_type: individual
-     haunting_level: high
-     characters: [main_character]
-     location_mode: by_role
-     room_role: second_attempt
-     story_beat: In this room, the haunting attacks them in a new way—not physical
-        danger, but making them the villain. Framing them. Accusing them. The room
-        tries to twist their identity into something they're not.
-     notes: The horror here is about false accusation, being framed, being made
-        into the bad guy. Harsh cold light, shadows that seem to point accusingly.
+  - id: p14
+    index: 14
+    section: Second Attempt
+    page_type: individual
+    haunting_level: high
+    characters: [main_character]
+    location_mode: by_role
+    room_role: second_attempt
+    story_beat: In this room, the haunting attacks them in a new way—not physical
+      danger, but making them the villain. Framing them. Accusing them. The room tries
+      to twist their identity into something they're not.
+    notes: The horror here is about false accusation, being framed, being made into
+      the bad guy. Harsh cold light, shadows that seem to point accusingly.
 
    # page 15
-   - id: p15
-     index: 15
-     section: Second Attempt
-     page_type: individual
-     haunting_level: medium
-     characters: [main_character]
-     location_mode: by_role
-     room_role: second_attempt
-     story_beat: Instead of fighting the rigged game, the character stops and
-        speaks their truth with authority. They declare what is right, what is fair,
-        what is true about themselves. The room begins to listen. Warmth starts
-        to return at the edges.
-     notes: The solution is declarative, not physical. As they speak truth,
-        warm golden tones begin seeping back in, cold retreating.
+  - id: p15
+    index: 15
+    section: Second Attempt
+    page_type: individual
+    haunting_level: medium
+    characters: [main_character]
+    location_mode: by_role
+    room_role: second_attempt
+    story_beat: Instead of fighting the rigged game, the character stops and speaks
+      their truth with authority. They declare what is right, what is fair, what is
+      true about themselves. The room begins to listen. Warmth starts to return at
+      the edges.
+    notes: The solution is declarative, not physical. As they speak truth, warm golden
+      tones begin seeping back in, cold retreating.
 
    # page 16
-   - id: p16
-     index: 16
-     section: Second Attempt
-     page_type: individual
-     haunting_level: medium
-     characters: [main_character]
-     location_mode: by_role
-     room_role: second_attempt
-     story_beat: The room yields completely. The accusations stop. The chaos bows to
-        the character's authority. They stand in a space returning to warmth and
-        realize they don't just sense what's right—they can command it. Real power.
-     notes: "Second attempt: triumphant payoff. Room SUBMITS. Warm colors returning,
-        geometry normalizing, but still some tension in the air."
+  - id: p16
+    index: 16
+    section: Second Attempt
+    page_type: individual
+    haunting_level: medium
+    characters: [main_character]
+    location_mode: by_role
+    room_role: second_attempt
+    story_beat: The room yields completely. The accusations stop. The chaos bows to
+      the character's authority. They stand in a space returning to warmth and realize
+      they don't just sense what's right—they can command it. Real power.
+    notes: 'Second attempt: triumphant payoff. Room SUBMITS. Warm colors returning,
+      geometry normalizing, but still some tension in the air.'
 
    # page 17
-   - id: p17
-     index: 17
-     section: Second Attempt
-     page_type: individual
-     haunting_level: medium
-     characters: [main_character]
-     location_mode: fixed
-     location: hallway
-     story_beat: Despite the room's surrender, the character senses the haunting
-        isn't fully resolved—something bigger pulses through the house. "This house
-        is completely haunted. I need to find my cousins." They start running.
-     notes: Transition page. Character realizes individual victory isn't enough.
-        Medium haunting - warming but still wrong. Urgency to reunite with others.
+  - id: p17
+    index: 17
+    section: Second Attempt
+    page_type: individual
+    haunting_level: medium
+    characters: [main_character]
+    location_mode: fixed
+    location: hallway
+    story_beat: Despite the room's surrender, the character senses the haunting isn't
+      fully resolved—something bigger pulses through the house. "This house is completely
+      haunted. I need to find my cousins." They start running.
+    notes: Transition page. Character realizes individual victory isn't enough. Medium
+      haunting - warming but still wrong. Urgency to reunite with others.
 
    # page 18
-   - id: p18
-     index: 18
-     section: Realizing the Bigger Problem
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: hallway
-     story_beat: As each kid finishes their room, they drift into the hallway and
-        sense that a larger wrongness is still pulsing through the house. Medium
-        haunting - warmer than before, but something still deeply wrong.
+  - id: p18
+    index: 18
+    section: Realizing the Bigger Problem
+    page_type: joint
+    haunting_level: medium
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: hallway
+    story_beat: As each kid finishes their room, they drift into the hallway and sense
+      that a larger wrongness is still pulsing through the house. Medium haunting
+      - warmer than before, but something still deeply wrong.
 
    # page 19
-   - id: p19
-     index: 19
-     section: Realizing the Bigger Problem
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: hallway
-     story_beat: Nervous but determined, the group talks, masters their fears, and
-        decides they must face whatever is in the living room together.
+  - id: p19
+    index: 19
+    section: Realizing the Bigger Problem
+    page_type: joint
+    haunting_level: medium
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: hallway
+    story_beat: Nervous but determined, the group talks, masters their fears, and
+      decides they must face whatever is in the living room together.
 
    # page 20
-   - id: p20
-     index: 20
-     section: Realizing the Bigger Problem
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: All the kids gather under the tree, sharing quick snapshots of what
-        happened in their rooms, and realize everything traces back to the tree.
+  - id: p20
+    index: 20
+    section: Realizing the Bigger Problem
+    page_type: joint
+    haunting_level: medium
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: All the kids gather under the tree, sharing quick snapshots of what
+      happened in their rooms, and realize everything traces back to the tree.
 
    # page 21
-   - id: p21
-     index: 21
-     section: Realizing the Bigger Problem
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: Henry points at the odd ornament on the tree, drawing everyone's
-        attention to it.
+  - id: p21
+    index: 21
+    section: Realizing the Bigger Problem
+    page_type: joint
+    haunting_level: medium
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: Henry points at the odd ornament on the tree, drawing everyone's attention
+      to it.
 
    # page 22
-   - id: p22
-     index: 22
-     section: Realizing the Bigger Problem
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-        - regan
-     location_mode: fixed
-     location: living_room
-     story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and
-        surprised in a funny way. Behind her, rainbows, deities, lotuses, and other
-        Buddhist imagery shimmer in the air as she realizes what the ornament contains.
-        She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is
-        to scramble things.
+  - id: p22
+    index: 22
+    section: Realizing the Bigger Problem
+    page_type: joint
+    haunting_level: medium
+    characters:
+      - arthur
+      - cullan
+      - emer
+      - hansel
+      - henry
+      - james
+      - regan
+    location_mode: fixed
+    location: living_room
+    story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and
+      surprised in a funny way. Behind her, rainbows, deities, lotuses, and other
+      Buddhist imagery shimmer in the air as she realizes what the ornament contains.
+      She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is to
+      scramble things.
 
    # page 23
-   - id: p23
-     index: 23
-     section: Climax
-     page_type: joint
-     haunting_level: medium
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: The ornament flares and the spirit erupts, growing huge and blazing
-        red. Emer realizes it's furious because it's cramped—too big for a house,
-        it needs sky!
-     notes: Emer has the insight about the deity being cramped.
+  - id: p23
+    index: 23
+    section: Climax
+    page_type: joint
+    haunting_level: medium
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: The ornament flares and the spirit erupts, growing huge and blazing
+      red. Emer realizes it's furious because it's cramped—too big for a house, it
+      needs sky!
+    notes: Emer has the insight about the deity being cramped.
 
    # page 24
-   - id: p24
-     index: 24
-     section: Climax
-     page_type: joint
-     haunting_level: low
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: Working together, the children grab the blazing deity and wrestle
-        it into a box. The spirit is furious, shining light through every crack,
-        but contained. Warmth is returning to the room.
-     notes: Simple collective action - they just grab it and box it. No need to
-        recapitulate individual superpowers. Funny and chaotic.
+  - id: p24
+    index: 24
+    section: Climax
+    page_type: joint
+    haunting_level: low
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: Working together, the children grab the blazing deity and wrestle
+      it into a box. The spirit is furious, shining light through every crack, but
+      contained. Warmth is returning to the room.
+    notes: Simple collective action - they just grab it and box it. No need to recapitulate
+      individual superpowers. Funny and chaotic.
 
    # page 25
-   - id: p25
-     index: 25
-     section: Sky Procession
-     page_type: joint
-     haunting_level: low
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: driveway
-     story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit,
-        single wing, propeller in front. He's wearing WWII-style flight goggles
-        pushed up on his forehead, but still has his Santa hat on. James acts as
-        air traffic controller on the ground—"Spirit Sled Three-Seven-Red, cleared
-        for takeoff!"
+  - id: p25
+    index: 25
+    section: Sky Procession
+    page_type: joint
+    haunting_level: low
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: driveway
+    story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit,
+      single wing, propeller in front. He's wearing WWII-style flight goggles pushed
+      up on his forehead, but still has his Santa hat on. James acts as air traffic
+      controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
 
    # page 26
-   - id: p26
-     index: 26
-     section: Sky Procession
-     page_type: joint
-     haunting_level: low
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: driveway
-     story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
-        holding the deity in a box. Emer trails behind on a tricycle with Hansel on
-        the handlebars, pointing exultantly at the sky with his bottle. The plane
-        lifts the sled—not too high, just enough for comedic effect—dragging it across
-        the lawn, up over a little bump, maybe through some clouds.
+  - id: p26
+    index: 26
+    section: Sky Procession
+    page_type: joint
+    haunting_level: low
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: driveway
+    story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
+      holding the deity in a box. Emer trails behind on a tricycle with Hansel on
+      the handlebars, pointing exultantly at the sky with his bottle. The plane lifts
+      the sled—not too high, just enough for comedic effect—dragging it across the
+      lawn, up over a little bump, maybe through some clouds.
 
    # page 27
-   - id: p27
-     index: 27
-     section: Sky Procession
-     page_type: joint
-     haunting_level: none
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: driveway
-     story_beat: The moment the spirit is pulled into open space, it transforms—his
-        flames soften into wind, his weapons turn into sparkles, his screaming face
-        relaxes. He remembers he's not a monster but a sky guardian who forgot himself.
-        The spirit sees himself reflected in the sky (the sky becomes his mirror).
-        The house glows with a gentle protective aura instead of scrambled chaos.
-        Full warm golden light restored.
+  - id: p27
+    index: 27
+    section: Sky Procession
+    page_type: joint
+    haunting_level: none
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: driveway
+    story_beat: The moment the spirit is pulled into open space, it transforms—his
+      flames soften into wind, his weapons turn into sparkles, his screaming face
+      relaxes. He remembers he's not a monster but a sky guardian who forgot himself.
+      The spirit sees himself reflected in the sky (the sky becomes his mirror). The
+      house glows with a gentle protective aura instead of scrambled chaos. Full warm
+      golden light restored.
 
    # page 28
-   - id: p28
-     index: 28
-     section: Epilogue
-     page_type: joint
-     haunting_level: none
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: living_room
-     story_beat: That evening, the cousins gather by the tree—the real tree now,
-        no strange ornaments. They share tired smiles, each quietly reflecting on
-        what they learned about their strengths. Warm golden light, cozy and safe.
-     notes: Quiet interior moment of resolution.
+  - id: p28
+    index: 28
+    section: Epilogue
+    page_type: joint
+    haunting_level: none
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: living_room
+    story_beat: That evening, the cousins gather by the tree—the real tree now, no
+      strange ornaments. They share tired smiles, each quietly reflecting on what
+      they learned about their strengths. Warm golden light, cozy and safe.
+    notes: Quiet interior moment of resolution.
 
    # page 29
-   - id: p29
-     index: 29
-     section: Epilogue
-     page_type: joint
-     haunting_level: none
-     characters:
-        - arthur
-        - cullan
-        - emer
-        - hansel
-        - henry
-        - james
-     location_mode: fixed
-     location: exterior
-     story_beat: Outside, the house glows gently in the snowy woods, protected by
-        a guardian who finally found his sky. Peace settles over Millbrook.
-        Full warm Christmas colors restored.
-     notes: Closing exterior shot bookending page 1. Guardian spirit implied in
-        cloud shapes above.
+  - id: p29
+    index: 29
+    section: Epilogue
+    page_type: joint
+    haunting_level: none
+    characters: [arthur, cullan, emer, hansel, henry, james]
+    location_mode: fixed
+    location: exterior
+    story_beat: Outside, the house glows gently in the snowy woods, protected by a
+      guardian who finally found his sky. Peace settles over Millbrook. Full warm
+      Christmas colors restored.
+    notes: Closing exterior shot bookending page 1. Guardian spirit implied in cloud
+      shapes above.
