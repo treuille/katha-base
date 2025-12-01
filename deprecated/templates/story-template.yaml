@@ -5,6 +5,23 @@
 # Based on classic story structure: setup, rising action, midpoint,
 # crisis, climax, and resolution.
 
+# Visual Style Guide
+# All illustrations should follow this consistent aesthetic
+visual_style:
+  description: |-
+    Where's Waldo? inspired flat illustration style with these key characteristics:
+
+    - FLAT COMPOSITION: Completely flat with zero perspective, no dispersement, no depth cues
+    - LINE WORK: Black pen outlines defining all shapes and characters
+    - COLOR: Solid, flat colors with no gradients, shading, or highlights
+    - CHARACTERS: Drawn with characterial expressions using simple line-based faces
+    - NO 3D: Faces and bodies have no dimensional modeling or volume - they're flat drawn shapes
+    - EXPRESSIONS: Characterful and expressive through simple line arrangements, not through form
+
+    Think of everything as if drawn on a single flat plane with a black pen and filled
+    with solid colors. No atmospheric perspective, no size variation for distance,
+    no overlapping that suggests depth.
+
 # List of spreads in the story
 spreads:
   # Spread 1 - Opening
