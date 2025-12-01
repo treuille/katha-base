@@ -1,0 +1,49 @@
+# This is the id of the page which will match out/story/p21-arthur-cullan-emer-hansel-henry-james.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p21
+
+# Copied over from story/template.yaml
+section: Sky Procession
+
+# Copied over from story/template.yaml
+page_type: joint
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+  - regan
+
+# Inferred from story/template.yaml
+location: driveway
+
+# Copied over from story/template.yaml
+story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - Outside in the snowy driveway, Henry climbs into a toy airplane
+  - The airplane magically grows to real size, becoming the "vehicle of sky"
+  - James stands on the ground in air traffic controller pose
+  - Others gather around the sled with the contained spirit
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  Outside, Henry jumped into the toy airplane. It grew, transformed, became real. James grabbed two flashlight wands and stood like an air traffic controller. "Spirit Sled Three-Seven-Red," he announced officially, "you are cleared for takeoff!" The spirit wiggled indignantly in his box on the sled.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []

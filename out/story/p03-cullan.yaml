@@ -1,0 +1,43 @@
+# This is the id of the page which will match out/story/p03-cullan.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p03
+
+# Copied over from story/template.yaml
+section: Ordinary World
+
+# Copied over from story/template.yaml
+page_type: individual
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - cullan
+
+# Inferred from story/template.yaml
+location: living_room
+
+# Copied over from story/template.yaml
+story_beat: The main character plays with their favorite toy, glances at the tree, and feels a subtle sense that something about it is wrong.
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - Cullan sits with laptop playing Fortnite, concentrating on the screen
+  - His eyes shift from the game to glance at the Christmas tree
+  - One strange ornament on the tree seems to shimmer oddly
+  - Cullan's expression shifts from relaxed to slightly uneasy
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  Cullan was in the middle of a Fortnite match when something made him look up. His eyes drifted to the Christmas tree. One ornament looked... wrong. It wasn't the color or the shape—it was something else. Something that made his stomach feel strange.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []

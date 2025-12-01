@@ -1,0 +1,49 @@
+# This is the id of the page which will match out/story/p22-arthur-cullan-emer-hansel-henry-james.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p22
+
+# Copied over from story/template.yaml
+section: Sky Procession
+
+# Copied over from story/template.yaml
+page_type: joint
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+  - regan
+
+# Inferred from story/template.yaml
+location: driveway
+
+# Copied over from story/template.yaml
+story_beat: Cullan and Arthur ride in the sled being dragged by the airplane, holding the deity in a box. Emer trails behind on a tricycle with Hansel on the handlebars, pointing exultantly at the sky with his bottle. The plane lifts the sled—not too high, just enough for comedic effect—dragging it across the lawn, up over a little bump, maybe through some clouds.
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - The airplane drags the red sled with Cullan and Arthur riding it
+  - They hold the deity's box carefully as they lift into the air
+  - Behind them, Emer pedals a tricycle with Hänsel on the handlebars
+  - Hänsel points exultantly at the sky with his bottle, the procession comedic and joyful
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  The airplane lifted the sled—not too high, just enough. Cullan and Arthur rode it, holding the deity's box. Emer trailed behind on a tricycle with Hänsel on the handlebars. He pointed at the sky with his bottle, laughing. They dragged the spirit across the lawn, up through the clouds.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []

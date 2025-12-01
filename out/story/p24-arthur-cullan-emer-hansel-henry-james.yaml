@@ -1,0 +1,49 @@
+# This is the id of the page which will match out/story/p24-arthur-cullan-emer-hansel-henry-james.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p24
+
+# Copied over from story/template.yaml
+section: Epilogue
+
+# Copied over from story/template.yaml
+page_type: joint
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+  - regan
+
+# Inferred from story/template.yaml
+location: exterior
+
+# Copied over from story/template.yaml
+story_beat: Back inside, the kids briefly reflect on what they learned about their strengths and each other. Each child returns to their ordinary world, slightly changed. The final image shows the peaceful house from outside with a protective glow.
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - Interior panel showing the children back inside, peaceful and changed
+  - They're gathered by the tree, now glowing softly without wrongness
+  - Exterior shot of the house from outside with gentle protective golden aura
+  - Snow falls softly, Christmas lights glow, everything feels right
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  Back inside, everything felt different. Cullan smiled at Arthur. They'd used their real strengths and helped each other. The house was peaceful now, protected instead of haunted. Outside, snow fell softly on Graminy's house. The spirit watched from the sky, gentle and grateful. Christmas was finally right.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []

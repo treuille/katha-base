@@ -1,0 +1,43 @@
+# This is the id of the page which will match out/story/p06-cullan.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p06
+
+# Copied over from story/template.yaml
+section: First Attempt
+
+# Copied over from story/template.yaml
+page_type: individual
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - cullan
+
+# Inferred from character's first_attempt_location (dining_room)
+location: dining_room
+
+# Copied over from story/template.yaml
+story_beat: The haunting escalates and the main character tries a simple, obvious solution based on what seems to make sense at first.
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - Cullan rushes around the table, grabbing plates and silverware
+  - He straightens chairs and stacks plates neatly
+  - Action lines show quick, athletic movements
+  - His expression is focused and determined
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  "Not on my watch," Cullan muttered. He rushed around the table, catching sliding plates and straightening chairs. He stacked the silverware neatly and lined up the glasses. The chaos slowed. The obvious mess was fixed. But something still felt off.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []

@@ -1,0 +1,49 @@
+# This is the id of the page which will match out/story/p02-arthur-cullan-emer-hansel-henry-james.yaml.
+# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
+# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
+# in filenames, even if other characters like regan or dorje_legpa appear on the page.
+# See .claude/claude.md for complete naming conventions.
+id: p02
+
+# Copied over from story/template.yaml
+section: Ordinary World
+
+# Copied over from story/template.yaml
+page_type: joint
+
+# The list of characters, using IDs from characters/ (in alphabetical order)
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+  - regan
+
+# Inferred from story/template.yaml
+location: living_room
+
+# Copied over from story/template.yaml
+story_beat: All the kids play happily with their favorite toys around the Christmas tree in a warm, bustling living room.
+
+# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
+# DO NOT: Copy / replicate / duplicate any visual information from
+#   1. story/template.yaml
+#   2. characters/character_id.yaml
+#   3. location/location_id.yaml
+# as this information will be separately added into the visual prompt.
+# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
+visual: |
+  - Bustling living room scene with decorated Christmas tree as focal point
+  - All six children scattered around playing with their favorite toys
+  - Warm, cozy atmosphere with festive decorations throughout
+  - Each child engaged in their own activity near the tree
+
+# This is the text which will be displayed on the storybook pages.
+# It should consist of no more than 50 words, including quoted sentences.
+text: |
+  Inside, the living room was warm and wonderful. The Christmas tree sparkled with ornaments. Cullan sat cross-legged with his laptop playing Fortnite, while Arthur worked on a Rubik's cube nearby. Emer danced with her ponies, Henry tinkered with his toy plane, and James sketched. Baby Hänsel banged cheerfully on a drum.
+
+# This is the list of reference objects in the page (see ref/objects)
+objects: []
