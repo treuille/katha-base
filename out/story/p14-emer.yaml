@@ -1,0 +1,27 @@
+id: p14
+section: Second Attempt
+page_type: individual
+characters:
+  - emer
+  - dorje_legpa
+location: library
+story_beat: |
+  Emer enters the library and is overwhelmed by the chaos—characters wandering
+  between books, pages fluttering everywhere, stories bleeding into each other.
+  She tries to catch them, to help, but she's too small and there are too many.
+  The room seems to accuse her—you can't fix this, you're just a little girl.
+
+visual:
+  - Emer in the center of the library, surrounded by swirling chaos
+  - Story characters float between bookshelves—a knight in a fairy tale, a princess in a mystery
+  - Pages flutter through the air like confused birds
+  - Emer reaching up, trying to catch characters, guide them home, but overwhelmed
+  - Her expression shifting from determination to distress
+  - She's too small, there are too many, it's all too much
+  - Harsh cold light, shadows pointing at her accusingly
+  - Tiny Dorje Legpa statuette tucked between books on a high shelf
+
+text: |
+  The library was chaos. Characters wandered between books—a princess lost in a mystery, a dragon in a love story. Pages flew everywhere. Emer reached for them, tried to help, but there were too many. She was too small. "I can't—" Her voice broke. "I can't do this alone."
+
+objects: []

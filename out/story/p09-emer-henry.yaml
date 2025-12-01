@@ -1,0 +1,25 @@
+id: p09
+section: Crossover / Pair
+page_type: pair
+characters:
+  - emer
+  - henry
+  - dorje_legpa
+location: hallway
+story_beat: |
+  Henry describes what happened in the library—books with scrambled stories,
+  characters wandering between pages, endings that won't stay put. Emer listens
+  with wide eyes, recognizing the same kind of wrongness.
+
+visual:
+  - Henry gesturing as he describes the library chaos
+  - Ghost-like transparent overlays between them showing scrambled book pages, wandering characters
+  - Emer's eyes wide with recognition—she understands this kind of problem
+  - Henry's expression frustrated—he tried to organize but it didn't fully work
+  - The cold hallway around them, light pooling strangely
+  - Tiny Dorje Legpa statuette visible on a side table
+
+text: |
+  "The library's haunted too," Henry said. "Books with mixed-up stories. Characters walking into the wrong books. I tried shelving them right, but..." He shook his head. Emer's eyes went wide. Scrambled stories? Characters in wrong places? That sounded like something she understood.
+
+objects: []

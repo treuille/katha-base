@@ -8,6 +8,7 @@ characters:
   - hansel
   - henry
   - james
+  - dorje_legpa
 location: driveway
 
 story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit, single
@@ -15,13 +16,14 @@ story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit,
   forehead, but still has his Santa hat on. James acts as air traffic controller.
 
 visual: |
-  - Snowy driveway scene with Henry climbing into a small WWII-style biplane
-  - The plane has an OPEN COCKPIT, single wing, propeller in front
-  - Henry wearing WWII-style flight goggles pushed UP on his forehead
-  - Henry still wearing his Santa hat—goggles AND Santa hat together
-  - James standing with authority, hand signals like an air traffic controller
-  - The glowing box with the contained spirit waiting nearby
-  - Other cousins preparing for the procession
+  - Snowy driveway scene showing clearly FROM LEFT TO RIGHT: tricycle, sled, then biplane - all moving toward the right
+  - Emer's tricycle on the FAR LEFT with Hansel on the handlebars
+  - The red sled in the MIDDLE with Arthur and Henry holding a glowing box (light coming out through cracks), struggling but gleeful
+  - Henry's small WWII-style biplane on the FAR RIGHT with OPEN COCKPIT, single wing, propeller in front
+  - Henry inside the plane wearing WWII-style flight goggles on his forehead AND his Santa hat
+  - James underneath/near the plane dressed as an air marshal, signaling the plane forward
+  - EVERYONE wearing Santa hats and looking happy, gleeful, and triumphant
+  - The whole procession moving toward the RIGHT side of the image
 
 text: |
   Outside in the snow, Henry climbed into his small airplane—a proper WWII-style biplane with an open cockpit and a propeller in front. He'd found some flight goggles somewhere and pushed them up on his forehead, though he kept his Santa hat firmly in place. James took position on the ground, all business. "Spirit Sled Three-Seven-Red," he announced in his best pilot voice, "you are cleared for takeoff!"

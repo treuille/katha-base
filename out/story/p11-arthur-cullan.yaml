@@ -5,6 +5,7 @@ haunting_level: high
 characters:
   - arthur
   - cullan
+  - dorje_legpa
 location: hallway
 
 story_beat: The realization crystallizes—"This house is haunted." They look at each
@@ -19,6 +20,7 @@ visual: |
   - A moment of shared understanding between best friends
   - Both standing straight despite the wrongness around them
   - The weight of the realization visible in their eyes
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the window ledge behind them - frozen crimson figurine silhouetted against the frosty glass
 
 text: |
   Arthur looked at the frost creeping across the hallway window. At the shadows that didn't fall right. At the way the walls seemed to lean. "Cullan," he said quietly. "This house is haunted."

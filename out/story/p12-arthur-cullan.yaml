@@ -5,6 +5,7 @@ haunting_level: high
 characters:
   - arthur
   - cullan
+  - dorje_legpa
 location: hallway
 
 story_beat: They realize each other's strengths fit the other room better and agree
@@ -19,6 +20,7 @@ visual: |
   - The cold blue hallway still wrong, but the boys standing strong together
   - A moment of determination and friendship
   - Their best-friend bond visible in how they face the challenge
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette peeking from behind a doorframe in the background - frozen crimson figurine almost hidden but watching
 
 text: |
   "Wait," Arthur said. "Your room has candles that won't stay distributed fairly. And my room has a Scrabble game with rigged rules." He paused. "That's your thing—you hate unfair rules."

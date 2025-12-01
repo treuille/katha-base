@@ -66,6 +66,26 @@ Later, Dorje Legpa is:
 2. **Captured** in a container
 3. **Carried outside** to a new, appropriate home, where the protective side can remain while the disruptive side is contained
 
+### Dorje Legpa Easter Egg
+
+Throughout every interior shot (before the climax where he fully manifests), Dorje Legpa appears as a subtle **Easter egg** for attentive viewers to spot:
+
+- **Living room scenes**: He appears as an **ornament hanging on the Christmas tree**—the strange ornament that contains him
+- **Other interior scenes** (hallway, dining room, library, etc.): He appears as a **tiny frozen statuette** (no more than 6 inches tall) hiding in a logical place—tucked behind a book, on the corner of a table, behind a chair leg, on a shelf, etc.
+
+Visual characteristics of the Easter egg form:
+- He does NOT look alive—he appears as a completely still, frozen figurine
+- Same visual features as his full form but miniaturized: crimson red skin, gold and turquoise details, tiny sword raised
+- Subtle enough to miss on first glance, but clearly recognizable as him if you look closely
+
+This Easter egg serves to:
+- Reward attentive readers who spot him in each scene
+- Foreshadow his presence throughout the house before the reveal
+- Create a "hidden picture" game element for re-reads
+- Reinforce that his influence pervades every corner of the house
+
+When Dorje Legpa appears as an Easter egg in a scene, he should be included in the `characters` list for that page so his reference images can inform the illustration.
+
 ---
 
 ## 4. Narrative Architecture: Six Books, One Spine

@@ -1,0 +1,24 @@
+id: p05
+section: First Attempt
+page_type: individual
+characters:
+  - emer
+  - dorje_legpa
+location: kitchen
+story_beat: |
+  Emer steps into the kitchen and sees chaos—jars with wrong labels, ingredients
+  swapping places, recipes rewriting themselves on cards. She wants to make
+  something, just like she does with mommy. But everything is scrambled.
+
+visual:
+  - Emer standing in the kitchen doorway, eyes wide at the chaos before her
+  - Jars on counters with labels that don't match their contents—sugar jar filled with salt, flour jar with coffee
+  - Recipe cards flutter and shift on the counter, words rearranging themselves
+  - Ingredients seem to slide between containers when you're not looking directly at them
+  - Cold blue light from windows contrasts with warm but chaotic kitchen
+  - Tiny Dorje Legpa statuette hiding behind a jar of flour on the counter
+
+text: |
+  The kitchen was all wrong. Jars had traded labels. Recipe cards kept rewriting themselves. Emer's heart sank—this was where she and Mommy made hot cocoa together. She knew exactly how it should be. "I can fix this," she whispered. "Just like Mommy taught me."
+
+objects: []

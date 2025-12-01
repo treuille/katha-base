@@ -4,6 +4,7 @@ page_type: individual
 haunting_level: high
 characters:
   - cullan
+  - dorje_legpa
 location: dining_room
 
 story_beat: Cullan uses his speed to blow out the clustered candles and spread them
@@ -13,12 +14,14 @@ story_beat: Cullan uses his speed to blow out the clustered candles and spread t
 visual: |
   - Dynamic action shot: Cullan as a blur racing around the dining table
   - Blowing out candles with his speed, moving them to safe positions around the room
-  - But candles visibly SLIDING BACK across the table surface toward the corner
+  - But candles visibly SLIDING BACK across the table surface toward the FAR RIGHT CORNER
+  - CANDLE PLACEMENT (MUST MATCH P05): All candles clustering toward the FAR RIGHT CORNER of the dining room, near the windows and velvet curtains
   - The geometry of the room warping further—shadows deepening, angles wrong
   - His santa hat flying back from the speed, expression frustrated
   - Cold blue tones dominating, harsh shadows pooling
   - Trails of smoke from extinguished candles
-  - The curtains still dangerously close to where candles keep clustering
+  - The velvet curtains in the FAR RIGHT CORNER still dangerously close to where candles keep clustering
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the china cabinet - frozen crimson figurine visible among the fine dishes, watching Cullan's futile efforts
 
 text: |
   Cullan became a blur. He raced around the table, blowing out candles, moving them to safe spots all around the room. But the moment he set one down, it started sliding back—scraping across the tablecloth toward the corner like something was pulling it. The harder he worked, the faster they clustered back together. It was like trying to bail out a sinking boat with a thimble.

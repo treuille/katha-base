@@ -1,0 +1,26 @@
+id: p08
+section: Crossover / Pair
+page_type: pair
+characters:
+  - emer
+  - henry
+  - dorje_legpa
+location: hallway
+story_beat: |
+  Emer bumps into Henry in the hallway. The hallway is at peak wrongness—cold,
+  tilted, shadows pooling strangely. Emer describes the chaos in the kitchen,
+  how the recipes kept rewriting themselves.
+
+visual:
+  - Emer and Henry meeting in the cold, tilted hallway
+  - Emer looking up at tall Henry, gesturing animatedly about what she saw
+  - She mimes stirring and the jars swapping with her hands
+  - Henry in his grey Aviator Nation tracksuit, leaning down to listen intently
+  - The height difference between 5-year-old Emer and 15-year-old Henry emphasized
+  - Cold blue light, harsh shadows, geometry slightly warped around them
+  - Tiny Dorje Legpa statuette on a hallway shelf behind them
+
+text: |
+  "Henry!" Emer ran to her big cousin in the hallway. "The kitchen is all wrong! The jars keep trading and the recipes won't stay still and I made ONE cup of cocoa but—" She waved her arms, showing him the chaos. Henry knelt down to listen.
+
+objects: []

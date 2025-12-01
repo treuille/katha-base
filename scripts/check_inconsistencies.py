@@ -29,7 +29,8 @@ def validate_yaml_files():
     yaml_files = (
         list(Path('characters').glob('*.yaml')) +
         list(Path('locations').glob('*.yaml')) +
-        [Path('story/template.yaml')]
+        [Path('story/template.yaml')] +
+        list(Path('out/story').glob('*.yaml'))
     )
 
     for yaml_file in yaml_files:

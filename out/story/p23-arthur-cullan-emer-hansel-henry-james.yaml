@@ -8,6 +8,7 @@ characters:
   - hansel
   - henry
   - james
+  - dorje_legpa
 location: living_room
 
 story_beat: The ornament flares and the spirit erupts, growing huge and blazing
@@ -16,12 +17,14 @@ story_beat: The ornament flares and the spirit erupts, growing huge and blazing
 
 visual: |
   - The ornament exploding with blazing red light
-  - A huge, fierce spirit form erupting from it, filling the room
-  - The spirit's face furious, flames and weapons swirling around it
+  - A huge, fierce spirit form erupting from it, filling the room - the room goes COLD, not hot
+  - The spirit has deep crimson red skin, slightly drunken or intoxicated-looking eyes
+  - RAINBOW LIGHT and ICE emanating from the spirit instead of fire - no flames
+  - Frosty mist and rainbow prismatic light swirling around the deity
   - All six children recoiling but standing their ground
   - The spirit clearly too big for the space, cramped and angry
 
 text: |
-  The ornament FLARED. Red light blazed as a huge spirit burst free—all flames and fury, weapons spinning, face twisted in rage. But Emer understood first: "He's not evil—he's cramped! He's too big for inside. He needs sky!"
+  The ornament FLARED. Red light blazed as a huge spirit burst free—all rainbows and icy fury, weapons spinning, face twisted in rage. The room went cold, not hot. But Emer understood first: "He's not evil—he's cramped! He's too big for inside. He needs sky!"
 
 objects: []

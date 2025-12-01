@@ -1,0 +1,25 @@
+id: p06
+section: First Attempt
+page_type: individual
+characters:
+  - emer
+  - dorje_legpa
+location: kitchen
+story_beat: |
+  Emer drags a heavy chair across the kitchen floor and climbs up to reach the
+  counter. She tries to organize ingredients and make hot cocoa from memory,
+  but the chaos keeps fighting back—labels swap, ingredients slide away.
+
+visual:
+  - Emer standing on a wooden chair she dragged to the counter, reaching up with determination
+  - Her small hands grasp a mixing bowl, ingredients gathered around her
+  - She's remembering Mommy's steps—cocoa powder, sugar, milk—but jars keep swapping contents
+  - Scuff marks on the floor from where she dragged the heavy chair
+  - Her santa hat tilted from the effort of climbing
+  - Expression of fierce concentration mixed with frustration
+  - Shadows deepen, geometry warps slightly around the edges
+
+text: |
+  Emer dragged the heavy chair across the floor—scraaape—just like Mommy taught her. She climbed up carefully, reaching for the cocoa. "First the powder, then the sugar..." But the jars kept swapping! Every time she looked away, they traded places again.
+
+objects: []

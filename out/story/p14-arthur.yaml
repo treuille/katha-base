@@ -4,9 +4,11 @@ page_type: individual
 haunting_level: high
 characters:
   - arthur
+  - dorje_legpa
 location: dining_room
 
-story_beat: Arthur enters and sees the clustered candles—fire hazard, just like
+story_beat: |
+  Arthur enters and sees the clustered candles—fire hazard, just like
   Cullan described. But Arthur sees something else: the PATTERN of how they cluster.
   It's like a Rubik's cube mid-solve. There's an order underneath the chaos, and
   he can see it.
@@ -20,6 +22,7 @@ visual: |
   - Like seeing a Rubik's cube solution overlaid on scrambled colors
   - Cold blue light from windows despite the dangerous flames
   - His quiet confidence returning—he sees the pattern others miss
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the buffet table - frozen crimson figurine with gold crown, watching Arthur survey the chaos
 
 text: |
   The candles were exactly as Cullan described—clustered in one corner, flames licking toward the curtains. But Arthur didn't see chaos. He saw a Rubik's cube, three moves from solved. The candles weren't random—they'd been pushed out of balance, and balance had a pattern. He could see where each one belonged, like ghost-images hovering in the air. This wasn't about speed. This was about seeing.

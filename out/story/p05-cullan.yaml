@@ -4,6 +4,7 @@ page_type: individual
 haunting_level: medium
 characters:
   - cullan
+  - dorje_legpa
 location: dining_room
 
 story_beat: Cullan enters the dining room and sees something dangerous—all the candles
@@ -12,14 +13,17 @@ story_beat: Cullan enters the dining room and sees something dangerous—all the
   cold despite the flames.
 
 visual: |
-  - Cullan stepping into the dining room, face showing alarm
-  - All the Christmas candles have CLUSTERED in one corner of the room
-  - Flames burning dangerously high, too close to curtains and decorations
+  - FOCUS ON THE CANDLES for dramatic effect - they are the star of this image
+  - All Christmas candles have CLUSTERED in the far right corner of the room near the velvet curtains
+  - Candles appear DYNAMIC and ALIVE - growing, moving, leaning toward curtains as if reaching
+  - Dramatic lighting from candle flames casting long, harsh shadows across the entire room
+  - Cullan visible in the BACKGROUND, face showing HORROR as he looks at what the candles are doing
   - The concentrated fire creating a real hazard—curtains could catch any moment
   - Despite the flames, cold blue light seeping through the windows
   - Frost on the windowpanes, room feeling freezing despite the fire danger
-  - His ice-blue eyes wide, recognizing the danger immediately
-  - The formal dining table with placesettings, but candles all wrong
+  - The formal dining table with placesettings, candles all clustered in the far right corner
+  - CANDLE PLACEMENT: All candles clustered in FAR RIGHT CORNER of the dining room, near the windows and velvet curtains
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the sideboard - frozen crimson figurine with gold crown, positioned as if watching the candle chaos unfold
 
 text: |
   Cullan pushed open the dining room door and gasped. Every candle in the room had somehow clustered into one corner—dozens of flames burning dangerously high, licking toward the velvet curtains. One spark and the whole house could catch fire! But despite all those flames, the room felt freezing. Frost crept across the windows. Something was very, very wrong.

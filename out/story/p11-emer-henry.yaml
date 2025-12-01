@@ -1,0 +1,25 @@
+id: p11
+section: Crossover / Pair
+page_type: pair
+characters:
+  - emer
+  - henry
+  - dorje_legpa
+location: hallway
+story_beat: |
+  The realization crystallizes—"This house is haunted." They look at each other
+  with a mix of fear and determination. The cold blue light and warped geometry
+  emphasize the moment's weight.
+
+visual:
+  - Emer and Henry facing each other, the weight of realization on their faces
+  - Emer gripping Henry's hand, scared but determined
+  - Henry protective but also uncertain—he's the older one but this is beyond normal
+  - The hallway at maximum wrongness around them—cold, tilted, shadows deep
+  - A moment of fear passing between them, but also resolve building
+  - Their breath visible in the cold air
+
+text: |
+  "Henry," Emer whispered, her voice very small. "Is this house... haunted?" The word hung in the cold air between them. Henry squeezed her hand. "Yeah," he said quietly. "I think it is." They stood together in the crooked hallway, scared but not alone.
+
+objects: []

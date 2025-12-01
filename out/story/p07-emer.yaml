@@ -1,0 +1,25 @@
+id: p07
+section: First Attempt
+page_type: individual
+characters:
+  - emer
+  - dorje_legpa
+location: kitchen
+story_beat: |
+  Through sheer determination and memory of Mommy's recipe, Emer manages to make
+  one cup of hot cocoa that tastes right. But the kitchen chaos continues around
+  her—she's calmed one small part but the deeper scrambling remains. She realizes
+  her heart isn't quite the right tool for this room.
+
+visual:
+  - Emer sitting on the chair, hands wrapped around a steaming mug of hot cocoa
+  - A small proud smile on her face—she did it, one cup is right
+  - But around her, the kitchen remains chaotic—jars still mislabeled, recipe cards still shuffling
+  - The contrast between her small victory (the perfect cup) and the larger unsolved problem
+  - She looks troubled, realizing this room needs something she doesn't have
+  - Warm brown cocoa steam rises against the cold blue background
+
+text: |
+  Emer closed her eyes and remembered. Mommy's hands guiding hers. The exact order. She made one perfect cup of cocoa—she could taste it was right. But the kitchen still churned around her. Love and memory helped, but something else was needed here. Something more... organized.
+
+objects: []

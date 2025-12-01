@@ -142,10 +142,23 @@ For each page in @story/template.yaml where this character appears:
 
 **NEVER use TODO placeholders** - always write complete content.
 
-### 3.4 Summary
+### 3.4 Validate Generated Pages
+
+Run the consistency checker to validate all generated pages:
+
+```bash
+uv run python scripts/check_inconsistencies.py
+```
+
+If any YAML validation errors are found, fix them before proceeding. Common issues:
+- Colons in story_beat text need `|` block syntax (e.g., `story_beat: |`)
+- Unquoted special characters
+
+### 3.5 Summary
 
 After completing, provide:
 - Total pages for this character
 - Pages created vs. skipped
 - List of all page files
 - Any notes on creative choices made
+- Confirmation that consistency check passed

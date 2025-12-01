@@ -8,6 +8,7 @@ characters:
   - hansel
   - henry
   - james
+  - dorje_legpa
 location: living_room
 
 story_beat: All the kids play happily with their favorite toys around the Christmas
@@ -15,12 +16,15 @@ story_beat: All the kids play happily with their favorite toys around the Christ
 
 visual: |
   - Bustling living room scene with all six cousins scattered around the Christmas tree
-  - Arthur solving a Rubik's cube on the floor, Cullan on his black gaming laptop nearby
+  - Arthur solving a comically complicated Rubik's cube - some kind of crazy platonic solid shape, not a simple cube
+  - Cullan on his black Windows gaming laptop with colorful RGB glowing keys nearby
   - Henry examining a toy airplane, James with aviation books
   - Emer playing with Hansel, who clutches his bottle
+  - All background characters wearing Christmas/Santa hats
   - Wrapping paper scattered everywhere, cozy chaos of Christmas morning
+  - EASTER EGG: One ornament on the tree is Dorje Legpa - a tiny crimson-red deity figurine with gold crown, turquoise sash, and raised sword, hanging among the regular ornaments - looks like an unusual but inanimate decoration
 
 text: |
-  The living room buzzed with cousins and Christmas. Arthur twisted his Rubik's cube while Cullan tapped at Fortnite. Henry swooped a toy airplane overhead. James studied his aviation manual. Emer kept Hansel entertained. Everyone was happy. Everything was perfect. Almost.
+  The living room buzzes with the special energy of Christmas morning. Arthur twisted his impossibly complicated Rubik's puzzle—some crazy shape with too many sides—while Cullan tapped at Fortnite on his glowing laptop. Henry swooped a toy airplane overhead. James studied his aviation manual. Emer kept Hansel entertained. Everyone was happy. Everything was perfect. Almost.
 
 objects: []
