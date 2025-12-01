@@ -313,7 +313,8 @@ def generate_with_gemini(page_file):
         print(f"Successfully generated {len(generated_images)} image(s)")
 
         # Save the generated image(s)
-        page_id = page_data.get('id', 'unknown')
+        # Use the input filename stem (without .yaml extension) for output
+        input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
         output_dir = Path('out/images')
         output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -322,11 +323,11 @@ def generate_with_gemini(page_file):
             img_obj = image_part.as_image()
             pil_image = img_obj._pil_image
 
-            # Determine output filename
+            # Determine output filename - matches input filename with .jpg extension
             if len(generated_images) == 1:
-                output_file = output_dir / f'{page_id}.jpg'
+                output_file = output_dir / f'{input_filename}.jpg'
             else:
-                output_file = output_dir / f'{page_id}_{idx + 1}.jpg'
+                output_file = output_dir / f'{input_filename}_{idx + 1}.jpg'
 
             # Save the image
             pil_image.save(output_file, format='JPEG', quality=95)
