@@ -8,24 +8,20 @@ characters:
   - hansel
   - henry
   - james
-location: exterior
+location: living_room
 
-story_beat: Back inside, the kids briefly reflect on what they learned about
-  their strengths and each other. Each child returns to their ordinary world,
-  slightly changed. The final image shows the peaceful house from outside with
-  a protective glow.
+story_beat: That evening, the cousins gather by the tree—the real tree now,
+  no strange ornaments. They share tired smiles, each quietly reflecting on
+  what they learned about their strengths.
 
 visual: |
-  - Ultra-flat Marin Hanford style with warm, peaceful resolution
-  - Split composition: interior reflection moment AND exterior closing shot
-  - Interior panel: children gathered, tired but happy, sharing quiet smiles
-  - Cullan looking thoughtfully at his hands—he knows his fairness matters now
-  - Exterior panel: the house in snowy woods, now glowing with GENTLE PROTECTIVE AURA
-  - The sky above soft and peaceful, guardian spirit implied in cloud shapes
-  - Flat warm colors: golden protective glow, white snow, cozy house
-  - Feeling of peace, safety, and lessons learned
+  - All six cousins gathered around the Christmas tree in warm evening light
+  - Tired but content expressions, the adventure behind them
+  - Cullan looking thoughtfully at his hands—knowing now what they can truly do
+  - The tree looking normal, peaceful, no strange ornaments
+  - A sense of quiet accomplishment and newfound understanding
 
 text: |
-  That night, the cousins sat together by the tree—the real tree now, no strange ornaments. Cullan thought about fairness and candles and games with honest rules. Outside, the house glowed gently in the snow, protected by a guardian who had finally found his sky.
+  That evening, the cousins sat together by the tree—the real tree now, no strange ornaments. Cullan looked at his hands. Not just fast hands. Fair hands. Hands that could see what was right and make it real. That was worth more than any speed.
 
 objects: []

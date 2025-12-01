@@ -10,14 +10,15 @@ story_beat: The main character bumps into their room-swap partner in the hall,
   and they compare the strange things that just happened in their rooms.
 
 visual: |
-  - Ultra-flat Marin Hanford style with bold colors and clean graphic shapes
-  - Cullan and Arthur face each other in the hallway, both gesturing animatedly
-  - Ghostly transparent thought-bubbles between them showing their experiences:
-    - Cullan's side: candles going out in spirals, the giant match, crooked chairs
-    - Arthur's side: jumbled game pieces, dice with wrong numbers, frustrated board games
-  - Both boys look slightly frazzled but excited to share
-  - Their expressions show the relief of finding someone who understands
-  - Flat color palette: warm hallway tones, translucent memory overlays
+  - Arthur and Cullan meeting in the hallway, both looking shaken
+  - Ghostly transparent overlays between them showing their experiences
+  - On one side: flickering candles and scrambled dining table
+  - On other side: scattered game pieces and broken board game boxes
+  - Both boys gesturing animatedly as they compare stories
 
 text: |
-  "The dining room candles kept blowing out!" Cullan said. "I lit them all, but the chairs are still wrong." Arthur nodded eagerly. "The playroom games are broken—pieces everywhere, rules that make no sense. I sorted them, but they still feel rigged."
+  "Cullan!" Arthur rushed down the hall. "The playroom is haunted—games keep changing their own rules!"
+  "The dining room too," Cullan said. "Candles won't stay lit and nothing's in the right place."
+  They stared at each other. This was bigger than either of them thought.
+
+objects: []

@@ -9,13 +9,13 @@ story_beat: The main character steps into their first-attempt location and sense
   that something in here is definitely wrong.
 
 visual: |
-  - Ultra-flat Marin Hanford style with graphic shapes and bold flat colors
-  - Elegant dining room with a long table set with candelabras everywhere
-  - Cullan stands in the doorway, eyes wide with surprise
-  - Multiple candles going out simultaneously—little puffs of smoke rising in a pattern
-  - Pff-pff-pff visual effect: candles extinguishing in a zigzag across the table
-  - Chairs visibly askew, place settings mismatched, but focus is on the dying candles
-  - Golden warm tones of the room dimming as more flames disappear
+  - Cullan stepping into the dining room, eyes wide with surprise
+  - The long formal table in disarray—chairs at odd angles, place settings scrambled
+  - Candles flickering wildly, some blowing out even as others flare
+  - His ice-blue eyes scanning the chaos, trying to make sense of it
+  - The room feeling unsettled, as if a wind is moving through despite closed windows
 
 text: |
-  The dining room was set for a fancy dinner, candles everywhere. But as Cullan watched, they started going out. Pff. Pff. Pff-pff-pff. No wind, no reason. He turned to look at one, and three behind him went dark.
+  The dining room was a mess. Chairs had slid to wrong places. Plates sat before empty seats while people's spots had nothing. And the candles—they kept blowing out in crazy patterns, like invisible fingers were snuffing them one by one. "What is going on?" Cullan whispered.
+
+objects: []

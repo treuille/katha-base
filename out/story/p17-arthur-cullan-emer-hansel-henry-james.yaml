@@ -14,13 +14,13 @@ story_beat: Henry points at the odd ornament on the tree, drawing everyone's
   attention to it.
 
 visual: |
-  - Ultra-flat illustration style with bold graphic shapes and dramatic focus
-  - Henry's arm extended, pointing directly at the strange ornament
-  - All other children's gazes following his finger to the tree
-  - The ornament isolated visually—other decorations fade, this one GLOWS
-  - The ornament looks ancient, out of place among cheerful Christmas decorations
-  - Tension in everyone's posture—this is the source
-  - Flat colors with dramatic contrast: dark ornament against bright tree
+  - Henry pointing directly at a strange ornament on the tree
+  - The ornament glowing with an unsettling inner light
+  - All other cousins turning to look where he points
+  - The ornament distinctly different from the others—wrong somehow
+  - Tension building in the frame as all eyes focus on one spot
 
 text: |
-  "There." Henry pointed at an ornament near the top. It was different from the others—darker, older, with strange patterns that seemed to move. "That one. That's what's wrong."
+  "There." Henry's voice was steady as he pointed at the tree. One ornament hung slightly crooked, glowing with a strange inner light that didn't match the others. It seemed to pulse, almost breathing. "That's what's wrong."
+
+objects: []

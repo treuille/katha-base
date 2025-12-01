@@ -9,12 +9,13 @@ story_beat: The main character plays with their favorite toy, glances at the
   tree, and feels a subtle sense that something about it is wrong.
 
 visual: |
-  - Ultra-flat Marin Hanford style with bold colors and clean graphic shapes
-  - Cullan sits cross-legged on the floor, laptop open, blue light from Fortnite on his face
-  - His ice-blue eyes lift from the screen toward the Christmas tree
-  - On the laptop screen, the game appears slightly glitched—frozen mid-action
-  - The strange ornament on the tree catches light oddly, drawing his suspicious gaze
-  - Warm living room colors contrast with the cool blue of his screen
+  - Cullan sitting cross-legged with laptop, Fortnite glowing on screen
+  - His ice-blue eyes lifting from the game toward the Christmas tree
+  - A subtle wrongness in the tree's ornaments—one seems slightly out of place
+  - His expression shifting from relaxed to uncertain
+  - Santa hat slightly askew as he tilts his head, sensing something
 
 text: |
-  Cullan's Fortnite match froze mid-jump. That never happened. He looked up at the Christmas tree, and one ornament seemed to pulse with strange light. "Weird," he muttered, closing his laptop. Something in the house felt off.
+  Cullan was deep in a Fortnite match when something made him look up. The Christmas tree sparkled like always, but one ornament caught his eye. It seemed... wrong somehow. He couldn't explain it. He tried to focus on his game, but the feeling wouldn't go away.
+
+objects: []

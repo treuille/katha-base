@@ -387,10 +387,27 @@ pages:
         - henry
         - james
      location_mode: fixed
+     location: living_room
+     story_beat: That evening, the cousins gather by the tree—the real tree now,
+        no strange ornaments. They share tired smiles, each quietly reflecting on
+        what they learned about their strengths.
+     notes: Quiet interior moment of resolution.
+
+   # page 25
+   - id: p25
+     index: 25
+     section: Epilogue
+     page_type: joint
+     characters:
+        - arthur
+        - cullan
+        - emer
+        - hansel
+        - henry
+        - james
+     location_mode: fixed
      location: exterior
-     story_beat: Back inside, the kids briefly reflect on what they learned about
-        their strengths and each other. Each child returns to their ordinary world,
-        slightly changed. The final image shows the peaceful house from outside with
-        a protective glow.
-     notes: Visually can be a combination of interior reflection panel(s) and a closing
-        exterior shot.
+     story_beat: Outside, the house glows gently in the snowy woods, protected by
+        a guardian who finally found his sky. Peace settles over Millbrook.
+     notes: Closing exterior shot bookending page 1. Guardian spirit implied in
+        cloud shapes above.

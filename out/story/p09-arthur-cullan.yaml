@@ -10,14 +10,15 @@ story_beat: They realize each other's strengths fit the other room better, decid
   the house is haunted, and agree to swap which room they will tackle next.
 
 visual: |
-  - Ultra-flat illustration style with bold graphic shapes and clean edges
-  - The two boys face each other, moment of realization lighting up their faces
-  - Arthur's hand gestures toward where dining room would be (pattern recognition)
-  - Cullan points toward playroom direction (fairness expertise)
-  - A subtle visual swap: arrows or motion lines suggesting they're trading destinations
-  - Their expressions shift from confused to confident—they have a plan
-  - Best friends energy: comfortable, trusting, ready to work together
-  - Fist bump or handshake moment capturing their agreement
+  - The two boys face each other with sudden understanding dawning
+  - Arthur's Rubik's cube visible in his pocket, Cullan's smartwatch on wrist
+  - Expressions of realization lighting up their faces
+  - A moment of agreement as they prepare to swap rooms
+  - Fist bump frozen in the middle of the frame
 
 text: |
-  "Wait," Arthur said slowly. "Chairs in wrong seats—that's a pattern puzzle. I'm good at patterns." Cullan's eyes lit up. "And rigged games? I know unfair when I see it." They bumped fists. "Swap?" "Swap."
+  "Wait," Arthur said slowly. "Your room needs someone who can see patterns in the seating. And my room..." He paused. "The games feel rigged. Like the rules themselves are unfair."
+  Cullan's eyes lit up. "That's my thing. Swap?"
+  They bumped fists. "Swap."
+
+objects: []

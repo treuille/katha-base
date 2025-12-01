@@ -9,12 +9,13 @@ story_beat: Uneasily, the main character follows a strange feeling or sound away
   from the tree and toward another part of the house.
 
 visual: |
-  - Ultra-flat illustration style with bold flat colors and no 3D shading
-  - Cullan stands in the hallway, head tilted, listening intently
-  - Distant flickering light spills from a doorway ahead (the dining room)
-  - His posture is athletic and alert—ready to move like a sprinter
-  - Shadows on the walls seem slightly wrong, as if light sources keep shifting
-  - His black Apple Watch visible on his wrist as he raises one hand to steady himself
+  - Cullan standing in the hallway, laptop closed under his arm
+  - Looking toward the dining room with furrowed brow
+  - A faint flicker of candlelight visible through the doorway ahead
+  - His track pants and athletic build suggesting readiness to move
+  - The hallway stretching before him, shadows seeming slightly wrong
 
 text: |
-  Cullan followed a flickering glow down the hallway. Candles? The light kept stuttering, on and off, like something was blowing them out. His feet moved quietly on the wooden floor as he approached the dining room door.
+  Cullan set down his laptop and wandered into the hallway. A strange flickering caught his attention—candlelight from the dining room, dancing wildly. That was weird. Graminy always kept those candles perfectly still. His runner's instincts told him to investigate.
+
+objects: []

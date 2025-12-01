@@ -9,14 +9,13 @@ story_beat: The room calms down a bit and the haunting is visibly weakened, but
   something still feels off as the main character leaves.
 
 visual: |
-  - Ultra-flat Marin Hanford style with bold colors and graphic motion lines
-  - Cullan as a blur of navy blue and royal blue, racing around the dining room
-  - Motion trails showing his speed—diving under tables, leaping over chairs
-  - The giant match leaves a trail of fire as he strikes and lights
-  - Final triumphant pose: Cullan standing still, chest heaving, match raised
-  - EVERY SINGLE CANDLE now blazing golden—room glows warm and bright
-  - But in the background: chairs still visibly crooked, place settings still wrong
-  - Flat color celebration: gold candlelight, Cullan's blue outfit, satisfied expression
+  - Cullan standing back, slightly winded, surveying his work
+  - All candles now burning steadily, the wild flickering stopped
+  - But the chairs and place settings still scrambled, unchanged
+  - His expression shifting from triumph to puzzlement
+  - Looking back over his shoulder as he heads toward the door
 
 text: |
-  Cullan became a blur. He dove under the table, leaped over chairs, struck the giant match again and again. When he finally stopped, breathing hard, every candle blazed triumphantly. But the chairs were still crooked. Something deeper was wrong.
+  The candles held steady now—his speed had worked. But as Cullan caught his breath, he noticed the chairs were still wrong. The plates still sat at empty places. He'd fixed the flames, but not the deeper problem. "That's not my thing," he muttered, heading for the hall.
+
+objects: []
