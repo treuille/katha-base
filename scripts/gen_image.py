@@ -34,7 +34,7 @@ from google.genai import types
 from PIL import Image
 
 # Public API
-__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image", "get_default_style"]
+__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image", "frame_image_for_pdf", "get_default_style"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
@@ -356,16 +356,35 @@ def show_prompt(page_file, style_id):
     print()
 
 
-def generate_image(page_file, style_id):
+def generate_image(page_file, style_id, version: int | None = None):
     """Generate image using Gemini.
 
     Args:
         page_file: Path to the page YAML file
         style_id: The style identifier (e.g., 'genealogy_witch')
+        version: Version number to save to (e.g., 1 saves to out/01/).
+                 If None, uses legacy style-based output path.
 
     Returns:
         Path to the generated image file
     """
+    from scripts import versioning
+
+    # Load page data and build prompt FIRST to compute hash
+    page_data = _load_yaml_file(page_file)
+    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
+
+    # Compute prompt hash and check for existing image
+    input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
+    prompt_hash = versioning.compute_prompt_hash(prompt)
+
+    if version is not None:
+        version_path = versioning.get_version_path(version)
+        existing = versioning.find_existing_image(version_path, input_filename, prompt_hash)
+        if existing:
+            print(f"Image already exists with matching prompt hash: {existing}")
+            return existing
+
     # Initialize the Gemini client via Vertex AI (higher quota than AI Studio)
     # Uses gcloud application-default credentials (run: gcloud auth application-default login)
     client = genai.Client(
@@ -377,10 +396,6 @@ def generate_image(page_file, style_id):
     # Load style info
     style = _load_style(style_id)
     artist = style.get("artist", style_id)
-
-    # Load page data and build prompt
-    page_data = _load_yaml_file(page_file)
-    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
 
     print(f"Generating image for {page_file}...")
     print(f"Style: {style_id} ({artist})")
@@ -451,26 +466,45 @@ def generate_image(page_file, style_id):
 
     # Save the generated image(s)
     # Use the input filename stem (without .yaml extension) for output
-    # Output to style-specific subdirectory
-    input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    output_dir = Path("out/images") / style_id
-    output_dir.mkdir(parents=True, exist_ok=True)
+    if version is not None:
+        # New versioned output: out/{version:02d}/{page_stem}-{hash}.jpg
+        output_dir = versioning.get_version_path(version)
+        output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_file = None
-    for idx, image_part in enumerate(generated_images):
-        # Get the PIL image
-        img_obj = image_part.as_image()
-        pil_image = img_obj._pil_image
+        output_file = None
+        for idx, image_part in enumerate(generated_images):
+            img_obj = image_part.as_image()
+            pil_image = img_obj._pil_image
 
-        # Determine output filename - matches input filename with .jpg extension
-        if len(generated_images) == 1:
-            output_file = output_dir / f"{input_filename}.jpg"
-        else:
-            output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
+            if len(generated_images) == 1:
+                output_file = output_dir / f"{input_filename}-{prompt_hash}.jpg"
+            else:
+                output_file = output_dir / f"{input_filename}-{prompt_hash}_{idx + 1}.jpg"
 
-        # Save the image
-        pil_image.save(output_file, format="JPEG", quality=95)
-        print(f"Saved image to: {output_file}")
+            pil_image.save(output_file, format="JPEG", quality=95)
+            print(f"Saved image to: {output_file}")
+
+        # Update manifest with image info
+        if output_file:
+            versioning.update_manifest_image(version, input_filename, output_file.name, prompt_hash)
+
+    else:
+        # Legacy style-based output: out/images/{style_id}/{page_stem}.jpg
+        output_dir = Path("out/images") / style_id
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        output_file = None
+        for idx, image_part in enumerate(generated_images):
+            img_obj = image_part.as_image()
+            pil_image = img_obj._pil_image
+
+            if len(generated_images) == 1:
+                output_file = output_dir / f"{input_filename}.jpg"
+            else:
+                output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
+
+            pil_image.save(output_file, format="JPEG", quality=95)
+            print(f"Saved image to: {output_file}")
 
     print(f"\nImage generation complete!")
 
@@ -531,6 +565,50 @@ def frame_image(image_path):
     print(f"  Full (with bleed): {FULL_WIDTH}x{FULL_HEIGHT}")
 
     return output_file
+
+
+def frame_image_for_pdf(image_path):
+    """Frame an image for PDF assembly (in-memory, no disk save).
+
+    Same processing as frame_image() but returns PIL Image instead of saving.
+    Used during PDF creation to frame images on-the-fly.
+
+    Args:
+        image_path: Path to the source image
+
+    Returns:
+        PIL Image: The framed image ready for PDF inclusion
+    """
+    from PIL import ImageDraw
+
+    image_path = Path(image_path)
+
+    # Load and resize to content dimensions
+    img = Image.open(image_path)
+    img_resized = img.resize((CONTENT_WIDTH, CONTENT_HEIGHT), Image.Resampling.LANCZOS)
+
+    # Create white canvas at full dimensions (with bleed)
+    canvas = Image.new("RGB", (FULL_WIDTH, FULL_HEIGHT), "white")
+
+    # Paste content centered on canvas (offset by bleed)
+    canvas.paste(img_resized, (BLEED, BLEED))
+
+    # Draw guide lines
+    draw = ImageDraw.Draw(canvas)
+    guide_color = (200, 200, 200)  # Light gray
+
+    # Horizontal lines (top and bottom margins)
+    draw.line([(0, BLEED), (FULL_WIDTH, BLEED)], fill=guide_color, width=1)
+    draw.line([(0, FULL_HEIGHT - BLEED), (FULL_WIDTH, FULL_HEIGHT - BLEED)], fill=guide_color, width=1)
+
+    # Vertical lines (left and right margins)
+    draw.line([(BLEED, 0), (BLEED, FULL_HEIGHT)], fill=guide_color, width=1)
+    draw.line([(FULL_WIDTH - BLEED, 0), (FULL_WIDTH - BLEED, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    # Center gutter line (for two-page spread fold)
+    draw.line([(CENTER_GUTTER, 0), (CENTER_GUTTER, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    return canvas
 
 
 def _get_available_styles():

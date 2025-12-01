@@ -12,6 +12,7 @@ katha-base/
 ├── locations/           # Location and room definitions
 ├── story/               # Story structure and narrative design
 │   ├── template.yaml    # Shared narrative template
+│   ├── page-template.yaml # Template for individual page files
 │   ├── styles.yaml      # Visual style definitions
 │   ├── styles-skip.yaml # Skipped/experimental styles
 │   └── overview.md      # Story world and narrative overview
@@ -21,8 +22,11 @@ katha-base/
 │   ├── locations/       # Location reference images
 │   └── objects/         # Object reference images
 ├── out/                 # Generated outputs (git-ignored)
-│   ├── images/{style}/  # Generated illustrations by style
-│   ├── books/           # Generated PDF books
+│   ├── versions/        # Versioned output folders
+│   │   └── {xx}/        # Version folders (01/, 02/, etc.)
+│   │       ├── *.jpg    # Raw images with prompt hash
+│   │       ├── *-book.pdf
+│   │       └── manifest.yaml
 │   └── story/           # Generated story files
 ├── deprecated/          # Archived old structure
 └── .streamlit/          # Streamlit configuration and secrets
@@ -40,8 +44,10 @@ katha-base/
   - **ref/locations/** - Location reference images
   - **ref/objects/** - Object reference images
 - **out/** - Generated outputs (not committed to repository)
-  - **out/images/{style_id}/** - Generated illustrations organized by style
-  - **out/books/** - Generated PDF books (named `{character}-{version}-{style_id}.pdf`)
+  - **out/versions/{xx}/** - Versioned output folders (e.g., `out/versions/01/`)
+    - Images named `{page_stem}-{prompt_hash}.jpg` (raw, unframed)
+    - Books named `{character}-book.pdf`
+    - `manifest.yaml` with version metadata
   - **out/story/** - Generated story files
 
 ## Visual Styles
@@ -89,8 +95,8 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_wi
 # Generate an image in red_tree style
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
 
-# Frame a generated image for printing
-uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
+# Frame a generated image for printing (legacy - framing now happens during PDF creation)
+uv run scripts/gen_image.py frame out/versions/04/p09-arthur-cullan-a1b2c.jpg
 ```
 
 ### How it works
@@ -107,8 +113,9 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ### Output
 
-- Generated images are saved to `out/images/{style_id}/{page_id}.jpg`
+- Generated images are saved to `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
 - Aspect ratio: 3:2 (closest to target ratio of 3507x2334 which is ~1.5)
+- Images are stored raw (unframed); framing happens during PDF creation
 
 ### Requirements
 
@@ -118,27 +125,44 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ## Book Generation
 
-The `scripts/gen_book.py` script generates complete picture book PDFs for a character in a specific style.
+The `scripts/gen_book.py` script generates complete picture book PDFs for a character.
 
 ### Usage
 
 ```bash
-uv run scripts/gen_book.py <character_id> <style_id>
+uv run scripts/gen_book.py <character_id> [--style STYLE] [--message MESSAGE]
 ```
+
+**Options:**
+- `--style STYLE` - Visual style to use (default: from `story/template.yaml`)
+- `--message MESSAGE` - Required when creating a new version (prompts changed)
 
 **Examples:**
 
 ```bash
-# Generate Cullan's book in genealogy_witch style
-uv run scripts/gen_book.py cullan genealogy_witch
+# Generate Cullan's book (uses existing version if prompts unchanged)
+uv run scripts/gen_book.py cullan
 
-# Generate books in parallel for multiple styles
-uv run scripts/gen_book.py cullan genealogy_witch &
-uv run scripts/gen_book.py cullan red_tree &
-uv run scripts/gen_book.py cullan gashlycrumb &
+# Create a new version with a message
+uv run scripts/gen_book.py cullan --message "Updated story text"
+
+# Generate Arthur's book in a specific style
+uv run scripts/gen_book.py arthur --style red_tree
 ```
+
+### Versioning
+
+The script automatically detects when prompts have changed:
+- **Prompts unchanged**: Uses existing version, skips already-generated images
+- **Prompts changed**: Requires `--message` flag to create a new version
+
+This enables:
+- **Crash recovery**: Re-run to resume interrupted generations
+- **Idempotent runs**: Same prompt = same image (skipped if exists)
+- **Joint page efficiency**: Generating one character's book also generates shared pages
 
 ### Output
 
-- PDFs saved to: `out/books/{character}-{version}-{style_id}.pdf`
-- Images saved to: `out/images/{style_id}/{page_id}.jpg`
+- PDFs saved to: `out/versions/{xx}/{character}-book.pdf`
+- Images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
+- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style)

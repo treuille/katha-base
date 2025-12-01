@@ -14,10 +14,10 @@
 
 - **YAML files**: Character and location definitions use YAML format
 - **Flat structure**: All story content lives at root level (characters/, locations/, story/)
-- **Generated content**: AI-created content goes in `out/` (git-ignored) - images in `out/images/`, stories in `out/story/`
+- **Generated content**: AI-created content goes in `out/` (git-ignored) - versioned outputs in `out/versions/{xx}/`, stories in `out/story/`
 - **Reference images**: Visual references in `ref/` organized by type (characters/, locations/, objects/)
 - **Deprecated code**: Old system components in `deprecated/` - don't modify unless migrating back
-- **Empty directories**: Use `.gitkeep` files to preserve empty directories in git (e.g., `ref/.gitkeep`, `out/images/.gitkeep`)
+- **Empty directories**: Use `.gitkeep` files to preserve empty directories in git (e.g., `ref/.gitkeep`)
 
 ### File Naming Conventions
 
@@ -110,8 +110,8 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_wi
 # Generate the image in red_tree style
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
 
-# Frame a generated image for printing
-uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
+# Frame a generated image for printing (legacy - framing now happens during PDF creation)
+uv run scripts/gen_image.py frame out/versions/04/p09-arthur-cullan-a1b2c.jpg
 ```
 
 **How the Prompt is Assembled:**
@@ -131,9 +131,9 @@ The script automatically builds a comprehensive prompt by combining:
    - Object images: `ref/objects/{object_id}-*.jpg`
 
 **Output:**
-- Generated images saved to: `out/images/{style_id}/{page_id}.jpg`
+- Generated images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg` (raw, unframed)
 - Aspect ratio: 3:2 (maintains ~1.5 ratio, close to target 3507x2334)
-- Framed images saved to: `out/images/{page_id}-framed.jpg`
+- Framing happens in-memory during PDF creation (no separate framed files)
 
 **Print Dimensions (frame mode):**
 - Content area: 3507×2334 pixels
@@ -150,28 +150,42 @@ The script automatically builds a comprehensive prompt by combining:
 
 ### Book Generation (`scripts/gen_book.py`)
 
-Generates a complete picture book PDF for a character in a specific style.
+Generates a complete picture book PDF for a character.
 
 **Usage:**
 ```bash
-uv run scripts/gen_book.py <character_id> <style_id>
+uv run scripts/gen_book.py <character_id> [--style STYLE] [--message MESSAGE]
 ```
+
+**Options:**
+- `--style STYLE` - Visual style to use (default: from `story/template.yaml`)
+- `--message MESSAGE` - Required when creating a new version (prompts changed)
 
 **Examples:**
 ```bash
-# Generate Cullan's book in genealogy_witch style
-uv run scripts/gen_book.py cullan genealogy_witch
+# Generate Cullan's book (uses existing version if prompts unchanged)
+uv run scripts/gen_book.py cullan
 
-# Generate Arthur's book in red_tree style
-uv run scripts/gen_book.py arthur red_tree
+# Create a new version with a message
+uv run scripts/gen_book.py cullan --message "Updated story text"
 
-# Generate books in parallel for all styles
-uv run scripts/gen_book.py cullan genealogy_witch &
-uv run scripts/gen_book.py cullan red_tree &
-uv run scripts/gen_book.py cullan gashlycrumb &
+# Generate Arthur's book in a specific style
+uv run scripts/gen_book.py arthur --style red_tree
 ```
 
+**Versioning:**
+
+The script automatically detects when prompts have changed:
+- **Prompts unchanged**: Uses existing version, skips already-generated images
+- **Prompts changed**: Requires `--message` flag to create a new version
+
+This enables:
+- **Crash recovery**: Re-run to resume interrupted generations
+- **Idempotent runs**: Same prompt = same image (skipped if exists)
+- **Joint page efficiency**: Generating one character's book also generates shared pages
+
 **Output:**
-- PDFs saved to: `out/books/{character}-{version}-{style_id}.pdf`
-- Images saved to: `out/images/{style_id}/{page_id}.jpg`
+- PDFs saved to: `out/versions/{xx}/{character}-book.pdf`
+- Images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
+- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style)
 
