@@ -3,18 +3,20 @@
 Generate an image for a story page using AI image generation.
 
 Usage:
-    uv run scripts/gen_image.py [mode] <page_file>
+    uv run scripts/gen_image.py [mode] <file>
 
 Modes:
     prompt - Show the image gen prompt and list all referenced images
     gemini - Generate the image using gemini-3-pro-image-preview model
+    frame  - Frame an existing image for print with bleed and guide lines
 
-Example:
+Examples:
     uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
     uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
+    uv run scripts/gen_image.py frame out/images/p09-arthur-cullan.jpg
 
 Requirements:
-    - GEMINI_API_KEY must be set in .env file
+    - GEMINI_API_KEY must be set in .env file (for gemini mode)
     - Reference images must exist in ref/characters/, ref/locations/, ref/objects/
 """
 
@@ -32,12 +34,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Public API
-__all__ = ["build_prompt", "generate_image", "show_prompt"]
+__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
 CONTENT_WIDTH = 3507
 CONTENT_HEIGHT = 2334
+
+# Print-ready dimensions (with bleed area)
+FULL_WIDTH = 3579      # CONTENT_WIDTH + 2 * BLEED
+FULL_HEIGHT = 2406     # CONTENT_HEIGHT + 2 * BLEED
+BLEED = 36             # Bleed area on all sides
+CENTER_GUTTER = 1789   # Center line for two-page spread fold
 
 
 def _load_yaml_file(file_path):
@@ -350,6 +358,62 @@ def generate_image(page_file):
     return output_file
 
 
+def frame_image(image_path):
+    """Frame an image for printing with bleed area and guide lines.
+
+    Takes a generated image and prepares it for print by:
+    - Resizing to exact content dimensions (CONTENT_WIDTH x CONTENT_HEIGHT)
+    - Adding bleed area (BLEED pixels on all sides)
+    - Drawing guide lines for margins and center gutter
+
+    Args:
+        image_path: Path to the source image
+
+    Returns:
+        Path to the framed image (saved as {original_stem}-framed.jpg)
+    """
+    from PIL import ImageDraw
+
+    image_path = Path(image_path)
+
+    # Load and resize to content dimensions
+    img = Image.open(image_path)
+    img_resized = img.resize((CONTENT_WIDTH, CONTENT_HEIGHT), Image.Resampling.LANCZOS)
+
+    # Create white canvas at full dimensions (with bleed)
+    canvas = Image.new("RGB", (FULL_WIDTH, FULL_HEIGHT), "white")
+
+    # Paste content centered on canvas (offset by bleed)
+    canvas.paste(img_resized, (BLEED, BLEED))
+
+    # Draw guide lines
+    draw = ImageDraw.Draw(canvas)
+    guide_color = (200, 200, 200)  # Light gray
+
+    # Horizontal lines (top and bottom margins)
+    draw.line([(0, BLEED), (FULL_WIDTH, BLEED)], fill=guide_color, width=1)
+    draw.line([(0, FULL_HEIGHT - BLEED), (FULL_WIDTH, FULL_HEIGHT - BLEED)], fill=guide_color, width=1)
+
+    # Vertical lines (left and right margins)
+    draw.line([(BLEED, 0), (BLEED, FULL_HEIGHT)], fill=guide_color, width=1)
+    draw.line([(FULL_WIDTH - BLEED, 0), (FULL_WIDTH - BLEED, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    # Center gutter line (for two-page spread fold)
+    draw.line([(CENTER_GUTTER, 0), (CENTER_GUTTER, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    # Save output
+    output_dir = Path("out/images")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / f"{image_path.stem}-framed.jpg"
+
+    canvas.save(output_file, format="JPEG", quality=95)
+    print(f"Framed image saved to: {output_file}")
+    print(f"  Content: {CONTENT_WIDTH}x{CONTENT_HEIGHT}")
+    print(f"  Full (with bleed): {FULL_WIDTH}x{FULL_HEIGHT}")
+
+    return output_file
+
+
 def main():
     """Main entry point."""
     if len(sys.argv) < 2:
@@ -366,21 +430,22 @@ def main():
         page_file = sys.argv[2]
 
     # Validate mode
-    if mode not in ["prompt", "gemini"]:
-        print(f"Error: Invalid mode '{mode}'. Must be 'prompt' or 'gemini'")
-        print(__doc__)
-        sys.exit(1)
+    valid_modes = ["prompt", "gemini", "frame"]
+    if mode not in valid_modes:
+        raise ValueError(f"Invalid mode '{mode}'. Must be one of: {', '.join(valid_modes)}")
 
-    # Validate page file exists
-    if not Path(page_file).exists():
-        print(f"Error: Page file '{page_file}' not found")
-        sys.exit(1)
+    # Validate input file exists
+    input_file = Path(page_file)
+    if not input_file.exists():
+        raise FileNotFoundError(f"Input file '{page_file}' not found")
 
     # Execute the appropriate mode
     if mode == "prompt":
         show_prompt(page_file)
     elif mode == "gemini":
         generate_image(page_file)
+    elif mode == "frame":
+        frame_image(page_file)
 
 
 if __name__ == "__main__":

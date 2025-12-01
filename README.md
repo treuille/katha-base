@@ -73,6 +73,7 @@ uv run scripts/gen_image.py [mode] <page_file>
 **Modes:**
 - `prompt` - Display the image generation prompt and list all referenced images
 - `gemini` - Generate the image using gemini-3-pro-image-preview model
+- `frame` - Frame an existing image for print with bleed and guide lines
 
 **Examples:**
 
@@ -82,6 +83,9 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
 
 # Generate an image using Gemini
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
+
+# Frame a generated image for printing
+uv run scripts/gen_image.py frame out/images/p09-arthur-cullan.jpg
 ```
 
 ### How it works

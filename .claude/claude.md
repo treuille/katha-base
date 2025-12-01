@@ -84,6 +84,7 @@ uv run scripts/gen_image.py [mode] <page_file>
 **Modes:**
 - `prompt` - Display the complete image generation prompt and list all referenced images (useful for debugging/review)
 - `gemini` - Generate the actual image using gemini-3-pro-image-preview model
+- `frame` - Frame an existing image for print with bleed area and guide lines
 
 **Examples:**
 ```bash
@@ -92,6 +93,9 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
 
 # Generate the image for page 09
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
+
+# Frame a generated image for printing
+uv run scripts/gen_image.py frame out/images/p09-arthur-cullan.jpg
 ```
 
 **How the Prompt is Assembled:**
@@ -125,8 +129,16 @@ Image 6: A reference picture of the Hallway
 ```
 
 **Output:**
-- Images saved to: `out/images/{page_id}.jpg`
+- Generated images saved to: `out/images/{page_id}.jpg`
 - Aspect ratio: 3:2 (maintains ~1.5 ratio, close to target 3507x2334)
+- Framed images saved to: `out/images/{page_id}-framed.jpg`
+
+**Print Dimensions (frame mode):**
+- Content area: 3507×2334 pixels
+- Full size (with bleed): 3579×2406 pixels
+- Bleed: 36 pixels on all sides
+- Center gutter: 1789 pixels (for two-page spread fold)
+- Guide lines drawn in light gray for margins and center gutter
 
 **Requirements:**
 - Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` (for gemini mode)
