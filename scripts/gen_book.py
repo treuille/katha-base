@@ -98,66 +98,47 @@ def _create_pdf(image_paths: list[Path], output_path: Path):
     )
 
 
-def generate_book(character_id: str) -> list[tuple[Path, Exception]]:
+def generate_book(character_id: str) -> Path:
     """Generate a picture book for a specific character.
 
     Args:
         character_id: The character ID (e.g., 'cullan', 'arthur')
 
     Returns:
-        List of (page_file, error) tuples for any pages that failed
+        Path to the generated PDF file
     """
     # Find pages for this character
     page_files = _get_pages_for_character(character_id)
 
     if not page_files:
-        print(f"No pages found for character '{character_id}'")
-        print(f"Make sure page files exist in {STORY_DIR}")
-        return []
+        raise ValueError(f"No pages found for character '{character_id}' in {STORY_DIR}")
 
     print(f"Found {len(page_files)} page(s) for {character_id}")
     print()
 
     # Generate images for each page
-    errors = []
     generated_images = []
 
     for i, page_file in enumerate(page_files, 1):
         print(f"[{i}/{len(page_files)}] Processing {page_file.name}...")
-        try:
-            gen_image.generate_image(str(page_file))
-            # Image will be saved as out/images/{page_stem}.jpg
-            image_path = IMAGES_DIR / f'{page_file.stem}.jpg'
-            if image_path.exists():
-                generated_images.append(image_path)
-            print()
-        except Exception as e:
-            errors.append((page_file, e))
-            print(f"  Error: {e}")
-            print()
+        image_path = gen_image.generate_image(str(page_file))
+        generated_images.append(image_path)
+        print()
 
-    # Create PDF if we have any images
-    if generated_images:
-        version = _get_next_book_version(character_id)
-        pdf_path = BOOKS_DIR / f'{character_id}-{version:02d}.pdf'
+    # Create PDF
+    version = _get_next_book_version(character_id)
+    pdf_path = BOOKS_DIR / f'{character_id}-{version:02d}.pdf'
 
-        print("=" * 60)
-        print(f"Creating PDF with {len(generated_images)} page(s)...")
-        _create_pdf(generated_images, pdf_path)
-        print(f"Saved book to: {pdf_path}")
+    print("=" * 60)
+    print(f"Creating PDF with {len(generated_images)} page(s)...")
+    _create_pdf(generated_images, pdf_path)
+    print(f"Saved book to: {pdf_path}")
 
-    # Report summary
     print()
     print("=" * 60)
-    succeeded = len(page_files) - len(errors)
-    print(f"Generation complete: {succeeded}/{len(page_files)} pages succeeded")
+    print(f"Generation complete: {len(page_files)}/{len(page_files)} pages succeeded")
 
-    if errors:
-        print(f"\n{len(errors)} page(s) failed:")
-        for page_file, error in errors:
-            print(f"  - {page_file.name}: {error}")
-
-    return errors
+    return pdf_path
 
 
 def main():
@@ -174,10 +155,7 @@ def main():
         print("Character IDs should be lowercase letters and underscores only")
         sys.exit(1)
 
-    errors = generate_book(character_id)
-
-    # Exit with error code if any pages failed
-    sys.exit(1 if errors else 0)
+    generate_book(character_id)
 
 
 if __name__ == '__main__':

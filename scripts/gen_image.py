@@ -252,13 +252,18 @@ def show_prompt(page_file):
 
 
 def generate_image(page_file):
-    """Generate image using Gemini."""
+    """Generate image using Gemini.
+
+    Args:
+        page_file: Path to the page YAML file
+
+    Returns:
+        Path to the generated image file
+    """
     # Get API key
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("Error: GEMINI_API_KEY environment variable not set")
-        print("Please copy .env.example to .env and set your GEMINI_API_KEY")
-        sys.exit(1)
+        raise RuntimeError("GEMINI_API_KEY environment variable not set")
 
     # Initialize the Gemini client
     client = genai.Client(api_key=api_key)
@@ -276,13 +281,10 @@ def generate_image(page_file):
     contents = []
 
     for img_path, label in zip(ref_images, ref_labels):
-        try:
-            img = Image.open(img_path)
-            contents.append(img)
-            contents.append(label)
-            print(f"  Loaded: {img_path} ({label})")
-        except Exception as e:
-            print(f"  Warning: Could not load {img_path}: {e}")
+        img = Image.open(img_path)
+        contents.append(img)
+        contents.append(label)
+        print(f"  Loaded: {img_path} ({label})")
 
     # Add the main prompt at the end
     contents.append(prompt)
@@ -294,65 +296,58 @@ def generate_image(page_file):
     # CONTENT_WIDTH = 3507, CONTENT_HEIGHT = 2334, ratio ~= 1.5 (3:2)
     aspect_ratio = "3:2"
 
-    # Use Gemini to generate the image
-    try:
-        print(f"Calling gemini-3-pro-image-preview with aspect ratio {aspect_ratio}...")
-        print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
+    print(f"Calling gemini-3-pro-image-preview with aspect ratio {aspect_ratio}...")
+    print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
 
-        response = client.models.generate_content(
-            model="gemini-3-pro-image-preview",
-            contents=contents,
-            config=types.GenerateContentConfig(
-                response_modalities=["IMAGE"],
-                image_config=types.ImageConfig(
-                    aspect_ratio=aspect_ratio,
-                ),
+    response = client.models.generate_content(
+        model="gemini-3-pro-image-preview",
+        contents=contents,
+        config=types.GenerateContentConfig(
+            response_modalities=["IMAGE"],
+            image_config=types.ImageConfig(
+                aspect_ratio=aspect_ratio,
             ),
-        )
+        ),
+    )
 
-        print(f"Response received with {len(response.parts)} part(s)")
+    print(f"Response received with {len(response.parts)} part(s)")
 
-        # Extract images from response parts
-        generated_images = []
-        for part in response.parts:
-            if part.inline_data:
-                generated_images.append(part)
+    # Extract images from response parts
+    generated_images = []
+    for part in response.parts:
+        if part.inline_data:
+            generated_images.append(part)
 
-        if not generated_images:
-            print("Error: No images were generated in the response")
-            sys.exit(1)
+    if not generated_images:
+        raise RuntimeError("No images were generated in the response")
 
-        print(f"Successfully generated {len(generated_images)} image(s)")
+    print(f"Successfully generated {len(generated_images)} image(s)")
 
-        # Save the generated image(s)
-        # Use the input filename stem (without .yaml extension) for output
-        input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-        output_dir = Path("out/images")
-        output_dir.mkdir(parents=True, exist_ok=True)
+    # Save the generated image(s)
+    # Use the input filename stem (without .yaml extension) for output
+    input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
+    output_dir = Path("out/images")
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-        for idx, image_part in enumerate(generated_images):
-            # Get the PIL image
-            img_obj = image_part.as_image()
-            pil_image = img_obj._pil_image
+    output_file = None
+    for idx, image_part in enumerate(generated_images):
+        # Get the PIL image
+        img_obj = image_part.as_image()
+        pil_image = img_obj._pil_image
 
-            # Determine output filename - matches input filename with .jpg extension
-            if len(generated_images) == 1:
-                output_file = output_dir / f"{input_filename}.jpg"
-            else:
-                output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
+        # Determine output filename - matches input filename with .jpg extension
+        if len(generated_images) == 1:
+            output_file = output_dir / f"{input_filename}.jpg"
+        else:
+            output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
 
-            # Save the image
-            pil_image.save(output_file, format="JPEG", quality=95)
-            print(f"✅ Saved image to: {output_file}")
+        # Save the image
+        pil_image.save(output_file, format="JPEG", quality=95)
+        print(f"Saved image to: {output_file}")
 
-        print(f"\n🎉 Image generation complete!")
+    print(f"\nImage generation complete!")
 
-    except Exception as e:
-        print(f"Error generating image: {e}")
-        import traceback
-
-        traceback.print_exc()
-        sys.exit(1)
+    return output_file
 
 
 def main():

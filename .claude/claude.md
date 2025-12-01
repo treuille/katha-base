@@ -64,6 +64,12 @@
 - **Deduplicate information**: Don't repeat the same information across multiple files. Reference authoritative sources (e.g., "see `characters/*.yaml`") rather than duplicating lists.
 - **Single source of truth**: Character details live in `characters/*.yaml`, location details in `locations/*.yaml`, story structure in `story/template.yaml`.
 
+### Error Handling
+
+- **Let exceptions propagate**: Do not use try/catch blocks unless the catch is part of the logical flow of the program. Let exceptions flow out naturally so they can be handled usefully by agentic callers or surface clearly in logs.
+- **Raise, don't print-and-exit**: Use `raise RuntimeError(...)` or `raise ValueError(...)` instead of `print("Error: ..."); sys.exit(1)`. This makes functions composable and testable.
+- **Return values, don't assume paths**: Functions that create files should return the path to the created file, not just print it. Callers should use the returned path rather than reconstructing it.
+
 ## Scripts
 
 ### Image Generation (`scripts/gen_image.py`)
@@ -98,7 +104,7 @@ The script automatically builds a comprehensive prompt by combining:
 4. **Page-specific scene** from the page YAML file (`visual` field)
 5. **Page text to display** from the page YAML file (`text` field) - with explicit instructions to render in image
 6. **Reference images** - automatically discovers and includes all matching images:
-   - Style images: `ref/style/style-*.jpg` (always included first)
+   - Style images: `ref/styles/{style_id}-*.jpg` (always included first)
    - Character images: `ref/characters/{character_id}-*.jpg`
    - Location images: `ref/locations/{location_id}-*.jpg`
    - Object images: `ref/objects/{object_id}-*.jpg`
