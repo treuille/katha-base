@@ -3,15 +3,17 @@
 Generate a picture book for a specific character in a specific visual style.
 
 Usage:
-    uv run scripts/gen_book.py <character_id> <style_id>
+    uv run scripts/gen_book.py <character_id> [--style STYLE]
 
 Arguments:
     character_id - The character to generate a book for (e.g., cullan, arthur)
-    style_id     - The visual style to use (e.g., genealogy_witch, red_tree)
+
+Options:
+    --style STYLE - The visual style to use (default: from story/template.yaml)
 
 Example:
-    uv run scripts/gen_book.py cullan genealogy_witch
-    uv run scripts/gen_book.py arthur red_tree
+    uv run scripts/gen_book.py cullan
+    uv run scripts/gen_book.py arthur --style red_tree
 
 Available styles (see story/styles.yaml):
     genealogy_witch, red_tree, gashlycrumb, donothing_day, ghost_hunt, ghost_easy
@@ -19,11 +21,13 @@ Available styles (see story/styles.yaml):
 This will:
 1. Find all pages featuring the character
 2. Generate images for each page in the specified style
-3. Compile images into a PDF at out/books/{character}-{version}-{style_id}.pdf
+3. Frame each image for print (with bleed area and guide lines)
+4. Compile images into a PDF at out/books/{character}-{version}-{style_id}.pdf
 """
 
 import sys
 import re
+import argparse
 from pathlib import Path
 
 # Add parent directory to path so we can import from scripts package
@@ -128,7 +132,9 @@ def generate_book(character_id: str, style_id: str) -> Path:
     for i, page_file in enumerate(page_files, 1):
         print(f"[{i}/{len(page_files)}] Processing {page_file.name}...")
         image_path = gen_image.generate_image(str(page_file), style_id)
-        generated_images.append(image_path)
+        # Frame the image for print (adds bleed area and guide lines)
+        framed_path = gen_image.frame_image(image_path)
+        generated_images.append(framed_path)
         print()
 
     # Create PDF with style in filename
@@ -150,23 +156,31 @@ def generate_book(character_id: str, style_id: str) -> Path:
 
 def main():
     """Main entry point."""
-    if len(sys.argv) != 3:
-        print(__doc__)
-        sys.exit(1)
+    default_style = gen_image.get_default_style()
 
-    character_id = sys.argv[1]
-    style_id = sys.argv[2]
+    parser = argparse.ArgumentParser(
+        description="Generate a picture book for a specific character.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=f"Default style: {default_style}"
+    )
+    parser.add_argument("character_id", help="The character to generate a book for (e.g., cullan, arthur)")
+    parser.add_argument("--style", default=default_style, help=f"The visual style to use (default: {default_style})")
+
+    args = parser.parse_args()
+
+    character_id = args.character_id
+    style_id = args.style
 
     # Validate character_id format (lowercase, underscores allowed)
     if not re.match(r'^[a-z_]+$', character_id):
-        raise ValueError(
+        parser.error(
             f"Invalid character ID '{character_id}'. "
             "Character IDs should be lowercase letters and underscores only"
         )
 
     # Validate style_id format (lowercase, underscores allowed)
     if not re.match(r'^[a-z_]+$', style_id):
-        raise ValueError(
+        parser.error(
             f"Invalid style ID '{style_id}'. "
             "Style IDs should be lowercase letters and underscores only"
         )

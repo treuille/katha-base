@@ -5,6 +5,9 @@
 # Only the 6 main child characters (arthur, cullan, emer, hansel, henry, james) are included
 # in filenames, even if other characters like regan or dorje_legpa appear on the page.
 
+# Default visual style for image generation (can be overridden with --style)
+default_style: genealogy_witch
+
 # Haunting Level Visual Framework:
 # - none: Warm golden Christmas tones, soft glowing light, cozy atmosphere
 # - low: Slight chill creeping in, hints of blue at edges, subtle wrongness

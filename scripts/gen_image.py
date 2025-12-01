@@ -3,18 +3,19 @@
 Generate an image for a story page using AI image generation.
 
 Usage:
-    uv run scripts/gen_image.py <mode> <file> [style_id]
+    uv run scripts/gen_image.py <mode> <file> [--style STYLE]
 
 Modes:
-    prompt <page_file> <style_id> - Show the image gen prompt and list all referenced images
-    gemini <page_file> <style_id> - Generate the image using Gemini
-    frame  <image_file>           - Frame an existing image for print with bleed and guide lines
+    prompt <page_file> [--style STYLE] - Show the image gen prompt and list all referenced images
+    gemini <page_file> [--style STYLE] - Generate the image using Gemini
+    frame  <image_file>                - Frame an existing image for print with bleed and guide lines
 
 Examples:
-    uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_witch
-    uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
+    uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
+    uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml --style red_tree
     uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
 
+The default style is defined in story/template.yaml (currently 'genealogy_witch').
 Available styles (see story/styles.yaml):
     genealogy_witch, red_tree, gashlycrumb, donothing_day, ghost_hunt, ghost_easy
 
@@ -24,20 +25,16 @@ Requirements:
 """
 
 import sys
+import argparse
 import yaml
 from pathlib import Path
 from collections import defaultdict
 from google import genai
 from google.genai import types
-import os
 from PIL import Image
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 # Public API
-__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image"]
+__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image", "get_default_style"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
@@ -49,11 +46,15 @@ FULL_WIDTH = 3579      # CONTENT_WIDTH + 2 * BLEED
 FULL_HEIGHT = 2406     # CONTENT_HEIGHT + 2 * BLEED
 BLEED = 36             # Bleed area on all sides
 
-# Model for image generation
+# Model for image generation (via Vertex AI)
 # GEMINI_MODEL = "gemini-2.5-flash-image"
 # GEMINI_MODEL = "gemini-3-pro-image"
-# GEMINI_MODEL = "gemini-3-pro-image-preview"
-GEMINI_MODEL = "imagen-3.0-generate-001"
+GEMINI_MODEL = "gemini-3-pro-image-preview"
+# GEMINI_MODEL = "imagen-3.0-generate-001"
+
+# Vertex AI configuration
+VERTEX_PROJECT = "gen-lang-client-0783348437"
+VERTEX_LOCATION = "global"  # Preview models require global endpoint
 
 # Gemini 3 Pro supports max 14 reference images
 MAX_TOTAL_IMAGES = 14
@@ -67,6 +68,22 @@ def _load_yaml_file(file_path):
     """Load and parse a YAML file."""
     with open(file_path, "r") as f:
         return yaml.safe_load(f)
+
+
+def get_default_style():
+    """Get the default style from story/template.yaml.
+
+    Returns:
+        str: The default style ID (e.g., 'genealogy_witch')
+
+    Raises:
+        ValueError: If no default_style is defined in template.yaml
+    """
+    template = _load_yaml_file("story/template.yaml")
+    default_style = template.get("default_style")
+    if not default_style:
+        raise ValueError("No default_style defined in story/template.yaml")
+    return default_style
 
 
 def _load_style(style_id):
@@ -341,13 +358,13 @@ def generate_image(page_file, style_id):
     Returns:
         Path to the generated image file
     """
-    # Get API key
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY environment variable not set")
-
-    # Initialize the Gemini client
-    client = genai.Client(api_key=api_key)
+    # Initialize the Gemini client via Vertex AI (higher quota than AI Studio)
+    # Uses gcloud application-default credentials (run: gcloud auth application-default login)
+    client = genai.Client(
+        vertexai=True,
+        project=VERTEX_PROJECT,
+        location=VERTEX_LOCATION,
+    )
 
     # Load style info
     style = _load_style(style_id)
@@ -517,66 +534,58 @@ def _get_available_styles():
     return []
 
 
-def _print_usage_error(message):
-    """Print a formatted usage error with available styles."""
-    available_styles = _get_available_styles()
-    print(f"\nError: {message}\n")
-    print("Usage:")
-    print("    uv run scripts/gen_image.py <mode> <file> [style_id]")
-    print()
-    print("Modes:")
-    print("    prompt <page_file> <style_id> - Show the image gen prompt")
-    print("    gemini <page_file> <style_id> - Generate image using Gemini")
-    print("    frame  <image_file>           - Frame an image for print")
-    print()
-    if available_styles:
-        print(f"Available styles: {', '.join(available_styles)}")
-    print()
-    sys.exit(1)
-
-
 def main():
     """Main entry point."""
-    if len(sys.argv) < 2:
-        _print_usage_error("No mode specified")
+    available_styles = _get_available_styles()
+    default_style = get_default_style()
 
-    mode = sys.argv[1]
+    parser = argparse.ArgumentParser(
+        description="Generate images for story pages using AI image generation.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=f"Available styles: {', '.join(available_styles)}\nDefault style: {default_style}"
+    )
 
-    # Validate mode
-    valid_modes = ["prompt", "gemini", "frame"]
-    if mode not in valid_modes:
-        _print_usage_error(f"Invalid mode '{mode}'. Must be one of: {', '.join(valid_modes)}")
+    subparsers = parser.add_subparsers(dest="mode", required=True, help="Operation mode")
 
-    # Frame mode only needs an image file
-    if mode == "frame":
-        if len(sys.argv) < 3:
-            _print_usage_error("frame mode requires an image file path")
-        image_file = sys.argv[2]
-        if not Path(image_file).exists():
-            _print_usage_error(f"Image file '{image_file}' not found")
-        frame_image(image_file)
+    # prompt subcommand
+    prompt_parser = subparsers.add_parser("prompt", help="Show the image gen prompt and list all referenced images")
+    prompt_parser.add_argument("page_file", help="Path to the page YAML file")
+    prompt_parser.add_argument("--style", default=default_style, help=f"Style ID (default: {default_style})")
+
+    # gemini subcommand
+    gemini_parser = subparsers.add_parser("gemini", help="Generate the image using Gemini")
+    gemini_parser.add_argument("page_file", help="Path to the page YAML file")
+    gemini_parser.add_argument("--style", default=default_style, help=f"Style ID (default: {default_style})")
+
+    # frame subcommand
+    frame_parser = subparsers.add_parser("frame", help="Frame an existing image for print with bleed and guide lines")
+    frame_parser.add_argument("image_file", help="Path to the image file to frame")
+
+    args = parser.parse_args()
+
+    # Frame mode
+    if args.mode == "frame":
+        if not Path(args.image_file).exists():
+            parser.error(f"Image file '{args.image_file}' not found")
+        frame_image(args.image_file)
         return
 
-    # prompt and gemini modes require page_file and style_id
-    if len(sys.argv) < 4:
-        _print_usage_error(f"{mode} mode requires: <page_file> <style_id>")
-
-    page_file = sys.argv[2]
-    style_id = sys.argv[3]
+    # prompt and gemini modes
+    page_file = args.page_file
+    style_id = args.style
 
     # Validate input file exists
     if not Path(page_file).exists():
-        _print_usage_error(f"Page file '{page_file}' not found")
+        parser.error(f"Page file '{page_file}' not found")
 
     # Validate style exists
-    available_styles = _get_available_styles()
     if available_styles and style_id not in available_styles:
-        _print_usage_error(f"Unknown style '{style_id}'. Must be one of: {', '.join(available_styles)}")
+        parser.error(f"Unknown style '{style_id}'. Must be one of: {', '.join(available_styles)}")
 
     # Execute the appropriate mode
-    if mode == "prompt":
+    if args.mode == "prompt":
         show_prompt(page_file, style_id)
-    elif mode == "gemini":
+    elif args.mode == "gemini":
         generate_image(page_file, style_id)
 
 
