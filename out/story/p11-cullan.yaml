@@ -1,43 +1,23 @@
-# This is the id of the page which will match out/story/p11-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p11
-
-# Copied over from story/template.yaml
 section: Second Attempt
-
-# Copied over from story/template.yaml
 page_type: individual
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - cullan
-
-# Inferred from character's second_attempt_location (play_room)
 location: play_room
 
-# Copied over from story/template.yaml
-story_beat: In the new room, the haunting is still present but subtler, and the main character notices a deeper pattern that matches their strongest passion.
+story_beat: In the new room, the haunting is still present but subtler, and the
+  main character notices a deeper pattern that matches their strongest passion.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan stands in the playroom doorway, surveying the scene
-  - Board games scattered with mismatched pieces, toy instruments out of tune
-  - Game boards show all ties, no clear winners
-  - Cullan's eyes narrow as he analyzes the deeper problem
+  - Ultra-flat Marin Hanford style—bold colors, graphic shapes, no 3D depth
+  - Devastation scene: the playroom looks like a FROZEN TANTRUM
+  - Monopoly money crumpled and scattered across the floor
+  - Chess pieces knocked over mid-game, some thrown against walls
+  - Dice showing blank faces, cards torn and scattered
+  - A Connect Four board with ALL pieces the same color
+  - Chairs overturned as if players stormed off in fury
+  - Cullan stands in the doorway, taking in the scene of rage
+  - His expression shifts from shock to recognition—he understands this feeling
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  The playroom was quieter now—Arthur had sorted the obvious mess—but Cullan saw the real problem. Every game ended in a tie. No one could win. The rules weren't just scrambled; they were designed to frustrate. It wasn't about matching pieces. It was about making the game fair again.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  The playroom looked like a hundred players had stormed off in fury. Games everywhere—pieces scattered, cards torn, dice showing blank faces. A Connect Four board had all red pieces. Cullan felt it immediately: nobody could ever win here.

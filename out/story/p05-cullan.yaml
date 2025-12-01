@@ -1,43 +1,21 @@
-# This is the id of the page which will match out/story/p05-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p05
-
-# Copied over from story/template.yaml
 section: First Attempt
-
-# Copied over from story/template.yaml
 page_type: individual
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - cullan
-
-# Inferred from character's first_attempt_location (dining_room)
 location: dining_room
 
-# Copied over from story/template.yaml
-story_beat: The main character steps into their first-attempt location and senses that something in here is definitely wrong.
+story_beat: The main character steps into their first-attempt location and senses
+  that something in here is definitely wrong.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan stands in the dining room doorway, eyes wide
-  - The formal dining table has chairs sliding slowly to wrong positions
-  - Plates and silverware drift across the table surface
-  - Name cards shuffle and swap places on their own
+  - Ultra-flat Marin Hanford style with graphic shapes and bold flat colors
+  - Elegant dining room with a long table set with candelabras everywhere
+  - Cullan stands in the doorway, eyes wide with surprise
+  - Multiple candles going out simultaneously—little puffs of smoke rising in a pattern
+  - Pff-pff-pff visual effect: candles extinguishing in a zigzag across the table
+  - Chairs visibly askew, place settings mismatched, but focus is on the dying candles
+  - Golden warm tones of the room dimming as more flames disappear
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  Cullan stepped into the dining room and froze. The table was set for Christmas dinner, but something was very wrong. Chairs slid slowly to different spots. Plates drifted across the tablecloth. Name cards shuffled themselves. Everyone would be in the wrong seat.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  The dining room was set for a fancy dinner, candles everywhere. But as Cullan watched, they started going out. Pff. Pff. Pff-pff-pff. No wind, no reason. He turned to look at one, and three behind him went dark.

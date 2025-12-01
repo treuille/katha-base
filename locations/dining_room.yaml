@@ -2,11 +2,11 @@ id: dining_room
 display_name: Dining Room
 kind: room
 
-haunting_theme: Scrambled feast with mismatched seats, plates, and social tension.
-description_short: Formal dining room where chairs, plates, and moods all slide to the wrong places.
+haunting_theme: Scrambled feast with mismatched seats, plates, candles that won't stay lit, and social tension.
+description_short: Formal dining room where chairs, plates, and moods all slide to the wrong places, and candles keep mysteriously blowing out.
 
 attempts:
   - character: cullan
-    summary: Cullan calms the obvious chaos at the table but leaves the deeper mismatched seating pattern unresolved.
+    summary: Cullan discovers candles keep blowing out in crazy patterns. Using his expert candle-lighting skills and track speed, he races around with a comically long match in a whirlwind until every candle blazes at once—but the deeper seating pattern remains unresolved.
   - character: arthur
     summary: Arthur notices the hidden pattern and rearranges seats and settings into a perfect permutation that restores harmony.

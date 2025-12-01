@@ -1,43 +1,22 @@
-# This is the id of the page which will match out/story/p07-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p07
-
-# Copied over from story/template.yaml
 section: First Attempt
-
-# Copied over from story/template.yaml
 page_type: individual
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - cullan
-
-# Inferred from character's first_attempt_location (dining_room)
 location: dining_room
 
-# Copied over from story/template.yaml
-story_beat: The room calms down a bit and the haunting is visibly weakened, but something still feels off as the main character leaves.
+story_beat: The room calms down a bit and the haunting is visibly weakened, but
+  something still feels off as the main character leaves.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan pauses at the dining room doorway, looking back
-  - The table looks calmer, but name cards are still in wrong positions
-  - Subtle visual wrongness in the seating arrangement pattern
-  - Cullan frowns, uncertain, as he exits
+  - Ultra-flat Marin Hanford style with bold colors and graphic motion lines
+  - Cullan as a blur of navy blue and royal blue, racing around the dining room
+  - Motion trails showing his speed—diving under tables, leaping over chairs
+  - The giant match leaves a trail of fire as he strikes and lights
+  - Final triumphant pose: Cullan standing still, chest heaving, match raised
+  - EVERY SINGLE CANDLE now blazing golden—room glows warm and bright
+  - But in the background: chairs still visibly crooked, place settings still wrong
+  - Flat color celebration: gold candlelight, Cullan's blue outfit, satisfied expression
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  The room calmed down. Plates stayed put. Chairs stopped sliding. But when Cullan looked at the name cards, they were still wrong—just subtly wrong. He frowned. He'd fixed the obvious chaos, but the deeper problem remained. Uneasy, he backed out into the hallway.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Cullan became a blur. He dove under the table, leaped over chairs, struck the giant match again and again. When he finally stopped, breathing hard, every candle blazed triumphantly. But the chairs were still crooked. Something deeper was wrong.

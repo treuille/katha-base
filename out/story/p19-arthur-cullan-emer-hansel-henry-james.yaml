@@ -1,17 +1,6 @@
-# This is the id of the page which will match out/story/p19-arthur-cullan-emer-hansel-henry-james.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p19
-
-# Copied over from story/template.yaml
 section: Climax
-
-# Copied over from story/template.yaml
 page_type: joint
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
@@ -19,31 +8,20 @@ characters:
   - hansel
   - henry
   - james
-  - regan
-
-# Inferred from story/template.yaml
 location: living_room
 
-# Copied over from story/template.yaml
-story_beat: The ornament flares and the spirit erupts, growing huge and blazing red. The boys realize it's furious because it's cramped—too big for a bedroom, it needs sky!
+story_beat: The ornament flares and the spirit erupts, growing huge and blazing
+  red. The boys realize it's furious because it's cramped—too big for a bedroom,
+  it needs sky!
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - The ornament explodes with red light and the spirit erupts huge and blazing
-  - Dorje Legpa towers over the children, red flames, fierce but not truly scary
-  - The children look up in awe and understanding
-  - The spirit's expression shows frustration and cramped discomfort
+  - Ultra-flat illustration style with DRAMATIC bold colors and explosive energy
+  - The ornament FLARES with intense light
+  - Dorje Legpa ERUPTS from it—growing HUGE, blazing RED and orange
+  - The spirit fills the room, wild and furious, flames and chaos swirling
+  - Children stumble back, shielding eyes, but not running
+  - The spirit looks cramped, frustrated, pushing against walls and ceiling
+  - Flat bold colors at maximum intensity: reds, oranges, the fury of containment
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  The ornament flared. Red light exploded. The spirit erupted—huge, blazing, filling the room with flames and fury. But the boys understood immediately. "He's too big for the house!" Cullan shouted. "He needs sky!" Henry yelled. The spirit wasn't evil. He was just cramped and furious.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  The ornament FLARED. Light exploded outward, and a spirit burst free—huge, blazing red, furious. It pushed against the walls, against the ceiling, roaring. "He's too big!" Henry shouted. "He needs SKY!"

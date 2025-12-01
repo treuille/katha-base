@@ -1,17 +1,6 @@
-# This is the id of the page which will match out/story/p15-arthur-cullan-emer-hansel-henry-james.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p15
-
-# Copied over from story/template.yaml
 section: Realizing the Bigger Problem
-
-# Copied over from story/template.yaml
 page_type: joint
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
@@ -19,31 +8,19 @@ characters:
   - hansel
   - henry
   - james
-  - regan
-
-# Inferred from story/template.yaml
 location: hallway
 
-# Copied over from story/template.yaml
-story_beat: Nervous but determined, the group talks, masters their fears, and decides they must face whatever is in the living room together.
+story_beat: Nervous but determined, the group talks, masters their fears, and
+  decides they must face whatever is in the living room together.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - The six children huddle together in the hallway
-  - Regan stands with them, hand on Emer's shoulder
-  - They all look toward the living room where faint red light glows
-  - Determined expressions despite their nervousness
+  - Ultra-flat illustration style with bold graphic shapes
+  - Children huddled together in hallway, having an urgent conversation
+  - Expressions range from nervous to determined—fear mastered by courage
+  - Someone (maybe James) gesturing toward the living room direction
+  - The group forming a united front—no one wants to go alone
+  - Hansel held by Emer, watching the older kids with wide eyes
+  - Flat colors emphasizing the contrast between fear and determination
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  "We fixed the rooms," Cullan said, "but the house still feels wrong." Everyone nodded. They could see it now—a faint red glow from the living room. "It's coming from there," Henry said. They looked at each other nervously. Regan squeezed Emer's hand. "Together," she said. They headed toward the living room.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  "It's coming from the living room," Emer said. "The tree." They looked at each other—nervous, but nobody wanted to run. "Together?" Cullan asked. Arthur nodded. James squared his shoulders. "Together."

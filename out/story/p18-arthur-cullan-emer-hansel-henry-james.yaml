@@ -1,17 +1,6 @@
-# This is the id of the page which will match out/story/p18-arthur-cullan-emer-hansel-henry-james.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p18
-
-# Copied over from story/template.yaml
 section: Realizing the Bigger Problem
-
-# Copied over from story/template.yaml
 page_type: joint
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
@@ -20,30 +9,22 @@ characters:
   - henry
   - james
   - regan
-
-# Inferred from story/template.yaml
 location: living_room
 
-# Copied over from story/template.yaml
-story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and surprised in a funny way. Behind her, rainbows, deities, lotuses, and other Buddhist imagery shimmer in the air as she realizes what the ornament contains. She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is to scramble things.
+story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and
+  surprised in a funny way. Behind her, rainbows, deities, lotuses, and other
+  Buddhist imagery shimmer in the air as she realizes what the ornament contains.
+  She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is
+  to scramble things.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Close-up on Regan's face, shocked and surprised but with a hint of humor
-  - Behind her, shimmering Buddhist imagery appears: rainbows, deities, lotuses
-  - The ornament glows brighter in the foreground
-  - Children watch her with wide eyes waiting for explanation
+  - Ultra-flat Marin Hanford style with bold colors and magical elements
+  - Close-up on Regan's face—shocked, worried, but also funny-surprised
+  - Behind her, Buddhist imagery shimmers: rainbows, lotus flowers, deity forms
+  - The imagery is translucent, dreamlike, appearing as her recognition dawns
+  - Children in background watching her reaction with wide eyes
+  - The ornament reflected in her eyes or visible over her shoulder
+  - Flat bold colors with magical translucent overlay effects
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  Regan's eyes went wide. "Oh no," she said, half-laughing, half-worried. Behind her, rainbows and lotuses shimmered in the air. "That's Dorje Legpa. A trickster spirit from Tibetan Buddhism. He scrambles things—wrong seats, wrong rules, wrong places. Someone hung him on our tree by mistake!"
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Regan walked in and froze. Her eyes went wide. Behind her, rainbows and lotus flowers seemed to shimmer in the air. "Oh no," she whispered, half-laughing. "That's Dorje Legpa—a trickster spirit. He scrambles everything!"

@@ -1,43 +1,22 @@
-# This is the id of the page which will match out/story/p12-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p12
-
-# Copied over from story/template.yaml
 section: Second Attempt
-
-# Copied over from story/template.yaml
 page_type: individual
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - cullan
-
-# Inferred from character's second_attempt_location (play_room)
 location: play_room
 
-# Copied over from story/template.yaml
-story_beat: The main character experiments with a solution based on that passion, and the room begins to respond and improve.
+story_beat: The main character experiments with a solution based on that passion,
+  and the room begins to respond and improve.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan kneels on the floor, arranging game pieces and toys in a new pattern
-  - He connects different games together, creating a cooperative meta-game
-  - Toys and instruments begin to glow softly as the new rules take hold
-  - His expression is focused, creative, problem-solving
+  - Ultra-flat illustration style with bold graphic shapes and clean edges
+  - Cullan kneeling among scattered game pieces, testing them
+  - He rolls dice—they come up BLANK, showing nothing
+  - He tries a card game—the deck fans out revealing ALL JOKERS
+  - His expression shifts from testing to ANGER—righteous, not scared
+  - His ice-blue eyes go intense, focused, determined
+  - The room feels deliberately wrong—this isn't chaos, it's CHEATING
+  - Flat bold colors emphasize the injustice: wrong numbers, impossible cards
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  Cullan got to work. He connected the Monopoly board to the chess set, linked the toy piano to the card deck. He designed a cooperative game where everyone worked together, using all the toys fairly. The room responded. The games glowed. The wrongness began to fade.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Cullan picked up the dice and rolled. Blank. He tried a card game—all jokers. Every game was rigged against the player. This wasn't random chaos. This was cheating. And something fierce woke up inside him. "This isn't fair."

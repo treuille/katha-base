@@ -1,17 +1,6 @@
-# This is the id of the page which will match out/story/p16-arthur-cullan-emer-hansel-henry-james.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p16
-
-# Copied over from story/template.yaml
 section: Realizing the Bigger Problem
-
-# Copied over from story/template.yaml
 page_type: joint
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
@@ -19,31 +8,19 @@ characters:
   - hansel
   - henry
   - james
-  - regan
-
-# Inferred from story/template.yaml
 location: living_room
 
-# Copied over from story/template.yaml
-story_beat: All the kids gather under the tree, sharing quick snapshots of what happened in their rooms, and realize everything traces back to the tree.
+story_beat: All the kids gather under the tree, sharing quick snapshots of what
+  happened in their rooms, and realize everything traces back to the tree.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - All children gathered under the Christmas tree in a circle
-  - Each child gestures describing their room experience
-  - Visual echoes of their rooms float above them (dining table, playroom games, etc.)
-  - All eyes turn toward the strange ornament on the tree
+  - Ultra-flat Marin Hanford style with bold colors and dramatic composition
+  - All six children gathered around the Christmas tree
+  - They're talking rapidly, sharing stories, gesturing to explain
+  - Quick visual snapshots floating around them showing their room experiences
+  - All attention gradually focusing on the tree—specifically one ornament
+  - The strange ornament seems to glow or pulse subtly
+  - Flat colors with tree as dramatic centerpiece, children as united group
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  Under the tree, they compared notes. "Wrong seats," Cullan said. "Broken games," Arthur added. "Mixed-up stories," Emer said. "Scrambled stairs," James reported. Henry nodded about the kitchen. Hänsel pointed at the tree. Everything traced back to one place. One thing. The tree itself.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Under the tree, stories tumbled out. Candles. Games. Wrong seats. Broken rules. Every strange thing traced back here—to the tree, to one ornament that none of them remembered hanging. It pulsed with faint, wrong light.

@@ -1,17 +1,6 @@
-# This is the id of the page which will match out/story/p01-arthur-cullan-emer-hansel-henry-james.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p01
-
-# Copied over from story/template.yaml
 section: Ordinary World
-
-# Copied over from story/template.yaml
 page_type: joint
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
@@ -19,31 +8,20 @@ characters:
   - hansel
   - henry
   - james
-  - regan
-
-# Inferred from story/template.yaml
 location: exterior
 
-# Copied over from story/template.yaml
-story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house glowing in the distance.
+story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
+  glowing in the distance.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Wide establishing shot of Graminy's large house nestled in snowy woods
-  - Snow-covered trees surround the property, winter landscape stretches into distance
-  - Warm golden light glows from the windows against the cold blue winter afternoon
-  - The seven family members arrive, carrying bags and presents up the snowy driveway
+  - Ultra-flat Marin Hanford style with bold colors and graphic landscape shapes
+  - Wide establishing shot of Graminy's house in snowy woods
+  - The large cozy house glows warm against cold white and blue snow
+  - Smoke curls from chimney in a graphic, stylized way
+  - Snow-covered trees frame the scene, woods stretching into distance
+  - Winter sky with soft light—daytime, peaceful
+  - Tire tracks or footprints in snow suggest recent arrivals
+  - The house feels welcoming, magical, full of promise
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  On Christmas Eve, all the grandchildren arrived at Graminy's house in Millbrook. Snow covered the woods and the big house glowed warmly in the distance. Cullan, Arthur, Emer, Henry, James, and baby Hänsel piled out of the car with their mom Regan, ready for the holidays.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Snow blanketed Millbrook on Christmas Day. Deep in the woods, Graminy's house glowed warm against the cold. Inside, six cousins had gathered for the holidays—ready for presents, hot cocoa, and adventure.

@@ -1,43 +1,20 @@
-# This is the id of the page which will match out/story/p10-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p10
-
-# Copied over from story/template.yaml
 section: Second Attempt
-
-# Copied over from story/template.yaml
 page_type: individual
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - cullan
-
-# Inferred from story/template.yaml
 location: hallway
 
-# Copied over from story/template.yaml
-story_beat: The main character walks with new resolve toward their second-attempt location, determined to use what they are truly best at this time.
+story_beat: The main character walks with new resolve toward their second-attempt
+  location, determined to use what they are truly best at this time.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan walks down the hallway with purpose and determination
-  - His smartwatch glows on his wrist, athletic posture confident
-  - Ahead, the playroom door stands open
-  - His expression shows resolve mixed with excitement
+  - Ultra-flat illustration style with bold colors and clean graphic shapes
+  - Cullan walking down the hallway with purpose, shoulders back, jaw set
+  - His ice-blue eyes are focused and determined—not shy now, resolute
+  - Ahead of him, a doorway with scattered toys visible on the floor beyond
+  - His athletic stance shows confidence—this is the walk of someone ready to compete
+  - Flat color palette: warm hallway wood tones, cool blue of his outfit
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  Cullan walked toward the playroom with new confidence. This was his strength—designing fair games, making rules that worked. Arthur was brilliant at patterns, but Cullan understood how to turn chaos into something fun. He'd spent years designing game modes in Fortnite. This was what he was made for.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  Cullan headed toward the playroom with a new feeling in his chest. Arthur would handle the dining room puzzle—he was good at patterns. But rigged games? Unfair rules? That was something Cullan understood in his bones.

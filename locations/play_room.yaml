@@ -3,10 +3,10 @@ display_name: Playroom
 kind: room
 
 haunting_theme: Games have the wrong pieces and rules, and every match ends in an unsatisfying tie.
-description_short: Lively playroom where board games, toys, and instruments keep changing rules and never let anyone truly win.
+description_short: Chaotic playroom with game pieces scattered everywhere as if players stormed off in frustration—rules keep changing and nothing is ever fair.
 
 attempts:
   - character: arthur
     summary: Arthur matches pieces to the right boxes and restores basic logic but the games still feel rigged and unresolved.
   - character: cullan
-    summary: Cullan designs a cooperative meta-game that uses all the toys fairly and gives the playroom a proper, shared finale.
+    summary: Cullan recognizes the rules are rigged to always be unfair, and rewrites them with his innate sense of justice—the games finally let someone win.

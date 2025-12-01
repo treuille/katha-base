@@ -1,44 +1,23 @@
-# This is the id of the page which will match out/story/p08-arthur-cullan.yaml.
-# Naming convention: p{number}-{characters in alphabetical order, dash-separated}.yaml
-# Only include the 6 main child characters (arthur, cullan, emer, hansel, henry, james)
-# in filenames, even if other characters like regan or dorje_legpa appear on the page.
-# See .claude/claude.md for complete naming conventions.
 id: p08
-
-# Copied over from story/template.yaml
 section: Crossover / Pair
-
-# Copied over from story/template.yaml
 page_type: pair
-
-# The list of characters, using IDs from characters/ (in alphabetical order)
 characters:
   - arthur
   - cullan
-
-# Inferred from story/template.yaml
 location: hallway
 
-# Copied over from story/template.yaml
-story_beat: The main character bumps into their room-swap partner in the hall, and they compare the strange things that just happened in their rooms.
+story_beat: The main character bumps into their room-swap partner in the hall,
+  and they compare the strange things that just happened in their rooms.
 
-# This should be a few bullet points, each just a few words or a relatively simple sentences long. It will be used as input into the prompt engine.
-# DO NOT: Copy / replicate / duplicate any visual information from
-#   1. story/template.yaml
-#   2. characters/character_id.yaml
-#   3. location/location_id.yaml
-# as this information will be separately added into the visual prompt.
-# It should frame a single dramatic image and a single moment in time which makes sense with the story text.
 visual: |
-  - Cullan and Arthur meet face-to-face in the hallway, both looking shaken
-  - Ghostly transparent overlay between them showing jumbled dining table on one side
-  - Scattered board game pieces and tangled toy parts on the other side
-  - Both boys gesture animatedly as they talk
+  - Ultra-flat Marin Hanford style with bold colors and clean graphic shapes
+  - Cullan and Arthur face each other in the hallway, both gesturing animatedly
+  - Ghostly transparent thought-bubbles between them showing their experiences:
+    - Cullan's side: candles going out in spirals, the giant match, crooked chairs
+    - Arthur's side: jumbled game pieces, dice with wrong numbers, frustrated board games
+  - Both boys look slightly frazzled but excited to share
+  - Their expressions show the relief of finding someone who understands
+  - Flat color palette: warm hallway tones, translucent memory overlays
 
-# This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
 text: |
-  In the hallway, Cullan nearly bumped into Arthur. "Did you see something weird?" Arthur asked breathlessly. "The dining room," Cullan said. "Everything's in the wrong place." "The playroom too!" Arthur said. "Games with broken rules." They stared at each other, understanding dawning.
-
-# This is the list of reference objects in the page (see ref/objects)
-objects: []
+  "The dining room candles kept blowing out!" Cullan said. "I lit them all, but the chairs are still wrong." Arthur nodded eagerly. "The playroom games are broken—pieces everywhere, rules that make no sense. I sorted them, but they still feel rigged."
