@@ -20,7 +20,7 @@ Available styles (see story/styles.yaml):
     genealogy_witch, red_tree, gashlycrumb, donothing_day, ghost_hunt, ghost_easy
 
 Requirements:
-    - GEMINI_API_KEY must be set in .env file (for gemini mode)
+    - Authenticate with Google Cloud: gcloud auth application-default login
     - Reference images must exist in ref/styles/, ref/characters/, ref/locations/, ref/objects/
 """
 
@@ -236,15 +236,23 @@ def build_prompt(page_data, style_id):
     for char_id in characters:
         char_visual = _load_character_visual(char_id)
         if char_visual:
-            # Get character name
+            # Get character name and age
             char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
                 char_data = _load_yaml_file(char_file)
                 char_name = char_data.get("name", char_id.title())
+                char_age = char_data.get("age")
             else:
                 char_name = char_id.title()
+                char_age = None
 
-            char_desc = f"\n{char_name}:\n"
+            # Format header with age (e.g., "Emer (age 5):" or "Dorje Legpa (ageless):")
+            if char_age == "ageless":
+                char_desc = f"\n{char_name} (ageless):\n"
+            elif char_age:
+                char_desc = f"\n{char_name} (age {char_age}):\n"
+            else:
+                char_desc = f"\n{char_name}:\n"
             for item in char_visual:
                 char_desc += f"  - {item}\n"
             char_descriptions.append(char_desc)

@@ -143,7 +143,8 @@ The script automatically builds a comprehensive prompt by combining:
 - Guide lines drawn in light gray for margins and center gutter
 
 **Requirements:**
-- Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` (for gemini mode)
+- Authenticate with Google Cloud: `gcloud auth application-default login`
+- Set quota project: `gcloud auth application-default set-quota-project <PROJECT_ID>`
 - Reference images must exist in `ref/` subdirectories
 - Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `genealogy_witch-02.jpg`)
 
@@ -171,6 +172,6 @@ uv run scripts/gen_book.py cullan gashlycrumb &
 ```
 
 **Output:**
-- PDFs saved to: `out/books/{style_id}/{character}-{version}.pdf`
+- PDFs saved to: `out/books/{character}-{version}-{style_id}.pdf`
 - Images saved to: `out/images/{style_id}/{page_id}.jpg`
 

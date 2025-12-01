@@ -22,7 +22,7 @@ katha-base/
 │   └── objects/         # Object reference images
 ├── out/                 # Generated outputs (git-ignored)
 │   ├── images/{style}/  # Generated illustrations by style
-│   ├── books/{style}/   # Generated PDF books by style
+│   ├── books/           # Generated PDF books
 │   └── story/           # Generated story files
 ├── deprecated/          # Archived old structure
 └── .streamlit/          # Streamlit configuration and secrets
@@ -41,7 +41,7 @@ katha-base/
   - **ref/objects/** - Object reference images
 - **out/** - Generated outputs (not committed to repository)
   - **out/images/{style_id}/** - Generated illustrations organized by style
-  - **out/books/{style_id}/** - Generated PDF books organized by style
+  - **out/books/** - Generated PDF books (named `{character}-{version}-{style_id}.pdf`)
   - **out/story/** - Generated story files
 
 ## Visual Styles
@@ -60,9 +60,10 @@ Skipped/experimental styles are in `story/styles-skip.yaml`.
 
 ## Setup
 
-1. Copy `.env.example` to `.env` and add your API keys
-2. Add reference images to `ref/` subdirectories (`characters/`, `locations/`, `objects/`)
-3. Configure Google API key in `.streamlit/secrets.toml`
+1. Install Google Cloud SDK: `curl https://sdk.cloud.google.com | bash`
+2. Authenticate: `gcloud auth application-default login`
+3. Set quota project: `gcloud auth application-default set-quota-project <PROJECT_ID>`
+4. Add reference images to `ref/` subdirectories (`characters/`, `locations/`, `objects/`)
 
 ## Image Generation
 
@@ -76,7 +77,7 @@ uv run scripts/gen_image.py <mode> <file> [style_id]
 
 **Modes:**
 - `prompt <page_file> <style_id>` - Display the image generation prompt and list all referenced images
-- `gemini <page_file> <style_id>` - Generate the image using gemini-3-pro-image-preview model
+- `gemini <page_file> <style_id>` - Generate the image using Gemini
 - `frame <image_file>` - Frame an existing image for print with bleed and guide lines
 
 **Examples:**
@@ -111,7 +112,8 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ### Requirements
 
-- Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` for image generation
+- Authenticate with Google Cloud: `gcloud auth application-default login`
+- Set quota project: `gcloud auth application-default set-quota-project <PROJECT_ID>`
 - Reference images must follow naming convention: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `genealogy_witch-02.jpg`)
 
 ## Book Generation
@@ -138,5 +140,5 @@ uv run scripts/gen_book.py cullan gashlycrumb &
 
 ### Output
 
-- PDFs saved to: `out/books/{style_id}/{character}-{version}.pdf`
+- PDFs saved to: `out/books/{character}-{version}-{style_id}.pdf`
 - Images saved to: `out/images/{style_id}/{page_id}.jpg`
