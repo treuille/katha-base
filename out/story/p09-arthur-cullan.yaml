@@ -7,20 +7,20 @@ characters:
   - cullan
 location: hallway
 
-story_beat: Arthur describes what happened in his room—games that kept changing their
-  own rules, rigging themselves against him. The hallway around them feels frozen,
-  light harsh and wrong.
+story_beat: Arthur describes what happened in his room—the Scrabble board that
+  twisted his words. He played SYZYGY and the letters changed. The hallway around
+  them feels frozen, light harsh and wrong.
 
 visual: |
   - Arthur now gesturing, describing his experience
   - Cullan listening, nodding with recognition
-  - Ghostly transparent overlay showing Arthur's experience: scattered game pieces, board games with rules rewriting themselves
+  - Ghostly transparent overlay showing Arthur's experience: Scrabble tiles twisting, letters rearranging
   - The hallway still at peak wrongness - cold, harsh shadows
   - Arthur's Rubik's cube visible in his pocket
   - Both boys' breath frosting in the cold air
   - Light pooling in wrong places around them
 
 text: |
-  Arthur's eyes went wide. "The playroom too! Every game I touched changed its own rules. Chess pieces moved when I looked away. The dice kept rolling wrong. It's like everything was rigged against me!"
+  Arthur's eyes went wide. "The playroom too! I found a Scrabble board and played SYZYGY—you know, the astronomy word? The letters twisted right after I placed them. Turned into gibberish. Made me look like a cheater!" His voice cracked. "I've beaten adults at Scrabble. And this game rejected me."
 
 objects: []

@@ -1,0 +1,27 @@
+id: p13
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - arthur
+location: hallway
+
+story_beat: Arthur walks toward the dining room with new understanding. From ahead,
+  he sees flickering orange light, smells heat. His pattern-brain is already working
+  on what he'll find—Cullan described clustered candles, fire danger. But Arthur
+  sees problems differently.
+
+visual: |
+  - Arthur striding down the hallway toward the dining room
+  - His posture determined, analytical, knowing what awaits
+  - Flickering orange light spilling from the dining room doorway ahead
+  - The hallway still at peak wrongness—cold, tilted, shadows pooling
+  - His expression focused, mind already working on the problem
+  - Contrast: cold blue hallway vs. warm orange glow from dining room
+  - His Rubik's cube visible in pocket, a reminder of his pattern-skills
+  - Shadows on walls, but Arthur walking with purpose
+
+text: |
+  Arthur walked toward the dining room, but differently this time. He knew what waited—Cullan had described the clustered candles, the fire danger. But where Cullan saw chaos, Arthur saw a puzzle. The flickering orange light ahead was just another pattern waiting to be solved. His mind was already working: how do you balance something that refuses to stay balanced?
+
+objects: []

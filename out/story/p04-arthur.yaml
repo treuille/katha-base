@@ -1,0 +1,26 @@
+id: p04
+section: Ordinary World
+page_type: individual
+haunting_level: medium
+characters:
+  - arthur
+location: hallway
+
+story_beat: Arthur follows a strange pull toward the playroom. The hallway feels
+  geometrically wrong—doorframes don't meet at right angles, warm Christmas colors
+  draining to cold blues. His pattern-brain screams that something is deeply off.
+
+visual: |
+  - Arthur standing in the hallway, head tilted, studying the geometry
+  - Looking toward the playroom with growing unease
+  - The hallway's doorframes visibly WRONG—angles that don't add up to 90 degrees
+  - Warm Christmas colors draining away, replaced by cold blue tones
+  - His expression analytical but troubled—he SEES the wrongness
+  - Light pooling in impossible places, shadows falling at wrong angles
+  - His breath coming out in a small frost cloud
+  - Rubik's cube clutched in one hand, forgotten
+
+text: |
+  Something pulled Arthur toward the playroom. The hallway felt wrong. Not just cold—geometrically wrong. That doorframe wasn't ninety degrees. That shadow fell the wrong direction. His pattern-brain screamed at him: none of this adds up. The warm Christmas colors were draining away, replaced by cold blue. He kept walking anyway.
+
+objects: []

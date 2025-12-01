@@ -1,0 +1,27 @@
+id: p06
+section: First Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - arthur
+location: play_room
+
+story_beat: Arthur plays SYZYGY—astronomical alignment, no regular vowels, a
+  tournament-level word. But the tiles CHANGE after he places them. The Y's twist
+  into other letters. His perfect word becomes gibberish. "INVALID" echoes from
+  nowhere. The game is framing him as a cheater.
+
+visual: |
+  - Arthur with tiles in hand, having just played SYZYGY on the board
+  - The letters VISIBLY TWISTING on the board—Y's becoming random letters
+  - His expression shifting from pride to horror
+  - The word transforming into gibberish before his eyes
+  - Shadows deepening around him, geometry warping further
+  - Cold harsh light, the room at peak haunting
+  - His hands still extended toward the board, frozen in disbelief
+  - Other game pieces around the room seeming to watch, accuse
+
+text: |
+  Arthur placed his tiles with confidence: S-Y-Z-Y-G-Y. Syzygy. Astronomical alignment. No regular vowels. A word that won tournaments. But as he lifted his fingers, the letters twisted. The Y's curled into X's and Q's. His perfect word became nonsense. "INVALID," something whispered from nowhere. He tried again—CAT, DOG, simple words. Every tile changed the moment he let go. The game was making him look like a cheater.
+
+objects: []

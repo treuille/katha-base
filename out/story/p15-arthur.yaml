@@ -1,0 +1,26 @@
+id: p15
+section: Second Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - arthur
+location: dining_room
+
+story_beat: Arthur begins methodically rearranging candles. Not fighting, not
+  commanding—solving. His hands move with quiet precision, each candle placed
+  exactly where it belongs. The pattern emerges. Warmth begins returning to the room.
+
+visual: |
+  - Arthur moving calmly around the dining table, placing candles
+  - His hands precise, methodical, like solving a puzzle
+  - Candles being placed in a balanced arrangement around the room
+  - Some already in position, glowing steadily
+  - The clustered corner now half-empty, flames calming
+  - Warm golden light beginning to seep back into the room
+  - Cold blue retreating from the edges
+  - His expression focused, peaceful—this is his element
+
+text: |
+  Arthur didn't rush. He picked up the first candle and placed it exactly where it belonged—not where it wanted to go, but where it fit. Then another. And another. His hands moved with the same precision he used on Rubik's cubes, each piece finding its place in the pattern. The flames stopped reaching for the curtains. Warmth crept back into the room. The pattern was emerging.
+
+objects: []

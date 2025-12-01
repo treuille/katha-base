@@ -2,18 +2,20 @@ id: play_room
 display_name: Playroom
 kind: room
 
-haunting_theme: The games frame and accuse. Rules twist to make whoever plays look
-  like a cheater—dice roll double sixes at the wrong moment, cards change suits in
-  your hand, and a voice keeps announcing "CHEATER." The room makes you the villain.
-description_short: Chaotic playroom where every game is rigged to frame the player
-  as a cheater. No matter how carefully you play, hidden rules twist to make you guilty.
+haunting_theme: The Scrabble board frames and accuses. Tiles twist valid words into
+  gibberish, rearrange to spell accusations like CHEATER and LIAR. The game that
+  requires vocabulary and honesty becomes a weapon that puts words in your mouth.
+description_short: Chaotic playroom dominated by a haunted Scrabble board that twists
+  words and spells accusations. No matter how valid your play, the tiles rearrange
+  to frame you as a cheater.
 
 attempts:
   - character: arthur
-    summary: Arthur matches pieces to the right boxes and restores basic logic, but
-      the deeper accusation system remains—the games still frame anyone who plays.
+    summary: Arthur plays SYZYGY—a tournament-level word—but the tiles twist into
+      gibberish after he places them. The game frames him as a cheater. He organizes
+      the room but can't fix a game rigged at its core.
   - character: cullan
-    summary: Cullan realizes the games aren't just unfair—they're designed to frame
-      him as a cheater. Instead of playing along, he stops and declares what fair
-      means with authority. The games have to listen. They bow to his commands,
-      the accusations fall silent, and he discovers he can command fairness—real power.
+    summary: The Scrabble board spells accusations at Cullan—CHEATER, LIAR, FRAUD.
+      Instead of playing along, he stops and declares what fair means with authority.
+      The tiles have to listen. They settle peacefully, and he discovers he can
+      command fairness—real power.

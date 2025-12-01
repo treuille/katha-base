@@ -6,21 +6,21 @@ characters:
   - cullan
 location: play_room
 
-story_beat: The playroom attacks Cullan in a new way—not erasing him, but framing him.
-  Every game is rigged so HE looks like the cheater. Dice roll double sixes when he
-  touches them. Game pieces arrange themselves to point blame at him.
+story_beat: The Scrabble board attacks Cullan—not twisting his words like it did to
+  Arthur, but spelling out accusations. Tiles rearrange to spell CHEATER, LIAR, FRAUD.
+  The game is framing him, making him the villain.
 
 visual: |
-  - Cullan standing amid scattered board games, looking horrified
-  - Dice in his hand showing DOUBLE SIXES—as if he rigged them
-  - Cards in his other hand changing suits before his eyes
-  - Game pieces POINTING at him like accusing fingers
-  - Chess pieces turned to face him, pawns arranged in blame formation
+  - Cullan standing over the Scrabble board, looking horrified
+  - Tiles on the board rearranging themselves to spell CHEATER
+  - More tiles sliding to form LIAR, FRAUD, pointing at him
+  - The wooden tile rack spelling accusations directly at Cullan
   - Shadows pooling around him, isolating him as the "guilty one"
   - His expression shifting from confusion to horror—he's being framed
   - Cold harsh light, geometry deeply wrong
+  - The same board that attacked Arthur now attacking him differently
 
 text: |
-  Cullan picked up a pair of dice, and they immediately rolled double sixes. He grabbed a card, and it changed suits in his hand. All around the room, game pieces swiveled to point at him—chess pawns, checkers, even the little metal dog from Monopoly. Everything was arranged to make him look guilty. The room was framing him as a cheater.
+  Cullan stepped toward the Scrabble board—the same one that had twisted Arthur's words. But it attacked him differently. The tiles slid and rearranged, spelling out words: CHEATER. LIAR. FRAUD. Every accusation pointed at him. He hadn't even touched the board, and already it was framing him as the villain. The room wasn't twisting his words. It was putting words in his mouth.
 
 objects: []
