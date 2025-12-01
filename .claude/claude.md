@@ -28,11 +28,12 @@
   - Characters are listed in **alphabetical order**, dash-separated
   - **Only include the 6 main child characters** (arthur, cullan, emer, hansel, henry, james) in filenames, even if other characters like regan or dorje_legpa appear on the page
   - Examples: `p01-arthur-cullan-emer-hansel-henry-james.yaml`, `p09-arthur-cullan.yaml`, `p07-arthur.yaml`
-- **Image files**: Must be JPG format, use naming format `id-xx.jpg` where:
-  - `id` is a multiple letter code, potentially with underscores (e.g., `play_room`, `dining_room`)
-  - `xx` is a two-digit number with leading zero (e.g., `01`, `02`, not `1`, `2`)
-  - Always use underscores for multi-word names, dash to separate the number
-  - Examples: `arthur-01.jpg`, `dining_room-01.jpg`, `play_room-02.jpg`
+- **Image files**: Must be JPG format, use naming format `{id}-{xx}.jpg` where:
+  - `{id}` matches the YAML filename exactly (e.g., `arthur`, `dorje_legpa`, `dining_room`)
+  - `{xx}` is a two-digit number with leading zero (e.g., `01`, `02`, not `1`, `2`)
+  - The dash (`-`) is ONLY used as the separator before the number
+  - Underscores in IDs are preserved (this allows unambiguous parsing: everything before the last `-` is the ID)
+  - Examples: `arthur-01.jpg`, `dorje_legpa-01.jpg`, `dining_room-02.jpg`
 
 ### Working with Data Files
 
@@ -118,5 +119,5 @@ Image 6: A reference picture of the Hallway
 **Requirements:**
 - Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` (for gemini mode)
 - Reference images must exist in `ref/` subdirectories
-- Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `hallway-02.jpg`)
+- Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `dorje_legpa-01.jpg`, `hallway-02.jpg`)
 

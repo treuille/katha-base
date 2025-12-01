@@ -87,7 +87,7 @@ def collect_reference_images(page_data):
     characters = page_data.get('characters', [])
     for char_id in characters:
         # Find all images for this character (e.g., arthur-01.jpg, arthur-02.jpg)
-        char_images = sorted(Path('ref/characters').glob(f'{char_id.replace("_", "-")}-*.jpg'))
+        char_images = sorted(Path('ref/characters').glob(f'{char_id}-*.jpg'))
         for img_path in char_images:
             images.append(str(img_path))
             # Extract the display name from the character YAML
@@ -102,7 +102,7 @@ def collect_reference_images(page_data):
     # Collect location images
     location = page_data.get('location')
     if location:
-        loc_images = sorted(Path('ref/locations').glob(f'{location.replace("_", "-")}-*.jpg'))
+        loc_images = sorted(Path('ref/locations').glob(f'{location}-*.jpg'))
         for img_path in loc_images:
             images.append(str(img_path))
             # Extract the display name from the location YAML
@@ -117,7 +117,7 @@ def collect_reference_images(page_data):
     # Collect object images
     objects = page_data.get('objects', [])
     for obj_id in objects:
-        obj_images = sorted(Path('ref/objects').glob(f'{obj_id.replace("_", "-")}-*.jpg'))
+        obj_images = sorted(Path('ref/objects').glob(f'{obj_id}-*.jpg'))
         for img_path in obj_images:
             images.append(str(img_path))
             image_labels.append(f"A reference picture of {obj_id.replace('_', ' ')}")
