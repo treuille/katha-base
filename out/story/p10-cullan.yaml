@@ -5,17 +5,20 @@ characters:
   - cullan
 location: hallway
 
-story_beat: The main character walks with new resolve toward their second-attempt
-  location, determined to use what they are truly best at this time.
+story_beat: |
+  Cullan walks toward the playroom with new understanding. From ahead, he
+  hears dice rattling on their own. Then a child's voice—not one of his cousins—
+  whispers "Your turn. You lose."
 
 visual: |
-  - Cullan striding purposefully down the hallway toward the playroom
-  - His posture confident, athletic, determined
-  - Ice-blue eyes focused ahead with new understanding
-  - Track pants suggesting readiness for action, but this time it's mental
-  - Light from the playroom doorway ahead, casting long shadows
+  - Cullan striding down the hallway toward the playroom
+  - His posture determined but wary, knowing something waits ahead
+  - Dice visible through the doorway, rattling on their own
+  - A ghostly whisper visible as text in the air: "Your turn. You lose."
+  - Ice-blue eyes narrowed with new understanding—this time he knows his real strength
+  - Light from the playroom casting an ominous glow
 
 text: |
-  Cullan walked toward the playroom with a different feeling this time. Speed wouldn't fix rigged rules—he knew that now. But unfairness? He'd always been able to sense when something wasn't right. Time to trust that instinct.
+  Cullan walked toward the playroom, but slower this time. He could hear dice rattling from inside—rattling on their own, with no one touching them. Then a voice that wasn't any of his cousins whispered from the doorway: "Your turn. You lose." Cullan clenched his fists. Speed wouldn't help here. But unfairness? That, he could fight.
 
 objects: []

@@ -5,17 +5,19 @@ characters:
   - cullan
 location: living_room
 
-story_beat: The main character plays with their favorite toy, glances at the
-  tree, and feels a subtle sense that something about it is wrong.
+story_beat: Cullan plays Fortnite, but one ornament on the tree catches his attention—it
+  seems to be watching him specifically. Not the others. Just him. A chill runs through
+  him.
 
 visual: |
   - Cullan sitting cross-legged with laptop, Fortnite glowing on screen
   - His ice-blue eyes lifting from the game toward the Christmas tree
-  - A subtle wrongness in the tree's ornaments—one seems slightly out of place
-  - His expression shifting from relaxed to uncertain
-  - Santa hat slightly askew as he tilts his head, sensing something
+  - One ornament that seems to STARE back at him—catching light strangely
+  - The other cousins visible in background, oblivious, but the ornament tracks only Cullan
+  - His expression shifting from relaxed to unsettled, a chill running through him
+  - Santa hat slightly askew as he tilts his head, feeling singled out
 
 text: |
-  Cullan was deep in a Fortnite match when something made him look up. The Christmas tree sparkled like always, but one ornament caught his eye. It seemed... wrong somehow. He couldn't explain it. He tried to focus on his game, but the feeling wouldn't go away.
+  Cullan was deep in a Fortnite match when something made him look up. One ornament on the tree seemed to be staring at him. Not at anyone else—just him. The other kids kept playing, oblivious. But that ornament... it was watching. A chill ran down his spine.
 
 objects: []

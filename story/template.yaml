@@ -58,9 +58,11 @@ pages:
      characters: [main_character]
      location_mode: fixed
      location: living_room
-     story_beat: The main character plays with their favorite toy, glances at the
-        tree, and feels a subtle sense that something about it is wrong.
-     notes: Content customized per main character but always near the tree.
+     story_beat: The main character plays with their favorite toy, but something
+        about the tree catches their attention—an ornament seems to be watching
+        them specifically, singling them out. A chill runs through them.
+     notes: Build anticipation. The haunting should feel personal and targeted,
+        not random. The character should feel singled out from the others.
 
    # page 04
    - id: p04
@@ -70,8 +72,11 @@ pages:
      characters: [main_character]
      location_mode: fixed
      location: hallway
-     story_beat: Uneasily, the main character follows a strange feeling or sound away
-        from the tree and toward another part of the house.
+     story_beat: The main character follows a strange pull toward another part of
+        the house. The hallway feels wrong—shadows lean away, sounds echo strangely,
+        as if the house itself doesn't want them here.
+     notes: Build dread. Foreshadow what's coming in the next room. The character
+        should hear or sense something specific that hints at the challenge ahead.
 
    # page 05
    - id: p05
@@ -81,9 +86,12 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: first_attempt
-     story_beat: The main character steps into their first-attempt location and senses
-        that something in here is definitely wrong.
+     story_beat: The main character steps into the room and realizes the haunting
+        is targeting them personally. Something about this room is rejecting them,
+        erasing them, making them feel like they don't belong. It's genuinely frightening.
      notes: Location depends on character's first attempt location (attempt_locations[0]).
+        The horror should be emotional and personal—not just physical chaos. The
+        character should feel attacked at their core identity.
 
    # page 06
    - id: p06
@@ -93,9 +101,11 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: first_attempt
-     story_beat: The haunting escalates and the main character tries a simple, obvious
-        solution based on what seems to make sense at first.
-     notes: Partial solution attempt.
+     story_beat: The haunting intensifies. Desperate, the character fights back with
+        their most obvious skill—but while they achieve some surface success, the
+        deeper horror continues. Their skill alone isn't enough.
+     notes: The character's obvious talent (speed, strength, etc.) works partially
+        but misses the point. The room keeps attacking them at a deeper level.
 
    # page 07
    - id: p07
@@ -105,9 +115,12 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: first_attempt
-     story_beat: The room calms down a bit and the haunting is visibly weakened, but
-        something still feels off as the main character leaves.
-     notes: 'First attempt: partial success only.'
+     story_beat: The surface symptoms ease, but the character realizes they've only
+        treated the symptoms, not the disease. The room still rejects them. They
+        leave knowing their obvious skill wasn't the right tool—something deeper
+        is needed.
+     notes: 'First attempt: partial success only. Character should have a moment of
+        realization that speed/strength/surface skills can''t solve emotional problems.'
 
    # page 08
    - id: p08
@@ -153,8 +166,11 @@ pages:
      characters: [main_character]
      location_mode: fixed
      location: hallway
-     story_beat: The main character walks with new resolve toward their second-attempt
-        location, determined to use what they are truly best at this time.
+     story_beat: The character walks toward their second room with new understanding.
+        From ahead, they hear something ominous—a hint of the horror waiting for them.
+        But this time they know what they're truly capable of.
+     notes: Build anticipation again. The character should hear or sense something
+        specific and frightening from the room ahead.
 
    # page 11
    - id: p11
@@ -164,8 +180,11 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: second_attempt
-     story_beat: In the new room, the haunting is still present but subtler, and the
-        main character notices a deeper pattern that matches their strongest passion.
+     story_beat: In this room, the haunting attacks them in a new way—not erasing them,
+        but making them the villain. Framing them. Accusing them. The room tries to
+        twist their identity into something they're not.
+     notes: The horror here should be about false accusation, being framed, being made
+        into the bad guy. This is worse than being ignored—it's being blamed.
 
    # page 12
    - id: p12
@@ -175,8 +194,11 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: second_attempt
-     story_beat: The main character experiments with a solution based on that passion,
-        and the room begins to respond and improve.
+     story_beat: Instead of playing by the rigged rules, the character stops and
+        speaks their truth with authority. They declare what is right, what is fair,
+        what is true about themselves. The room begins to listen.
+     notes: The solution is not physical but declarative. The character speaks with
+        authority and the room has to obey. This is the discovery of real power.
 
    # page 13
    - id: p13
@@ -186,10 +208,11 @@ pages:
      characters: [main_character]
      location_mode: by_role
      room_role: second_attempt
-     story_beat: Committed fully to their strength, the main character completes the
-        second attempt, the haunting in this room dissolves, and the space feels truly
-        right.
-     notes: "Second attempt: this character is the 'room hero'."
+     story_beat: The room yields completely. The accusations stop. The chaos bows to
+        the character's authority. They stand in the peaceful space and realize they
+        don't just sense what's right—they can command it. That's real power.
+     notes: "Second attempt: this character is the 'room hero.' The payoff should be
+        triumphant and deeply satisfying. Not just 'the room glows'—the room SUBMITS."
 
    # page 14
    - id: p14

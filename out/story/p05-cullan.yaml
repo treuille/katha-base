@@ -5,17 +5,19 @@ characters:
   - cullan
 location: dining_room
 
-story_beat: The main character steps into their first-attempt location and senses
-  that something in here is definitely wrong.
+story_beat: Cullan enters the dining room and discovers a horrifying truth—his placecard
+  is missing. Everyone else's sits neatly on their plates. But where Cullan should sit,
+  there's nothing. The room is erasing him from Christmas dinner.
 
 visual: |
-  - Cullan stepping into the dining room, eyes wide with surprise
-  - The long formal table in disarray—chairs at odd angles, place settings scrambled
-  - Candles flickering wildly, some blowing out even as others flare
-  - His ice-blue eyes scanning the chaos, trying to make sense of it
-  - The room feeling unsettled, as if a wind is moving through despite closed windows
+  - Cullan stepping into the dining room, face going pale with shock
+  - The long formal table with neat placecards on each plate—names visible
+  - One plate with NO placecard—the empty space where Cullan's name should be
+  - Candles flickering ominously, one going out as he watches
+  - His ice-blue eyes fixed on the empty spot, realizing what it means
+  - The room rejecting him, making him invisible, erasing his place
 
 text: |
-  The dining room was a mess. Chairs had slid to wrong places. Plates sat before empty seats while people's spots had nothing. And the candles—they kept blowing out in crazy patterns, like invisible fingers were snuffing them one by one. "What is going on?" Cullan whispered.
+  The dining room took Cullan's breath away—but not in a good way. Every plate had a placecard with someone's name in careful handwriting. Mom. Dad. Graminy. Arthur. Everyone. But where Cullan always sat, there was nothing. Just an empty plate. His name was gone. Like he'd never been part of Christmas at all.
 
 objects: []

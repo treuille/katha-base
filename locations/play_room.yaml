@@ -2,11 +2,18 @@ id: play_room
 display_name: Playroom
 kind: room
 
-haunting_theme: Games have the wrong pieces and rules, and every match ends in an unsatisfying tie.
-description_short: Chaotic playroom with game pieces scattered everywhere as if players stormed off in frustration—rules keep changing and nothing is ever fair.
+haunting_theme: The games frame and accuse. Rules twist to make whoever plays look
+  like a cheater—dice roll double sixes at the wrong moment, cards change suits in
+  your hand, and a voice keeps announcing "CHEATER." The room makes you the villain.
+description_short: Chaotic playroom where every game is rigged to frame the player
+  as a cheater. No matter how carefully you play, hidden rules twist to make you guilty.
 
 attempts:
   - character: arthur
-    summary: Arthur matches pieces to the right boxes and restores basic logic but the games still feel rigged and unresolved.
+    summary: Arthur matches pieces to the right boxes and restores basic logic, but
+      the deeper accusation system remains—the games still frame anyone who plays.
   - character: cullan
-    summary: Cullan recognizes the rules are rigged to always be unfair, and rewrites them with his innate sense of justice—the games finally let someone win.
+    summary: Cullan realizes the games aren't just unfair—they're designed to frame
+      him as a cheater. Instead of playing along, he stops and declares what fair
+      means with authority. The games have to listen. They bow to his commands,
+      the accusations fall silent, and he discovers he can command fairness—real power.

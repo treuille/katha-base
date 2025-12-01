@@ -5,17 +5,19 @@ characters:
   - cullan
 location: dining_room
 
-story_beat: The haunting escalates and the main character tries a simple, obvious
-  solution based on what seems to make sense at first.
+story_beat: As more candles blow out, more traces of Cullan vanish. His chair slides
+  away. Desperate, he uses his speed to keep candles lit—racing around the table in
+  a blur. The candles hold, but the deeper horror continues.
 
 visual: |
   - Dynamic action shot: Cullan as a blur racing around the dining table
   - A comically long match in his hand, trailing flame like a comet
   - Multiple candles relighting in his wake, flames leaning toward him
-  - His santa hat flying back from the speed
-  - His expression determined, athletic form in full sprint mode
+  - But his CHAIR sliding away from the table even as he runs
+  - His placecard reappearing—but BLANK, his name erased
+  - His santa hat flying back from the speed, expression desperate
 
 text: |
-  Cullan grabbed the longest match he could find. If the candles wanted to blow out, he'd just be faster. Using his track speed, he became a blur around the table—lighting, relighting, racing to catch each dying flame. Within seconds, every candle blazed at once. "Ha!"
+  Another candle blew out, and Cullan's chair slid away from the table on its own. "No!" He grabbed the longest match he could find and became a blur—racing, relighting, keeping the flames alive through sheer speed. Every candle blazed. But when he stopped to catch his breath, his placecard had reappeared... completely blank. His name was still gone.
 
 objects: []

@@ -5,17 +5,19 @@ characters:
   - cullan
 location: hallway
 
-story_beat: Uneasily, the main character follows a strange feeling or sound away
-  from the tree and toward another part of the house.
+story_beat: Cullan follows a strange pull toward the dining room. In the hallway,
+  he hears his name whispered—but wrong. Mispronounced. Then silence where his name
+  should be. The shadows lean away from him, as if he doesn't belong.
 
 visual: |
-  - Cullan standing in the hallway, laptop closed under his arm
-  - Looking toward the dining room with furrowed brow
-  - A faint flicker of candlelight visible through the doorway ahead
-  - His track pants and athletic build suggesting readiness to move
-  - The hallway stretching before him, shadows seeming slightly wrong
+  - Cullan standing in the hallway, laptop abandoned behind him
+  - Looking toward the dining room with growing dread
+  - Shadows that seem to LEAN AWAY from him, as if rejecting his presence
+  - Faint candlelight flickering erratically through the doorway ahead
+  - His expression shifting from curiosity to fear
+  - The hallway feeling hostile, unwelcoming, wrong
 
 text: |
-  Cullan set down his laptop and wandered into the hallway. A strange flickering caught his attention—candlelight from the dining room, dancing wildly. That was weird. Graminy always kept those candles perfectly still. His runner's instincts told him to investigate.
+  Cullan stepped into the hallway and froze. He heard his name whispered from somewhere ahead—but wrong. "Cull-AN. Cull-AN." Then silence where his name should have been, like someone had erased it mid-word. The shadows seemed to lean away from him. Even the hallway didn't want him here.
 
 objects: []

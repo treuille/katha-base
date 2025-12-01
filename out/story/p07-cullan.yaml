@@ -5,17 +5,19 @@ characters:
   - cullan
 location: dining_room
 
-story_beat: The room calms down a bit and the haunting is visibly weakened, but
-  something still feels off as the main character leaves.
+story_beat: The candles hold, but Cullan's place is still erased. He realizes speed
+  can't make people want you there. He leaves, knowing his obvious skill wasn't the
+  right tool. The room needs someone who can see what's unfair.
 
 visual: |
-  - Cullan standing back, slightly winded, surveying his work
-  - All candles now burning steadily, the wild flickering stopped
-  - But the chairs and place settings still scrambled, unchanged
-  - His expression shifting from triumph to puzzlement
-  - Looking back over his shoulder as he heads toward the door
+  - Cullan standing back, breathing hard, surveying the table
+  - All candles burning steadily—his speed worked for that
+  - But his plate still empty, his chair pushed away, his placecard blank
+  - His expression shifting from confusion to painful realization
+  - Looking back at the empty spot where he should belong
+  - The bitter understanding that speed can't fix this
 
 text: |
-  The candles held steady now—his speed had worked. But as Cullan caught his breath, he noticed the chairs were still wrong. The plates still sat at empty places. He'd fixed the flames, but not the deeper problem. "That's not my thing," he muttered, heading for the hall.
+  The candles held. Cullan had won that battle. But his place at the table was still gone—blank card, pushed-away chair, no sign he'd ever belonged there. Speed could keep flames lit, but it couldn't make people want him. He turned toward the hallway, a lump in his throat. This room needed something he couldn't give it.
 
 objects: []

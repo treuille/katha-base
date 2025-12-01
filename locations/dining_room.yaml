@@ -2,11 +2,21 @@ id: dining_room
 display_name: Dining Room
 kind: room
 
-haunting_theme: Scrambled feast with mismatched seats, plates, candles that won't stay lit, and social tension.
-description_short: Formal dining room where chairs, plates, and moods all slide to the wrong places, and candles keep mysteriously blowing out.
+haunting_theme: The room rejects and erases. Placecards disappear, names are overwritten,
+  and the haunting systematically removes traces of whoever enters—as if they don't
+  belong at the family table. Candles going out signal another piece of identity being
+  erased.
+description_short: Formal dining room where placecards on each plate show who belongs
+  at Christmas dinner—but the haunting keeps erasing names and rearranging seats to
+  push people out.
 
 attempts:
   - character: cullan
-    summary: Cullan discovers candles keep blowing out in crazy patterns. Using his expert candle-lighting skills and track speed, he races around with a comically long match in a whirlwind until every candle blazes at once—but the deeper seating pattern remains unresolved.
+    summary: Cullan discovers his placecard is missing while everyone else's sits
+      neatly on their plates. Each time a candle blows out, more traces of him vanish.
+      Using his speed, he races to keep candles lit—but speed can't make people want
+      you there. The candles hold, but his place is still gone.
   - character: arthur
-    summary: Arthur notices the hidden pattern and rearranges seats and settings into a perfect permutation that restores harmony.
+    summary: Arthur notices the hidden pattern and rearranges seats and settings into
+      a perfect permutation that restores harmony—ensuring everyone has their rightful
+      place at the table.

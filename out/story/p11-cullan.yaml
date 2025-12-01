@@ -5,17 +5,19 @@ characters:
   - cullan
 location: play_room
 
-story_beat: In the new room, the haunting is still present but subtler, and the
-  main character notices a deeper pattern that matches their strongest passion.
+story_beat: The playroom attacks Cullan in a new way—not erasing him, but framing him.
+  Every game is rigged so HE looks like the cheater. Dice roll double sixes when he
+  touches them. A voice keeps announcing "CHEATER. CHEATER."
 
 visual: |
-  - Cullan standing amid scattered board games, pieces everywhere
-  - His ice-blue eyes beginning to glow with an almost mystical quality
-  - Faint patterns visible in the air—lines connecting rule cards to game boards
-  - Game pieces arranged in formations that somehow feel wrong, rigged
-  - His expression shifting from confusion to recognition
+  - Cullan standing amid scattered board games, looking horrified
+  - Dice in his hand showing DOUBLE SIXES—as if he rigged them
+  - Cards in his other hand changing suits before his eyes
+  - The word "CHEATER" floating in the air around him, accusatory
+  - Game pieces pointing at him like fingers of blame
+  - His expression shifting from confusion to horror—he's being framed
 
 text: |
-  The playroom was chaos—Monopoly money mixed with chess pieces, dice showing impossible numbers. But as Cullan looked closer, his eyes caught something. The rules weren't just broken. They were rigged. Every game was designed so nobody could ever truly win.
+  Cullan picked up a pair of dice, and they immediately rolled double sixes. He grabbed a card, and it changed suits in his hand. From somewhere in the chaos, a voice hissed: "CHEATER. CHEATER." He wasn't cheating—but every game was rigged to make him look guilty. The room was framing him.
 
 objects: []

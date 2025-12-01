@@ -5,17 +5,19 @@ characters:
   - cullan
 location: play_room
 
-story_beat: The main character experiments with a solution based on that passion,
-  and the room begins to respond and improve.
+story_beat: Instead of playing by the rigged rules, Cullan stops and speaks with
+  authority. He DECLARES what fair means—not with a pen, but with his voice. "A fair
+  game is one where everyone can win." The room begins to listen.
 
 visual: |
-  - Cullan kneeling among the games, picking up rule cards
-  - His hands physically rewriting rules on the cards with a found pen
-  - Some games already responding—pieces settling into proper positions
-  - A warm glow beginning to emanate from the corrected games
-  - His expression focused, almost meditative, deeply concentrated
+  - Cullan standing tall among the chaos, hands raised, SPEAKING
+  - His ice-blue eyes glowing with authority and conviction
+  - Visible words emanating from his mouth like power: "A FAIR GAME..."
+  - The accusatory words "CHEATER" beginning to dissolve in the air
+  - Game pieces starting to settle, to orient toward him, LISTENING
+  - His expression fierce, commanding, discovering his real power
 
 text: |
-  Cullan grabbed a pen and started rewriting. "Roll doubles, move again—but only twice." Fair. "Bankrupt players get a second chance." Fair. "Winner helps the loser set up the next game." As each rule became just, the games began to glow softly.
+  Cullan stopped trying to play. He stood up tall and spoke out loud: "A fair game is one where everyone can win." The room went quiet. "A fair game doesn't have hidden rules." The floating accusations wavered. "A fair game lets you make mistakes without being destroyed." His voice rang with authority—and the games began to listen.
 
 objects: []
