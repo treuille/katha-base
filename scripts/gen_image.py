@@ -7,7 +7,7 @@ Usage:
 
 Modes:
     prompt <page_file> <style_id> - Show the image gen prompt and list all referenced images
-    gemini <page_file> <style_id> - Generate the image using gemini-3-pro-image-preview model
+    gemini <page_file> <style_id> - Generate the image using Gemini
     frame  <image_file>           - Frame an existing image for print with bleed and guide lines
 
 Examples:
@@ -49,10 +49,17 @@ FULL_WIDTH = 3579      # CONTENT_WIDTH + 2 * BLEED
 FULL_HEIGHT = 2406     # CONTENT_HEIGHT + 2 * BLEED
 BLEED = 36             # Bleed area on all sides
 
-# DEBUG: Limiting reference images to avoid API 500 errors (max ~14 images allowed)
+# Model for image generation
+# GEMINI_MODEL = "gemini-2.5-flash-image"
+# GEMINI_MODEL = "gemini-3-pro-image"
+# GEMINI_MODEL = "gemini-3-pro-image-preview"
+GEMINI_MODEL = "imagen-3.0-generate-001"
+
+# Gemini 3 Pro supports max 14 reference images
+MAX_TOTAL_IMAGES = 14
 MAX_STYLE_IMAGES = 1
 MAX_LOCATION_IMAGES = 1
-MAX_CHARACTER_IMAGES = 3
+MAX_CHARACTER_IMAGES = 1
 CENTER_GUTTER = 1789   # Center line for two-page spread fold
 
 
@@ -173,6 +180,13 @@ def _collect_reference_images(page_data, style_id):
         for img_path in obj_images:
             images.append(str(img_path))
             image_labels.append(f"A reference picture of {obj_id.replace('_', ' ')}")
+
+    # Validate total image count
+    if len(images) > MAX_TOTAL_IMAGES:
+        raise ValueError(
+            f"Too many reference images ({len(images)}). "
+            f"Gemini 3 Pro supports max {MAX_TOTAL_IMAGES} reference images."
+        )
 
     return images, image_labels
 
@@ -368,11 +382,11 @@ def generate_image(page_file, style_id):
     # CONTENT_WIDTH = 3507, CONTENT_HEIGHT = 2334, ratio ~= 1.5 (3:2)
     aspect_ratio = "3:2"
 
-    print(f"Calling gemini-3-pro-image-preview with aspect ratio {aspect_ratio}...")
+    print(f"Calling {GEMINI_MODEL} with aspect ratio {aspect_ratio}...")
     print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
 
     response = client.models.generate_content(
-        model="gemini-3-pro-image-preview",
+        model=GEMINI_MODEL,
         contents=contents,
         config=types.GenerateContentConfig(
             response_modalities=["IMAGE"],
@@ -494,39 +508,70 @@ def frame_image(image_path):
     return output_file
 
 
+def _get_available_styles():
+    """Get list of available style IDs from styles.yaml."""
+    styles_file = Path("story/styles.yaml")
+    if styles_file.exists():
+        styles = _load_yaml_file(styles_file)
+        return list(styles.keys())
+    return []
+
+
+def _print_usage_error(message):
+    """Print a formatted usage error with available styles."""
+    available_styles = _get_available_styles()
+    print(f"\nError: {message}\n")
+    print("Usage:")
+    print("    uv run scripts/gen_image.py <mode> <file> [style_id]")
+    print()
+    print("Modes:")
+    print("    prompt <page_file> <style_id> - Show the image gen prompt")
+    print("    gemini <page_file> <style_id> - Generate image using Gemini")
+    print("    frame  <image_file>           - Frame an image for print")
+    print()
+    if available_styles:
+        print(f"Available styles: {', '.join(available_styles)}")
+    print()
+    sys.exit(1)
+
+
 def main():
     """Main entry point."""
     if len(sys.argv) < 2:
-        print(__doc__)
-        sys.exit(1)
+        _print_usage_error("No mode specified")
 
     mode = sys.argv[1]
 
     # Validate mode
     valid_modes = ["prompt", "gemini", "frame"]
     if mode not in valid_modes:
-        raise ValueError(f"Invalid mode '{mode}'. Must be one of: {', '.join(valid_modes)}")
+        _print_usage_error(f"Invalid mode '{mode}'. Must be one of: {', '.join(valid_modes)}")
 
     # Frame mode only needs an image file
     if mode == "frame":
         if len(sys.argv) < 3:
-            raise ValueError("frame mode requires an image file path")
+            _print_usage_error("frame mode requires an image file path")
         image_file = sys.argv[2]
         if not Path(image_file).exists():
-            raise FileNotFoundError(f"Image file '{image_file}' not found")
+            _print_usage_error(f"Image file '{image_file}' not found")
         frame_image(image_file)
         return
 
     # prompt and gemini modes require page_file and style_id
     if len(sys.argv) < 4:
-        raise ValueError(f"{mode} mode requires: <page_file> <style_id>")
+        _print_usage_error(f"{mode} mode requires: <page_file> <style_id>")
 
     page_file = sys.argv[2]
     style_id = sys.argv[3]
 
     # Validate input file exists
     if not Path(page_file).exists():
-        raise FileNotFoundError(f"Page file '{page_file}' not found")
+        _print_usage_error(f"Page file '{page_file}' not found")
+
+    # Validate style exists
+    available_styles = _get_available_styles()
+    if available_styles and style_id not in available_styles:
+        _print_usage_error(f"Unknown style '{style_id}'. Must be one of: {', '.join(available_styles)}")
 
     # Execute the appropriate mode
     if mode == "prompt":

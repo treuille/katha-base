@@ -2,21 +2,19 @@ id: dining_room
 display_name: Dining Room
 kind: room
 
-haunting_theme: The room rejects and erases. Placecards disappear, names are overwritten,
-  and the haunting systematically removes traces of whoever enters—as if they don't
-  belong at the family table. Candles going out signal another piece of identity being
-  erased.
-description_short: Formal dining room where placecards on each plate show who belongs
-  at Christmas dinner—but the haunting keeps erasing names and rearranging seats to
-  push people out.
+haunting_theme: The candles rebel against fair distribution. They cluster dangerously
+  in one corner, flames burning too high, too close to curtains—a fire hazard that
+  threatens the whole house. No matter how you spread them apart, they slide back
+  together, refusing to be distributed fairly.
+description_short: Formal dining room where Christmas candles have mysteriously
+  clustered into one dangerous corner, flames threatening the curtains. The room
+  resists any attempt to distribute them fairly.
 
 attempts:
   - character: cullan
-    summary: Cullan discovers his placecard is missing while everyone else's sits
-      neatly on their plates. Each time a candle blows out, more traces of him vanish.
-      Using his speed, he races to keep candles lit—but speed can't make people want
-      you there. The candles hold, but his place is still gone.
+    summary: Cullan sees the fire danger and uses his speed to blow out candles and
+      spread them around the room—but they keep sliding back together. Speed can't
+      solve unfair distribution.
   - character: arthur
-    summary: Arthur notices the hidden pattern and rearranges seats and settings into
-      a perfect permutation that restores harmony—ensuring everyone has their rightful
-      place at the table.
+    summary: Arthur sees the pattern in how the candles cluster and rearranges them
+      into a balanced configuration that finally holds—restoring spatial harmony.
