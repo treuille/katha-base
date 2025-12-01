@@ -1,7 +1,7 @@
 # Personal todo files
 adrien-todo.md
 
-# Ignoreing the pycache
+# Ignoring the pycache
 scripts/__pycache__
 
 # Environment variables with API keys
@@ -11,10 +11,13 @@ scripts/__pycache__
 # Generated images
 out/**/*.jpg
 
+# Generated books
+out/books/*.pdf
+
 # Reference images
 ref/**/*.jpg
 
-# Bakup files
+# Backup files
 bak/
 
 # uv/Python virtual environment

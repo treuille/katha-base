@@ -58,6 +58,12 @@
 - Use "location" for rooms/places
 - In narrative text (descriptions, summaries), informal terms like "kids" are acceptable and refer to the child characters
 
+### Documentation Practices
+
+- **Avoid explicit counts**: Don't write "Eight characters" or "Six rooms" - these numbers become stale when content changes. Use general terms like "Characters inhabiting this world:" instead.
+- **Deduplicate information**: Don't repeat the same information across multiple files. Reference authoritative sources (e.g., "see `characters/*.yaml`") rather than duplicating lists.
+- **Single source of truth**: Character details live in `characters/*.yaml`, location details in `locations/*.yaml`, story structure in `story/template.yaml`.
+
 ## Scripts
 
 ### Image Generation (`scripts/gen_image.py`)

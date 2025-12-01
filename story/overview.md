@@ -16,7 +16,7 @@ This repository encodes a **single shared storyworld**:
 - **Millbrook** is a real town in upstate New York. Deep in the woods outside the town sits a large house, also called Millbrook, where **Graminy** lives.
 - During the **early Christmas season**, all of her grandchildren come to the house for the holidays.
 - The house becomes haunted after a strange ornament is hung on the Christmas tree.
-- **Eight characters** inhabit this world:
+- **Characters** inhabiting this world:
   - **Six children** (cousins and siblings: Arthur, Cullan, Emer, Hansel, Henry, and James - see `characters/*.yaml`), each with their own point of view and core strength
   - **Dorje Legpa**, a Gyalpo trickster deity (see `characters/dorje_legpa.yaml`) whose magic is about *mismatch* and *scrambled roles*, not gore or horror
   - **Regan** (see `characters/regan.yaml`), mother of Cullan and Emer, who identifies the spirit
