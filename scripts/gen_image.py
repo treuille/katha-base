@@ -31,6 +31,8 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
+# Public API
+__all__ = ["build_prompt", "generate_image", "show_prompt"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
@@ -38,86 +40,90 @@ CONTENT_WIDTH = 3507
 CONTENT_HEIGHT = 2334
 
 
-def load_yaml_file(file_path):
+def _load_yaml_file(file_path):
     """Load and parse a YAML file."""
-    with open(file_path, 'r') as f:
+    with open(file_path, "r") as f:
         return yaml.safe_load(f)
 
 
-def load_template_visual_style():
+def _load_template_visual_style():
     """Load the overall visual style from story/template.yaml."""
-    template = load_yaml_file('story/template.yaml')
-    return template.get('visual', [])
+    template = _load_yaml_file("story/template.yaml")
+    return template.get("visual", [])
 
 
-def load_character_visual(character_id):
+def _load_character_visual(character_id):
     """Load visual description for a character."""
-    char_file = Path('characters') / f'{character_id}.yaml'
+    char_file = Path("characters") / f"{character_id}.yaml"
     if not char_file.exists():
         return []
 
-    char_data = load_yaml_file(char_file)
-    return char_data.get('visual', [])
+    char_data = _load_yaml_file(char_file)
+    return char_data.get("visual", [])
 
 
-def load_location_visual(location_id):
+def _load_location_visual(location_id):
     """Load visual description for a location."""
-    loc_file = Path('locations') / f'{location_id}.yaml'
+    loc_file = Path("locations") / f"{location_id}.yaml"
     if not loc_file.exists():
         return []
 
-    loc_data = load_yaml_file(loc_file)
-    return loc_data.get('visual', [])
+    loc_data = _load_yaml_file(loc_file)
+    return loc_data.get("visual", [])
 
 
-def collect_reference_images(page_data):
+def _collect_reference_images(page_data):
     """Collect all reference images for style, characters, locations, and objects."""
     images = []
     image_labels = []
 
     # Collect style reference images first
-    style_dir = Path('ref/style')
+    style_dir = Path("ref/style")
     if style_dir.exists():
-        style_images = sorted(style_dir.glob('style-*.jpg'))
+        style_images = sorted(style_dir.glob("style-*.jpg"))
         for img_path in style_images:
             images.append(str(img_path))
-            image_labels.append(f"A style reference image showing the illustration style")
+            image_labels.append(
+                f"A style reference image showing the illustration style"
+            )
 
     # Collect character images
-    characters = page_data.get('characters', [])
+    characters = page_data.get("characters", [])
     for char_id in characters:
         # Find all images for this character (e.g., arthur-01.jpg, arthur-02.jpg)
-        char_images = sorted(Path('ref/characters').glob(f'{char_id}-*.jpg'))
+        char_images = sorted(Path("ref/characters").glob(f"{char_id}-*.jpg"))
         for img_path in char_images:
             images.append(str(img_path))
             # Extract the display name from the character YAML
-            char_file = Path('characters') / f'{char_id}.yaml'
+            char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
-                char_data = load_yaml_file(char_file)
-                char_name = char_data.get('name', char_id.title())
+                char_data = _load_yaml_file(char_file)
+                char_name = char_data.get("name", char_id.title())
             else:
                 char_name = char_id.title()
             image_labels.append(f"A reference picture of {char_name}")
 
     # Collect location images
-    location = page_data.get('location')
+    location = page_data.get("location")
     if location:
-        loc_images = sorted(Path('ref/locations').glob(f'{location}-*.jpg'))
+        loc_images = sorted(Path("ref/locations").glob(f"{location}-*.jpg"))
         for img_path in loc_images:
             images.append(str(img_path))
             # Extract the display name from the location YAML
-            loc_file = Path('locations') / f'{location}.yaml'
+            loc_file = Path("locations") / f"{location}.yaml"
             if loc_file.exists():
-                loc_data = load_yaml_file(loc_file)
-                loc_name = loc_data.get('display_name', location.replace('_', ' ').title())
+                loc_data = _load_yaml_file(loc_file)
+                loc_name = loc_data.get(
+                    "display_name", location.replace("_", " ").title()
+                )
             else:
-                loc_name = location.replace('_', ' ').title()
+                loc_name = location.replace("_", " ").title()
             image_labels.append(f"A reference picture of the {loc_name}")
 
     # Collect object images
-    objects = page_data.get('objects', [])
+    objects = page_data.get("objects", [])
     for obj_id in objects:
-        obj_images = sorted(Path('ref/objects').glob(f'{obj_id}-*.jpg'))
+        obj_images = sorted(Path("ref/objects").glob(f"{obj_id}-*.jpg"))
         for img_path in obj_images:
             images.append(str(img_path))
             image_labels.append(f"A reference picture of {obj_id.replace('_', ' ')}")
@@ -126,29 +132,31 @@ def collect_reference_images(page_data):
 
 
 def build_prompt(page_data):
-    """Build the complete image generation prompt."""
+    """Build the complete image generation prompt.
+
+    Returns:
+        tuple: (prompt_text, ref_image_paths, ref_labels) where:
+            - prompt_text: The text prompt (without image references, those are interleaved separately)
+            - ref_image_paths: List of paths to reference images
+            - ref_labels: List of labels describing each reference image
+    """
     # Load visual style from template
-    visual_style = load_template_visual_style()
+    visual_style = _load_template_visual_style()
 
     # Collect reference images
-    ref_images, ref_labels = collect_reference_images(page_data)
-
-    # Build the image reference section
-    image_ref_text = f"\n\nI have provided {len(ref_images)} reference images:\n\n"
-    for i, label in enumerate(ref_labels, 1):
-        image_ref_text += f"Image {i}: {label}\n"
+    ref_images, ref_labels = _collect_reference_images(page_data)
 
     # Build character visual descriptions
-    characters = page_data.get('characters', [])
+    characters = page_data.get("characters", [])
     char_descriptions = []
     for char_id in characters:
-        char_visual = load_character_visual(char_id)
+        char_visual = _load_character_visual(char_id)
         if char_visual:
             # Get character name
-            char_file = Path('characters') / f'{char_id}.yaml'
+            char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
-                char_data = load_yaml_file(char_file)
-                char_name = char_data.get('name', char_id.title())
+                char_data = _load_yaml_file(char_file)
+                char_name = char_data.get("name", char_id.title())
             else:
                 char_name = char_id.title()
 
@@ -158,41 +166,41 @@ def build_prompt(page_data):
             char_descriptions.append(char_desc)
 
     # Build location visual description
-    location = page_data.get('location')
+    location = page_data.get("location")
     location_description = ""
     if location:
-        loc_visual = load_location_visual(location)
+        loc_visual = _load_location_visual(location)
         if loc_visual:
-            loc_file = Path('locations') / f'{location}.yaml'
+            loc_file = Path("locations") / f"{location}.yaml"
             if loc_file.exists():
-                loc_data = load_yaml_file(loc_file)
-                loc_name = loc_data.get('display_name', location.replace('_', ' ').title())
+                loc_data = _load_yaml_file(loc_file)
+                loc_name = loc_data.get(
+                    "display_name", location.replace("_", " ").title()
+                )
             else:
-                loc_name = location.replace('_', ' ').title()
+                loc_name = location.replace("_", " ").title()
 
             location_description = f"\nLocation ({loc_name}):\n"
             for item in loc_visual:
                 location_description += f"  - {item}\n"
 
     # Get page-specific visual description
-    page_visual = page_data.get('visual', '')
+    page_visual = page_data.get("visual", "")
     if isinstance(page_visual, list):
-        page_visual = '\n'.join(f"  - {item}" for item in page_visual)
+        page_visual = "\n".join(f"  - {item}" for item in page_visual)
 
     # Get page text that should be displayed in the image
-    page_text = page_data.get('text', '')
+    page_text = page_data.get("text", "")
     if isinstance(page_text, str):
         page_text = page_text.strip()
 
-    # Build the complete prompt
+    # Build the complete prompt (without image references - those are interleaved separately)
     prompt = f"""Create an illustration for a children's storybook page.
 
 OVERALL VISUAL STYLE:
 """
     for style_item in visual_style:
         prompt += f"  - {style_item}\n"
-
-    prompt += image_ref_text
 
     if char_descriptions:
         prompt += "\nCHARACTER VISUAL DETAILS:\n"
@@ -220,13 +228,13 @@ Please display this text exactly as written in a clear, readable storybook font 
 Please create a single illustration that captures this moment in the Marin Hanford illustration style, using the reference images provided to ensure character and location consistency. Include lots of fun little details as shown in the reference images.
 """
 
-    return prompt, ref_images
+    return prompt, ref_images, ref_labels
 
 
-def show_prompt_mode(page_file):
+def show_prompt(page_file):
     """Show the prompt and list referenced images."""
-    page_data = load_yaml_file(page_file)
-    prompt, ref_images = build_prompt(page_data)
+    page_data = _load_yaml_file(page_file)
+    prompt, ref_images, ref_labels = build_prompt(page_data)
 
     print("=" * 80)
     print("IMAGE GENERATION PROMPT")
@@ -237,15 +245,16 @@ def show_prompt_mode(page_file):
     print("=" * 80)
     print(f"REFERENCED IMAGES ({len(ref_images)} total)")
     print("=" * 80)
-    for i, img_path in enumerate(ref_images, 1):
+    for i, (img_path, label) in enumerate(zip(ref_images, ref_labels), 1):
         print(f"{i}. {img_path}")
+        print(f"   Label: {label}")
     print()
 
 
-def generate_with_gemini(page_file):
+def generate_image(page_file):
     """Generate image using Gemini."""
     # Get API key
-    api_key = os.environ.get('GEMINI_API_KEY')
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY environment variable not set")
         print("Please copy .env.example to .env and set your GEMINI_API_KEY")
@@ -255,47 +264,50 @@ def generate_with_gemini(page_file):
     client = genai.Client(api_key=api_key)
 
     # Load page data and build prompt
-    page_data = load_yaml_file(page_file)
-    prompt, ref_images = build_prompt(page_data)
+    page_data = _load_yaml_file(page_file)
+    prompt, ref_images, ref_labels = build_prompt(page_data)
 
     print(f"Generating image for {page_file}...")
     print(f"Using {len(ref_images)} reference images")
     print(f"Prompt: {len(prompt)} characters")
 
-    # Load reference images as PIL Images
-    loaded_images = []
-    for img_path in ref_images:
+    # Build multimodal contents by interleaving images with their labels
+    # This helps the model associate each image with its description
+    contents = []
+
+    for img_path, label in zip(ref_images, ref_labels):
         try:
             img = Image.open(img_path)
-            loaded_images.append(img)
-            print(f"  Loaded: {img_path}")
+            contents.append(img)
+            contents.append(label)
+            print(f"  Loaded: {img_path} ({label})")
         except Exception as e:
             print(f"  Warning: Could not load {img_path}: {e}")
 
-    print(f"Successfully loaded {len(loaded_images)} reference images")
+    # Add the main prompt at the end
+    contents.append(prompt)
+
+    num_images = len([c for c in contents if isinstance(c, Image.Image)])
+    print(f"Successfully loaded {num_images} reference images")
 
     # Determine aspect ratio based on our target dimensions
     # CONTENT_WIDTH = 3507, CONTENT_HEIGHT = 2334, ratio ~= 1.5 (3:2)
     aspect_ratio = "3:2"
 
-    # Build multimodal contents: reference images + text prompt
-    # The images come first, then the text prompt
-    contents = loaded_images + [prompt]
-
     # Use Gemini to generate the image
     try:
         print(f"Calling gemini-3-pro-image-preview with aspect ratio {aspect_ratio}...")
-        print(f"Sending {len(loaded_images)} reference images + text prompt")
+        print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
 
         response = client.models.generate_content(
             model="gemini-3-pro-image-preview",
             contents=contents,
             config=types.GenerateContentConfig(
-                response_modalities=['IMAGE'],
+                response_modalities=["IMAGE"],
                 image_config=types.ImageConfig(
                     aspect_ratio=aspect_ratio,
-                )
-            )
+                ),
+            ),
         )
 
         print(f"Response received with {len(response.parts)} part(s)")
@@ -315,7 +327,7 @@ def generate_with_gemini(page_file):
         # Save the generated image(s)
         # Use the input filename stem (without .yaml extension) for output
         input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-        output_dir = Path('out/images')
+        output_dir = Path("out/images")
         output_dir.mkdir(parents=True, exist_ok=True)
 
         for idx, image_part in enumerate(generated_images):
@@ -325,12 +337,12 @@ def generate_with_gemini(page_file):
 
             # Determine output filename - matches input filename with .jpg extension
             if len(generated_images) == 1:
-                output_file = output_dir / f'{input_filename}.jpg'
+                output_file = output_dir / f"{input_filename}.jpg"
             else:
-                output_file = output_dir / f'{input_filename}_{idx + 1}.jpg'
+                output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
 
             # Save the image
-            pil_image.save(output_file, format='JPEG', quality=95)
+            pil_image.save(output_file, format="JPEG", quality=95)
             print(f"✅ Saved image to: {output_file}")
 
         print(f"\n🎉 Image generation complete!")
@@ -338,6 +350,7 @@ def generate_with_gemini(page_file):
     except Exception as e:
         print(f"Error generating image: {e}")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 
@@ -351,14 +364,14 @@ def main():
     # Parse arguments
     if len(sys.argv) == 2:
         # Assume prompt mode if only page file is given
-        mode = 'prompt'
+        mode = "prompt"
         page_file = sys.argv[1]
     else:
         mode = sys.argv[1]
         page_file = sys.argv[2]
 
     # Validate mode
-    if mode not in ['prompt', 'gemini']:
+    if mode not in ["prompt", "gemini"]:
         print(f"Error: Invalid mode '{mode}'. Must be 'prompt' or 'gemini'")
         print(__doc__)
         sys.exit(1)
@@ -369,11 +382,11 @@ def main():
         sys.exit(1)
 
     # Execute the appropriate mode
-    if mode == 'prompt':
-        show_prompt_mode(page_file)
-    elif mode == 'gemini':
-        generate_with_gemini(page_file)
+    if mode == "prompt":
+        show_prompt(page_file)
+    elif mode == "gemini":
+        generate_image(page_file)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
