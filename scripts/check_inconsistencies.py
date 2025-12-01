@@ -293,6 +293,76 @@ def check_cross_references():
         return True
 
 
+def check_visual_field_structure():
+    """Check that visual fields contain only plain strings, no nested elements."""
+    print("\n" + "=" * 60)
+    print("VISUAL FIELD STRUCTURE VALIDATION")
+    print("=" * 60)
+
+    issues = []
+
+    print("\nValidating character visual fields:")
+    for char_file in Path('characters').glob('*.yaml'):
+        with open(char_file, 'r') as f:
+            data = yaml.safe_load(f)
+
+        if 'visual' not in data:
+            print(f"  - {char_file.stem}: no visual field (skipped)")
+            continue
+
+        visual = data['visual']
+        if not isinstance(visual, list):
+            issue = f"  ✗ {char_file.stem}: visual field is not a list"
+            print(issue)
+            issues.append(issue)
+            continue
+
+        has_nested = False
+        for i, item in enumerate(visual):
+            if not isinstance(item, str):
+                issue = f"  ✗ {char_file.stem}: visual[{i}] is {type(item).__name__}, expected str"
+                print(issue)
+                issues.append(issue)
+                has_nested = True
+
+        if not has_nested:
+            print(f"  ✓ {char_file.stem}: all visual items are plain strings")
+
+    print("\nValidating location visual fields:")
+    for loc_file in Path('locations').glob('*.yaml'):
+        with open(loc_file, 'r') as f:
+            data = yaml.safe_load(f)
+
+        if 'visual' not in data:
+            print(f"  - {loc_file.stem}: no visual field (skipped)")
+            continue
+
+        visual = data['visual']
+        if not isinstance(visual, list):
+            issue = f"  ✗ {loc_file.stem}: visual field is not a list"
+            print(issue)
+            issues.append(issue)
+            continue
+
+        has_nested = False
+        for i, item in enumerate(visual):
+            if not isinstance(item, str):
+                issue = f"  ✗ {loc_file.stem}: visual[{i}] is {type(item).__name__}, expected str"
+                print(issue)
+                issues.append(issue)
+                has_nested = True
+
+        if not has_nested:
+            print(f"  ✓ {loc_file.stem}: all visual items are plain strings")
+
+    if issues:
+        print(f"\n❌ {len(issues)} visual field structure issue(s) found")
+        return False
+    else:
+        print("\n✅ All visual fields contain plain strings only")
+        return True
+
+
 def check_yaml_structure():
     """Check YAML structure consistency across files."""
     print("\n" + "=" * 60)
@@ -454,6 +524,10 @@ def main():
 
     # Run YAML structure consistency check
     if not check_yaml_structure():
+        all_passed = False
+
+    # Run visual field structure check
+    if not check_visual_field_structure():
         all_passed = False
 
     # Run naming convention validation
