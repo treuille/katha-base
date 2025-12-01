@@ -1,0 +1,38 @@
+# Skipped/experimental styles - not currently used for generation
+# These styles didn't work well in testing but are kept for reference
+
+witchlings:
+  artist: "Júlia Sardà"
+  books: [The Queen in the Cave, The Witch in the Tower]
+  skip_reason: "Doesn't work at all"
+  prompts:
+    - Limited color palette with muted tones and selective pops of saturated red and orange.
+    - Delicate and slightly imperfect linework, suggestive of traditional pen and ink.
+    - Soft, textured rendering that evokes a mix of watercolor and colored pencil.
+    - Whimsical, fantastical character designs with slightly exaggerated features.
+    - Narrative composition, suggestive of scenes from children's book illustrations.
+    - Use of decorative patterns and motifs within clothing and backgrounds.
+    - Dreamlike and slightly melancholic atmosphere with touches of humor.
+    - Flat planes of color with minimal gradients for a retro aesthetic.
+    - Stylized rendering of textures to create a tactile impression.
+    - Use of dark outlines to define shapes and create contrast.
+    - Figures often placed in dreamscape environments.
+    - Composition that centers figures to emphasize their emotional or symbolic state.
+
+wolves_walls:
+  artist: Dave McKean
+  books: [The Wolves in the Walls]
+  skip_reason: "Too crazy/complex for consistent generation"
+  prompts:
+    - Limited color palette with stark contrasts of black, white, and shades of muted red or ochre.
+    - Heavily textured surfaces resembling distressed paper, aged walls, or layered collages.
+    - Loose, expressive line work that blends drawing, painting, and collage.
+    - Use of shadow play to create a sense of unease and mystery.
+    - Distorted perspectives and fragmented compositions to evoke a dreamlike or nightmarish quality.
+    - Inclusion of photographic elements integrated with hand-drawn and painted elements.
+    - Figurative elements rendered with a mix of realism and abstraction, often distorted.
+    - Overlapping layers of imagery, text, and patterns to create visual density.
+    - Implied narrative through symbolic imagery and suggestive details.
+    - Emphasis on strong, directional lighting that creates dramatic highlights and shadows.
+    - Handwritten or typewritten text incorporated directly into the artwork.
+    - Blurred and smudged effects to suggest movement, decay, or a sense of the uncanny.

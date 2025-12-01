@@ -3,21 +3,24 @@
 Generate an image for a story page using AI image generation.
 
 Usage:
-    uv run scripts/gen_image.py [mode] <file>
+    uv run scripts/gen_image.py <mode> <file> [style_id]
 
 Modes:
-    prompt - Show the image gen prompt and list all referenced images
-    gemini - Generate the image using gemini-3-pro-image-preview model
-    frame  - Frame an existing image for print with bleed and guide lines
+    prompt <page_file> <style_id> - Show the image gen prompt and list all referenced images
+    gemini <page_file> <style_id> - Generate the image using gemini-3-pro-image-preview model
+    frame  <image_file>           - Frame an existing image for print with bleed and guide lines
 
 Examples:
-    uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
-    uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
-    uv run scripts/gen_image.py frame out/images/p09-arthur-cullan.jpg
+    uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_witch
+    uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
+    uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
+
+Available styles (see story/styles.yaml):
+    genealogy_witch, red_tree, gashlycrumb, donothing_day, ghost_hunt, ghost_easy
 
 Requirements:
     - GEMINI_API_KEY must be set in .env file (for gemini mode)
-    - Reference images must exist in ref/characters/, ref/locations/, ref/objects/
+    - Reference images must exist in ref/styles/, ref/characters/, ref/locations/, ref/objects/
 """
 
 import sys
@@ -54,8 +57,31 @@ def _load_yaml_file(file_path):
         return yaml.safe_load(f)
 
 
-def _load_template_visual_style():
-    """Load the overall visual style from story/template.yaml."""
+def _load_style(style_id):
+    """Load style configuration from story/styles.yaml.
+
+    Args:
+        style_id: The style identifier (e.g., 'genealogy_witch', 'red_tree')
+
+    Returns:
+        dict with 'artist', 'books', and 'prompts' keys
+
+    Raises:
+        ValueError: If style_id is not found in styles.yaml
+    """
+    styles = _load_yaml_file("story/styles.yaml")
+    if style_id not in styles:
+        available = list(styles.keys())
+        raise ValueError(f"Unknown style '{style_id}'. Available: {available}")
+    return styles[style_id]
+
+
+def _load_template_setting():
+    """Load the setting description from story/template.yaml.
+
+    This provides story-specific setting info (house, atmosphere, etc.)
+    that is combined with the style-specific visual prompts.
+    """
     template = _load_yaml_file("story/template.yaml")
     return template.get("visual", [])
 
@@ -80,20 +106,27 @@ def _load_location_visual(location_id):
     return loc_data.get("visual", [])
 
 
-def _collect_reference_images(page_data):
-    """Collect all reference images for style, characters, locations, and objects."""
+def _collect_reference_images(page_data, style_id):
+    """Collect all reference images for style, characters, locations, and objects.
+
+    Args:
+        page_data: The page YAML data
+        style_id: The style identifier for loading style reference images
+    """
     images = []
     image_labels = []
 
-    # Collect style reference images first
-    style_dir = Path("ref/style")
-    if style_dir.exists():
-        style_images = sorted(style_dir.glob("style-*.jpg"))
-        for img_path in style_images:
-            images.append(str(img_path))
-            image_labels.append(
-                f"A style reference image showing the illustration style"
-            )
+    # Load style info for labeling
+    style = _load_style(style_id)
+    artist = style.get("artist", style_id)
+
+    # Collect style reference images first (ref/styles/{style_id}-*.jpg)
+    style_images = sorted(Path("ref/styles").glob(f"{style_id}-*.jpg"))
+    for img_path in style_images:
+        images.append(str(img_path))
+        image_labels.append(
+            f"A style reference image showing {artist}'s illustration style"
+        )
 
     # Collect character images
     characters = page_data.get("characters", [])
@@ -139,8 +172,12 @@ def _collect_reference_images(page_data):
     return images, image_labels
 
 
-def build_prompt(page_data):
+def build_prompt(page_data, style_id):
     """Build the complete image generation prompt.
+
+    Args:
+        page_data: The page YAML data
+        style_id: The style identifier (e.g., 'genealogy_witch')
 
     Returns:
         tuple: (prompt_text, ref_image_paths, ref_labels) where:
@@ -148,11 +185,14 @@ def build_prompt(page_data):
             - ref_image_paths: List of paths to reference images
             - ref_labels: List of labels describing each reference image
     """
-    # Load visual style from template
-    visual_style = _load_template_visual_style()
+    # Load style prompts and template setting
+    style = _load_style(style_id)
+    style_prompts = style.get("prompts", [])
+    artist = style.get("artist", style_id)
+    setting_description = _load_template_setting()
 
     # Collect reference images
-    ref_images, ref_labels = _collect_reference_images(page_data)
+    ref_images, ref_labels = _collect_reference_images(page_data, style_id)
 
     # Build character visual descriptions
     characters = page_data.get("characters", [])
@@ -203,12 +243,17 @@ def build_prompt(page_data):
         page_text = page_text.strip()
 
     # Build the complete prompt (without image references - those are interleaved separately)
-    prompt = f"""Create an illustration for a children's storybook page.
+    prompt = f"""Create an illustration for a children's storybook page in {artist}'s illustration style.
 
-OVERALL VISUAL STYLE:
+VISUAL STYLE ({artist}):
 """
-    for style_item in visual_style:
+    for style_item in style_prompts:
         prompt += f"  - {style_item}\n"
+
+    if setting_description:
+        prompt += "\nSTORY SETTING:\n"
+        for setting_item in setting_description:
+            prompt += f"  - {setting_item}\n"
 
     if char_descriptions:
         prompt += "\nCHARACTER VISUAL DETAILS:\n"
@@ -229,23 +274,31 @@ The following text must be included in the illustration with appropriate storybo
 
 "{page_text}"
 
-Please display this text exactly as written in a clear, readable storybook font that fits the Marin Hanford illustration style.
+Please display this text exactly as written in a clear, readable storybook font that fits {artist}'s illustration style.
 """
 
-    prompt += """
-Please create a single illustration that captures this moment in the Marin Hanford illustration style, using the reference images provided to ensure character and location consistency. Include lots of fun little details as shown in the reference images.
+    prompt += f"""
+Please create a single illustration that captures this moment in {artist}'s illustration style, using the reference images provided to ensure character and location consistency. Include lots of fun little details as shown in the reference images.
 """
 
     return prompt, ref_images, ref_labels
 
 
-def show_prompt(page_file):
-    """Show the prompt and list referenced images."""
+def show_prompt(page_file, style_id):
+    """Show the prompt and list referenced images.
+
+    Args:
+        page_file: Path to the page YAML file
+        style_id: The style identifier (e.g., 'genealogy_witch')
+    """
     page_data = _load_yaml_file(page_file)
-    prompt, ref_images, ref_labels = build_prompt(page_data)
+    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
+
+    style = _load_style(style_id)
+    artist = style.get("artist", style_id)
 
     print("=" * 80)
-    print("IMAGE GENERATION PROMPT")
+    print(f"IMAGE GENERATION PROMPT (Style: {style_id} / {artist})")
     print("=" * 80)
     print()
     print(prompt)
@@ -259,11 +312,12 @@ def show_prompt(page_file):
     print()
 
 
-def generate_image(page_file):
+def generate_image(page_file, style_id):
     """Generate image using Gemini.
 
     Args:
         page_file: Path to the page YAML file
+        style_id: The style identifier (e.g., 'genealogy_witch')
 
     Returns:
         Path to the generated image file
@@ -276,11 +330,16 @@ def generate_image(page_file):
     # Initialize the Gemini client
     client = genai.Client(api_key=api_key)
 
+    # Load style info
+    style = _load_style(style_id)
+    artist = style.get("artist", style_id)
+
     # Load page data and build prompt
     page_data = _load_yaml_file(page_file)
-    prompt, ref_images, ref_labels = build_prompt(page_data)
+    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
 
     print(f"Generating image for {page_file}...")
+    print(f"Style: {style_id} ({artist})")
     print(f"Using {len(ref_images)} reference images")
     print(f"Prompt: {len(prompt)} characters")
 
@@ -318,6 +377,21 @@ def generate_image(page_file):
         ),
     )
 
+    # Debug: print full response if parts is None
+    if response.parts is None:
+        print(f"WARNING: response.parts is None")
+        print(f"Full response: {response}")
+        if hasattr(response, 'prompt_feedback'):
+            print(f"Prompt feedback: {response.prompt_feedback}")
+        if hasattr(response, 'candidates') and response.candidates:
+            for i, candidate in enumerate(response.candidates):
+                print(f"Candidate {i}: {candidate}")
+                if hasattr(candidate, 'finish_reason'):
+                    print(f"  Finish reason: {candidate.finish_reason}")
+                if hasattr(candidate, 'safety_ratings'):
+                    print(f"  Safety ratings: {candidate.safety_ratings}")
+        raise RuntimeError("API returned no parts - likely content filtering or rate limiting")
+
     print(f"Response received with {len(response.parts)} part(s)")
 
     # Extract images from response parts
@@ -333,8 +407,9 @@ def generate_image(page_file):
 
     # Save the generated image(s)
     # Use the input filename stem (without .yaml extension) for output
+    # Output to style-specific subdirectory
     input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    output_dir = Path("out/images")
+    output_dir = Path("out/images") / style_id
     output_dir.mkdir(parents=True, exist_ok=True)
 
     output_file = None
@@ -420,32 +495,39 @@ def main():
         print(__doc__)
         sys.exit(1)
 
-    # Parse arguments
-    if len(sys.argv) == 2:
-        # Assume prompt mode if only page file is given
-        mode = "prompt"
-        page_file = sys.argv[1]
-    else:
-        mode = sys.argv[1]
-        page_file = sys.argv[2]
+    mode = sys.argv[1]
 
     # Validate mode
     valid_modes = ["prompt", "gemini", "frame"]
     if mode not in valid_modes:
         raise ValueError(f"Invalid mode '{mode}'. Must be one of: {', '.join(valid_modes)}")
 
+    # Frame mode only needs an image file
+    if mode == "frame":
+        if len(sys.argv) < 3:
+            raise ValueError("frame mode requires an image file path")
+        image_file = sys.argv[2]
+        if not Path(image_file).exists():
+            raise FileNotFoundError(f"Image file '{image_file}' not found")
+        frame_image(image_file)
+        return
+
+    # prompt and gemini modes require page_file and style_id
+    if len(sys.argv) < 4:
+        raise ValueError(f"{mode} mode requires: <page_file> <style_id>")
+
+    page_file = sys.argv[2]
+    style_id = sys.argv[3]
+
     # Validate input file exists
-    input_file = Path(page_file)
-    if not input_file.exists():
-        raise FileNotFoundError(f"Input file '{page_file}' not found")
+    if not Path(page_file).exists():
+        raise FileNotFoundError(f"Page file '{page_file}' not found")
 
     # Execute the appropriate mode
     if mode == "prompt":
-        show_prompt(page_file)
+        show_prompt(page_file, style_id)
     elif mode == "gemini":
-        generate_image(page_file)
-    elif mode == "frame":
-        frame_image(page_file)
+        generate_image(page_file, style_id)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,103 @@
+# Visual styles for image generation, in priority order
+# Each style has: artist, books (references), prompts (for image generation)
+
+genealogy_witch:
+  artist: Benjamin Lacombe
+  books: [Genealogy of a Witch, Madame Butterfly]
+  prompts:
+    - Muted, desaturated color palette with occasional jewel-toned accents
+    - High contrast between light and shadow, creating dramatic lighting
+    - Smooth, almost porcelain-like skin texture on characters
+    - Stylized character proportions with large, expressive eyes
+    - Ornate, intricate detailing in clothing and backgrounds
+    - Dreamlike and slightly melancholic mood
+    - Use of shallow depth of field to focus attention
+    - Soft, blended brushstrokes simulating oil or acrylic painting
+    - Strong emphasis on narrative and storytelling through visual elements
+    - Frequent inclusion of symbolic motifs and allegorical references
+    - Compositions often incorporate elements of classical portraiture
+    - Use of textures with hints of aged paper and worn surfaces
+
+red_tree:
+  artist: Shaun Tan
+  books: [The Red Tree]
+  prompts:
+    - Muted and desaturated color palette with analogous color harmonies.
+    - Soft, blended brushstrokes creating a textured, slightly rough surface.
+    - Atmospheric perspective achieved through subtle gradations of color and tone.
+    - Dreamlike and surreal subject matter blending the mundane and the fantastical.
+    - Figurative elements with simplified forms and expressive, emotionally charged features.
+    - Slightly blurred edges and imperfections, evoking a handmade quality.
+    - Dark, mysterious shadows that create a sense of unease and introspection.
+    - Close framing that emphasizes the emotional state of the characters.
+    - The use of mixed media to create layers of texture and depth.
+    - Composition with leading lines and pathways to guide the viewer's eye.
+    - Deliberate inclusion of symbolic elements and motifs, such as letters and numbers.
+    - A generally somber and melancholic mood with hints of hope and resilience.
+
+gashlycrumb:
+  artist: Edward Gorey
+  books: [The Gashlycrumb Tinies]
+  prompts:
+    - Limited color palette of primarily grayscale tones with sepia undertones
+    - Fine, scratchy ink line work with varying line weight
+    - Dense stippling and hatching to create textures and shadows
+    - Characters with darkly hollowed eyes and gaunt features
+    - Use of gothic architectural and clothing elements
+    - Macabre and darkly humorous subject matter
+    - Composition features figures clustered towards the bottom of the frame
+    - Distorted perspective and simplified backgrounds
+    - Use of a thin, formal, and slightly antiquated typeface for text
+    - Flat, unblended rendering with an absence of soft gradients
+    - Emphasis on detailed textures in fabrics and architectural details
+    - Heavy use of dramatic lighting and shadow to create a sense of foreboding
+
+donothing_day:
+  artist: Beatrice Alemagna
+  books: [On a Magical Do-Nothing Day]
+  prompts:
+    - Earthy and muted color palette with desaturated tones and occasional pops of brighter color.
+    - Loose, sketchy lines and visible pencil strokes, creating a sense of spontaneity and imperfection.
+    - Textured surfaces with visible grain, possibly achieved through mixed media or digital techniques mimicking physical media.
+    - Composition focuses on foreground details, often cropping elements to create a sense of depth.
+    - Character designs are stylized and slightly exaggerated with expressive features and simple shapes.
+    - A whimsical and slightly melancholic atmosphere, often conveying a sense of introspection.
+    - Visible use of colored pencils and crayon-like textures for shading and highlights.
+    - Layered imagery creating depth and texture through overlapping shapes and colors.
+    - Textural contrast through areas of flat, solid color and areas of dense hatching.
+    - Distinct use of perspective, often skewed or slightly distorted to enhance the narrative.
+    - Intricate background details that add to the complexity and richness of the visual environment.
+
+ghost_hunt:
+  artist: Cherie Zamazing
+  books: [We're Going On A Ghost Hunt]
+  prompts:
+    - Deep purple background with golden and orange accent colors.
+    - Soft, glowing gradients suggesting moonlight and atmosphere.
+    - Whimsical hand-drawn line work with slight imperfections.
+    - Playful, slightly cartoonish animal character designs with exaggerated features.
+    - Textured surfaces mimicking the appearance of colored pencil or crayon.
+    - Use of flat shapes and simple patterns to create depth.
+    - Floating elements like stars and ghosts adding to a dreamlike quality.
+    - Warm, inviting mood despite the Halloween theme.
+    - Composition focused on central figures with supporting visual elements.
+    - Use of flags and Halloween themed items for decoration.
+    - Bold, stylized lettering with a vintage children's book feel.
+    - Lift the flaps and find the ghosts style note on a pumpkin shape.
+
+ghost_easy:
+  artist: Stephanie Laberis
+  books: [It's Not Easy Being A Ghost]
+  prompts:
+    - Predominantly cool, muted color palette with desaturated purples, greens, and blues
+    - Textural brush strokes and implied grainy surface details to convey a painted look
+    - Thick, soft-edged outlines defining shapes with slight color variation
+    - Cartoonish character designs with exaggerated features, particularly large, expressive eyes
+    - Dramatic lighting creates distinct highlights and deep shadows for depth
+    - Composition uses dynamic angles and framing to enhance the mood
+    - Overall atmosphere is spooky yet whimsical and lighthearted
+    - Playful use of transparency and glowing effects for ghostly elements
+    - Soft, rounded shapes and forms lend a cute and friendly appearance
+    - Background details include cobwebs and dust motes to reinforce the haunted theme
+    - Color harmony achieved through analogous color relationships and subtle gradients
+    - Angular, expressive poses and gestures adding to the whimsical nature

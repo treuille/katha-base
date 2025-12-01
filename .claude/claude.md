@@ -70,6 +70,22 @@
 - **Raise, don't print-and-exit**: Use `raise RuntimeError(...)` or `raise ValueError(...)` instead of `print("Error: ..."); sys.exit(1)`. This makes functions composable and testable.
 - **Return values, don't assume paths**: Functions that create files should return the path to the created file, not just print it. Callers should use the returned path rather than reconstructing it.
 
+## Visual Styles
+
+Style configuration lives in `story/styles.yaml`. Each style defines an artist, reference books, and prompt descriptors.
+
+**Available styles** (in priority order):
+- `genealogy_witch` - Benjamin Lacombe (Genealogy of a Witch)
+- `red_tree` - Shaun Tan (The Red Tree)
+- `gashlycrumb` - Edward Gorey (The Gashlycrumb Tinies)
+- `donothing_day` - Beatrice Alemagna (On a Magical Do-Nothing Day)
+- `ghost_hunt` - Cherie Zamazing (We're Going On A Ghost Hunt)
+- `ghost_easy` - Stephanie Laberis (It's Not Easy Being A Ghost)
+
+Skipped/experimental styles are in `story/styles-skip.yaml`.
+
+**Reference images:** `ref/styles/{style_id}-*.jpg` (e.g., `genealogy_witch-01.jpg`)
+
 ## Scripts
 
 ### Image Generation (`scripts/gen_image.py`)
@@ -78,58 +94,44 @@ Generates illustrations for story pages using AI image generation with reference
 
 **Basic Usage:**
 ```bash
-uv run scripts/gen_image.py [mode] <page_file>
+uv run scripts/gen_image.py <mode> <file> [style_id]
 ```
 
 **Modes:**
-- `prompt` - Display the complete image generation prompt and list all referenced images (useful for debugging/review)
-- `gemini` - Generate the actual image using gemini-3-pro-image-preview model
-- `frame` - Frame an existing image for print with bleed area and guide lines
+- `prompt <page_file> <style_id>` - Display the prompt and list all referenced images
+- `gemini <page_file> <style_id>` - Generate the image using Gemini
+- `frame <image_file>` - Frame an existing image for print with bleed and guide lines
 
 **Examples:**
 ```bash
-# Preview the prompt for page 09
-uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
+# Preview the prompt for page 09 in genealogy_witch style
+uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_witch
 
-# Generate the image for page 09
-uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml
+# Generate the image in red_tree style
+uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
 
 # Frame a generated image for printing
-uv run scripts/gen_image.py frame out/images/p09-arthur-cullan.jpg
+uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
 ```
 
 **How the Prompt is Assembled:**
 
 The script automatically builds a comprehensive prompt by combining:
 
-1. **Visual style** from `story/template.yaml` (`visual` field)
-2. **Character visual descriptions** from `characters/{character_id}.yaml` (`visual` field)
-3. **Location visual descriptions** from `locations/{location_id}.yaml` (`visual` field)
-4. **Page-specific scene** from the page YAML file (`visual` field)
-5. **Page text to display** from the page YAML file (`text` field) - with explicit instructions to render in image
-6. **Reference images** - automatically discovers and includes all matching images:
+1. **Style prompts** from `story/styles.yaml` (artist-specific visual characteristics)
+2. **Story setting** from `story/template.yaml` (`visual` field - house, atmosphere, etc.)
+3. **Character visual descriptions** from `characters/{character_id}.yaml` (`visual` field)
+4. **Location visual descriptions** from `locations/{location_id}.yaml` (`visual` field)
+5. **Page-specific scene** from the page YAML file (`visual` field)
+6. **Page text to display** from the page YAML file (`text` field)
+7. **Reference images** - automatically discovers and includes:
    - Style images: `ref/styles/{style_id}-*.jpg` (always included first)
    - Character images: `ref/characters/{character_id}-*.jpg`
    - Location images: `ref/locations/{location_id}-*.jpg`
    - Object images: `ref/objects/{object_id}-*.jpg`
 
-**Reference Image Labeling:**
-
-Images are labeled in the prompt using a common prompt engineering pattern:
-```
-I have provided 11 reference images:
-
-Image 1: A style reference image showing the illustration style
-Image 2: A style reference image showing the illustration style
-Image 3: A reference picture of Arthur
-Image 4: A reference picture of Arthur
-Image 5: A reference picture of Cullan
-Image 6: A reference picture of the Hallway
-...
-```
-
 **Output:**
-- Generated images saved to: `out/images/{page_id}.jpg`
+- Generated images saved to: `out/images/{style_id}/{page_id}.jpg`
 - Aspect ratio: 3:2 (maintains ~1.5 ratio, close to target 3507x2334)
 - Framed images saved to: `out/images/{page_id}-framed.jpg`
 
@@ -143,5 +145,32 @@ Image 6: A reference picture of the Hallway
 **Requirements:**
 - Copy `.env.example` to `.env` and set your `GEMINI_API_KEY` (for gemini mode)
 - Reference images must exist in `ref/` subdirectories
-- Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `dorje_legpa-01.jpg`, `hallway-02.jpg`)
+- Image naming: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `genealogy_witch-02.jpg`)
+
+### Book Generation (`scripts/gen_book.py`)
+
+Generates a complete picture book PDF for a character in a specific style.
+
+**Usage:**
+```bash
+uv run scripts/gen_book.py <character_id> <style_id>
+```
+
+**Examples:**
+```bash
+# Generate Cullan's book in genealogy_witch style
+uv run scripts/gen_book.py cullan genealogy_witch
+
+# Generate Arthur's book in red_tree style
+uv run scripts/gen_book.py arthur red_tree
+
+# Generate books in parallel for all styles
+uv run scripts/gen_book.py cullan genealogy_witch &
+uv run scripts/gen_book.py cullan red_tree &
+uv run scripts/gen_book.py cullan gashlycrumb &
+```
+
+**Output:**
+- PDFs saved to: `out/books/{style_id}/{character}-{version}.pdf`
+- Images saved to: `out/images/{style_id}/{page_id}.jpg`
 
