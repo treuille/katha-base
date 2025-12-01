@@ -52,6 +52,7 @@ Reference images for potential illustration styles are stored in `ref/styles/` u
 6. `ghost_hunt` — **Cherie Zamazing** — We're Going On A Ghost Hunt
 7. `gashlycrumb` — **Edward Gorey** — The Gashlycrumb Tinies
 8. `ghost_easy` — **Stephanie Laberis** — It's Not Easy Being A Ghost
+9. `wheres_waldo` — **Martin Handford** — Where's Waldo?
 
 ## Setup
 
