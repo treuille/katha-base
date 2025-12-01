@@ -1,5 +1,5 @@
 id: p21
-section: Sky Procession
+section: Realizing the Bigger Problem
 page_type: joint
 characters:
   - arthur
@@ -8,20 +8,19 @@ characters:
   - hansel
   - henry
   - james
-location: driveway
+location: living_room
 
-story_beat: Outside, Henry jumps into the toy airplane, which becomes the "vehicle
-  of sky." James acts as air traffic controller on the ground—"Spirit Sled Three-Seven-Red,
-  cleared for takeoff!"
+story_beat: Henry points at the odd ornament on the tree, drawing everyone's
+  attention to it.
 
 visual: |
-  - Snowy driveway scene with Henry climbing into a toy airplane
-  - The airplane seeming to shimmer with possibility, ready to fly
-  - James standing with authority, hand signals like an air traffic controller
-  - The red sled with the contained spirit waiting nearby
-  - Other cousins preparing for the procession
+  - Henry pointing directly at a strange ornament on the tree
+  - The ornament glowing with an unsettling inner light
+  - All other cousins turning to look where he points
+  - The ornament distinctly different from the others—wrong somehow
+  - Tension building in the frame as all eyes focus on one spot
 
 text: |
-  Outside in the snow, Henry climbed into his toy airplane. Somehow, here, it felt like it could really fly. James took position on the ground, all business. "Spirit Sled Three-Seven-Red," he announced in his best pilot voice, "you are cleared for takeoff!"
+  "There." Henry's voice was steady as he pointed at the tree. One ornament hung slightly crooked, glowing with a strange inner light that didn't match the others. It seemed to pulse, almost breathing. "That's what's wrong."
 
 objects: []

@@ -1,5 +1,5 @@
 id: p24
-section: Epilogue
+section: Climax
 page_type: joint
 characters:
   - arthur
@@ -10,18 +10,19 @@ characters:
   - james
 location: living_room
 
-story_beat: That evening, the cousins gather by the tree—the real tree now,
-  no strange ornaments. They share tired smiles, each quietly reflecting on
-  what they learned about their strengths.
+story_beat: Working together, the children grab the blazing deity and wrestle it
+  into a box. The spirit is furious, shining light through every crack, but
+  contained. Simple collective action, funny and chaotic.
 
 visual: |
-  - All six cousins gathered around the Christmas tree in warm evening light
-  - Tired but content expressions, the adventure behind them
-  - Cullan looking thoughtfully at his hands—knowing now what they can truly do
-  - The tree looking normal, peaceful, no strange ornaments
-  - A sense of quiet accomplishment and newfound understanding
+  - Big chaotic action spread showing all six kids working together
+  - The children grabbing the blazing spirit with their bare hands
+  - Wrestling the furious deity into a large wooden box
+  - Light blazing out through every crack and gap in the box
+  - The spirit hilariously indignant, wiggling and complaining but contained
+  - Warmth returning to the room as the spirit is boxed
 
 text: |
-  That evening, the cousins sat together by the tree—the real tree now, no strange ornaments. Cullan looked at his hands. Not just fast hands. Fair hands. Hands that could see what was right and make it real. That was worth more than any speed.
+  "Grab him!" Everyone moved at once. Six pairs of hands seized the blazing, wiggling spirit and wrestled it toward a big wooden box. The deity complained loudly, shooting light through every crack, but they got the lid closed. It looked absolutely ridiculous—a glowing, shaking box full of angry trickster god.
 
 objects: []

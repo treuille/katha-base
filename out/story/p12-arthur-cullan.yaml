@@ -1,0 +1,28 @@
+id: p12
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - arthur
+  - cullan
+location: hallway
+
+story_beat: They realize each other's strengths fit the other room better and agree
+  to swap which room they will tackle next. A spark of hope despite the cold, wrong
+  hallway around them.
+
+visual: |
+  - Both boys with sudden understanding dawning on their faces
+  - Arthur's Rubik's cube visible in his pocket, Cullan's smartwatch on wrist
+  - A spark of hope in their expressions despite the haunted hallway
+  - Fist bump frozen in the middle of the frame
+  - The cold blue hallway still wrong, but the boys standing strong together
+  - A moment of determination and friendship
+  - Their best-friend bond visible in how they face the challenge
+
+text: |
+  "Wait," Arthur said. "Your room has candles that won't stay distributed fairly. And my room has games with rigged rules." He paused. "That's your thing—you hate unfair rules."
+  Cullan's eyes lit up. "And you can see patterns in how things should be arranged. Swap?"
+  They bumped fists. "Swap."
+
+objects: []

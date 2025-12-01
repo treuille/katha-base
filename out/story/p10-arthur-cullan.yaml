@@ -1,0 +1,26 @@
+id: p10
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - arthur
+  - cullan
+location: hallway
+
+story_beat: They compare notes, realizing the connections between their experiences.
+  A dawning understanding begins—something is very wrong with this house. The visual
+  wrongness is at its peak around them.
+
+visual: |
+  - Both boys facing each other, expressions shifting from fear to thought
+  - The cold blue hallway surrounding them, geometry still warped
+  - Both gesturing as they compare stories
+  - Visual elements: candle flames on one side, dice/game pieces on the other
+  - Their faces showing the beginning of understanding
+  - Peak haunting atmosphere - shadows deep, light harsh, angles wrong
+  - The sense that something bigger is connecting their experiences
+
+text: |
+  "Wait," Cullan said slowly. "Things keep moving on their own in your room. Things keep moving on their own in mine." He looked down the hallway—was that doorframe crooked? "Arthur... do you feel like the house itself is wrong?"
+
+objects: []

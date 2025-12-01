@@ -1,5 +1,5 @@
 id: p25
-section: Epilogue
+section: Sky Procession
 page_type: joint
 characters:
   - arthur
@@ -8,19 +8,22 @@ characters:
   - hansel
   - henry
   - james
-location: exterior
+location: driveway
 
-story_beat: Outside, the house glows gently in the snowy woods, protected by
-  a guardian who finally found his sky. Peace settles over Millbrook.
+story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit, single
+  wing, propeller in front. He's wearing WWII-style flight goggles pushed up on his
+  forehead, but still has his Santa hat on. James acts as air traffic controller.
 
 visual: |
-  - Wide shot of Millbrook house in snowy woods at dusk
-  - The house glowing with gentle PROTECTIVE golden aura
-  - Snow-covered trees surrounding the cozy home
-  - The sky above soft and peaceful, guardian spirit implied in cloud shapes
-  - A sense of peace, protection, and story's end—bookending page 1
+  - Snowy driveway scene with Henry climbing into a small WWII-style biplane
+  - The plane has an OPEN COCKPIT, single wing, propeller in front
+  - Henry wearing WWII-style flight goggles pushed UP on his forehead
+  - Henry still wearing his Santa hat—goggles AND Santa hat together
+  - James standing with authority, hand signals like an air traffic controller
+  - The glowing box with the contained spirit waiting nearby
+  - Other cousins preparing for the procession
 
 text: |
-  Outside, the house glowed gently in the snow. Somewhere up in the endless sky, a guardian who had finally remembered himself watched over Millbrook. Peace had settled over the old house, and Christmas felt right again.
+  Outside in the snow, Henry climbed into his small airplane—a proper WWII-style biplane with an open cockpit and a propeller in front. He'd found some flight goggles somewhere and pushed them up on his forehead, though he kept his Santa hat firmly in place. James took position on the ground, all business. "Spirit Sled Three-Seven-Red," he announced in his best pilot voice, "you are cleared for takeoff!"
 
 objects: []

@@ -1,6 +1,7 @@
 id: p03
 section: Ordinary World
 page_type: individual
+haunting_level: low
 characters:
   - cullan
 location: living_room
@@ -10,7 +11,7 @@ story_beat: Cullan plays Fortnite, but one ornament on the tree catches his atte
   him.
 
 visual: |
-  - Cullan sitting cross-legged with laptop, Fortnite glowing on screen
+  - Cullan sitting cross-legged with black gaming laptop, Fortnite glowing on screen
   - His ice-blue eyes lifting from the game toward the Christmas tree
   - One ornament that seems to STARE back at him—catching light strangely
   - The other cousins visible in background, oblivious, but the ornament tracks only Cullan

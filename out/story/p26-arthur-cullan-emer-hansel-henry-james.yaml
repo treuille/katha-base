@@ -1,0 +1,29 @@
+id: p26
+section: Sky Procession
+page_type: joint
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+location: driveway
+
+story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
+  holding the deity in a box. Emer trails behind on a tricycle with Hansel on
+  the handlebars, pointing exultantly at the sky with his bottle. The plane
+  lifts the sled—not too high, just enough for comedic effect—dragging it across
+  the lawn, up over a little bump, maybe through some clouds.
+
+visual: |
+  - The WWII-style biplane dragging the red sled across the snowy lawn
+  - Cullan and Arthur in the sled, holding a glowing box containing the spirit
+  - The sled lifting slightly off the ground—just enough to be magical
+  - Behind them, Emer on a tricycle with Hansel on handlebars
+  - Hansel pointing his bottle triumphantly at the sky, pure joy on his face
+
+text: |
+  The airplane pulled the sled across the snow, then lifted—just a little, just enough. Cullan and Arthur held tight to the spirit's box as they bumped through a low cloud. Behind them, Emer pedaled furiously on a tricycle while Hansel waved his bottle at the sky, laughing.
+
+objects: []

@@ -1,23 +1,26 @@
 id: p13
 section: Second Attempt
 page_type: individual
+haunting_level: high
 characters:
   - cullan
-location: play_room
+location: hallway
 
-story_beat: The games BOW to Cullan. The voice goes silent. The accusations vanish.
-  He stands in the peaceful room and realizes—he doesn't just sense fairness. He can
-  COMMAND it. That's real power.
+story_beat: |
+  Cullan walks toward the playroom with new understanding. From ahead, he
+  sees dice rolling on their own across the floor, game pieces moving in
+  aggressive patterns. The shadows seem to point accusingly toward the room.
 
 visual: |
-  - Cullan standing triumphant, arms at his sides, radiating authority
-  - All the game pieces BOWING toward him—chess pieces, dice, cards oriented in respect
-  - The accusatory words completely GONE from the air
-  - The room bathed in warm, peaceful golden light
-  - His ice-blue eyes glowing with the realization of his true power
-  - His expression: quiet triumph, profound self-discovery
+  - Cullan striding down the hallway toward the playroom
+  - His posture determined but wary, knowing something waits ahead
+  - Dice visible through the doorway, rolling on their own across the floor
+  - Game pieces moving in sharp, aggressive patterns
+  - Shadows on the walls seeming to POINT toward the playroom, accusatory
+  - Ice-blue eyes narrowed with new understanding—this time he knows his real strength
+  - Cold blue light spilling from the playroom, geometry warped
 
 text: |
-  The games bowed to him. Chess pieces tilted forward. Dice settled showing honest numbers. The voice that had called him "cheater" went completely silent. Cullan stood in the peaceful room, breathing hard, and realized something huge: he didn't just sense what was fair. He could command it. The world had to listen when he spoke the truth. That was power. Real power.
+  Cullan walked toward the playroom, but slower this time. Through the doorway, he could see dice rolling across the floor on their own—no one touching them. Game pieces moved in sharp, angry patterns. The shadows on the walls seemed to point at the room like accusing fingers. Cullan clenched his fists. Speed wouldn't help here. But unfair games? That, he could fight.
 
 objects: []

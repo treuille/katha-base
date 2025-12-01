@@ -1,5 +1,5 @@
 id: p23
-section: Sky Procession
+section: Climax
 page_type: joint
 characters:
   - arthur
@@ -8,22 +8,20 @@ characters:
   - hansel
   - henry
   - james
-location: driveway
+location: living_room
 
-story_beat: The moment the spirit is pulled into open space, it transforms—his
-  flames soften into wind, his weapons turn into sparkles, his screaming face
-  relaxes. He remembers he's not a monster but a sky guardian who forgot himself.
-  The spirit sees himself reflected in the sky (the sky becomes his mirror).
-  The house glows with a gentle protective aura instead of scrambled chaos.
+story_beat: The ornament flares and the spirit erupts, growing huge and blazing
+  red. Emer realizes it's furious because it's cramped—too big for a house,
+  it needs sky!
 
 visual: |
-  - The spirit TRANSFORMING in open sky—flames becoming soft wind
-  - Weapons dissolving into sparkles and light
-  - The spirit's face relaxing from fury to peace—remembering who he truly is
-  - THE SKY AS MIRROR: spirit seeing his true reflection in clouds and blue
-  - Below, the house now glows with gentle PROTECTIVE golden aura
+  - The ornament exploding with blazing red light
+  - A huge, fierce spirit form erupting from it, filling the room
+  - The spirit's face furious, flames and weapons swirling around it
+  - All six children recoiling but standing their ground
+  - The spirit clearly too big for the space, cramped and angry
 
 text: |
-  The moment the spirit touched open sky, everything changed. His flames softened into wind. His screaming face relaxed. He saw himself reflected in the endless blue and remembered—he wasn't a monster. He was a sky guardian who had forgotten himself.
+  The ornament FLARED. Red light blazed as a huge spirit burst free—all flames and fury, weapons spinning, face twisted in rage. But Emer understood first: "He's not evil—he's cramped! He's too big for inside. He needs sky!"
 
 objects: []

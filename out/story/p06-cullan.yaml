@@ -1,23 +1,26 @@
 id: p06
 section: First Attempt
 page_type: individual
+haunting_level: high
 characters:
   - cullan
 location: dining_room
 
-story_beat: As more candles blow out, more traces of Cullan vanish. His chair slides
-  away. Desperate, he uses his speed to keep candles lit—racing around the table in
-  a blur. The candles hold, but the deeper horror continues.
+story_beat: Cullan uses his speed to blow out the clustered candles and spread them
+  apart around the room—but they keep sliding back together, clustering again in
+  the dangerous corner. The harder he works, the faster they return.
 
 visual: |
   - Dynamic action shot: Cullan as a blur racing around the dining table
-  - A comically long match in his hand, trailing flame like a comet
-  - Multiple candles relighting in his wake, flames leaning toward him
-  - But his CHAIR sliding away from the table even as he runs
-  - His placecard reappearing—but BLANK, his name erased
-  - His santa hat flying back from the speed, expression desperate
+  - Blowing out candles with his speed, moving them to safe positions around the room
+  - But candles visibly SLIDING BACK across the table surface toward the corner
+  - The geometry of the room warping further—shadows deepening, angles wrong
+  - His santa hat flying back from the speed, expression frustrated
+  - Cold blue tones dominating, harsh shadows pooling
+  - Trails of smoke from extinguished candles
+  - The curtains still dangerously close to where candles keep clustering
 
 text: |
-  Another candle blew out, and Cullan's chair slid away from the table on its own. "No!" He grabbed the longest match he could find and became a blur—racing, relighting, keeping the flames alive through sheer speed. Every candle blazed. But when he stopped to catch his breath, his placecard had reappeared... completely blank. His name was still gone.
+  Cullan became a blur. He raced around the table, blowing out candles, moving them to safe spots all around the room. But the moment he set one down, it started sliding back—scraping across the tablecloth toward the corner like something was pulling it. The harder he worked, the faster they clustered back together. It was like trying to bail out a sinking boat with a thimble.
 
 objects: []

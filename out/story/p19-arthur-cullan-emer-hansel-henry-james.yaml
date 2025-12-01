@@ -1,5 +1,5 @@
 id: p19
-section: Climax
+section: Realizing the Bigger Problem
 page_type: joint
 characters:
   - arthur
@@ -8,20 +8,21 @@ characters:
   - hansel
   - henry
   - james
-location: living_room
+location: hallway
 
-story_beat: The ornament flares and the spirit erupts, growing huge and blazing
-  red. The boys realize it's furious because it's cramped—too big for a bedroom,
-  it needs sky!
+story_beat: Nervous but determined, the group talks, masters their fears, and
+  decides they must face whatever is in the living room together.
 
 visual: |
-  - The ornament exploding with blazing red light
-  - A huge, fierce spirit form erupting from it, filling the room
-  - The spirit's face furious, flames and weapons swirling around it
-  - All six children recoiling but standing their ground
-  - The spirit clearly too big for the space, cramped and angry
+  - The six cousins huddled together in the hallway
+  - Nervous but determined expressions on every face
+  - Hands reaching out to hold or reassure each other
+  - Hansel held protectively by Emer
+  - All eyes turning toward the living room doorway together
 
 text: |
-  The ornament FLARED. Red light blazed as a huge spirit burst free—all flames and fury, weapons spinning, face twisted in rage. But Henry understood first: "He's not evil—he's cramped! He's too big for inside. He needs sky!"
+  "We have to go back to the living room," Emer said.
+  "Together," Arthur added.
+  Cullan nodded. James straightened his shoulders. Henry took a deep breath. Even little Hansel seemed to understand. Whatever was in there, they'd face it as a team.
 
 objects: []

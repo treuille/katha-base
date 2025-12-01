@@ -1,23 +1,26 @@
 id: p07
 section: First Attempt
 page_type: individual
+haunting_level: high
 characters:
   - cullan
 location: dining_room
 
-story_beat: The candles hold, but Cullan's place is still erased. He realizes speed
-  can't make people want you there. He leaves, knowing his obvious skill wasn't the
-  right tool. The room needs someone who can see what's unfair.
+story_beat: The candles keep clustering despite Cullan's efforts. He stops, breathing
+  hard, and realizes speed isn't the answer. Whatever's wrong here, he can't outrun
+  it. He needs to find Arthur.
 
 visual: |
-  - Cullan standing back, breathing hard, surveying the table
-  - All candles burning steadily—his speed worked for that
-  - But his plate still empty, his chair pushed away, his placecard blank
-  - His expression shifting from confusion to painful realization
-  - Looking back at the empty spot where he should belong
-  - The bitter understanding that speed can't fix this
+  - Cullan standing back, breathing hard, surveying the room
+  - Candles still clustered dangerously despite his best efforts
+  - His expression shifting from frustration to defeat
+  - The room still dominated by cold harsh light, angles wrong
+  - High haunting—deep shadows, warped geometry, cold blue dominant
+  - His ice-blue eyes showing he knows speed won't solve this
+  - Turning toward the door, needing to find help
+  - His santa hat askew, sweat on his brow
 
 text: |
-  The candles held. Cullan had won that battle. But his place at the table was still gone—blank card, pushed-away chair, no sign he'd ever belonged there. Speed could keep flames lit, but it couldn't make people want him. He turned toward the hallway, a lump in his throat. This room needed something he couldn't give it.
+  Cullan stopped, gasping for breath. The candles were still clustering in their dangerous corner, flames reaching for the curtains. No matter how fast he moved, they slid right back. Speed wasn't working. Whatever was wrong here, it wasn't something he could outrun. He needed to find Arthur—maybe his best friend would know what to do.
 
 objects: []

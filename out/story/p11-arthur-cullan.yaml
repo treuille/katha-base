@@ -1,0 +1,27 @@
+id: p11
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - arthur
+  - cullan
+location: hallway
+
+story_beat: The realization crystallizes—"This house is haunted." They look at each
+  other with a mix of fear and determination. The cold blue light and warped geometry
+  emphasize the moment's weight.
+
+visual: |
+  - Close-up on both boys' faces as realization dawns
+  - Their expressions: fear mixed with determination
+  - The cold blue light casting harsh shadows across their features
+  - The warped geometry of the hallway framing them
+  - A moment of shared understanding between best friends
+  - Both standing straight despite the wrongness around them
+  - The weight of the realization visible in their eyes
+
+text: |
+  Arthur looked at the frost creeping across the hallway window. At the shadows that didn't fall right. At the way the walls seemed to lean. "Cullan," he said quietly. "This house is haunted."
+  Cullan nodded, a chill running through him that had nothing to do with the cold. "Yeah. It really is."
+
+objects: []

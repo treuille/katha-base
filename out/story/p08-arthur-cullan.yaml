@@ -1,24 +1,26 @@
 id: p08
 section: Crossover / Pair
 page_type: pair
+haunting_level: high
 characters:
   - arthur
   - cullan
 location: hallway
 
-story_beat: The main character bumps into their room-swap partner in the hall,
-  and they compare the strange things that just happened in their rooms.
+story_beat: Cullan bumps into Arthur in the hall. The hallway is at peak wrongness—
+  cold, tilted, shadows pooling strangely. Cullan describes the fire danger he just
+  faced in the dining room.
 
 visual: |
-  - Arthur and Cullan meeting in the hallway, both looking shaken
-  - Ghostly transparent overlays between them showing their experiences
-  - On one side: flickering candles and scrambled dining table
-  - On other side: scattered game pieces and broken board game boxes
-  - Both boys gesturing animatedly as they compare stories
+  - Cullan and Arthur meeting in the hallway, both looking shaken
+  - Hallway at PEAK HAUNTING - cold blue light, harsh shadows, geometry warped
+  - Doorframes visibly tilted, proportions wrong, uncanny
+  - Cullan gesturing urgently, describing what he saw
+  - Arthur listening intently, face showing concern
+  - Cullan's santa hat askew, still catching his breath
+  - The wrongness of the hallway surrounding them both
 
 text: |
-  "Cullan!" Arthur rushed down the hall. "The playroom is haunted—games keep changing their own rules!"
-  "The dining room too," Cullan said. "Candles won't stay lit and nothing's in the right place."
-  They stared at each other. This was bigger than either of them thought.
+  Cullan nearly ran into Arthur in the hallway. "Arthur! The dining room—all the candles clustered together in one corner. They almost set the curtains on fire! I tried moving them, but they keep sliding back."
 
 objects: []

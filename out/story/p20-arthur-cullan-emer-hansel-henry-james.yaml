@@ -1,5 +1,5 @@
 id: p20
-section: Climax
+section: Realizing the Bigger Problem
 page_type: joint
 characters:
   - arthur
@@ -10,18 +10,17 @@ characters:
   - james
 location: living_room
 
-story_beat: In a big action spread, each child uses their room-discovered superpower
-  to contain the spirit. They tie it onto the bright red sled—still blazing
-  and hilarious, complaining and wiggling. Very funny.
+story_beat: All the kids gather under the tree, sharing quick snapshots of what
+  happened in their rooms, and realize everything traces back to the tree.
 
 visual: |
-  - Big action spread showing all six kids working together
-  - The spirit being wrestled onto a bright red sled
-  - Each child using their unique strength: Cullan ensuring fair containment
-  - The spirit hilariously indignant, wiggling and complaining but contained
-  - Ropes and ribbons holding the blazing, grumpy deity in place
+  - All six cousins gathered around the Christmas tree
+  - Each gesturing as they share their room experiences
+  - Ghostly overlays showing glimpses of each haunting: candles, games, other rooms
+  - The tree looming large in the frame, ornaments glinting ominously
+  - Growing realization on their faces as patterns connect
 
 text: |
-  Everyone moved at once. Arthur found the pattern to approach safely. Cullan made sure the containment was fair—"Even trickster spirits deserve proper treatment!" They wrestled the blazing, wiggling, loudly-complaining deity onto Graminy's red sled. It looked absolutely ridiculous.
+  Under the tree, stories tumbled out. Candles that kept clustering dangerously. Games with impossible rules. Each room had been scrambled in its own way, but now they saw it—all the wrongness radiated from here. From the tree. From something on it.
 
 objects: []

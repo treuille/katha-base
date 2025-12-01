@@ -1,0 +1,26 @@
+id: p17
+section: Second Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - cullan
+location: hallway
+
+story_beat: Despite the room's surrender, Cullan senses the haunting isn't fully
+  resolved—something bigger pulses through the house. "This house is completely
+  haunted. I need to find my cousins." He starts running.
+
+visual: |
+  - Cullan stepping out of the playroom into the hallway
+  - His expression shifting from triumph to concern
+  - The hallway still wrong but warming—medium haunting level
+  - Some warm golden tones returning, but cold still present
+  - His posture shifting to urgency, about to run
+  - Looking down the hallway toward where the others might be
+  - The sense that his individual victory isn't enough
+  - His runner's stance, ready to sprint
+
+text: |
+  Cullan stepped into the hallway, still breathing hard from his victory. The playroom was peaceful now. But something still felt wrong—a pulse of strangeness running through the whole house. The hallway was warmer than before, but not warm enough. "This house is completely haunted," he muttered. "I need to find my cousins." And then he ran.
+
+objects: []

@@ -1,23 +1,26 @@
 id: p04
 section: Ordinary World
 page_type: individual
+haunting_level: medium
 characters:
   - cullan
 location: hallway
 
-story_beat: Cullan follows a strange pull toward the dining room. In the hallway,
-  he hears his name whispered—but wrong. Mispronounced. Then silence where his name
-  should be. The shadows lean away from him, as if he doesn't belong.
+story_beat: Cullan follows a strange pull toward the dining room. The hallway feels
+  subtly wrong—warm Christmas colors draining away, replaced by cold blues. Light
+  pools oddly. Angles don't quite match up.
 
 visual: |
-  - Cullan standing in the hallway, laptop abandoned behind him
-  - Looking toward the dining room with growing dread
-  - Shadows that seem to LEAN AWAY from him, as if rejecting his presence
-  - Faint candlelight flickering erratically through the doorway ahead
-  - His expression shifting from curiosity to fear
-  - The hallway feeling hostile, unwelcoming, wrong
+  - Cullan standing in the hallway, black gaming laptop abandoned behind him
+  - Looking toward the dining room with growing unease
+  - The hallway's warm Christmas colors visibly DRAINING, being replaced by cold blue tones
+  - Light pooling in wrong places, creating harsh shadows
+  - Christmas decorations on the wall looking slightly tilted, proportions off
+  - His breath might frost slightly—temperature dropping
+  - The angles of doorframes and walls not quite matching up, subtly uncanny
+  - His ice-blue eyes alert, sensing something deeply wrong
 
 text: |
-  Cullan stepped into the hallway and froze. He heard his name whispered from somewhere ahead—but wrong. "Cull-AN. Cull-AN." Then silence where his name should have been, like someone had erased it mid-word. The shadows seemed to lean away from him. Even the hallway didn't want him here.
+  Something pulled Cullan toward the dining room—a strange tug he couldn't explain. The hallway felt wrong. The warm Christmas colors seemed to be draining away, replaced by cold blues. Lights pooled in odd places. The doorframe ahead looked... tilted? His breath came out in a little cloud of frost. The house itself felt like it was holding its breath.
 
 objects: []

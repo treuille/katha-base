@@ -8,23 +8,19 @@ characters:
   - hansel
   - henry
   - james
-  - regan
-location: living_room
+location: hallway
 
-story_beat: Close-up on Regan's face as she recognizes it—shocked, worried, and
-  surprised in a funny way. Behind her, rainbows, deities, lotuses, and other
-  Buddhist imagery shimmer in the air as she realizes what the ornament contains.
-  She identifies it as Dorje Legpa, a Gyalpo trickster deity whose nature is
-  to scramble things.
+story_beat: As each kid finishes their room, they drift into the hallway and
+  sense that a larger wrongness is still pulsing through the house.
 
 visual: |
-  - Close-up on Regan's face showing shock, worry, and bemused recognition
-  - Behind her, translucent Buddhist imagery shimmering: rainbows, lotuses, deity figures
-  - The children watching her reaction with wide eyes
-  - The strange ornament reflected in her eyes
-  - A mix of alarm and "oh no, not this again" humor in her expression
+  - All six cousins gathering in the hallway from different directions
+  - Each looking relieved but uneasy, sensing something still wrong
+  - Subtle visual distortions in the hallway—shadows at odd angles
+  - The kids drawing together instinctively
+  - A faint pulse of wrong-colored light from the direction of the living room
 
 text: |
-  Regan walked in and froze. Her eyes went wide, then narrowed. "Oh no." Behind her, strange images shimmered—rainbows, lotuses, fierce deities. "That's Dorje Legpa. A Gyalpo spirit. A trickster." She almost laughed. "His whole thing is scrambling everything up."
+  One by one, the cousins found each other in the hallway. Each had fixed their room, but something still felt wrong. The house itself seemed to pulse with a deeper unease. "It's not over," Henry said quietly. They all knew he was right.
 
 objects: []

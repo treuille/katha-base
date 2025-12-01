@@ -1,0 +1,26 @@
+id: p29
+section: Epilogue
+page_type: joint
+characters:
+  - arthur
+  - cullan
+  - emer
+  - hansel
+  - henry
+  - james
+location: exterior
+
+story_beat: Outside, the house glows gently in the snowy woods, protected by
+  a guardian who finally found his sky. Peace settles over Millbrook.
+
+visual: |
+  - Wide shot of Millbrook house in snowy woods at dusk
+  - The house glowing with gentle PROTECTIVE golden aura
+  - Snow-covered trees surrounding the cozy home
+  - The sky above soft and peaceful, guardian spirit implied in cloud shapes
+  - A sense of peace, protection, and story's end—bookending page 1
+
+text: |
+  Outside, the house glowed gently in the snow. Somewhere up in the endless sky, a guardian who had finally remembered himself watched over Millbrook. Peace had settled over the old house, and Christmas felt right again.
+
+objects: []
