@@ -52,6 +52,7 @@ BLEED = 36             # Bleed area on all sides
 # DEBUG: Limiting reference images to avoid API 500 errors (max ~14 images allowed)
 MAX_STYLE_IMAGES = 1
 MAX_LOCATION_IMAGES = 1
+MAX_CHARACTER_IMAGES = 3
 CENTER_GUTTER = 1789   # Center line for two-page spread fold
 
 
@@ -136,7 +137,7 @@ def _collect_reference_images(page_data, style_id):
     characters = page_data.get("characters", [])
     for char_id in characters:
         # Find all images for this character (e.g., arthur-01.jpg, arthur-02.jpg)
-        char_images = sorted(Path("ref/characters").glob(f"{char_id}-*.jpg"))
+        char_images = sorted(Path("ref/characters").glob(f"{char_id}-*.jpg"))[:MAX_CHARACTER_IMAGES]
         for img_path in char_images:
             images.append(str(img_path))
             # Extract the display name from the character YAML
