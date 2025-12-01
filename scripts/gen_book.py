@@ -1,21 +1,25 @@
 #!/usr/bin/env python3
 """
-Generate a picture book for a specific character.
+Generate a picture book for a specific character in a specific visual style.
 
 Usage:
-    uv run scripts/gen_book.py <character_id>
+    uv run scripts/gen_book.py <character_id> <style_id>
 
 Arguments:
     character_id - The character to generate a book for (e.g., cullan, arthur)
+    style_id     - The visual style to use (e.g., genealogy_witch, red_tree)
 
 Example:
-    uv run scripts/gen_book.py cullan
-    uv run scripts/gen_book.py arthur
+    uv run scripts/gen_book.py cullan genealogy_witch
+    uv run scripts/gen_book.py arthur red_tree
+
+Available styles (see story/styles.yaml):
+    genealogy_witch, red_tree, gashlycrumb, donothing_day, ghost_hunt, ghost_easy
 
 This will:
 1. Find all pages featuring the character
-2. Generate images for each page
-3. Compile images into a PDF at out/books/{character}-{version}.pdf
+2. Generate images for each page in the specified style
+3. Compile images into a PDF at out/books/{style_id}/{character}-{version}.pdf
 """
 
 import sys
@@ -57,11 +61,12 @@ def _get_pages_for_character(character_id: str) -> list[Path]:
     return pages
 
 
-def _get_next_book_version(character_id: str) -> int:
-    """Get the next version number for a character's book."""
-    BOOKS_DIR.mkdir(parents=True, exist_ok=True)
+def _get_next_book_version(character_id: str, style_id: str) -> int:
+    """Get the next version number for a character's book in a specific style."""
+    style_dir = BOOKS_DIR / style_id
+    style_dir.mkdir(parents=True, exist_ok=True)
 
-    existing = list(BOOKS_DIR.glob(f'{character_id}-*.pdf'))
+    existing = list(style_dir.glob(f'{character_id}-*.pdf'))
     if not existing:
         return 1
 
@@ -98,11 +103,12 @@ def _create_pdf(image_paths: list[Path], output_path: Path):
     )
 
 
-def generate_book(character_id: str) -> Path:
-    """Generate a picture book for a specific character.
+def generate_book(character_id: str, style_id: str) -> Path:
+    """Generate a picture book for a specific character in a specific style.
 
     Args:
         character_id: The character ID (e.g., 'cullan', 'arthur')
+        style_id: The style ID (e.g., 'genealogy_witch', 'red_tree')
 
     Returns:
         Path to the generated PDF file
@@ -114,6 +120,7 @@ def generate_book(character_id: str) -> Path:
         raise ValueError(f"No pages found for character '{character_id}' in {STORY_DIR}")
 
     print(f"Found {len(page_files)} page(s) for {character_id}")
+    print(f"Style: {style_id}")
     print()
 
     # Generate images for each page
@@ -121,13 +128,15 @@ def generate_book(character_id: str) -> Path:
 
     for i, page_file in enumerate(page_files, 1):
         print(f"[{i}/{len(page_files)}] Processing {page_file.name}...")
-        image_path = gen_image.generate_image(str(page_file))
+        image_path = gen_image.generate_image(str(page_file), style_id)
         generated_images.append(image_path)
         print()
 
-    # Create PDF
-    version = _get_next_book_version(character_id)
-    pdf_path = BOOKS_DIR / f'{character_id}-{version:02d}.pdf'
+    # Create PDF in style-specific directory
+    version = _get_next_book_version(character_id, style_id)
+    style_dir = BOOKS_DIR / style_id
+    style_dir.mkdir(parents=True, exist_ok=True)
+    pdf_path = style_dir / f'{character_id}-{version:02d}.pdf'
 
     print("=" * 60)
     print(f"Creating PDF with {len(generated_images)} page(s)...")
@@ -143,19 +152,28 @@ def generate_book(character_id: str) -> Path:
 
 def main():
     """Main entry point."""
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print(__doc__)
         sys.exit(1)
 
     character_id = sys.argv[1]
+    style_id = sys.argv[2]
 
     # Validate character_id format (lowercase, underscores allowed)
     if not re.match(r'^[a-z_]+$', character_id):
-        print(f"Error: Invalid character ID '{character_id}'")
-        print("Character IDs should be lowercase letters and underscores only")
-        sys.exit(1)
+        raise ValueError(
+            f"Invalid character ID '{character_id}'. "
+            "Character IDs should be lowercase letters and underscores only"
+        )
 
-    generate_book(character_id)
+    # Validate style_id format (lowercase, underscores allowed)
+    if not re.match(r'^[a-z_]+$', style_id):
+        raise ValueError(
+            f"Invalid style ID '{style_id}'. "
+            "Style IDs should be lowercase letters and underscores only"
+        )
+
+    generate_book(character_id, style_id)
 
 
 if __name__ == '__main__':
