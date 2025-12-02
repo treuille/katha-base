@@ -1,0 +1,27 @@
+id: p10
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - hansel
+  - james
+  - dorje_legpa
+location: hallway
+
+story_beat: Hansel demonstrates his rhythm. TAP-tap-tap, TAP-tap-tap. He points at
+  his chest, then at the sun room direction. James watches the pattern, something
+  clicking in their mind. They're comparing experiences—and finding connections.
+
+visual:
+  - Hansel clapping in clear rhythm—TAP-tap-tap visible in his posture and motion
+  - James watching intently, head tilted, beginning to understand something
+  - Hansel pointing sequence: chest (me), then toward sun room (there), then clapping (rhythm)
+  - Ghostly overlays around them—looping stairs for Hansel, flickering plants for James
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette tucked behind a potted plant in corner—frozen crimson figurine barely visible between leaves
+  - The visual wrongness at peak around them, but a spark of understanding forming
+  - James's expression shifting from confusion to dawning realization
+
+text: |
+  Hansel showed James what he meant. TAP-tap-tap. TAP-tap-tap. He pointed at himself, then toward where the sun room was, then clapped again. James watched the rhythm. "You... you kept making a beat," James said slowly.
+
+objects: []

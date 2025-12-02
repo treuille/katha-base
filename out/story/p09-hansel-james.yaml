@@ -1,0 +1,27 @@
+id: p09
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - hansel
+  - james
+  - dorje_legpa
+location: hallway
+
+story_beat: James explains the sun room—seasons flickering, plants dying and blooming
+  wrong. Hansel listens intently, his eyes widening. Then he responds the only way
+  he can—pointing at the stairs, clapping once to show he understands rhythm problems.
+
+visual:
+  - James gesturing animatedly, describing the chaos with hands spread wide
+  - Ghostly transparent overlay between them showing flickering plants, mixed seasons
+  - Hansel's eyes wide with understanding—he KNOWS about rhythm problems
+  - Hansel's hands positioned mid-clap, about to demonstrate
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a side table beside a lamp—frozen crimson figurine almost invisible in blue shadows
+  - The hallway frozen around them, light harsh and wrong
+  - James looking frustrated, Hansel looking like he has something important to show
+
+text: |
+  "I organized everything perfectly," James said, "but the seasons keep flickering. Summer, winter, spring—all at once." Hansel's eyes went wide. He clapped once—CLAP—then pointed at the stairs. He knew about things being out of rhythm.
+
+objects: []

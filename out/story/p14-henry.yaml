@@ -1,0 +1,31 @@
+id: p14
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - henry
+  - dorje_legpa
+location: kitchen
+
+story_beat: Henry enters the kitchen that Emer partially calmed. Her single perfect
+  cup of cocoa sits on the counter—one warm thing amid chaos. But the kitchen doesn't
+  just scramble anymore. It ACCUSES. Recipe cards rewrite themselves with hostile
+  messages. Jars rattle and point at him. The oven display flashes "INTRUDER." He's
+  being framed as someone who doesn't belong.
+
+visual:
+  - Henry standing in the kitchen doorway, facing the accusations
+  - Emer's single cup of cocoa glowing warm on the counter—her small victory amid the chaos
+  - 'Recipe cards hovering and displaying hostile text: "YOU''LL RUIN EVERYTHING" and "YOU DON''T BELONG"'
+  - Jars rattling on shelves, seeming to lean and point accusingly toward Henry
+  - The oven display glowing with the word "INTRUDER" in harsh red letters
+  - Ingredients scattered chaotically—flour spilled, sugar overturned, eggs rolling
+  - Cold blue light dominant, harsh accusatory shadows pointing at Henry
+  - His expression: hurt for a moment, then resolute—he knows who he really is
+  - Santa hat and grey tracksuit standing out against the cold hostile kitchen
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a high shelf behind jars - frozen crimson figurine orchestrating the accusations
+
+text: |
+  The kitchen had something to say. Recipe cards floated up and rewrote themselves: "YOU'LL RUIN EVERYTHING." Jars rattled on the shelves, leaning toward him like pointing fingers. The oven display flashed red: "INTRUDER. INTRUDER. INTRUDER." But Henry saw Emer's cup of cocoa on the counter—one perfect warm thing in all the cold chaos. She'd made that with love. The kitchen was calling him a destroyer. Someone who didn't care. But that wasn't true. That wasn't true at all.
+
+objects: []

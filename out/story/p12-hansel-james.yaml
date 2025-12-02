@@ -1,0 +1,27 @@
+id: p12
+section: Crossover / Pair
+page_type: pair
+haunting_level: high
+characters:
+  - hansel
+  - james
+  - dorje_legpa
+location: hallway
+
+story_beat: The swap. James realizes Hansel's rhythm is what the sun room needs.
+  Hansel points at James, then at the stairs—understanding that James can make paths.
+  They seal the deal with a bottle-bump fist-bump, then head opposite directions.
+
+visual:
+  - The moment of agreement—Hansel's bottle touching James's fist in a baby fist-bump
+  - James pointing toward the stairs, Hansel pointing toward the sun room
+  - Both about to head in opposite directions, determination on their faces
+  - A spark of hope despite the cold, wrong hallway around them
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette peeking from behind a doorframe—frozen crimson figurine almost hidden but watching
+  - The hallway still at peak wrongness, but something has shifted—purpose in both their postures
+  - James's neon graphic shirt bright even in the blue light, Hansel's nautical print visible
+
+text: |
+  "Your rhythm—that's what my room needs!" James said. Hansel pointed at James, then at the stairs. James could make paths. Hansel could make beats. They bumped fist to bottle and turned opposite directions. Time to swap.
+
+objects: []

@@ -1,0 +1,26 @@
+id: p14
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - hansel
+  - dorje_legpa
+location: sun_room
+
+story_beat: The sun room attacks Hansel's identity. His happy claps echo back distorted
+  and harsh. Plants recoil from him. The room accuses him—his sounds are CAUSING
+  the chaos, not helping. His joy is framed as destruction.
+
+visual:
+  - Hansel in the sun room doorway, his clap frozen mid-motion
+  - Sound waves visible around him—his claps echoing back distorted, jagged, wrong
+  - Plants visibly recoiling from his presence, leaves curling away
+  - Seasons flickering violently through the windows—dawn, dusk, noon, all at once
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a plant stand—frozen crimson figurine watching the false accusations unfold
+  - Harsh cold light, shadows pointing accusingly at Hansel from all angles
+  - Hansel's face showing hurt and confusion—his joy being weaponized against him
+
+text: |
+  Hansel clapped—and the sound came back wrong. Harsh. Broken. The plants curled away from him. The light flickered faster. The room seemed to say: YOU did this. Your noise broke everything. Hansel's lip trembled. Was his joy really just chaos?
+
+objects: []

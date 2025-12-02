@@ -1,0 +1,33 @@
+id: p14
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - james
+  - dorje_legpa
+location: stairs
+
+story_beat: |
+  The stairs attack James's identity. Steps loop endlessly—James climbs but
+  ends up where they started. The stockings hung on the banister have wrong names—and
+  James's stocking says someone else's name entirely. The stairs whisper accusations:
+  "You're lost. Some leader."
+
+visual:
+  - James partway up the stairs, but the top seems no closer than before
+  - The staircase twists impossibly—Escher-like geometry, steps that seem to go both up and down
+  - Christmas stockings hung on the banister, each with a name embroidered on it
+  - CRITICAL: James's stocking prominently visible with SOMEONE ELSE'S NAME on it—their identity erased
+  - Other stockings have wrong names too—a visual representation of scrambled belonging
+  - James's face showing hurt and confusion—being misnamed cuts deep
+  - Shadows seem to point accusingly at James from all angles
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a low shelf built into the staircase wall—frozen crimson figurine watching the false accusations unfold
+  - Peak haunting visuals—cold harsh light, pools of darkness on the steps, proportions warped
+  - The stairs seem to mock James's path-making ability—impossible to navigate
+  - James's neon graphic shirt looking almost garish in the hostile light
+  - Santa hat, ginger hair with blonde streak, freckles—but their identity under attack
+
+text: |
+  James climbed. Ten steps, twenty, thirty—but when they looked back, they were still at the bottom. The stairs were looping. And worse, the stockings were wrong. Arthur's stocking said "Emer." Cullan's said "Henry." And James's stocking—the one Graminy had made with the viola on it—said a name James had never heard before. Like James didn't exist here. Like they'd never belonged. "You're lost," something whispered. Not from anywhere specific—from the stairs themselves. "You don't know where you're going. Some leader." James gripped the banister. The wood was freezing cold.
+
+objects: []

@@ -1,0 +1,33 @@
+id: p17
+section: Second Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - james
+  - dorje_legpa
+location: hallway
+
+story_beat: Despite the stairs' surrender, James senses the haunting isn't fully
+  resolved. Something bigger pulses through the house—the wrongness came from somewhere,
+  and it's still there. "This house is completely haunted. I need to find my cousins."
+  They start running.
+
+visual:
+  - James at the top of the stairs, looking out into the upstairs hallway with growing alarm
+  - Their hand still on the banister, the fixed stairs visible behind them
+  - Expression shifting from triumph to concern as they sense something larger
+  - The hallway ahead still has hints of wrongness—not as bad as before, but not right
+  - A pulse of cold blue light visible somewhere deeper in the house
+  - James's body language shifting from stillness to urgency, ready to run
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a decorative shelf near a doorway—frozen crimson figurine still watching even as the haunting fades from this area
+  - Medium haunting—mostly warm but with threads of wrongness still visible
+  - The house seems to hum with something unresolved
+  - James's bare feet planted, about to push off into a run
+  - Neon graphic shirt, black sweatpants, Santa hat—ready for action
+  - Ginger hair with blonde streak, freckles on their urgent face
+  - The sense that individual victories aren't enough—the source remains
+
+text: |
+  James stood at the top of the stairs, catching their breath. The staircase was fixed. The stockings knew their names. But something was still wrong. They could feel it—a pulse running through the walls, a hum in the floorboards. The stairs had just been a piece of it. The sun room had been a piece of it. But the thing itself, the source, was still somewhere in this house. "It's not over," James said. They thought of their cousins—Arthur, Cullan, Emer, Hansel, Henry. Were they facing the same thing? Were they okay? "I need to find them." James ran.
+
+objects: []

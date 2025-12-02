@@ -1,0 +1,29 @@
+id: p03
+section: Ordinary World
+page_type: individual
+haunting_level: low
+characters:
+  - henry
+  - dorje_legpa
+location: living_room
+
+story_beat: Henry plays Microsoft Flight Simulator on his laptop, piloting a 747 over
+  Brooklyn—he can see his own house below in the ultra-realistic graphics. The Dorje
+  Legpa ornament catches his eye. For just a moment, the instruments flicker wrong.
+  He shakes it off, but something feels off.
+
+visual:
+  - Henry sitting cross-legged on the floor with his laptop, Microsoft Flight Simulator glowing on screen
+  - The screen shows a photorealistic aerial view of Brooklyn from a 747 cockpit, his own house visible below
+  - His eyes lifting from the screen toward the Christmas tree, expression shifting from focused to uneasy
+  - EASTER EGG: The watching ornament IS Dorje Legpa - a tiny crimson-red deity figurine with gold crown, turquoise sash, and raised sword - its eyes seem to track Henry specifically
+  - The ornament faintly reflected in his laptop screen
+  - Grey Aviator Nation tracksuit with the signature five-stripe pattern (red, orange, yellow, green, blue) on the sweatpants
+  - Santa hat on his head, tall and slightly goofy posture even while sitting
+  - The other cousins visible in background, oblivious, but the ornament tracks only Henry
+  - Warm golden light beginning to drain at the edges, hints of cold blue creeping in
+
+text: |
+  Henry was flying a 747 over Brooklyn. On screen, he could see his own house—the one with the blue door—tiny and perfect below. Then the altimeter flickered. Just for a second, it showed impossible numbers. He looked up from his laptop, and one ornament on the tree was staring right at him. Not at anyone else. Just him. He looked back at the screen. Everything seemed fine now. But something felt wrong.
+
+objects: []

@@ -1,0 +1,26 @@
+id: p06
+section: First Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - hansel
+  - dorje_legpa
+location: stairs
+
+story_beat: Hansel tries his rhythm. TAP-tap-tap, TAP-tap-tap—clapping steadily,
+  pointing at each stocking. The stockings listen! Names flicker and shuffle back
+  to their rightful owners. But the stairs themselves keep looping, paths still broken.
+
+visual:
+  - Hansel sitting on the bottom step, clapping with focused determination
+  - TAP-tap-tap rhythm visible in his posture—one strong clap, two soft
+  - Stockings FLICKERING—some showing correct names now, responding to his rhythm
+  - His bottle pointing at each stocking in sequence, like a tiny conductor
+  - But the stairs behind him still twist impossibly—paths unchanged
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on the banister—frozen crimson figurine watching the partial success
+  - Peak visual haunting in the staircase geometry, but stockings showing signs of healing
+
+text: |
+  Hansel clapped. TAP-tap-tap. TAP-tap-tap. He pointed his bottle at each stocking—this one, that one, this one. The stockings listened. Names flickered. "Arthur" appeared on Arthur's stocking. "Hansel" appeared on his. But the stairs kept looping. His rhythm fixed names, not paths.
+
+objects: []

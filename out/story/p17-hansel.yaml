@@ -1,0 +1,26 @@
+id: p17
+section: Second Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - hansel
+  - dorje_legpa
+location: hallway
+
+story_beat: Despite the sun room's peace, Hansel feels a deeper pulse through the
+  house. Something bigger. He crawls urgently toward the living room, pointing ahead
+  with his bottle. His cousins need him. The source is still out there.
+
+visual:
+  - Hansel crawling urgently out of the restored sun room into the hallway
+  - His bottle pointing forward, toward the living room
+  - The sun room behind him glowing with warm, peaceful light—his victory
+  - But the hallway ahead still has hints of wrongness—medium haunting, not resolved
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a decorative shelf near doorway—frozen crimson figurine still watching even as haunting fades
+  - Hansel's expression urgent, determined—individual victories aren't enough
+  - A pulse of cold visible deeper in the house, something still wrong at the source
+
+text: |
+  The sun room was peaceful now. But Hansel felt something else—a pulse in the floorboards, a hum in the walls. The thing that broke the rhythms was still here, somewhere deeper. He crawled fast toward the living room, bottle pointing ahead. His cousins needed him.
+
+objects: []

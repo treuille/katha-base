@@ -1,0 +1,32 @@
+id: p07
+section: First Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - james
+  - dorje_legpa
+location: sun_room
+
+story_beat: James stops, exhausted. The plants are better organized now—but still
+  flickering through seasons. James realizes the truth—this isn't about where things
+  are, it's about when things are. The room needs rhythm, not routes. They leave,
+  knowing their strength wasn't the right tool here.
+
+visual:
+  - James standing still among the reorganized plants, hands dirty, expression thoughtful and humbled
+  - The plants ARE more organized now—sun plants together, shade plants together—partial success visible
+  - But the temporal chaos continues—seasons still flickering across every plant
+  - A moment of realization on James's face: this problem isn't about position
+  - James looking toward the door, ready to leave but troubled
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette behind a large plant pot on a shelf—frozen crimson figurine silently watching James give up
+  - Visual haunting remains high—cold blue light, harsh shadows, geometry still wrong
+  - James's shoulders slightly slumped, the forceful confidence dimmed
+  - Soil on their hands and knees, evidence of hard work that didn't solve the core problem
+  - Neon graphic t-shirt muted under the cold blue light
+  - Santa hat askew, ginger hair with blonde streak now messy, freckles visible on their tired face
+  - The room behind them as they turn to leave—organized but still broken
+
+text: |
+  James stopped. Their hands were covered in dirt. The plants were organized now—every one in a sensible spot. But the seasons kept flickering. Winter, summer, spring, fall, all at once, all wrong. "It's not about where," James said slowly. They watched a flower bloom and die in three seconds. "It's about when." The room needed something James couldn't give it. Not a better arrangement. Something else. A rhythm. A beat. James wiped their hands on their sweatpants and walked toward the door. Someone else would have to fix this. The thought stung.
+
+objects: []

@@ -1,0 +1,32 @@
+id: p05
+section: First Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - henry
+  - dorje_legpa
+location: library
+
+story_beat: Henry enters the library and discovers chaos. His laptop sits open on the
+  reading table, running Microsoft Flight Simulator on its own—instruments showing
+  impossible readings. But worse, the books themselves are wrong. Story characters
+  wander between covers. A knight from one book stumbles through a romance. Pages
+  flutter with scrambled words. Everything is out of place.
+
+visual:
+  - Henry frozen in the library doorway, staring at the chaos before him
+  - His laptop open on an antique reading table, Microsoft Flight Simulator running without him
+  - The screen shows the 747 cockpit over photorealistic Brooklyn, but instruments wildly contradicting each other
+  - Altimeter showing CLIMB while artificial horizon shows DIVE, fuel gauge jumping randomly
+  - Books open everywhere with pages fluttering—story characters visible wandering between covers
+  - A tiny illustrated knight standing confused on a romance novel's page, a princess lost in an adventure book
+  - Text on pages shimmering and rearranging, words in wrong order
+  - Graminy's aviation shelf visible - old pilot manuals, vintage flying magazines, a model biplane
+  - Cold blue light streaming through windows, harsh shadows pooling strangely
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the corner of a bookshelf - frozen crimson figurine watching the chaos unfold
+  - Henry's expression shifting from confusion to alarm, Santa hat askew
+
+text: |
+  The library was wrong in two different ways. Henry's laptop sat on Graminy's reading table, running by itself—his 747 over Brooklyn with instruments gone insane, altimeter screaming UP while the horizon showed DOWN. But the books were even worse. They lay open everywhere, and the stories inside had scrambled. A knight wandered through a cookbook. A princess was lost in a mystery. Characters stumbled between covers like they'd forgotten where they belonged.
+
+objects: []

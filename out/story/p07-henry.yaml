@@ -1,0 +1,31 @@
+id: p07
+section: First Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - henry
+  - dorje_legpa
+location: library
+
+story_beat: The 747 crashes. The characters keep wandering. Henry stares at his double
+  failure—crashed plane on screen, scrambled stories all around. He did everything
+  by the book. But checklists can't fix lying instruments, and shelving can't fix
+  characters who don't know their own stories. He needs someone who understands how
+  stories are supposed to end. He needs Emer.
+
+visual:
+  - Henry sitting back from the laptop, defeated, surrounded by his double failure
+  - The laptop showing the frozen crash—the 747 scattered across a Brooklyn street
+  - Around him, books still open with characters wandering aimlessly between pages
+  - The knight sitting down on a cookbook page, looking lost; the princess wandering in circles
+  - His expression: not just sad but deeply confused—his worldview has been shaken
+  - He tried to organize everything and nothing stayed organized
+  - The library still cold and blue, harsh light, but Henry turning toward the door
+  - His posture shifting from defeat to determination—he knows he needs a different kind of help
+  - Santa hat askew, grey tracksuit rumpled from the struggle
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette behind a crystal vase on the mantel - frozen crimson figurine silently watching Henry leave
+
+text: |
+  The plane crashed. The characters kept wandering. Henry sat surrounded by his failures—the 747 scattered across Brooklyn on screen, the knight sitting lost on a cookbook page, the princess circling endlessly through a mystery. He'd done everything right. Every checklist, every procedure, every attempt to put things back where they belonged. But you can't fly when instruments lie, and you can't shelve characters who don't know their own stories. He needed someone who understood stories. Someone who knew how they were supposed to end. He stood up and headed for the door. He needed to find Emer.
+
+objects: []

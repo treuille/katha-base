@@ -1,0 +1,26 @@
+id: p03
+section: Ordinary World
+page_type: individual
+haunting_level: low
+characters:
+  - hansel
+  - dorje_legpa
+location: living_room
+
+story_beat: Hansel plays near the tree, clapping happily. But then he notices the
+  Christmas lights blinking off-rhythm—wrong, wrong, wrong. His clapping falters.
+  The ornament seems to pulse at him specifically, disrupting his joy.
+
+visual:
+  - Hansel mid-clap, his hands frozen apart as he stares at the Christmas tree
+  - His expression shifting from joy to confusion—something is wrong with the lights
+  - Christmas lights on tree blinking in visible disarray, some too fast, some too slow
+  - His baby bottle nearby, ready to become his pointing tool
+  - EASTER EGG: The watching ornament IS Dorje Legpa—tiny crimson deity figurine pulsing with light that doesn't match the other ornaments
+  - Warm golden light beginning to drain at edges, hints of cold blue creeping in
+  - Other cousins visible in background, unaware of what Hansel senses
+
+text: |
+  Hansel loved clapping. Clap-clap-clap, all morning long. But then he saw the tree lights. They blinked wrong. Fast-slow-fast-nothing-fast. His hands stopped mid-clap. One ornament pulsed differently from all the others—watching him, daring him to fix what it had broken.
+
+objects: []

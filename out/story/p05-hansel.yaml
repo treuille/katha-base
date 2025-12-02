@@ -1,0 +1,26 @@
+id: p05
+section: First Attempt
+page_type: individual
+haunting_level: medium
+characters:
+  - hansel
+  - dorje_legpa
+location: stairs
+
+story_beat: Hansel reaches the stairs and sees chaos—footsteps echoing in wrong
+  directions, stockings hung with scrambled names. Arthur's stocking says "Emer."
+  Hansel's own stocking has a name he doesn't recognize. The stairs loop impossibly.
+
+visual:
+  - Hansel at the bottom of the stairs, looking up at the impossible geometry
+  - Christmas stockings hung on the banister, each with visibly WRONG names embroidered
+  - Hansel's stocking prominently showing a stranger's name—his identity erased
+  - Footprints on the stairs going in contradictory directions
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a stair shelf—frozen crimson figurine watching the chaos
+  - The staircase seeming to twist and loop, Escher-like wrongness
+  - Hansel's bottle already raising, ready to point
+
+text: |
+  The stairs were wrong. Footsteps went up and came down at the same time. The stockings had the wrong names—Arthur's said "Emer," and Hansel's said something he'd never heard before. Like he didn't belong here. Hansel gripped his bottle tighter.
+
+objects: []

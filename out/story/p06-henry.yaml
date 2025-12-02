@@ -1,0 +1,30 @@
+id: p06
+section: First Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - henry
+  - dorje_legpa
+location: library
+
+story_beat: Henry tries to fix everything at once. He runs flight checklists to save
+  the plane—but the instruments lie and every procedure makes it worse. He tries
+  shelving the books, putting characters back where they belong—but they wander right
+  back out. Perfect procedure can't fix corrupted data OR scrambled stories.
+
+visual:
+  - Henry in motion—one hand on laptop keyboard, other hand grabbing a book to shelve
+  - The laptop screen showing the 747 in worse trouble—Brooklyn tilting crazily below
+  - A stack of books he's trying to organize, but characters visibly climbing back out of the covers
+  - The knight from the romance novel already wandering toward a mystery book Henry just closed
+  - Expression shifting from focused determination to frustration to desperation
+  - One of Graminy's laminated pilot checklists visible, but the text seems to shimmer and shift
+  - The geometry of the library warping further—bookshelves leaning at wrong angles
+  - Deep shadows pooling in corners, cold blue light harsh and accusatory
+  - Santa hat knocked slightly back from the frantic effort
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette among books on a high shelf - frozen crimson figurine watching Henry's futile efforts
+
+text: |
+  Henry tried to fix both problems at once. He ran emergency checklists on the flight sim—step one, step two, step three—but trusting the altimeter made the plane dive, and trusting the horizon made it stall. He grabbed books and shoved characters back into their stories—but they wandered right back out. The knight climbed out of the romance before Henry could close the cover. "Stay PUT!" he shouted. But nothing stayed. His checklists were perfect. The library didn't care.
+
+objects: []
