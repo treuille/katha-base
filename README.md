@@ -22,9 +22,11 @@ katha-base/
 │   ├── locations/       # Location reference images
 │   └── objects/         # Object reference images
 ├── out/                 # Generated outputs (git-ignored)
+│   ├── images/          # Shared image storage (reused across versions)
+│   │   ├── *.txt        # Prompt text files ({page_stem}-{hash}.txt)
+│   │   └── *.jpg        # Generated images ({page_stem}-{hash}.jpg)
 │   ├── versions/        # Versioned output folders
 │   │   └── {xx}/        # Version folders (01/, 02/, etc.)
-│   │       ├── *.jpg    # Raw images with prompt hash
 │   │       ├── *-book.pdf
 │   │       └── manifest.yaml
 │   └── story/           # Generated story files
@@ -44,10 +46,12 @@ katha-base/
   - **ref/locations/** - Location reference images
   - **ref/objects/** - Object reference images
 - **out/** - Generated outputs (not committed to repository)
+  - **out/images/** - Shared storage for prompts and images (reused across versions)
+    - Prompts: `{page_stem}-{prompt_hash}.txt`
+    - Images: `{page_stem}-{prompt_hash}.jpg` (raw, unframed)
   - **out/versions/{xx}/** - Versioned output folders (e.g., `out/versions/01/`)
-    - Images named `{page_stem}-{prompt_hash}.jpg` (raw, unframed)
-    - Books named `{character}-book.pdf`
-    - `manifest.yaml` with version metadata
+    - Books: `{character}-book.pdf`
+    - `manifest.yaml` with version metadata (references images in `out/images/`)
   - **out/story/** - Generated story files
 
 ## Visual Styles
@@ -96,7 +100,7 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_wi
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
 
 # Frame a generated image for printing (legacy - framing now happens during PDF creation)
-uv run scripts/gen_image.py frame out/versions/04/p09-arthur-cullan-a1b2c.jpg
+uv run scripts/gen_image.py frame out/images/p09-arthur-cullan-a1b2c.jpg
 ```
 
 ### How it works
@@ -113,9 +117,11 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ### Output
 
-- Generated images are saved to `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
+- Generated images are saved to `out/images/{page_stem}-{prompt_hash}.jpg`
+- Prompt text saved to `out/images/{page_stem}-{prompt_hash}.txt`
 - Aspect ratio: 3:2 (closest to target ratio of 3507x2334 which is ~1.5)
 - Images are stored raw (unframed); framing happens during PDF creation
+- Images are shared across versions (same prompt hash = same image)
 
 ### Requirements
 
@@ -164,5 +170,6 @@ This enables:
 ### Output
 
 - PDFs saved to: `out/versions/{xx}/{character}-book.pdf`
-- Images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
-- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style)
+- Images saved to: `out/images/{page_stem}-{prompt_hash}.jpg` (shared across versions)
+- Prompts saved to: `out/images/{page_stem}-{prompt_hash}.txt`
+- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style, references to shared images)

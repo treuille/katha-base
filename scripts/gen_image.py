@@ -34,7 +34,7 @@ from google.genai import types
 from PIL import Image
 
 # Public API
-__all__ = ["build_prompt", "generate_image", "show_prompt", "frame_image", "frame_image_for_pdf", "get_default_style"]
+__all__ = ["build_prompt", "generate_image", "generate_image_from_prompt", "show_prompt", "frame_image", "frame_image_for_pdf", "get_default_style"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
@@ -356,34 +356,38 @@ def show_prompt(page_file, style_id):
     print()
 
 
-def generate_image(page_file, style_id, version: int | None = None):
-    """Generate image using Gemini.
+def generate_image_from_prompt(
+    prompt: str,
+    ref_images: list[str],
+    ref_labels: list[str],
+    page_stem: str,
+    prompt_hash: str
+) -> Path:
+    """Generate image from pre-built prompt.
+
+    This is the core image generation function that takes an already-constructed
+    prompt. Use this when you want to control prompt generation separately.
 
     Args:
-        page_file: Path to the page YAML file
-        style_id: The style identifier (e.g., 'genealogy_witch')
-        version: Version number to save to (e.g., 1 saves to out/01/).
-                 If None, uses legacy style-based output path.
+        prompt: The complete text prompt for image generation
+        ref_images: List of paths to reference images
+        ref_labels: List of labels describing each reference image
+        page_stem: The page identifier (e.g., "p09-arthur-cullan")
+        prompt_hash: The 5-char prompt hash
 
     Returns:
-        Path to the generated image file
+        Path to the generated image file (in out/images/)
     """
     from scripts import versioning
 
-    # Load page data and build prompt FIRST to compute hash
-    page_data = _load_yaml_file(page_file)
-    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
+    # Check for existing image in shared storage
+    existing = versioning.find_existing_image(page_stem, prompt_hash)
+    if existing:
+        print(f"Image already exists with matching prompt hash: {existing}")
+        return existing
 
-    # Compute prompt hash and check for existing image
-    input_filename = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    prompt_hash = versioning.compute_prompt_hash(prompt)
-
-    if version is not None:
-        version_path = versioning.get_version_path(version)
-        existing = versioning.find_existing_image(version_path, input_filename, prompt_hash)
-        if existing:
-            print(f"Image already exists with matching prompt hash: {existing}")
-            return existing
+    # Ensure output directory exists
+    versioning.IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
     # Initialize the Gemini client via Vertex AI (higher quota than AI Studio)
     # Uses gcloud application-default credentials (run: gcloud auth application-default login)
@@ -393,12 +397,7 @@ def generate_image(page_file, style_id, version: int | None = None):
         location=VERTEX_LOCATION,
     )
 
-    # Load style info
-    style = _load_style(style_id)
-    artist = style.get("artist", style_id)
-
-    print(f"Generating image for {page_file}...")
-    print(f"Style: {style_id} ({artist})")
+    print(f"Generating image for {page_stem}...")
     print(f"Using {len(ref_images)} reference images")
     print(f"Prompt: {len(prompt)} characters")
 
@@ -464,49 +463,67 @@ def generate_image(page_file, style_id, version: int | None = None):
 
     print(f"Successfully generated {len(generated_images)} image(s)")
 
-    # Save the generated image(s)
-    # Use the input filename stem (without .yaml extension) for output
-    if version is not None:
-        # New versioned output: out/{version:02d}/{page_stem}-{hash}.jpg
-        output_dir = versioning.get_version_path(version)
-        output_dir.mkdir(parents=True, exist_ok=True)
+    # Save the generated image(s) to shared out/images/ directory
+    output_file = None
+    for idx, image_part in enumerate(generated_images):
+        img_obj = image_part.as_image()
+        pil_image = img_obj._pil_image
 
-        output_file = None
-        for idx, image_part in enumerate(generated_images):
-            img_obj = image_part.as_image()
-            pil_image = img_obj._pil_image
+        if len(generated_images) == 1:
+            output_file = versioning.get_image_path(page_stem, prompt_hash)
+        else:
+            # Multiple images: append index
+            output_file = versioning.IMAGES_DIR / f"{page_stem}-{prompt_hash}_{idx + 1}.jpg"
 
-            if len(generated_images) == 1:
-                output_file = output_dir / f"{input_filename}-{prompt_hash}.jpg"
-            else:
-                output_file = output_dir / f"{input_filename}-{prompt_hash}_{idx + 1}.jpg"
-
-            pil_image.save(output_file, format="JPEG", quality=95)
-            print(f"Saved image to: {output_file}")
-
-        # Update manifest with image info
-        if output_file:
-            versioning.update_manifest_image(version, input_filename, output_file.name, prompt_hash)
-
-    else:
-        # Legacy style-based output: out/images/{style_id}/{page_stem}.jpg
-        output_dir = Path("out/images") / style_id
-        output_dir.mkdir(parents=True, exist_ok=True)
-
-        output_file = None
-        for idx, image_part in enumerate(generated_images):
-            img_obj = image_part.as_image()
-            pil_image = img_obj._pil_image
-
-            if len(generated_images) == 1:
-                output_file = output_dir / f"{input_filename}.jpg"
-            else:
-                output_file = output_dir / f"{input_filename}_{idx + 1}.jpg"
-
-            pil_image.save(output_file, format="JPEG", quality=95)
-            print(f"Saved image to: {output_file}")
+        pil_image.save(output_file, format="JPEG", quality=95)
+        print(f"Saved image to: {output_file}")
 
     print(f"\nImage generation complete!")
+
+    return output_file
+
+
+def generate_image(page_file, style_id, version: int | None = None):
+    """Generate image using Gemini.
+
+    This is a convenience wrapper that builds the prompt from a page file
+    and then calls generate_image_from_prompt().
+
+    Args:
+        page_file: Path to the page YAML file
+        style_id: The style identifier (e.g., 'genealogy_witch')
+        version: Version number (used for manifest updates only, images go to out/images/)
+
+    Returns:
+        Path to the generated image file
+    """
+    from scripts import versioning
+
+    # Load page data and build prompt
+    page_data = _load_yaml_file(page_file)
+    prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
+
+    # Compute prompt hash
+    page_stem = Path(page_file).stem  # e.g., "p09-arthur-cullan"
+    prompt_hash = versioning.compute_prompt_hash(prompt)
+
+    # Load style info for logging
+    style = _load_style(style_id)
+    artist = style.get("artist", style_id)
+    print(f"Style: {style_id} ({artist})")
+
+    # Generate image (or return existing)
+    output_file = generate_image_from_prompt(
+        prompt=prompt,
+        ref_images=ref_images,
+        ref_labels=ref_labels,
+        page_stem=page_stem,
+        prompt_hash=prompt_hash
+    )
+
+    # Update manifest if version provided
+    if version is not None:
+        versioning.update_manifest_image(version, page_stem, output_file.name, prompt_hash)
 
     return output_file
 

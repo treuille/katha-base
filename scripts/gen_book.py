@@ -18,10 +18,15 @@ Example:
     uv run scripts/gen_book.py arthur --style red_tree
 
 This will:
-1. Check if prompts have changed since the last version
-2. If changed, require --message to create a new version
-3. Generate images for each page (skipping if prompt hash matches existing)
-4. Frame images in-memory and compile into PDF at out/{version}/{character}-book.pdf
+1. Build all prompts upfront (in memory)
+2. Compare prompt hashes against the latest version
+3. If prompts changed, require --message to create a new version
+4. Save prompt TXT files to out/images/{page_stem}-{hash}.txt
+5. Generate images to out/images/{page_stem}-{hash}.jpg (skips if exists)
+6. Frame images in-memory and compile into PDF at out/versions/{version}/{character}-book.pdf
+
+Images are stored in a shared out/images/ directory (not per-version).
+This allows reusing images across versions when prompts are unchanged.
 """
 
 import sys
@@ -70,31 +75,53 @@ def _get_all_pages() -> list[Path]:
     return sorted(STORY_DIR.glob('p*.yaml'))
 
 
-def _compute_all_prompt_hashes(style_id: str) -> dict[str, str]:
-    """Compute prompt hashes for all pages.
+def _build_all_prompts(page_files: list[Path], style_id: str) -> dict[str, tuple[str, list[str], list[str], str]]:
+    """Build prompts for all pages upfront.
+
+    Args:
+        page_files: List of page YAML file paths to process
+        style_id: The style identifier (e.g., 'genealogy_witch')
 
     Returns:
-        dict mapping page_stem to 5-char prompt hash
+        dict mapping page_stem to tuple of (prompt, ref_images, ref_labels, prompt_hash)
     """
     import yaml
 
-    hashes = {}
-    for page_file in _get_all_pages():
+    prompts = {}
+    for page_file in page_files:
         with open(page_file) as f:
             page_data = yaml.safe_load(f)
-        prompt, _, _ = gen_image.build_prompt(page_data, style_id)
-        hashes[page_file.stem] = versioning.compute_prompt_hash(prompt)
+        prompt, ref_images, ref_labels = gen_image.build_prompt(page_data, style_id)
+        prompt_hash = versioning.compute_prompt_hash(prompt)
+        prompts[page_file.stem] = (prompt, ref_images, ref_labels, prompt_hash)
 
-    return hashes
+    return prompts
 
 
-def _check_version_needed(style_id: str, message: str | None) -> int:
+def _get_hashes_from_prompts(prompts: dict[str, tuple]) -> dict[str, str]:
+    """Extract just the hashes from a prompts dict.
+
+    Args:
+        prompts: dict from _build_all_prompts()
+
+    Returns:
+        dict mapping page_stem to prompt_hash
+    """
+    return {page_stem: data[3] for page_stem, data in prompts.items()}
+
+
+def _check_version_needed(current_hashes: dict[str, str], style_id: str, message: str | None) -> int:
     """Check if a new version is needed and return the version to use.
 
     Logic:
     - If no versions exist, create version 1 (requires --message)
     - If prompts changed since last version, require --message to create new version
     - If prompts unchanged, use existing version
+
+    Args:
+        current_hashes: dict mapping page_stem to current prompt_hash
+        style_id: The style identifier
+        message: User-provided message for new version (None if not provided)
 
     Returns:
         Version number to use
@@ -122,8 +149,7 @@ def _check_version_needed(style_id: str, message: str | None) -> int:
             sys.exit(1)
         return versioning.create_new_version(message, style_id)
 
-    # Compute current prompt hashes and compare
-    current_hashes = _compute_all_prompt_hashes(style_id)
+    # Compare current hashes against stored hashes
     stored_hashes = {k: v.get('prompt_hash') for k, v in manifest.get('images', {}).items()}
 
     # Check if any page's prompt has changed
@@ -174,35 +200,60 @@ def _create_pdf_from_images(image_paths: list[Path], output_path: Path):
     )
 
 
-def generate_book(character_id: str, style_id: str, version: int) -> Path:
+def _save_prompts(prompts: dict[str, tuple[str, list[str], list[str], str]]) -> None:
+    """Save prompt text files to out/images/ (if they don't exist).
+
+    Args:
+        prompts: dict from _build_all_prompts()
+    """
+    versioning.IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+
+    for page_stem, (prompt, _, _, prompt_hash) in prompts.items():
+        prompt_path = versioning.get_prompt_path(page_stem, prompt_hash)
+        if not prompt_path.exists():
+            prompt_path.write_text(prompt)
+            print(f"Saved prompt: {prompt_path}")
+
+
+def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], version: int) -> Path:
     """Generate a picture book for a specific character in a specific style.
 
     Args:
         character_id: The character ID (e.g., 'cullan', 'arthur')
         style_id: The style ID (e.g., 'genealogy_witch', 'red_tree')
+        prompts: Pre-built prompts from _build_all_prompts()
         version: The version number to generate into
 
     Returns:
         Path to the generated PDF file
     """
-    # Find pages for this character
-    page_files = _get_pages_for_character(character_id)
-
-    if not page_files:
-        raise ValueError(f"No pages found for character '{character_id}' in {STORY_DIR}")
-
-    print(f"Found {len(page_files)} page(s) for {character_id}")
+    print(f"Character: {character_id}")
     print(f"Style: {style_id}")
     print(f"Version: {version:02d}")
+    print(f"Pages: {len(prompts)}")
+    print()
+
+    # Save prompt TXT files (if not already saved)
+    print("Saving prompt files...")
+    _save_prompts(prompts)
     print()
 
     # Generate images for each page (skips if hash matches existing)
     generated_images = []
 
-    for i, page_file in enumerate(page_files, 1):
-        print(f"[{i}/{len(page_files)}] Processing {page_file.name}...")
-        image_path = gen_image.generate_image(str(page_file), style_id, version=version)
+    for i, (page_stem, (prompt, ref_images, ref_labels, prompt_hash)) in enumerate(prompts.items(), 1):
+        print(f"[{i}/{len(prompts)}] Processing {page_stem}...")
+        image_path = gen_image.generate_image_from_prompt(
+            prompt=prompt,
+            ref_images=ref_images,
+            ref_labels=ref_labels,
+            page_stem=page_stem,
+            prompt_hash=prompt_hash
+        )
         generated_images.append(image_path)
+
+        # Update manifest with image info
+        versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
         print()
 
     # Create PDF in version folder
@@ -221,7 +272,7 @@ def generate_book(character_id: str, style_id: str, version: int) -> Path:
 
     print()
     print("=" * 60)
-    print(f"Generation complete: {len(page_files)}/{len(page_files)} pages succeeded")
+    print(f"Generation complete: {len(prompts)}/{len(prompts)} pages succeeded")
 
     return pdf_path
 
@@ -259,10 +310,26 @@ def main():
             "Style IDs should be lowercase letters and underscores only"
         )
 
-    # Check version requirements and get version to use
-    version = _check_version_needed(style_id, message)
+    # Step 1: Find pages for this character
+    page_files = _get_pages_for_character(character_id)
+    if not page_files:
+        parser.error(f"No pages found for character '{character_id}' in {STORY_DIR}")
 
-    generate_book(character_id, style_id, version)
+    print(f"Found {len(page_files)} page(s) for {character_id}")
+
+    # Step 2: Build all prompts upfront (in memory)
+    print("Building prompts...")
+    prompts = _build_all_prompts(page_files, style_id)
+    current_hashes = _get_hashes_from_prompts(prompts)
+    print(f"Built {len(prompts)} prompt(s)")
+    print()
+
+    # Step 3: Check version requirements (uses pre-computed hashes)
+    version = _check_version_needed(current_hashes, style_id, message)
+    print()
+
+    # Step 4: Generate book (saves prompts, generates images, creates PDF)
+    generate_book(character_id, style_id, prompts, version)
 
 
 if __name__ == '__main__':

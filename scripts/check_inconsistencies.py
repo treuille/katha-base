@@ -4,12 +4,12 @@ Check for inconsistencies in the Katha Base project.
 
 This script validates:
 1. YAML file syntax and structure
-2. File inventory (required directories and documentation files)
-3. Cross-references between YAML files (characters, locations, attempts)
-4. YAML structure consistency (required fields)
-5. Naming conventions (YAML and image files)
-6. Reference images for all locations and characters
-7. Image naming conventions (auto-fixes underscore issues)
+2. Image naming conventions ({id}-{NN}.jpg format)
+3. File inventory (required directories and documentation files)
+4. Cross-references between YAML files (characters, locations, attempts)
+5. YAML structure consistency (required fields)
+6. Naming conventions (YAML and image files)
+7. Reference images for all locations and characters
 """
 
 import yaml
@@ -55,43 +55,49 @@ def validate_yaml_files():
         return True
 
 
-def fix_image_naming():
-    """Fix image naming conventions (replace underscore with hyphen ONLY before the number)."""
+def check_image_naming():
+    """Check image naming conventions (should be {id}-{NN}.jpg with underscore in ID preserved)."""
     print("\n" + "=" * 60)
-    print("FIXING IMAGE NAMING CONVENTIONS")
+    print("IMAGE NAMING CONVENTION CHECK")
     print("=" * 60)
 
-    renamed_count = 0
+    issues = []
 
-    # Fix locations - keep underscores in names, only replace before number
-    if Path('ref/locations').exists():
-        for img in Path('ref/locations').glob('*.jpg'):
-            # Check if the pattern is name_NN.jpg (underscore before number)
+    # Expected pattern: {id}-{NN}.jpg where id can have underscores, dash only before number
+    # Valid: dorje_legpa-01.jpg, dining_room-02.jpg, arthur-01.jpg
+    # Invalid: dorje_legpa_01.jpg (underscore before number), dorje-legpa-01.jpg (dash in id)
+
+    for ref_dir in ['ref/locations', 'ref/characters', 'ref/objects', 'ref/styles']:
+        if not Path(ref_dir).exists():
+            continue
+
+        print(f"\n{ref_dir}:")
+        for img in sorted(Path(ref_dir).glob('*.jpg')):
+            # Check if pattern is name_NN.jpg (underscore before number - wrong)
             if '_' in img.stem:
                 parts = img.stem.rsplit('_', 1)
                 if len(parts) == 2 and parts[1].isdigit():
-                    # Replace only the last underscore with hyphen
-                    new_name = f"{parts[0]}-{parts[1]}.jpg"
-                    new_path = img.parent / new_name
-                    img.rename(new_path)
-                    print(f"  Renamed: {img.name} → {new_name}")
-                    renamed_count += 1
+                    expected = f"{parts[0]}-{parts[1]}.jpg"
+                    issue = f"  ✗ {img.name}: should be {expected} (use dash before number)"
+                    print(issue)
+                    issues.append(issue)
+                    continue
 
-    # Fix characters - replace ALL underscores with hyphens
-    if Path('ref/characters').exists():
-        for img in Path('ref/characters').glob('*_*.jpg'):
-            new_name = img.name.replace('_', '-')
-            new_path = img.parent / new_name
-            img.rename(new_path)
-            print(f"  Renamed: {img.name} → {new_name}")
-            renamed_count += 1
+            # Check the image matches the expected pattern
+            parts = img.stem.rsplit('-', 1)
+            if len(parts) != 2 or not parts[1].isdigit() or len(parts[1]) != 2:
+                issue = f"  ✗ {img.name}: doesn't match pattern {{id}}-{{NN}}.jpg"
+                print(issue)
+                issues.append(issue)
+            else:
+                print(f"  ✓ {img.name}")
 
-    if renamed_count > 0:
-        print(f"\n✓ Renamed {renamed_count} image(s) to use correct naming")
+    if issues:
+        print(f"\n❌ {len(issues)} image naming issue(s) found")
+        return False
     else:
-        print("\n✓ All images already use correct naming convention")
-
-    return True
+        print("\n✅ All images follow naming conventions")
+        return True
 
 
 def check_reference_images():
@@ -512,8 +518,9 @@ def main():
     if not validate_yaml_files():
         all_passed = False
 
-    # Fix image naming conventions
-    fix_image_naming()
+    # Check image naming conventions
+    if not check_image_naming():
+        all_passed = False
 
     # Run file inventory check
     if not check_file_inventory():

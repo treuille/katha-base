@@ -14,17 +14,24 @@ import yaml
 
 __all__ = [
     'OUT_DIR',
+    'IMAGES_DIR',
     'get_latest_version',
     'get_version_path',
     'compute_prompt_hash',
     'find_existing_image',
+    'get_prompt_path',
+    'get_image_path',
     'read_manifest',
     'write_manifest',
     'get_git_commit',
+    'create_new_version',
+    'update_manifest_image',
+    'update_manifest_book',
 ]
 
 OUT_DIR = Path('out')
 VERSIONS_DIR = OUT_DIR / 'versions'
+IMAGES_DIR = OUT_DIR / 'images'
 
 
 def get_latest_version() -> int:
@@ -58,19 +65,45 @@ def compute_prompt_hash(prompt: str) -> str:
     return hashlib.sha256(prompt.encode()).hexdigest()[:5]
 
 
-def find_existing_image(version_path: Path, page_stem: str, prompt_hash: str) -> Path | None:
-    """Find an existing image with matching page stem and prompt hash.
+def get_prompt_path(page_stem: str, prompt_hash: str) -> Path:
+    """Get path for prompt TXT file in shared images directory.
 
     Args:
-        version_path: Path to the version folder (e.g., out/01/)
+        page_stem: The page identifier (e.g., "p01-arthur-cullan")
+        prompt_hash: The 5-char prompt hash
+
+    Returns:
+        Path: out/images/{page_stem}-{prompt_hash}.txt
+    """
+    return IMAGES_DIR / f'{page_stem}-{prompt_hash}.txt'
+
+
+def get_image_path(page_stem: str, prompt_hash: str) -> Path:
+    """Get path for image file in shared images directory.
+
+    Args:
+        page_stem: The page identifier (e.g., "p01-arthur-cullan")
+        prompt_hash: The 5-char prompt hash
+
+    Returns:
+        Path: out/images/{page_stem}-{prompt_hash}.jpg
+    """
+    return IMAGES_DIR / f'{page_stem}-{prompt_hash}.jpg'
+
+
+def find_existing_image(page_stem: str, prompt_hash: str) -> Path | None:
+    """Find an existing image with matching page stem and prompt hash.
+
+    Looks in the shared out/images/ directory.
+
+    Args:
         page_stem: The page identifier (e.g., "p01-arthur-cullan")
         prompt_hash: The 5-char prompt hash
 
     Returns:
         Path to existing image if found, None otherwise.
     """
-    expected_filename = f'{page_stem}-{prompt_hash}.jpg'
-    expected_path = version_path / expected_filename
+    expected_path = get_image_path(page_stem, prompt_hash)
 
     if expected_path.exists():
         return expected_path
