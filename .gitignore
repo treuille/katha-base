@@ -8,11 +8,12 @@ scripts/__pycache__
 .env
 .streamlit/secrets.toml
 
-# Generated images
-out/**/*.jpg
+# Generated images and prompts
+out/images/*.jpg
+out/images/*.txt
 
 # Generated books
-out/books/*.pdf
+out/versions
 
 # Reference images
 ref/**/*.jpg
