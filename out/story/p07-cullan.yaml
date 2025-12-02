@@ -7,22 +7,23 @@ characters:
   - dorje_legpa
 location: dining_room
 
-story_beat: The candles keep clustering despite Cullan's efforts. He stops, breathing
-  hard, and realizes speed isn't the answer. Whatever's wrong here, he can't outrun
-  it. He needs to find Arthur.
+story_beat: Cullan stops fighting and shouts at the flames—"It's not fair to burn
+  someone's house down!" Something strange happens. The flames flicker, hesitate,
+  then shrink back. His words had power. He doesn't understand it yet, but he
+  felt something respond to him. He needs to find Arthur.
 
 visual: |
-  - Cullan standing back, breathing hard, surveying the room
-  - Candles still clustered dangerously despite his best efforts
-  - His expression shifting from frustration to defeat
-  - The room still dominated by cold harsh light, angles wrong
-  - High haunting—deep shadows, warped geometry, cold blue dominant
-  - His ice-blue eyes showing he knows speed won't solve this
-  - Turning toward the door, needing to find help
-  - His santa hat askew, sweat on his brow
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette behind a crystal vase on the mantel - frozen crimson figurine barely visible, silently watching Cullan leave
+  - Cullan standing tall, shouting at the flames with fierce determination
+  - The flames on the curtains HESITATING, shrinking back from his words
+  - His expression showing surprise—his words did something
+  - Candles still clustered but the fire retreating
+  - The room beginning to shift—cold blue tones softening slightly
+  - His ice-blue eyes wide with realization—something responded to him
+  - His santa hat askew, sweat on his brow, but a new confidence emerging
+  - The burned curtains still smoking but no longer actively burning
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette behind a crystal vase on the mantel - frozen crimson figurine seeming to nod slightly at Cullan's discovery
 
 text: |
-  Cullan stopped, gasping for breath. The candles were still clustering in their dangerous corner, flames reaching for the curtains. No matter how fast he moved, they slid right back. Speed wasn't working. Whatever was wrong here, it wasn't something he could outrun. He needed to find Arthur—maybe his best friend would know what to do.
+  Cullan stopped, gasping for breath. Speed wasn't working. The flames kept spreading no matter how fast he moved. "It's not fair!" he shouted at the fire. "It's not fair to burn someone's house down!" And something strange happened. The flames flickered. Hesitated. Then slowly—impossibly—they shrank back from the curtains. Cullan stared. His words had done something. He didn't understand it, but he felt the fire respond to him. He needed to find Arthur—something very weird was happening here.
 
 objects: []

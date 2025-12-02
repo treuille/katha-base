@@ -7,23 +7,23 @@ characters:
   - dorje_legpa
 location: dining_room
 
-story_beat: Cullan uses his speed to blow out the clustered candles and spread them
-  apart around the room—but they keep sliding back together, clustering again in
-  the dangerous corner. The harder he works, the faster they return.
+story_beat: Cullan uses his speed to fight the fire—blowing out candles, beating at
+  the burning curtains—but nothing works. The candles slide back together, and the
+  flames on the curtains keep spreading. The harder he fights, the worse it gets.
 
 visual: |
   - Dynamic action shot: Cullan as a blur racing around the dining table
-  - Blowing out candles with his speed, moving them to safe positions around the room
+  - Blowing out candles, beating at the burning curtains with his speed
   - But candles visibly SLIDING BACK across the table surface toward the FAR RIGHT CORNER
-  - CANDLE PLACEMENT (MUST MATCH P05): All candles clustering toward the FAR RIGHT CORNER of the dining room, near the windows and velvet curtains
+  - CANDLE PLACEMENT (MUST MATCH P05): All candles clustering toward the FAR RIGHT CORNER
+  - THE CURTAINS STILL BURNING despite his efforts - flames spreading up the fabric
   - The geometry of the room warping further—shadows deepening, angles wrong
-  - His santa hat flying back from the speed, expression frustrated
+  - His santa hat flying back from the speed, expression frustrated and desperate
   - Cold blue tones dominating, harsh shadows pooling
-  - Trails of smoke from extinguished candles
-  - The velvet curtains in the FAR RIGHT CORNER still dangerously close to where candles keep clustering
+  - Trails of smoke from extinguished candles mixing with smoke from burning curtains
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the china cabinet - frozen crimson figurine visible among the fine dishes, watching Cullan's futile efforts
 
 text: |
-  Cullan became a blur. He raced around the table, blowing out candles, moving them to safe spots all around the room. But the moment he set one down, it started sliding back—scraping across the tablecloth toward the corner like something was pulling it. The harder he worked, the faster they clustered back together. It was like trying to bail out a sinking boat with a thimble.
+  Cullan became a blur. He raced around the table, blowing out candles, beating at the burning curtains with anything he could grab. But the moment he put out one spot, another flared up. The candles kept sliding back together like something was pulling them. The harder he fought, the faster the flames spread. It was like trying to bail out a sinking boat with a thimble.
 
 objects: []
