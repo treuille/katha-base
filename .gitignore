@@ -8,15 +8,13 @@ scripts/__pycache__
 .env
 .streamlit/secrets.toml
 
-# Generated images and prompts
-out/images/*.jpg
-out/images/*.txt
-
-# Generated books
+# Symlinks to katha-base (created by scripts/add_references.py)
+ref/characters
+ref/locations
+ref/objects
+ref/styles
+out/images
 out/versions
-
-# Reference images
-ref/**/*.jpg
 
 # Backup files
 bak/
