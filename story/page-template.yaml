@@ -35,7 +35,7 @@ visual: |
    - Moment of agreement as they decide to swap rooms
 
 # This is the text which will be displayed on the storybook pages.
-# It should consist of no more than 50 words, including quoted sentences.
+# Try to aim for no more than 70 words, including quoted sentences.
 text: |
    Cullan and Arthur met in the hallway after discovering the hauntings in their rooms. Arthur's playroom had games with broken rules, while Cullan's dining room had everyone in the wrong seats. "We should swap," Cullan said, and they bumped fists, ready to use their true strengths.
 

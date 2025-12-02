@@ -135,7 +135,7 @@ For each page in @story/template.yaml where this character appears:
 - DO NOT duplicate info from template/character/location files (added automatically by image generator)
 - Frame a specific moment in time matching the story_beat
 
-**Text field** (maximum 50 words):
+**Text field** (aim for no more than 70 words):
 - Third person for individual pages
 - Include dialogue where appropriate (use quotes)
 - Match tone to story_beat and character personality

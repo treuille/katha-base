@@ -38,6 +38,7 @@ red_tree:
     - A generally somber and melancholic mood with hints of hope and resilience.
 
 gashlycrumb:
+  # NOTE: No reference images in ref/styles/ for this style
   artist: Edward Gorey
   books: [The Gashlycrumb Tinies]
   prompts:
@@ -55,6 +56,7 @@ gashlycrumb:
     - Heavy use of dramatic lighting and shadow to create a sense of foreboding
 
 donothing_day:
+  # NOTE: No reference images in ref/styles/ for this style
   artist: Beatrice Alemagna
   books: [On a Magical Do-Nothing Day]
   prompts:

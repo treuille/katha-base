@@ -42,7 +42,7 @@
 - **Story template** (`story/template.yaml`): Defines page sequence, types, and story beats
 - **Page files** (`out/story/*.yaml`): Individual page definitions with visual and text content
   - **Visual field**: 3-5 bullet points describing the scene composition (DO NOT duplicate info from template/characters/locations)
-  - **Text field**: Picture book text, maximum 50 words, matches story_beat
+  - **Text field**: Picture book text, aim for no more than 70 words, matches story_beat
   - **NEVER use TODO placeholders** - always write complete content
 
 ### Key Patterns
