@@ -7,9 +7,10 @@ characters:
   - dorje_legpa
 location: dining_room
 
-story_beat: Arthur begins methodically rearranging candles. Not fighting, not
-  commanding—solving. His hands move with quiet precision, each candle placed
-  exactly where it belongs. The pattern emerges. Warmth begins returning to the room.
+story_beat: Arthur races against the spreading cold, snatching candles and placing
+  them with frantic precision. He sees the pattern—the solution—but time is running
+  out. His feet pound the floorboards as he rushes from spot to spot, each candle
+  placed exactly where it belongs. The warmth fights back.
 
 visual: |
   - Arthur RUNNING around the dining room, actively moving candles with energy and purpose
@@ -24,6 +25,6 @@ visual: |
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside the china cabinet - frozen crimson figurine partially obscured as order returns to the room
 
 text: |
-  Arthur didn't rush. He picked up the first candle and placed it exactly where it belonged—not where it wanted to go, but where it fit. Then another. And another. His hands moved with the same precision he used on Rubik's cubes, each piece finding its place in the pattern. The flames stopped reaching for the curtains. Warmth crept back into the room. The pattern was emerging.
+  Arthur's heart pounded. He could see it—the pattern, the solution—but the cold was spreading fast. He grabbed a candle and slammed it into place. Then he was running, snatching the next one, feet skidding on the wooden floor. "There—and there—and THERE!" Each piece of the puzzle clicking into place like a Rubik's cube in fast-forward. The flames steadied. Warmth surged back. He was going to solve this room.
 
 objects: []
