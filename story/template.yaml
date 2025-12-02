@@ -46,11 +46,12 @@ pages:
     section: Ordinary World
     page_type: joint
     haunting_level: none
-    characters: [arthur, cullan, emer, hansel, henry, james]
+    characters: []
     location_mode: fixed
     location: exterior
     story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
-      glowing in the distance. Warm golden light spills from windows.
+      glowing in the distance. Warm golden light spills from windows. No characters
+      visible - just the house exterior establishing the setting.
 
    # page 02
   - id: p02
@@ -528,15 +529,17 @@ pages:
   - id: p28
     index: 28
     section: Epilogue
-    page_type: joint
+    page_type: individual
     haunting_level: none
-    characters: [arthur, cullan, emer, hansel, henry, james]
+    characters: [main_character]
     location_mode: fixed
     location: living_room
-    story_beat: That evening, the cousins gather by the tree—the real tree now, no
-      strange ornaments. They share tired smiles, each quietly reflecting on what
-      they learned about their strengths. Warm golden light, cozy and safe.
-    notes: Quiet interior moment of resolution.
+    story_beat: That evening, the main character sits by the tree—the real tree now,
+      no strange ornaments. They share a tired smile, quietly reflecting on what
+      they learned about their own strength. Warm golden light, cozy and safe.
+      This is the main character's personal moment of resolution.
+    notes: Individual interior moment of resolution for each character. Each character
+      reflects on their own journey and what they discovered about themselves.
 
    # page 29
   - id: p29

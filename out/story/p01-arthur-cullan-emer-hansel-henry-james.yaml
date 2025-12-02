@@ -1,13 +1,7 @@
 id: p01
 section: Ordinary World
 page_type: joint
-characters:
-  - arthur
-  - cullan
-  - emer
-  - hansel
-  - henry
-  - james
+characters: []
 location: exterior
 
 story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
