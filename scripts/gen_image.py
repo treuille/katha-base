@@ -25,12 +25,14 @@ Requirements:
 """
 
 import sys
+import time
 import argparse
 import yaml
 from pathlib import Path
 from collections import defaultdict
 from google import genai
 from google.genai import types
+from google.api_core.exceptions import ResourceExhausted
 from PIL import Image
 
 # Public API
@@ -62,6 +64,11 @@ MAX_STYLE_IMAGES = 1
 MAX_LOCATION_IMAGES = 1
 MAX_CHARACTER_IMAGES = 1
 CENTER_GUTTER = 1789   # Center line for two-page spread fold
+
+# Retry configuration for rate limiting
+RETRY_MAX_ATTEMPTS = 3
+RETRY_BASE_WAIT_SECONDS = 60      # Start with 1 minute
+RETRY_BACKOFF_MULTIPLIER = 2      # Double wait time each retry
 
 
 def _load_yaml_file(file_path):
@@ -424,16 +431,28 @@ def generate_image_from_prompt(
     print(f"Calling {GEMINI_MODEL} with aspect ratio {aspect_ratio}...")
     print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
 
-    response = client.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=contents,
-        config=types.GenerateContentConfig(
-            response_modalities=["IMAGE"],
-            image_config=types.ImageConfig(
-                aspect_ratio=aspect_ratio,
-            ),
-        ),
-    )
+    # Retry loop for rate limiting errors
+    response = None
+    for attempt in range(1, RETRY_MAX_ATTEMPTS + 1):
+        try:
+            response = client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=contents,
+                config=types.GenerateContentConfig(
+                    response_modalities=["IMAGE"],
+                    image_config=types.ImageConfig(
+                        aspect_ratio=aspect_ratio,
+                    ),
+                ),
+            )
+            break  # Success, exit retry loop
+        except ResourceExhausted as e:
+            if attempt == RETRY_MAX_ATTEMPTS:
+                print(f"Rate limit exceeded after {RETRY_MAX_ATTEMPTS} attempts. Giving up.")
+                raise
+            wait_time = RETRY_BASE_WAIT_SECONDS * (RETRY_BACKOFF_MULTIPLIER ** (attempt - 1))
+            print(f"Rate limit hit (attempt {attempt}/{RETRY_MAX_ATTEMPTS}). Waiting {wait_time}s before retry...")
+            time.sleep(wait_time)
 
     # Debug: print full response if parts is None
     if response.parts is None:
