@@ -7,23 +7,22 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Henry leaves the kitchen carrying his tray of cupcakes, but senses something
-  still wrong in the house. The kitchen is fixed, but a deeper wrongness pulses through
-  the walls. This whole house is haunted. He needs to find his cousins—and bring them
-  cupcakes.
+story_beat: Henry leaves the kitchen carrying his tray of cupcakes. The kitchen and
+  library are both fixed now. But the house still feels wrong elsewhere. He needs
+  to find his cousins and share his cupcakes.
 
 visual:
   - Henry in the hallway, carefully balancing the tray of six cupcakes with airplane decorations
-  - His expression shifting from satisfaction to concern as he senses something deeper
-  - The hallway still slightly wrong—not as bad as before, but something lingers in the air
+  - His expression proud but alert—two rooms fixed, but the house isn't done yet
+  - The hallway still slightly wrong—not as bad as before, but something lingers
   - Warm light from the kitchen behind him, but cold blue still lurking ahead
   - His tall figure moving with purpose, protective of the cupcakes
   - Santa hat back in place, flour dust on his grey tracksuit
   - The cupcakes glowing warm on the tray, little airplanes visible on each one
   - His eyes looking toward where he senses the others might be
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a decorative shelf near a doorway - frozen crimson figurine still watching even as individual victories accumulate
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a decorative shelf near a doorway - frozen crimson figurine still watching even as victories accumulate
 
 text: |
-  Henry stepped into the hallway, cupcakes balanced carefully on the tray. The kitchen behind him felt warm and right again. But something still pulsed through the house—a deeper wrongness he could feel in the walls, in the floor, in the too-cold air. The kitchen was just one room. This whole house was haunted. He started walking faster, keeping the cupcakes steady. He needed to find his cousins. And they were definitely going to need these cupcakes.
+  Henry stepped into the hallway, cupcakes balanced carefully on the tray. The kitchen behind him felt warm and right again—just like the library. Two rooms fixed. But something still pulsed through the rest of the house—a deeper wrongness in the walls, the floor, the too-cold air. He started walking, keeping the cupcakes steady. He needed to find his cousins. They were definitely going to need these cupcakes.
 
 objects: []

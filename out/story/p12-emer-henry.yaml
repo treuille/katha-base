@@ -7,20 +7,19 @@ characters:
   - dorje_legpa
 location: hallway
 story_beat: |
-  They realize each other's strengths fit the other room better. Emer's storytelling
-  heart for the scrambled library. Henry's checklist brain for the chaotic kitchen.
-  They agree to swap rooms.
+  Henry volunteers to tackle the kitchen. He's the baker, the one who follows
+  recipes and measures everything properly. Emer gives him a fist bump for luck.
 
 visual:
   - A spark of hope on both their faces despite the cold hallway
-  - Emer pointing toward the library direction, excited
+  - Henry pointing toward the kitchen direction, determined
   - Henry nodding with determination, already mentally making a checklist
-  - Their body language shifting from scared to purposeful
-  - Emer doing a little bounce of determination
+  - Their body language purposeful and ready
+  - Emer doing a little bounce of encouragement
   - A faint warm glow beginning at the edges—hope returning
-  - They're about to part ways, each heading to their true challenge
+  - Henry about to head toward the kitchen, Emer cheering him on
 
 text: |
-  "Wait—you're good at stories!" Henry's eyes lit up. "The library needs someone who understands characters and endings." Emer gasped. "And you're good at recipes and checklists! The kitchen needs YOU!" They bumped fists. "Swap?" "Swap."
+  "I'll fix the kitchen," Henry said. "I'm the baker. I know how to measure things properly and follow recipes." Emer's eyes sparkled. "You're going to teach that kitchen how things are SUPPOSED to work!" They bumped fists. Henry headed toward the kitchen, Emer's encouragement warming his back.
 
 objects: []

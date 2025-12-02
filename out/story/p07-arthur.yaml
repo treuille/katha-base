@@ -1,7 +1,7 @@
 id: p07
 section: First Attempt
 page_type: individual
-haunting_level: high
+haunting_level: medium
 characters:
   - arthur
   - dorje_legpa
@@ -13,17 +13,17 @@ story_beat: Arthur tries to organize the chaos—matching pieces to boxes, resto
   to find Cullan.
 
 visual: |
-  - Arthur standing back from the Scrabble board, breathing hard
-  - Around him: some order restored—chess pieces in their box, cards stacked
-  - But the Scrabble board still scrambling, tiles rearranging themselves
-  - His expression shifting from frustration to realization
-  - The room still dominated by cold harsh light, angles wrong
-  - High haunting atmosphere—deep shadows, warped geometry
-  - His posture defeated but thoughtful, understanding something new
-  - Turning toward the door, knowing he needs help
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette sitting on a toy chest - frozen crimson figurine with tiny sword raised, watching Arthur's retreat
+  - Arthur ACTIVELY MOVING around the room—stacking games, sorting pieces, restoring order
+  - His body in motion: reaching for a shelf, sliding a box into place, hands busy
+  - Around him: visible progress—chess pieces boxed, cards stacked, board games on shelves
+  - The room noticeably LESS HAUNTED than before—warmer light seeping in, geometry stabilizing
+  - But the Scrabble board still scrambling in the corner, tiles rearranging themselves
+  - His expression: happy with his progress but still worried—the haunting runs deeper than expected
+  - Semi-victory atmosphere—shadows retreating, but not gone entirely
+  - Energy and purpose in his movements, not defeat
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette sitting on a toy chest - frozen crimson figurine with tiny sword raised, watching Arthur's progress
 
 text: |
-  Arthur tried everything. He sorted chess pieces into their box. Stacked the scattered cards. Put game boards back on shelves. For a moment, the room felt calmer. But the Scrabble tiles kept scrambling, rearranging into accusations. He couldn't fix a game that was rigged from the inside. Pattern-matching wasn't enough—not for this. He needed to find Cullan. Maybe together they could figure this out.
+  Arthur got to work. He sorted chess pieces into their box. Stacked the scattered cards. Slid board games back onto shelves. The room was calming down—he could feel it. Warmer. Less wrong. But the Scrabble tiles kept scrambling, rearranging into nonsense words. The haunting went deeper than he'd thought. He needed to find Cullan. He had to tell him what just happened.
 
 objects: []

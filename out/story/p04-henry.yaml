@@ -7,12 +7,14 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Henry follows a strange pull toward the library—maybe he wants to check
-  Graminy's old pilot manuals, or just needs to think. The hallway feels subtly wrong.
-  Warm Christmas colors drain away, replaced by cold blues. His breath frosts slightly.
+story_beat: Henry walks toward the library, the huge flight manual tucked under one
+  arm. He's trying to text his friend, but his phone is frosting over and shows zero
+  bars. The hallway feels subtly wrong. Warm Christmas colors drain away.
 
 visual:
-  - Henry walking down the hallway toward the library, laptop tucked under one arm
+  - Henry walking down the hallway toward the library, the massive flight manual tucked under one arm
+  - In his other hand, his phone—screen visibly frosting over with ice crystals, the signal indicator showing zero bars
+  - His expression confused and uneasy as he looks at the frozen phone
   - Tall figure in grey Aviator Nation tracksuit, the five-stripe pattern visible on his sweatpants
   - Santa hat still on, expression shifting from curious to uneasy
   - The hallway's warm Christmas colors visibly DRAINING, being replaced by cold blue tones
@@ -23,6 +25,6 @@ visual:
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette tucked behind a picture frame on the hallway wall - frozen crimson figurine with gold crown and tiny sword, completely still and inanimate
 
 text: |
-  Something pulled Henry toward the library. Maybe he wanted to check Graminy's old flying books. Maybe he just needed to think. But the hallway felt wrong. The Christmas lights seemed dimmer here, their warm colors draining away into cold blue. His breath came out in a little puff of frost. The family photos on the wall hung crooked, and the doorframe ahead looked... tilted? The house itself seemed to be holding its breath.
+  Something pulled Henry toward the library. He tried to text his friend back, but his phone had gone strange—frost spreading across the screen, the signal bars dropping to zero. He tapped at it uselessly. The hallway felt wrong too. The Christmas lights seemed dimmer here, their warm colors draining away into cold blue. His breath came out in a little puff of frost. The family photos on the wall hung crooked. The house itself seemed to be holding its breath.
 
 objects: []

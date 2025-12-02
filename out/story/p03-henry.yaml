@@ -7,23 +7,24 @@ characters:
   - dorje_legpa
 location: living_room
 
-story_beat: Henry plays Microsoft Flight Simulator on his laptop, piloting a 747 over
-  Brooklyn—he can see his own house below in the ultra-realistic graphics. The Dorje
-  Legpa ornament catches his eye. For just a moment, the instruments flicker wrong.
-  He shakes it off, but something feels off.
+story_beat: Henry sits with a comically massive flight manual he received for Christmas—
+  hundreds of pages of dense technical diagrams, checklists, and procedures. He's
+  genuinely trying to read it while also texting a friend. The Dorje Legpa ornament
+  catches his eye. Something feels slightly off.
 
 visual:
-  - Henry sitting cross-legged on the floor with his laptop, Microsoft Flight Simulator glowing on screen
-  - The screen shows a photorealistic aerial view of Brooklyn from a 747 cockpit, his own house visible below
-  - His eyes lifting from the screen toward the Christmas tree, expression shifting from focused to uneasy
+  - Henry sitting cross-legged on the floor, an absurdly thick flight manual open across his lap
+  - The manual is comically oversized—at least 800 pages, with dense technical diagrams of cockpit instruments, emergency procedures, pre-flight checklists, and cross-section engine schematics visible
+  - Chapter headings visible like "Section 47: Auxiliary Power Unit Thermal Management" and "Appendix Q: Emergency Decompression Protocols"
+  - His phone in one hand, texting, while he tries to read the manual with the other
+  - His eyes lifting from the manual toward the Christmas tree, expression shifting from focused to uneasy
   - EASTER EGG: The watching ornament IS Dorje Legpa - a tiny crimson-red deity figurine with gold crown, turquoise sash, and raised sword - its eyes seem to track Henry specifically
-  - The ornament faintly reflected in his laptop screen
   - Grey Aviator Nation tracksuit with the signature five-stripe pattern (red, orange, yellow, green, blue) on the sweatpants
   - Santa hat on his head, tall and slightly goofy posture even while sitting
-  - The other cousins visible in background, oblivious, but the ornament tracks only Henry
+  - No other characters in frame except Henry and the Dorje Legpa ornament
   - Warm golden light beginning to drain at the edges, hints of cold blue creeping in
 
 text: |
-  Henry was flying a 747 over Brooklyn. On screen, he could see his own house—the one with the blue door—tiny and perfect below. Then the altimeter flickered. Just for a second, it showed impossible numbers. He looked up from his laptop, and one ornament on the tree was staring right at him. Not at anyone else. Just him. He looked back at the screen. Everything seemed fine now. But something felt wrong.
+  Henry was deep in Chapter 23: "Emergency Fuel Jettison Procedures" when his phone buzzed. He texted back with one hand while trying to find his place in the massive flight manual Graminy had given him for Christmas. Eight hundred pages of everything a real pilot needed to know. He loved it. But when he looked up, one ornament on the tree was staring right at him. Not at anyone else. Just him. Something felt wrong.
 
 objects: []

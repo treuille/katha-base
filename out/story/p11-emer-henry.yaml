@@ -7,19 +7,19 @@ characters:
   - dorje_legpa
 location: hallway
 story_beat: |
-  The realization crystallizes—"This house is haunted." They look at each other
-  with a mix of fear and determination. The cold blue light and warped geometry
-  emphasize the moment's weight.
+  The realization crystallizes—this whole house is haunted, and they need to fix
+  it room by room. But Henry proved it can be done. They look at each other with
+  determination rather than just fear.
 
 visual:
-  - Emer and Henry facing each other, the weight of realization on their faces
-  - Emer gripping Henry's hand, scared but determined
-  - Henry protective but also uncertain—he's the older one but this is beyond normal
-  - The hallway at maximum wrongness around them—cold, tilted, shadows deep
-  - A moment of fear passing between them, but also resolve building
-  - Their breath visible in the cold air
+  - Emer and Henry facing each other, determination on their faces
+  - Emer gripping Henry's hand, excited now rather than just scared
+  - Henry confident and ready—he already fixed one room
+  - The hallway still wrong around them, but they're not intimidated
+  - Resolve building between them
+  - Their breath visible in the cold air, but they're standing tall
 
 text: |
-  "Henry," Emer whispered, her voice very small. "Is this house... haunted?" The word hung in the cold air between them. Henry squeezed her hand. "Yeah," he said quietly. "I think it is." They stood together in the crooked hallway, scared but not alone.
+  "Henry," Emer said, her voice getting excited. "You fixed the library! If we can fix the kitchen too—" "—then maybe we can fix the whole house," Henry finished. They looked at each other. The hallway was still cold and crooked around them. But they weren't just scared anymore. They had a plan.
 
 objects: []

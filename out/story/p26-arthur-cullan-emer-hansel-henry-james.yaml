@@ -11,22 +11,22 @@ characters:
   - dorje_legpa
 location: driveway
 
-story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
-  holding the deity in a box. Emer trails behind on a tricycle with Hansel on
-  the handlebars, pointing exultantly at the sky with his bottle. The plane
-  lifts the sled—not too high, just enough for comedic effect—dragging it across
-  the lawn, up over a little bump, maybe through some clouds.
+story_beat: Outside, the kids move together like a perfect team. Henry is in his
+  plane, ready for takeoff. James directs from below. Everyone's faces show pure
+  delight at what they're about to do together.
 
 visual: |
-  - The WWII-style biplane dragging the red sled across the snowy lawn
-  - Cullan and Arthur in the sled, holding a glowing box containing the spirit
-  - The spirit now appearing KIND, BENEVOLENT, and WISE as it begins to transform
-  - The sled lifting slightly off the ground—just enough to be magical
-  - The air filled with frosty Tibetan imagery - lotuses, rainbow light, peaceful deity forms
-  - Behind them, Emer on a tricycle with Hansel on handlebars
-  - Hansel pointing his bottle triumphantly at the sky, pure joy on his face
+  - Snowy driveway scene showing clearly FROM LEFT TO RIGHT: tricycle, sled, then biplane - all moving toward the right
+  - Emer's tricycle on the FAR LEFT with Hansel on the handlebars
+  - The red sled in the MIDDLE with Arthur and Cullan holding a glowing box (light coming out through cracks), struggling but gleeful
+  - Henry's small WWII-style biplane on the FAR RIGHT with OPEN COCKPIT, single wing, propeller in front
+  - Henry inside the plane wearing his Santa hat
+  - James underneath/near the plane dressed as an air marshal, signaling the plane forward
+  - Looks of pure delight on everyone's faces as they realize what they're about to do
+  - EVERYONE wearing Santa hats
+  - The whole procession moving toward the RIGHT side of the image
 
 text: |
-  The airplane pulled the sled across the snow, then lifted—just a little, just enough. Cullan and Arthur held tight to the spirit's box as they bumped through a low cloud. Behind them, Emer pedaled furiously on a tricycle while Hansel waved his bottle at the sky, laughing.
+  Outside in the snow, they moved together like a perfect team.
 
 objects: []

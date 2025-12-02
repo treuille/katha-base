@@ -451,9 +451,9 @@ pages:
     location_mode: fixed
     location: living_room
     story_beat: The ornament flares and the spirit erupts, growing huge and blazing
-      red. Emer realizes it's furious because it's cramped—too big for a house, it
+      red. James realizes it's furious because it's cramped—too big for a house, it
       needs sky!
-    notes: Emer has the insight about the deity being cramped.
+    notes: James has the insight about the deity being cramped.
     dorje_legpa_form: FULL MANIFESTATION - erupting huge from ornament, deep crimson
       skin, rainbow light and ice, weapons spinning, too big for the room.
 
@@ -477,18 +477,17 @@ pages:
    # page 25
   - id: p25
     index: 25
-    section: Sky Procession
+    section: Climax
     page_type: joint
     haunting_level: low
     characters: [arthur, cullan, emer, hansel, henry, james, dorje_legpa]
     location_mode: fixed
-    location: driveway
-    story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit,
-      single wing, propeller in front. He's wearing WWII-style flight goggles pushed
-      up on his forehead, but still has his Santa hat on. James acts as air traffic
-      controller on the ground—"Spirit Sled Three-Seven-Red, cleared for takeoff!"
-    dorje_legpa_form: IN BOX ON SLED - glowing box with light coming through cracks,
-      held by Arthur and Cullan, deity contained but visible through gaps.
+    location: living_room
+    story_beat: The kids look at the shaking, glowing box and realize it won't hold
+      for long. Henry has an idea - he remembers pulling a little red wagon to Millbrook
+      last summer, but he has something better in mind. He asks where his pilot goggles are.
+    dorje_legpa_form: IN SHAKING BOX - glowing box with light blazing through cracks,
+      the spirit contained but furious and rattling.
 
    # page 26
   - id: p26
@@ -499,17 +498,31 @@ pages:
     characters: [arthur, cullan, emer, hansel, henry, james, dorje_legpa]
     location_mode: fixed
     location: driveway
-    story_beat: Cullan and Arthur ride in the sled being dragged by the airplane,
-      holding the deity in a box. Emer trails behind on a tricycle with Hansel on
-      the handlebars, pointing exultantly at the sky with his bottle. The plane lifts
-      the sled—not too high, just enough for comedic effect—dragging it across the
-      lawn, up over a little bump, maybe through some clouds.
-    dorje_legpa_form: BEGINNING TO TRANSFORM - deity in box becoming kind/benevolent,
-      frosty Tibetan imagery (lotuses, rainbows) filling the air.
+    story_beat: Outside, the kids move together like a perfect team. Henry is in
+      a small WWII-style biplane with an open cockpit. James directs traffic from below.
+      Everyone's faces show pure delight at what they're about to do.
+    dorje_legpa_form: IN BOX ON SLED - glowing box with light coming through cracks,
+      held by Arthur and Cullan, deity contained but visible through gaps.
 
    # page 27
   - id: p27
     index: 27
+    section: Sky Procession
+    page_type: joint
+    haunting_level: low
+    characters: [arthur, cullan, emer, hansel, henry, james, dorje_legpa]
+    location_mode: fixed
+    location: driveway
+    story_beat: This is the big payoff image. The plane pulls the sled with Cullan
+      and Arthur holding the box. James underneath traffic controlling. Huge rainbows
+      and dramatic elements behind them, hint at snowy woods of upstate New York.
+      Keep words to minimum - this is the CLIMAX image.
+    dorje_legpa_form: BEGINNING TO TRANSFORM - deity in box becoming kind/benevolent,
+      frosty Tibetan imagery (lotuses, rainbows) filling the air.
+
+   # page 28
+  - id: p28
+    index: 28
     section: Sky Procession
     page_type: joint
     haunting_level: none
@@ -525,9 +538,9 @@ pages:
     dorje_legpa_form: TRANSFORMED/PEACEFUL - fury softened to wind, weapons to sparkles,
       benevolent expression, seeing reflection in sky, sky guardian remembered.
 
-   # page 28
-  - id: p28
-    index: 28
+   # page 29
+  - id: p29
+    index: 29
     section: Epilogue
     page_type: individual
     haunting_level: none
@@ -540,10 +553,11 @@ pages:
       This is the main character's personal moment of resolution.
     notes: Individual interior moment of resolution for each character. Each character
       reflects on their own journey and what they discovered about themselves.
+      EXCEPTION - Emer's p29 includes Regan (her mother) snuggling together with hot chocolate.
 
-   # page 29
-  - id: p29
-    index: 29
+   # page 30
+  - id: p30
+    index: 30
     section: Epilogue
     page_type: joint
     haunting_level: none

@@ -7,23 +7,22 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: After swapping rooms with Emer, Henry walks toward the kitchen with new
-  understanding. He smells burnt sugar and chaos from ahead. He hears something too—
-  a rattling, like jars arguing. But this time he knows what he's truly capable of.
-  He's not just a checklist-follower. He bakes for his friends.
+story_beat: Henry approaches the kitchen, hearing chaos within. Something is mixing
+  ingredients recklessly—no measuring, no recipes, just wild experimentation. He
+  can smell the disaster. But Henry knows exactly what this kitchen needs. He's ready.
 
 visual:
   - Henry striding purposefully down the hallway toward the kitchen
-  - His posture more confident than before—determination replacing confusion
+  - His posture confident from his piano victory—determination on his face
   - Strange flickering light spilling from the kitchen doorway ahead
-  - The hint of rattling jars audible—almost like angry voices
-  - Grey Aviator Nation tracksuit, Santa hat back in place properly
-  - Hallway still cold and high haunting, but Henry unafraid
+  - Sounds of splashing, mixing, things being dumped together carelessly
+  - Grey Aviator Nation tracksuit, Santa hat in place properly
+  - Hallway still cold, but Henry radiating warmth from his library success
   - His tall figure casting a long shadow toward the kitchen door
   - Hands slightly raised, ready—like a chef approaching his station
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine watching Henry approach his true challenge
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine watching Henry approach his next challenge
 
 text: |
-  Henry walked toward the kitchen. He could smell it from here—burnt sugar, spilled flour, the sharp tang of chaos. And he could hear something too. Rattling. Clattering. Almost like... arguing? Emer had done what she could, but she'd said it needed something more organized. More methodical. Henry rolled up his sleeves. He wasn't just a checklist-follower. He was a baker. And he baked for his friends.
+  Henry walked toward the kitchen. He could hear the chaos from here—splashing, sloshing, the sound of ingredients being dumped together without any care at all. Something in there was cooking without measuring. Without following recipes. Without any of the things that made baking actually work. Henry smiled. The piano had needed creativity. The kitchen needed precision. He knew exactly what to do.
 
 objects: []

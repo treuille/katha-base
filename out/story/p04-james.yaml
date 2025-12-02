@@ -7,24 +7,24 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: James follows a strange pull toward another part of the house. The hallway
-  feels personally wrong—they've memorized every path in this house, but now the routes
-  are lying to them. Doors seem to shift. The map in their head doesn't match what they see.
+story_beat: James walks toward the glass doors leading to the sunroom. Something feels
+  off—the light through the glass is strange, and they can hear an odd rustling from
+  inside. The plants seem to be moving. James has always been good at solving things.
+  Whatever awaits them, they'll figure it out.
 
 visual:
-  - James standing in the hallway, one hand trailing along the wall as if trying to anchor themselves
-  - Their expression is troubled, almost offended—this is their territory and it's betraying them
-  - The hallway stretches longer than it should, proportions subtly wrong
-  - Doors that should be on the left appear on the right, familiar landmarks in unfamiliar positions
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette tucked behind a picture frame on the hallway wall—frozen crimson figurine with gold crown, completely still
-  - Christmas decorations in the hallway look slightly tilted, garland drooping at wrong angles
-  - Cold blue light seeping in from somewhere, warm Christmas colors draining away
-  - James's breath might frost slightly in the air
-  - White graphic t-shirt with neon cyan, magenta, yellow design visible under the cold light
-  - Santa hat still on, ginger hair with blonde streak, freckles standing out against their concerned face
-  - The path ahead seems to fork where it shouldn't—James's mental map is useless here
+  - James walking toward the glass doors that lead down into the sunroom
+  - A single step down visible through the glass—the boundary between hallway and sunroom
+  - Strange light filtering through the doors, greenish and shifting
+  - The silhouettes of plants visible through the glass, seeming to sway despite no wind
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a side table near the doors—frozen crimson figurine with gold crown, watching
+  - James's expression curious but confident—they're good at puzzles
+  - White graphic t-shirt with neon cyan, magenta, yellow design
+  - Santa hat still on, ginger hair with blonde streak, freckles visible
+  - Cold blue light beginning to creep in at the edges, mixing with the greenish sunroom glow
+  - James's hand reaching toward the door handle
 
 text: |
-  James knew this hallway. They had run through it a thousand times—racing Cullan to the kitchen, leading the younger kids in flashlight games, mapping out the perfect route for sardines. But now the hallway was lying. The bathroom door was on the wrong side. The coat closet had moved. James pressed their hand against the wall, feeling for something real, but even the wallpaper felt different—colder, somehow stretched. They had always known exactly where they were going. For the first time, the path itself was wrong.
+  James walked toward the sunroom. Through the glass doors, they could see the plants—Graminy's ferns and succulents and that orchid she loved. But something was wrong. The plants were moving, swaying without any wind. And was that... whispering? James reached for the door handle. They were good at solving things. Math puzzles, word games, strategy—their brain loved a challenge. Whatever was happening in that sunroom, they'd figure it out.
 
 objects: []

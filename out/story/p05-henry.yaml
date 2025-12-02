@@ -7,26 +7,24 @@ characters:
   - dorje_legpa
 location: library
 
-story_beat: Henry enters the library and discovers chaos. His laptop sits open on the
-  reading table, running Microsoft Flight Simulator on its own—instruments showing
-  impossible readings. But worse, the books themselves are wrong. Story characters
-  wander between covers. A knight from one book stumbles through a romance. Pages
-  flutter with scrambled words. Everything is out of place.
+story_beat: Henry enters the library and discovers something wrong with the old wooden
+  upright piano. The black and white keys have rearranged themselves—seemingly at
+  random, with no pattern. He sits down and tries to play, but it sounds horrible.
 
 visual:
-  - Henry frozen in the library doorway, staring at the chaos before him
-  - His laptop open on an antique reading table, Microsoft Flight Simulator running without him
-  - The screen shows the 747 cockpit over photorealistic Brooklyn, but instruments wildly contradicting each other
-  - Altimeter showing CLIMB while artificial horizon shows DIVE, fuel gauge jumping randomly
-  - Books open everywhere with pages fluttering—story characters visible wandering between covers
-  - A tiny illustrated knight standing confused on a romance novel's page, a princess lost in an adventure book
-  - Text on pages shimmering and rearranging, words in wrong order
-  - Graminy's aviation shelf visible - old pilot manuals, vintage flying magazines, a model biplane
-  - Cold blue light streaming through windows, harsh shadows pooling strangely
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the corner of a bookshelf - frozen crimson figurine watching the chaos unfold
-  - Henry's expression shifting from confusion to alarm, Santa hat askew
+  - Henry standing before the old wooden upright piano, staring in confusion
+  - The piano keyboard is completely wrong—black keys where white keys should be, white keys scattered randomly, no logical pattern at all
+  - Some keys are doubled, some gaps are too wide, the entire keyboard looks like it's been shuffled
+  - Henry's hands hovering over the keys, hesitant
+  - Sheet music on the stand, but it won't help with keys in wrong places
+  - The library still cold and blue, harsh shadows pooling strangely
+  - Books on shelves behind him, Graminy's aviation shelf visible
+  - Cold blue light streaming through windows
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the corner of a bookshelf - frozen crimson figurine watching
+  - Henry's expression shifting from confusion to determination, Santa hat slightly askew
+  - His massive flight manual set aside on a reading table
 
 text: |
-  The library was wrong in two different ways. Henry's laptop sat on Graminy's reading table, running by itself—his 747 over Brooklyn with instruments gone insane, altimeter screaming UP while the horizon showed DOWN. But the books were even worse. They lay open everywhere, and the stories inside had scrambled. A knight wandered through a cookbook. A princess was lost in a mystery. Characters stumbled between covers like they'd forgotten where they belonged.
+  The library's old upright piano was wrong. Henry stared at the keyboard—the black and white keys had scrambled themselves into complete chaos. Two white keys here, four black keys there, gaps in impossible places. He sat down and tried a scale. The sound that came out was awful. Every note was in the wrong place. The piano had forgotten how to be a piano.
 
 objects: []

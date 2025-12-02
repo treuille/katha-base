@@ -7,25 +7,25 @@ characters:
   - dorje_legpa
 location: kitchen
 
-story_beat: Henry enters the kitchen that Emer partially calmed. Her single perfect
-  cup of cocoa sits on the counter—one warm thing amid chaos. But the kitchen doesn't
-  just scramble anymore. It ACCUSES. Recipe cards rewrite themselves with hostile
-  messages. Jars rattle and point at him. The oven display flashes "INTRUDER." He's
-  being framed as someone who doesn't belong.
+story_beat: Henry enters the kitchen and finds absolute chaos. The haunted kitchen
+  is mixing ingredients together into an abominable concoction—no measuring, no
+  recipes, just random ingredients being dumped and stirred. The result looks and
+  smells disgusting.
 
 visual:
-  - Henry standing in the kitchen doorway, facing the accusations
-  - Emer's single cup of cocoa glowing warm on the counter—her small victory amid the chaos
-  - 'Recipe cards hovering and displaying hostile text: "YOU''LL RUIN EVERYTHING" and "YOU DON''T BELONG"'
-  - Jars rattling on shelves, seeming to lean and point accusingly toward Henry
-  - The oven display glowing with the word "INTRUDER" in harsh red letters
-  - Ingredients scattered chaotically—flour spilled, sugar overturned, eggs rolling
-  - Cold blue light dominant, harsh accusatory shadows pointing at Henry
-  - His expression: hurt for a moment, then resolute—he knows who he really is
-  - Santa hat and grey tracksuit standing out against the cold hostile kitchen
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a high shelf behind jars - frozen crimson figurine orchestrating the accusations
+  - Henry standing in the kitchen doorway, staring at the chaos before him
+  - A massive mixing bowl on the counter, ingredients dumping themselves in randomly
+  - Flour pouring without measurement, eggs cracking at wrong times, sugar dumping in huge amounts
+  - The concoction in the bowl looks absolutely disgusting—brown, lumpy, wrong
+  - No measuring cups, no spoons, no recipe in sight—just chaos
+  - Ingredients flying through the air with no order whatsoever
+  - The fridge positioned to the right of the dishwasher
+  - Cold blue light dominant, the kitchen in supernatural disarray
+  - Henry's expression: dismay at first, then determination—he knows what's wrong here
+  - Santa hat and grey tracksuit standing out against the cold chaotic kitchen
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a high shelf behind jars - frozen crimson figurine watching the chaos
 
 text: |
-  The kitchen had something to say. Recipe cards floated up and rewrote themselves: "YOU'LL RUIN EVERYTHING." Jars rattled on the shelves, leaning toward him like pointing fingers. The oven display flashed red: "INTRUDER. INTRUDER. INTRUDER." But Henry saw Emer's cup of cocoa on the counter—one perfect warm thing in all the cold chaos. She'd made that with love. The kitchen was calling him a destroyer. Someone who didn't care. But that wasn't true. That wasn't true at all.
+  The kitchen was a disaster. Ingredients were dumping themselves into a giant bowl—flour without measuring, eggs cracking at random, sugar pouring in huge uneven heaps. The concoction inside was brown and lumpy and smelled terrible. No one was following a recipe. No one was measuring anything. It was baking without any of the rules that made baking work. Henry shook his head. "That's not how you make anything."
 
 objects: []

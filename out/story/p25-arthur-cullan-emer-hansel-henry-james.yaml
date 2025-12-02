@@ -1,5 +1,5 @@
 id: p25
-section: Sky Procession
+section: Climax
 page_type: joint
 characters:
   - arthur
@@ -9,23 +9,22 @@ characters:
   - henry
   - james
   - dorje_legpa
-location: driveway
+location: living_room
 
-story_beat: Outside, Henry jumps into a small WWII-style biplane—open cockpit, single
-  wing, propeller in front. He's wearing WWII-style flight goggles pushed up on his
-  forehead, but still has his Santa hat on. James acts as air traffic controller.
+story_beat: The kids look at the shaking, glowing box and realize it won't hold
+  for long. Henry has an idea - he remembers pulling a little red wagon to Millbrook
+  last summer, but he has something better in mind. He asks where his pilot goggles are.
 
 visual: |
-  - Snowy driveway scene showing clearly FROM LEFT TO RIGHT: tricycle, sled, then biplane - all moving toward the right
-  - Emer's tricycle on the FAR LEFT with Hansel on the handlebars
-  - The red sled in the MIDDLE with Arthur and Cullan holding a glowing box (light coming out through cracks), struggling but gleeful
-  - Henry's small WWII-style biplane on the FAR RIGHT with OPEN COCKPIT, single wing, propeller in front
-  - Henry inside the plane wearing WWII-style flight goggles on his forehead AND his Santa hat
-  - James underneath/near the plane dressed as an air marshal, signaling the plane forward
-  - EVERYONE wearing Santa hats and looking happy, gleeful, and triumphant
-  - The whole procession moving toward the RIGHT side of the image
+  - The living room with all six cousins gathered around the glowing, shaking wooden box
+  - Light blazing through every crack in the box, the spirit contained but furious
+  - Height order visible: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
+  - Worried expressions on the kids' faces as they realize the box won't hold
+  - Henry's face lighting up with sudden inspiration
+  - Looks of delight spreading across the other kids' faces as they realize what Henry is proposing
+  - EVERYONE wearing Santa hats
 
 text: |
-  Outside in the snow, Henry climbed into his small airplane—a proper WWII-style biplane with an open cockpit and a propeller in front. He'd found some flight goggles somewhere and pushed them up on his forehead, though he kept his Santa hat firmly in place. James took position on the ground, all business. "Spirit Sled Three-Seven-Red," he announced in his best air traffic controller voice, "you are cleared for takeoff!"
+  The box shook and rattled. Light blazed through every crack. "This won't hold!" someone said. They all looked at each other, uncertain. Then Henry's eyes lit up. "Remember when I pulled the little red wagon all the way to Millbrook last summer? Well, I have a better idea." He grinned. "Where are my pilot goggles?"
 
 objects: []

@@ -7,24 +7,26 @@ characters:
   - dorje_legpa
 location: sun_room
 
-story_beat: James enters the sun room and finds chaos—plants blooming and wilting in
-  seconds, sunlight flickering between dawn and dusk, seasons scrambled. A fern freezes
-  in winter while a succulent bakes in summer, all in the same room at once.
+story_beat: James opens the glass doors and steps down into the sunroom. Immediately,
+  the plants shift to block the path. Vines stretch across the way, ferns lean in,
+  and a large monstera unfurls its leaves like a barrier. A whisper rises from the
+  greenery—numbers, equations, impossible sums floating in the air.
 
 visual:
-  - James standing in the doorway of the sun room, eyes wide at the temporal chaos
-  - The sun room is a greenhouse-like space with many windows, filled with plants
-  - Plants in visible distress—some blooming frantically, others wilting, leaves changing color in real-time
-  - Sunlight streaming through windows but flickering—golden morning light in one pane, orange sunset in another, harsh noon in a third
-  - A fern covered in frost while inches away a cactus droops in summer heat
-  - Shadows moving wrong, not matching the light sources
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a plant stand among the pots—frozen crimson figurine watching the chaos unfold, gold details catching the flickering light
-  - Cold blue tones from winter-light mixing with harsh yellows from summer-light
-  - James's graphic t-shirt with neon colors almost glowing in the strange mixed light
-  - Santa hat, ginger hair with blonde streak, freckles, forceful expression becoming determined
-  - James's hands already reaching toward the nearest plant, instinct to organize kicking in
+  - James stepping down the single step from the glass doors into the sunroom
+  - The step clearly visible—the boundary between the hallway above and the sunroom below
+  - Plants moving to block James's path—vines stretching across, ferns leaning in
+  - A large monstera unfurling its leaves like a barrier
+  - Numbers and equations floating in the air among the plants—glowing, strange math problems
+  - "7 + ? = 3" and "12 - ? = 15" visible among the leaves
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a plant stand—frozen crimson figurine watching through the leaves
+  - Greenish light filtering through the plants, cold blue creeping at edges
+  - James's expression shifting from surprise to interest—a puzzle!
+  - White graphic t-shirt with neon cyan, magenta, yellow design
+  - Santa hat, ginger hair with blonde streak, freckles visible
+  - James's math-loving brain already working on the impossible sums
 
 text: |
-  The sun room was supposed to be Graminy's peaceful place—ferns and succulents and that one orchid she was so proud of. But now it was chaos. Through one window, James saw dawn. Through another, blazing noon. A third showed deep winter dusk. The fern was covered in frost. The cactus was wilting in heat. Flowers bloomed and died in seconds, petals scattering like snow. Time itself was scrambled here. James stepped inside. "Okay," they said to no one. "This needs organizing."
+  James stepped down into the sunroom. Instantly, the plants moved. Vines stretched across the path. Ferns leaned in. The big monstera spread its leaves like a wall. "You cannot pass," the plants whispered together, "until you solve the impossible sums." Numbers appeared in the air, glowing among the leaves. 7 + ? = 3. 12 - ? = 15. James grinned. Math. Now this was something they could do.
 
 objects: []

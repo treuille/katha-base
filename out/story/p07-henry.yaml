@@ -1,31 +1,31 @@
 id: p07
 section: First Attempt
 page_type: individual
-haunting_level: high
+haunting_level: low
 characters:
   - henry
   - dorje_legpa
 location: library
 
-story_beat: The 747 crashes. The characters keep wandering. Henry stares at his double
-  failure—crashed plane on screen, scrambled stories all around. He did everything
-  by the book. But checklists can't fix lying instruments, and shelving can't fix
-  characters who don't know their own stories. He needs someone who understands how
-  stories are supposed to end. He needs Emer.
+story_beat: As Henry plays faster and faster, something magical happens. The piano
+  keys begin sliding back into their proper positions. The room de-haunts around him.
+  But Henry barely notices—his fingers are flying, he's lost in the pure bliss of
+  music, grinning with joy.
 
 visual:
-  - Henry sitting back from the laptop, defeated, surrounded by his double failure
-  - The laptop showing the frozen crash—the 747 scattered across a Brooklyn street
-  - Around him, books still open with characters wandering aimlessly between pages
-  - The knight sitting down on a cookbook page, looking lost; the princess wandering in circles
-  - His expression: not just sad but deeply confused—his worldview has been shaken
-  - He tried to organize everything and nothing stayed organized
-  - The library still cold and blue, harsh light, but Henry turning toward the door
-  - His posture shifting from defeat to determination—he knows he needs a different kind of help
-  - Santa hat askew, grey tracksuit rumpled from the struggle
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette behind a crystal vase on the mantel - frozen crimson figurine silently watching Henry leave
+  - Henry playing the piano with pure joy, fingers flying across the keys
+  - The keyboard visibly CORRECTING itself—black and white keys sliding smoothly back into proper positions
+  - Musical notes swirling around him in warm golden light
+  - The cold blue retreating from the room, replaced by warm golden tones
+  - Shadows dissolving, the geometry of the room straightening
+  - Henry's face lit up with excitement and bliss, completely lost in the music
+  - His goofy grin at full force—he's having the time of his life
+  - The library transforming around him, books settling peacefully on shelves
+  - Warm light flooding through the windows
+  - Santa hat bouncing slightly as he plays with enthusiasm
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the mantel - frozen crimson figurine seeming smaller, less menacing, as the room returns to normal
 
 text: |
-  The plane crashed. The characters kept wandering. Henry sat surrounded by his failures—the 747 scattered across Brooklyn on screen, the knight sitting lost on a cookbook page, the princess circling endlessly through a mystery. He'd done everything right. Every checklist, every procedure, every attempt to put things back where they belonged. But you can't fly when instruments lie, and you can't shelve characters who don't know their own stories. He needed someone who understood stories. Someone who knew how they were supposed to end. He stood up and headed for the door. He needed to find Emer.
+  The melody built faster and faster. Henry's fingers flew across the keys, finding harmonies he'd never imagined. And something strange was happening—the keys were moving. Sliding. Rearranging themselves under his hands, slipping back into their proper places. But Henry barely noticed. He was lost in the music, lost in the pure joy of creation. The cold blue light melted away. Warmth flooded the library. The room was de-haunting around him, but all Henry felt was the music pouring through his fingertips.
 
 objects: []
