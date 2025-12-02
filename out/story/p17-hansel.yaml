@@ -5,22 +5,22 @@ haunting_level: medium
 characters:
   - hansel
   - dorje_legpa
-location: hallway
+location: sun_room
 
-story_beat: Despite the sun room's peace, Hansel feels a deeper pulse through the
-  house. Something bigger. He crawls urgently toward the living room, pointing ahead
-  with his bottle. His cousins need him. The source is still out there.
+story_beat: The plants respond to Hansel's laughter. They relax, settle back to normal
+  size, and let the sunlight stream back in. The jungle becomes a peaceful sun room
+  again, warm and bright. But Hansel senses something deeper still wrong in the house.
 
 visual:
-  - Hansel crawling urgently out of the restored sun room into the hallway
-  - His bottle pointing forward, toward the living room
-  - The sun room behind him glowing with warm, peaceful light—his victory
-  - But the hallway ahead still has hints of wrongness—medium haunting, not resolved
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a decorative shelf near doorway—frozen crimson figurine still watching even as haunting fades
-  - Hansel's expression urgent, determined—individual victories aren't enough
-  - A pulse of cold visible deeper in the house, something still wrong at the source
+  - The sun room transformed—plants settling back to normal size all around
+  - Sunlight streaming in through the windows as foliage parts
+  - Hansel sitting up now, surrounded by happy, peaceful plants
+  - Warm golden light flooding the room, the jungle tamed
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on windowsill—frozen crimson figurine diminished in the restored warmth
+  - Plants seeming content, leaves turned toward Hansel in gratitude
+  - But Hansel's expression shows he senses something else—the source is still out there
 
 text: |
-  The sun room was peaceful now. But Hansel felt something else—a pulse in the floorboards, a hum in the walls. The thing that broke the rhythms was still here, somewhere deeper. He crawled fast toward the living room, bottle pointing ahead. His cousins needed him.
+  All around him, the plants relaxed. They grew smaller, settled back where they belonged. Sunlight poured in as the leaves pulled away from the windows. The jungle became a peaceful sun room again. Hansel sat up, smiling. But he felt something else—a deeper wrongness, somewhere in the house. His cousins needed him.
 
 objects: []

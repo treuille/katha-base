@@ -7,20 +7,19 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Hansel crawls toward the sun room with new purpose. He's already warming
-  up—tap-tap-tap on the floor with his bottle. This time he knows his rhythm is
-  exactly what's needed. From ahead, he hears the chaos of flickering seasons.
+story_beat: Hansel crawls toward the sun room with new purpose. This time he knows
+  what he's doing. From ahead, he hears rustling and sees strange shadows moving
+  against the flickering light.
 
 visual:
   - Hansel crawling determinedly down the hallway toward the sun room
-  - His bottle tapping the floor in rhythm as he moves—TAP-tap-tap warming up
   - His expression focused and purposeful, not the confusion of before
-  - Strange flickering light visible from the sun room doorway ahead
+  - Strange flickering light and moving shadows visible from the sun room doorway ahead
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching approach to final challenge
   - The hallway still wrong—cold, tilted—but Hansel moves through with intention
-  - His nautical-print sleeper visible, Santa hat firmly on, bottle raised like a baton
+  - His nautical-print sleeper visible, Santa hat firmly on
 
 text: |
-  Hansel crawled toward the sun room, his bottle tapping the floor as he went. TAP-tap-tap. TAP-tap-tap. He wasn't confused anymore. James needed paths; Hansel made rhythms. From the room ahead came strange flickering light. His rhythm was ready.
+  Hansel crawled toward the sun room. He wasn't confused anymore. James needed paths; Hansel brought joy. From the room ahead came strange rustling sounds and moving shadows. Something was happening to the plants.
 
 objects: []
