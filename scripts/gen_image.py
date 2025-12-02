@@ -32,7 +32,7 @@ from pathlib import Path
 from collections import defaultdict
 from google import genai
 from google.genai import types
-from google.api_core.exceptions import ResourceExhausted
+from google.genai.errors import ClientError
 from PIL import Image
 
 # Public API
@@ -446,7 +446,9 @@ def generate_image_from_prompt(
                 ),
             )
             break  # Success, exit retry loop
-        except ResourceExhausted as e:
+        except ClientError as e:
+            if e.status_code != 429:
+                raise  # Re-raise non-rate-limit errors
             if attempt == RETRY_MAX_ATTEMPTS:
                 print(f"Rate limit exceeded after {RETRY_MAX_ATTEMPTS} attempts. Giving up.")
                 raise
