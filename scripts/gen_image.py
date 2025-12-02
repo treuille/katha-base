@@ -447,7 +447,7 @@ def generate_image_from_prompt(
             )
             break  # Success, exit retry loop
         except ClientError as e:
-            if e.status_code != 429:
+            if "RESOURCE_EXHAUSTED" not in str(e):
                 raise  # Re-raise non-rate-limit errors
             if attempt == RETRY_MAX_ATTEMPTS:
                 print(f"Rate limit exceeded after {RETRY_MAX_ATTEMPTS} attempts. Giving up.")
