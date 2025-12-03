@@ -261,16 +261,31 @@ def build_prompt(page_data, style_id):
                 char_age = None
                 char_hair = ""
 
-            # Format header with HAIR COLOR first (for identity anchoring), then age
-            # e.g., "Arthur (BROWN HAIR, age 13):" or "Dorje Legpa (ageless):"
+            # Format header with HAIR COLOR first (for identity anchoring), then age descriptor
+            # Use "child" for children, "baby" for age 1, preserve specific age for adults/ageless
+            # e.g., "Arthur (BROWN HAIR, child):" or "Dorje Legpa (ageless):"
+            hair_summary = char_hair.upper() if char_hair else ""
+
             if char_age == "ageless":
-                char_desc = f"\n{char_name} (ageless):\n"
-            elif char_hair and char_age:
-                # Extract just the color portion for the header (uppercase for emphasis)
-                hair_summary = char_hair.upper()
-                char_desc = f"\n{char_name} ({hair_summary}, age {char_age}):\n"
+                if hair_summary:
+                    char_desc = f"\n{char_name} ({hair_summary}, ageless):\n"
+                else:
+                    char_desc = f"\n{char_name} (ageless):\n"
+            elif char_age == 1:
+                if hair_summary:
+                    char_desc = f"\n{char_name} ({hair_summary}, baby):\n"
+                else:
+                    char_desc = f"\n{char_name} (baby):\n"
+            elif char_age and isinstance(char_age, int) and char_age >= 18:
+                if hair_summary:
+                    char_desc = f"\n{char_name} ({hair_summary}, age {char_age}):\n"
+                else:
+                    char_desc = f"\n{char_name} (age {char_age}):\n"
             elif char_age:
-                char_desc = f"\n{char_name} (age {char_age}):\n"
+                if hair_summary:
+                    char_desc = f"\n{char_name} ({hair_summary}, child):\n"
+                else:
+                    char_desc = f"\n{char_name} (child):\n"
             else:
                 char_desc = f"\n{char_name}:\n"
 
