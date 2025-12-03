@@ -8,22 +8,22 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Hansel and James meet in the hallway. James is exhausted, covered in
-  dirt from moving plants. Hansel points urgently back at the stairs. The hallway
-  is at peak wrongness around them—cold, tilted, shadows pooling strangely.
+story_beat: Hansel and James meet in the hallway. James looks down at baby Hansel
+  and thinks he's cute—but also senses Hansel is trying to communicate something
+  important. Hansel points intently with his bottle toward the stairs.
 
 visual:
   - James and Hansel facing each other in the warped hallway
-  - James is much taller than baby Hansel, looking down at him
-  - James looking exhausted, dirt on their hands and knees from the sun room
-  - Hansel on the floor, bottle raised and pointing back toward the stairs
-  - Both wearing Santa hats, united in confusion
+  - James is much taller than baby Hansel, looking down at him with a soft expression
+  - James thinking Hansel is cute, but also sensing something serious
+  - Hansel on the floor with a cute, intent expression—clearly trying to communicate
+  - Hansel's bottle raised, pointing intently back toward the stairs
+  - Both wearing Santa hats
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow shelf behind the pair—frozen crimson figurine watching them unseen
   - EASTER EGG: A small crossed German and French flag ornament hangs askew on the tilted wall
   - The hallway at peak wrongness—tilted angles, cold blue light, shadows pooling wrong
-  - A moment of recognition between the two—both have been through something
 
 text: |
-  James stumbled into the hallway, dirt on their hands. Hansel was there, pointing urgently back the way he'd come. "The sun room is broken," James said. "Time keeps flickering." Hansel pointed at his own chest, then at the stairs. His face said: me too.
+  James stumbled into the hallway and found Hansel waiting. The baby looked up with big serious eyes, pointing his bottle back the way he'd come. James smiled—Hansel was so cute. But something in that intent little face made James pay attention. Hansel was trying to tell them something.
 
 objects: []

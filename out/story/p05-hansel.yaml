@@ -7,20 +7,20 @@ characters:
   - dorje_legpa
 location: stairs
 
-story_beat: Hansel reaches the stairs and sees chaos—footsteps echoing in wrong
-  directions, stockings hung with scrambled names. Arthur's stocking says "Emer."
-  Hansel's own stocking has a name he doesn't recognize. The stairs loop impossibly.
+story_beat: Hansel reaches the stairs and tries to crawl down, but something is wrong.
+  With each step he takes, the stairs seem to grow steeper. What started as normal
+  stairs is becoming impossibly vertical. He can't go down.
 
 visual:
-  - Hansel at the bottom of the stairs, looking up at the impossible geometry
-  - Christmas stockings hung on the banister, each with visibly WRONG names embroidered
-  - Hansel's stocking prominently showing a stranger's name—his identity erased
-  - Footprints on the stairs going in contradictory directions
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a stair shelf—frozen crimson figurine watching the chaos
-  - The staircase seeming to twist and loop, Escher-like wrongness
-  - Hansel's bottle already raising, ready to point
+  - Hansel at the top of the stairs, looking down at the impossibly steep descent
+  - The stairs growing steeper and steeper as they go down—almost vertical
+  - Christmas stockings hung on the banister, one prominently showing "HANSEL"
+  - Hansel's expression shifting from determination to worry as he realizes he can't crawl down
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a stair shelf—frozen crimson figurine watching
+  - The staircase seeming to stretch and distort, each step taller than the last
+  - Hansel clutching his bottle, trying to figure out what to do
 
 text: |
-  The stairs were wrong. Footsteps went up and came down at the same time. The stockings had the wrong names—Arthur's said "Emer," and Hansel's said something he'd never heard before. Like he didn't belong here. Hansel gripped his bottle tighter.
+  Hansel wanted to go downstairs. But the stairs were wrong. Each step was taller than the last. By the time he looked down, they stretched almost straight down like a cliff. He couldn't crawl down that!
 
 objects: []

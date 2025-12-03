@@ -7,21 +7,21 @@ characters:
   - dorje_legpa
 location: stairs
 
-story_beat: Hansel tries his rhythm. TAP-tap-tap, TAP-tap-tap—clapping steadily,
-  pointing at each stocking. The stockings listen! Names flicker and shuffle back
-  to their rightful owners. But the stairs themselves keep looping, paths still broken.
+story_beat: Hansel tries to crawl down anyway and ends up dangling by one arm off
+  an impossibly tall stair. He's stuck! His little legs kick in the air. It would
+  be scary if it wasn't so funny.
 
 visual:
-  - Hansel sitting on the bottom step, clapping with focused determination
-  - TAP-tap-tap rhythm visible in his posture—one strong clap, two soft
-  - Stockings FLICKERING—some showing correct names now, responding to his rhythm
-  - His bottle pointing at each stocking in sequence, like a tiny conductor
-  - But the stairs behind him still twist impossibly—paths unchanged
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on the banister—frozen crimson figurine watching the partial success
+  - Hansel dangling by one arm off an impossibly tall stair step—funny and precarious
+  - His little legs kicking in the air, bottle clutched in his free hand
+  - The stair he's hanging from is comically tall—way bigger than it should be
+  - His expression a mix of determination and "uh oh"
+  - Christmas stockings visible on the banister nearby—one with "HANSEL" on it
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on the banister—frozen crimson figurine watching
   - EASTER EGG: A small crossed German and French flag ornament hangs from the banister
-  - Peak visual haunting in the staircase geometry, but stockings showing signs of healing
+  - The scene funny rather than scary—baby stuck on giant stair
 
 text: |
-  Hansel clapped. TAP-tap-tap. TAP-tap-tap. He pointed his bottle at each stocking—this one, that one, this one. The stockings listened. Names flickered. "Arthur" appeared on Arthur's stocking. "Hansel" appeared on his. But the stairs kept looping. His rhythm fixed names, not paths.
+  He tried anyway. One step, two steps—and then he was dangling! His little arm held onto the edge of an impossibly tall stair. His legs kicked in the air. His bottle waved around. This wasn't working at all.
 
 objects: []

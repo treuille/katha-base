@@ -8,22 +8,21 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: James explains the sun room—seasons flickering, plants dying and blooming
-  wrong. Hansel listens intently, his eyes widening. Then he responds the only way
-  he can—pointing at the stairs, clapping once to show he understands rhythm problems.
+story_beat: James explains the sun room problems. Hansel listens intently with that
+  cute, serious baby expression. When James mentions the house being "haunted,"
+  Hansel points intently at the stairs with his bottle—he's seen something there.
 
 visual:
-  - James gesturing animatedly, describing the chaos with hands spread wide
-  - James is much taller than baby Hansel
-  - Ghostly transparent overlay between them showing flickering plants, mixed seasons
-  - Hansel's eyes wide with understanding—he KNOWS about rhythm problems
-  - Hansel's hands positioned mid-clap, about to demonstrate
+  - James gesturing, describing the chaos
+  - James is much taller than baby Hansel, crouching down to talk
+  - Hansel's face showing that cute, intent expression—big eyes, serious focus
+  - Hansel pointing intently with his bottle toward the stairs
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a side table beside a lamp—frozen crimson figurine almost invisible in blue shadows
   - EASTER EGG: A kids bike helmet hanging on a hook in the hallway—a reminder of James's long bike rides with their mom
   - The hallway frozen around them, light harsh and wrong
-  - James looking frustrated, Hansel looking like he has something important to show
+  - A moment of communication between baby and older cousin
 
 text: |
-  "I organized everything perfectly," James said, "but the seasons keep flickering. Summer, winter, spring—all at once." Hansel's eyes went wide. He clapped once—CLAP—then pointed at the stairs. He knew about things being out of rhythm.
+  "Something's wrong with the sun room," James said. "The plants keep growing wild. It's like the whole house is... haunted." At that word, Hansel's eyes went wide. He pointed his bottle intently toward the stairs. He'd seen something there too.
 
 objects: []

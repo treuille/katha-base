@@ -7,19 +7,20 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Hansel crawls toward the sun room with new purpose. This time he knows
-  what he's doing. From ahead, he hears rustling and sees strange shadows moving
-  against the flickering light.
+story_beat: Hansel crawls through the hallway toward the sun room. He passes through
+  spaces that feel slightly off—anticipating the next challenge but not yet fully
+  haunted. The sun room waits ahead with its strange shadows.
 
 visual:
-  - Hansel crawling determinedly down the hallway toward the sun room
-  - His expression focused and purposeful, not the confusion of before
-  - Strange flickering light and moving shadows visible from the sun room doorway ahead
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching approach to final challenge
-  - The hallway still wrong—cold, tilted—but Hansel moves through with intention
-  - His nautical-print sleeper visible, Santa hat firmly on
+  - Hansel crawling through the hallway toward the sun room
+  - His expression curious and determined
+  - The hallway slightly off—hints of wrongness but not peak haunting yet
+  - Strange flickering light visible from the sun room doorway ahead
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching
+  - Hansel moving with purpose, anticipating what's ahead
+  - His nautical-print sleeper visible, Santa hat firmly on, bottle clutched
 
 text: |
-  Hansel crawled toward the sun room. He wasn't confused anymore. James needed paths; Hansel brought joy. From the room ahead came strange rustling sounds and moving shadows. Something was happening to the plants.
+  Hansel crawled on toward the sun room. The hallway felt strange—shadows moving wrong, light flickering—but he kept going. Something waited for him in the sun room. He could feel it. Time to find out what.
 
 objects: []

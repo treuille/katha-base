@@ -7,14 +7,14 @@ characters:
   - dorje_legpa
 location: living_room
 
-story_beat: Hansel plays near the tree, clapping happily. But then he notices the
-  Christmas lights blinking off-rhythm—wrong, wrong, wrong. His clapping falters.
-  The ornament seems to pulse at him specifically, disrupting his joy.
+story_beat: Hansel plays near the tree when he notices something wrong. A musical
+  ornament plays a lullaby, but the tune is off-key, wrong. His rattle makes no sound
+  when he shakes it. The world has gone strange in ways only a baby would notice.
 
 visual:
-  - Hansel mid-clap, his hands frozen apart as he stares at the Christmas tree
-  - His expression shifting from joy to confusion—something is wrong with the lights
-  - Christmas lights on tree blinking in visible disarray, some too fast, some too slow
+  - Hansel sitting near the Christmas tree, his expression shifting from content to confused
+  - A musical ornament on the tree—visibly playing but the notes seem wrong
+  - Hansel shaking his rattle, but it makes no sound—his face puzzled
   - His baby bottle nearby, ready to become his pointing tool
   - EASTER EGG: The watching ornament IS Dorje Legpa—tiny crimson deity figurine pulsing with light that doesn't match the other ornaments
   - EASTER EGG: A small crossed German and French flag ornament tucked away on the tree
@@ -22,6 +22,6 @@ visual:
   - No other characters in frame except Hansel and the Dorje Legpa ornament
 
 text: |
-  Hansel loved clapping. Clap-clap-clap, all morning long. But then he saw the tree lights. They blinked wrong. Fast-slow-fast-nothing-fast. His hands stopped mid-clap. One ornament pulsed differently from all the others—watching him, daring him to fix what it had broken.
+  A musical ornament on the tree played a lullaby, but the tune was wrong—off-key, sour. Hansel shook his rattle. Nothing. No sound at all. He shook it again. Silence. Something was very wrong with the world, and Hansel knew it.
 
 objects: []

@@ -7,20 +7,21 @@ characters:
   - dorje_legpa
 location: stairs
 
-story_beat: Hansel stops, exhausted. The stockings are fixed—names all correct now.
-  But the staircase still loops endlessly. He can't make paths, only rhythms. Someone
-  else will need to fix the directions. He crawls away, pointing back at the stairs.
+story_beat: Hansel gets an idea! He pulls himself up, crawls into a hanging Christmas
+  stocking, and uses it as a sled. He bounces happily down the stairs, giggling all
+  the way. The haunting recedes as joy fills the stairwell. Pure triumph.
 
 visual:
-  - Hansel crawling away from the stairs, looking back over his shoulder
-  - His bottle pointing purposefully back at the still-broken staircase
-  - Exactly six stockings now showing CORRECT names—Henry, Cullan, Arthur, Emer, James, Hansel—Hansel's victory visible
-  - But the stairs behind him still twist in impossible loops—his limitation clear
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette behind a crystal vase on the landing—frozen crimson figurine watching him leave
-  - Hansel's expression determined but knowing—someone else is needed here
-  - Visual haunting remains high on the stairs, but stockings glow with restored warmth
+  - Hansel inside a large Christmas stocking, sliding down the stairs like a sled
+  - His face full of pure joy and triumph—giggling, delighted
+  - The stocking bumping happily down each step, Hansel bouncing inside
+  - The stairs returning to normal size as he descends—haunting receding
+  - Warm golden light returning to the stairwell
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette behind a crystal vase on the landing—frozen crimson figurine diminished
+  - The other stockings on the banister showing names: Henry, Cullan, Arthur, Emer, James
+  - A moment of pure baby genius and joy
 
 text: |
-  The stockings were fixed. All six of them—Henry, Cullan, Arthur, Emer, James, Hansel—each name right where it belonged. But Hansel couldn't make the stairs go the right way—that wasn't his kind of magic. He crawled toward the hallway, pointing back at the stairs with his bottle. Someone else would have to make the path.
+  Then Hansel had an idea. He pulled himself up and looked at the stockings hanging on the banister. He crawled into his own stocking and—WHOOSH! Down he went, bouncing from step to step like a sled. "Wheee!" The stairs shrank back to normal as he giggled past. Stockings make great sleds!
 
 objects: []

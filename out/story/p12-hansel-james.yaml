@@ -8,21 +8,21 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: The swap. James realizes Hansel's rhythm is what the sun room needs.
-  Hansel points at James, then at the stairs—understanding that James can make paths.
-  They seal the deal with a bottle-bump fist-bump, then head opposite directions.
+story_beat: James resolves to help and check the stairs. Hansel, satisfied that James
+  understands, crawls off toward the sun room. They part ways with purpose—James
+  to the stairs, Hansel to whatever awaits in the sun room.
 
 visual:
-  - The moment of agreement—Hansel's bottle touching James's fist in a baby fist-bump
-  - James is much taller than baby Hansel, bending down for the fist-bump
-  - James pointing toward the stairs, Hansel pointing toward the sun room
-  - Both about to head in opposite directions, determination on their faces
+  - Hansel crawling away toward the sun room, looking back with a determined expression
+  - James is much taller than baby Hansel, watching him go with resolve
+  - James about to head toward the stairs
   - A spark of hope despite the cold, wrong hallway around them
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette peeking from behind a doorframe—frozen crimson figurine almost hidden but watching
   - The hallway still at peak wrongness, but something has shifted—purpose in both their postures
   - James's neon graphic shirt bright even in the blue light, Hansel's nautical print visible
+  - Hansel's bottle clutched as he crawls with determination
 
 text: |
-  "Your rhythm—that's what my room needs!" James said. Hansel pointed at James, then at the stairs. James could make paths. Hansel could make beats. They bumped fist to bottle and turned opposite directions. Time to swap.
+  "I'll check the stairs," James said. "You be careful, okay?" Hansel bounced once—he would be fine. Then he turned and crawled off toward the sun room, his bottle clutched tight. He had somewhere to be.
 
 objects: []
