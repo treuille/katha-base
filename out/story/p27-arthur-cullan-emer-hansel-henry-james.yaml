@@ -28,4 +28,4 @@ visual: |
 text: |
   Up they went.
 
-objects: [wagon]
+objects: [wagon, plane]

@@ -33,4 +33,5 @@ visual:
 text: |
   The library's old wooden upright piano had gone completely mad. Henry stared at the keyboard—keys were flying off at crooked angles, some tilted sideways, others sticking straight up like broken teeth. Black and white keys had redistributed themselves in impossible clusters—five black keys bunched together here, a long lonely stretch of white keys there. Some keys hovered above the keyboard, trembling. He sat down and tried a scale. The sound that came out was awful. The piano had forgotten how to be a piano.
 
-objects: []
+objects:
+  - piano
