@@ -12,16 +12,16 @@ story_beat: Arthur races against the spreading cold, snatching candles and placi
   out. His feet pound the floorboards as he rushes from spot to spot, each candle
   placed exactly where it belongs. The warmth fights back.
 
-visual: |
-  - Arthur RUNNING around the dining room, actively moving candles with energy and purpose
-  - His body in dynamic motion—reaching, placing, spinning to the next spot
+visual:
+  - Arthur RUNNING around the dining room, actively moving candles with urgent intensity
+  - His body in dynamic motion—reaching, placing, spinning to the next spot with desperate speed
   - OVERLAY: A complex DA VINCI-LIKE MATHEMATICAL PATTERN visible over the scene—intersecting lines, angles, golden ratio spirals, geometric guides showing where each candle belongs
   - The pattern emanates from Arthur's perspective, as if we see the world through his brilliant mathematical mind
   - Candles being placed at precise intersection points of the geometric overlay
-  - His expression: JOY—he's having FUN, grinning as he solves the room
+  - His expression: intense, worried but resolved—he sees the solution and must execute it before time runs out
   - Warm golden light blooming as each candle finds its mathematically perfect position
-  - Cold blue retreating from the edges as harmony is restored
-  - Energy and brilliance radiating from him—very active, very smart, loving every second
+  - Cold blue still threatening from the edges, not fully retreated
+  - Energy and brilliance radiating from him—very active, very smart, racing against danger
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside the china cabinet - frozen crimson figurine partially obscured as order returns to the room
 
 text: |
