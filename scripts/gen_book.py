@@ -182,11 +182,15 @@ def _check_version_needed(current_hashes: dict[str, str], style_id: str, message
     # Compare current hashes against stored hashes
     stored_hashes = {k: v.get('prompt_hash') for k, v in manifest.get('images', {}).items()}
 
-    # Check if any page's prompt has changed
+    # Check if any page's prompt has changed or is missing from manifest
     prompts_changed = False
     for page_stem, current_hash in current_hashes.items():
         stored_hash = stored_hashes.get(page_stem)
-        if stored_hash and stored_hash != current_hash:
+        if stored_hash is None:
+            # Page not in manifest - this is a new page or manifest was incomplete
+            prompts_changed = True
+            print(f"New page (not in manifest): {page_stem} [{current_hash}]")
+        elif stored_hash != current_hash:
             prompts_changed = True
             print(f"Prompt changed for {page_stem}: {stored_hash} -> {current_hash}")
 
@@ -429,12 +433,27 @@ def main():
     """Main entry point."""
     default_style = gen_image.get_default_style()
 
+    epilog = f"""
+Characters:
+  {', '.join(CHILDREN)}
+  all                 Generate books for all characters
+
+Examples:
+  %(prog)s cullan                          Generate Cullan's book
+  %(prog)s all                             Generate all character books
+  %(prog)s cullan --style red_tree         Use a different style
+  %(prog)s all --seed 42 -m "Test seed"    Reproducible generation
+
+Default style: {default_style}
+"""
+
     parser = argparse.ArgumentParser(
         description="Generate a picture book for a specific character.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=f"Default style: {default_style}"
+        epilog=epilog
     )
-    parser.add_argument("character_id", help="The character to generate a book for (e.g., cullan, arthur), or 'all' for all characters")
+    parser.add_argument("character_id", metavar="CHARACTER",
+                        help="character name or 'all' (see below)")
     parser.add_argument("--style", default=default_style, help=f"The visual style to use (default: {default_style})")
     parser.add_argument("--message", "-m", help="Commit message for a new version (required if prompts changed)")
     parser.add_argument("--seed", type=int, help="Seed for reproducible generation")
