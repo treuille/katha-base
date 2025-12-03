@@ -7,10 +7,14 @@ and reading/writing manifests.
 
 import hashlib
 import subprocess
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
+
+# Module-level lock for thread-safe manifest updates
+_manifest_lock = threading.Lock()
 
 __all__ = [
     'OUT_DIR',
@@ -190,26 +194,28 @@ def create_new_version(message: str, style: str) -> int:
 
 
 def update_manifest_image(version: int, page_stem: str, filename: str, prompt_hash: str) -> None:
-    """Add or update an image entry in the manifest."""
-    manifest = read_manifest(version)
-    if manifest is None:
-        raise ValueError(f"No manifest found for version {version}")
+    """Add or update an image entry in the manifest (thread-safe)."""
+    with _manifest_lock:
+        manifest = read_manifest(version)
+        if manifest is None:
+            raise ValueError(f"No manifest found for version {version}")
 
-    manifest['images'][page_stem] = {
-        'file': filename,
-        'prompt_hash': prompt_hash,
-    }
+        manifest['images'][page_stem] = {
+            'file': filename,
+            'prompt_hash': prompt_hash,
+        }
 
-    write_manifest(version, manifest)
+        write_manifest(version, manifest)
 
 
 def update_manifest_book(version: int, book_filename: str) -> None:
-    """Add a book to the manifest if not already present."""
-    manifest = read_manifest(version)
-    if manifest is None:
-        raise ValueError(f"No manifest found for version {version}")
+    """Add a book to the manifest if not already present (thread-safe)."""
+    with _manifest_lock:
+        manifest = read_manifest(version)
+        if manifest is None:
+            raise ValueError(f"No manifest found for version {version}")
 
-    if book_filename not in manifest['books']:
-        manifest['books'].append(book_filename)
+        if book_filename not in manifest['books']:
+            manifest['books'].append(book_filename)
 
-    write_manifest(version, manifest)
+        write_manifest(version, manifest)

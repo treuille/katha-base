@@ -250,13 +250,15 @@ def _save_prompts(prompts: dict[str, tuple[str, list[str], list[str], str]]) -> 
             print(f"Saved prompt: {prompt_path}")
 
 
-async def _generate_images_parallel(prompts: dict[str, tuple], seed: int | None = None, workers: int = DEFAULT_WORKERS) -> dict[str, Path]:
+async def _generate_images_parallel(prompts: dict[str, tuple], version: int, seed: int | None = None, workers: int = DEFAULT_WORKERS) -> dict[str, Path]:
     """Generate images for all pages in parallel.
 
     Uses asyncio.Semaphore to limit concurrent API calls.
+    Updates the manifest immediately after each image completes (thread-safe).
 
     Args:
         prompts: Pre-built prompts from _build_all_prompts()
+        version: The version number to update manifest for
         seed: Optional seed for reproducible generation
         workers: Number of concurrent workers
 
@@ -277,6 +279,8 @@ async def _generate_images_parallel(prompts: dict[str, tuple], seed: int | None 
                 prompt_hash=prompt_hash,
                 seed=seed
             )
+            # Update manifest immediately (thread-safe)
+            versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
             return page_stem, image_path
 
     # Create tasks for all pages
@@ -388,15 +392,10 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
     _save_prompts(prompts)
     print()
 
-    # Generate images in parallel
-    generated_images = asyncio.run(_generate_images_parallel(prompts, seed, workers))
+    # Generate images in parallel (manifest updated as each completes)
+    generated_images = asyncio.run(_generate_images_parallel(prompts, version, seed, workers))
 
-    # Update manifest with all generated images (after parallel completion)
-    print("\nUpdating manifest...")
-    for page_stem, image_path in generated_images.items():
-        prompt_hash = prompts[page_stem][3]  # 4th element is prompt_hash
-        versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
-
+    print()
     print("=" * 60)
     print("Creating PDFs...")
     print("Framing images for print...")
