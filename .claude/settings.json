@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fd:*)",
+      "Bash(fdfind:*)",
+      "Bash(fzf:*)",
+      "Bash(ls:*)",
+      "Bash(/bin/ls:*)",
+      "Bash(cat:*)",
+      "Bash(uv run:*)"
+    ]
+  }
+}
