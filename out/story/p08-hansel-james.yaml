@@ -1,7 +1,7 @@
 id: p08
 section: Crossover / Pair
 page_type: pair
-haunting_level: high
+haunting_level: low
 characters:
   - hansel
   - james
@@ -13,15 +13,17 @@ story_beat: Hansel and James meet in the hallway. James looks down at baby Hanse
   important. Hansel points intently with his bottle toward the stairs.
 
 visual:
-  - James and Hansel facing each other in the warped hallway
+  - James and Hansel just ran into each other in the hallway
+  - James looks triumphant from solving his first puzzle, but also tired and a little worried
   - James is much taller than baby Hansel, looking down at him with a soft expression
   - James thinking Hansel is cute, but also sensing something serious
   - Hansel on the floor with a cute, intent expression—clearly trying to communicate
   - Hansel's bottle raised, pointing intently back toward the stairs
   - Both wearing Santa hats
+  - Hallway is somewhat restored from the first challenge, but still lightly haunted
+  - Little signs of frost on surfaces, slight blue tinge to the light, a few crooked picture frames
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow shelf behind the pair—frozen crimson figurine watching them unseen
-  - EASTER EGG: A small crossed German and French flag ornament hangs askew on the tilted wall
-  - The hallway at peak wrongness—tilted angles, cold blue light, shadows pooling wrong
+  - EASTER EGG: A small crossed German and French flag ornament hangs slightly askew on the wall
 
 text: |
   James stumbled into the hallway and found Hansel waiting. The baby looked up with big serious eyes, pointing his bottle back the way he'd come. James smiled—Hansel was so cute. But something in that intent little face made James pay attention. Hansel was trying to tell them something.

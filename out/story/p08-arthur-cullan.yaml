@@ -1,7 +1,7 @@
 id: p08
 section: Crossover / Pair
 page_type: pair
-haunting_level: high
+haunting_level: low
 characters:
   - arthur
   - cullan
@@ -12,15 +12,15 @@ story_beat: Cullan bumps into Arthur in the hall. The hallway is at peak wrongne
   cold, tilted, shadows pooling strangely. Cullan describes the fire danger he just
   faced in the dining room.
 
-visual: |
-  - Cullan and Arthur meeting in the hallway, both looking shaken
-  - Hallway at PEAK HAUNTING - cold blue light, harsh shadows, geometry warped
-  - Doorframes visibly tilted, proportions wrong, uncanny
-  - Cullan gesturing urgently, describing what he saw
+visual:
+  - Cullan and Arthur just ran into each other in the hallway
+  - Both look triumphant from solving their first puzzles, but also tired and a little worried
+  - Cullan gesturing urgently, describing what he saw, still catching his breath
   - Arthur listening intently, face showing concern
   - Arthur and Cullan are the same height, standing eye-to-eye
-  - Cullan's santa hat askew, still catching his breath
-  - The wrongness of the hallway surrounding them both
+  - Cullan's santa hat askew
+  - Hallway is somewhat restored from the first challenge, but still lightly haunted
+  - Little signs of frost on surfaces, slight blue tinge to the light, a few crooked picture frames and tilted doorframes
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette perched on a narrow shelf behind the boys - frozen crimson figurine with gold crown and tiny sword, watching them unseen
   - EASTER EGG: Arthur's platonic solid Rubik's cube visible in his hand—a comfort object he carries everywhere
 
