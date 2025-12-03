@@ -57,12 +57,22 @@ def get_version_path(version: int) -> Path:
     return VERSIONS_DIR / f'{version:02d}'
 
 
-def compute_prompt_hash(prompt: str) -> str:
-    """Compute a 5-character hash from prompt text.
+def compute_prompt_hash(prompt: str, seed: int | None = None) -> str:
+    """Compute a 5-character hash from prompt text and optional seed.
 
     Uses SHA-256 and takes first 5 hex characters.
+    If seed is provided, it's included in the hash to ensure different
+    seeds produce different hashes (and thus different cached images).
+
+    Args:
+        prompt: The prompt text
+        seed: Optional seed for reproducible generation
+
+    Returns:
+        5-character hex hash
     """
-    return hashlib.sha256(prompt.encode()).hexdigest()[:5]
+    content = prompt if seed is None else f"{prompt}|seed={seed}"
+    return hashlib.sha256(content.encode()).hexdigest()[:5]
 
 
 def get_prompt_path(page_stem: str, prompt_hash: str) -> Path:
