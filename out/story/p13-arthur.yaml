@@ -13,7 +13,7 @@ story_beat: Arthur walks toward the dining room with new understanding. From ahe
   sees problems differently.
 
 visual: |
-  - Arthur striding down the hallway toward the dining room
+  - Arthur striding down the hallway toward the dining room - IMPORTANT: Arthur must be walking TOWARD the dining room (into the frame), not away from it
   - His posture determined, analytical, knowing what awaits
   - Flickering orange light spilling from the dining room doorway ahead
   - The hallway still at peak wrongness—cold, tilted, shadows pooling
