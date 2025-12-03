@@ -261,29 +261,29 @@ def build_prompt(page_data, style_id):
                 char_age = None
                 char_hair = ""
 
-            # Format header with HAIR COLOR first (for identity anchoring), then age descriptor
+            # Format header with age descriptor and HAIR COLOR
             # Use "child" for children, "baby" for age 1, preserve specific age for adults/ageless
-            # e.g., "Arthur (BROWN HAIR, child):" or "Dorje Legpa (ageless):"
+            # e.g., "Arthur (child with BROWN HAIR):" or "Dorje Legpa (ageless):"
             hair_summary = char_hair.upper() if char_hair else ""
 
             if char_age == "ageless":
                 if hair_summary:
-                    char_desc = f"\n{char_name} ({hair_summary}, ageless):\n"
+                    char_desc = f"\n{char_name} (ageless with {hair_summary}):\n"
                 else:
                     char_desc = f"\n{char_name} (ageless):\n"
             elif char_age == 1:
                 if hair_summary:
-                    char_desc = f"\n{char_name} ({hair_summary}, baby):\n"
+                    char_desc = f"\n{char_name} (baby with {hair_summary}):\n"
                 else:
                     char_desc = f"\n{char_name} (baby):\n"
             elif char_age and isinstance(char_age, int) and char_age >= 18:
                 if hair_summary:
-                    char_desc = f"\n{char_name} ({hair_summary}, age {char_age}):\n"
+                    char_desc = f"\n{char_name} (age {char_age} with {hair_summary}):\n"
                 else:
                     char_desc = f"\n{char_name} (age {char_age}):\n"
             elif char_age:
                 if hair_summary:
-                    char_desc = f"\n{char_name} ({hair_summary}, child):\n"
+                    char_desc = f"\n{char_name} (child with {hair_summary}):\n"
                 else:
                     char_desc = f"\n{char_name} (child):\n"
             else:
