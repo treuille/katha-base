@@ -7,7 +7,7 @@
 
 ### Python Execution
 
-- **Always use `uv run`**: All Python commands must be executed with `uv run python` or `uv run python3`
+- **Always use `uv run`**: All Python commands must be executed with `uv run python` or `uv run scripts/...`. NEVER use bare `python` or `python3` commands.
 - **Package management**: Use `uv add` to add new dependencies to the project
 
 ### File Organization
