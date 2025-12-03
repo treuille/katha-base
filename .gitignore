@@ -17,7 +17,7 @@ out/images
 out/versions
 
 # Backup files
-bak/
+bak
 
 # uv/Python virtual environment
 .venv/

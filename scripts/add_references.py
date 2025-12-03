@@ -27,6 +27,7 @@ SYMLINKS = [
     ("ref/styles", "../../katha-base/ref/styles"),
     ("out/versions", "../../katha-base/out/versions"),
     ("out/images", "../../katha-base/out/images"),
+    ("bak", "../katha-base/bak"),
 ]
 
 
