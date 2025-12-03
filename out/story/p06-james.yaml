@@ -7,17 +7,18 @@ characters:
   - dorje_legpa
 location: sun_room
 
-story_beat: James works through the impossible sums. Negative four! Negative three!
-  The answers are negative numbers—something most kids wouldn't think of. But James
-  loves math, and their brain sees the pattern immediately. Each answer makes a vine
-  pull back, a fern straighten, the path clearing bit by bit.
+story_beat: James works through the impossible sums. Negative cosine x! e to the x!
+  The square root of seventeen times pi! The answers are college-level calculus—something
+  no kid should know. But James loves math, and their brain sees the patterns immediately.
+  Each answer makes a vine pull back, a fern straighten, the path clearing bit by bit.
 
 visual:
   - James standing among the plants, pointing confidently at the floating equations
-  - Numbers changing as James solves them—"7 + (-4) = 3" appearing as James speaks
+  - Equations changing as James solves them—"∫sin(x)dx = -cos(x) + C" appearing as James speaks
+  - Complex calculus symbols glowing in the air—derivatives, integrals, Greek letters
   - Some vines already pulled back, the path beginning to clear
   - James's expression focused and confident—in their element
-  - More equations floating nearby, waiting to be solved
+  - More equations floating nearby, waiting to be solved—"∂/∂x" and "∑" and "lim x→∞" symbols visible
   - The plants seeming impressed, leaves rustling with surprise
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a windowsill—frozen crimson figurine watching James succeed
   - EASTER EGG: A comic book left on a sunroom chair—one of James's favorite genres, suggesting they read here often
@@ -27,6 +28,6 @@ visual:
   - The sense of puzzle-solving joy on James's face
 
 text: |
-  "Negative four," James said, pointing at the first equation. "Seven plus negative four equals three." The vine in front of them shuddered and pulled back. "Negative three," James continued, moving to the next. "Twelve minus fifteen is negative three—so the missing number is negative three." The fern straightened up and stepped aside. The plants rustled with what might have been surprise. James laughed. "You picked the wrong kid for math puzzles."
+  "Negative cosine x plus C," James said, pointing at the first equation. "The integral of sine is negative cosine." The vine in front of them shuddered and pulled back. "e to the x," James continued, moving to the next. "The derivative of e to the x is just e to the x again." The fern straightened up and stepped aside. "And that one," James said, pointing at the last equation, "is about twelve point nine five—the square root of seventeen times pi divided by pi is just the square root of seventeen, which is roughly four point one two three." The plants rustled with what might have been shock. James laughed. "You picked the wrong kid for math puzzles."
 
 objects: []

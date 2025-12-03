@@ -7,20 +7,22 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Hansel crawls through the hallway toward the sun room. He passes through
-  spaces that feel slightly off—anticipating the next challenge but not yet fully
-  haunted. The sun room waits ahead with its strange shadows.
+story_beat: Hansel crawls with URGENCY through the hallway toward the sun room. Something has awakened
+  in him from his first room victory—his rhythm-sense is sharper, stronger, almost magical.
+  The sun room waits ahead, but this time Hansel knows his power.
 
 visual:
-  - Hansel crawling through the hallway toward the sun room
-  - His expression curious and determined
-  - The hallway slightly off—hints of wrongness but not peak haunting yet
+  - Hansel crawling FAST through the hallway toward the sun room with URGENCY—arms and legs pumping with purpose
+  - His face shows RESOLVE—not just curious but DETERMINED, eyes bright with newfound understanding
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—his rhythm-sense awakened and pulsing
+  - The hallway at peak wrongness—shadows moving, light flickering—but Hansel pushes through UNDETERRED
   - Strange flickering light visible from the sun room doorway ahead
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching
-  - Hansel moving with purpose, anticipating what's ahead
-  - His nautical-print sleeper visible, Santa hat firmly on, bottle clutched
+  - Hansel's body in dynamic motion—crawling with speed and purpose like a baby on a mission
+  - His nautical-print sleeper visible, Santa hat firmly on, bottle clutched like a talisman of power
+  - His whole posture radiating determination—this baby knows exactly what he can do
 
 text: |
-  Hansel crawled on toward the sun room. The hallway felt strange—shadows moving wrong, light flickering—but he kept going. Something waited for him in the sun room. He could feel it. Time to find out what.
+  Hansel crawled fast—faster than he'd ever crawled before. Something had changed in him after the stairs. He could feel it now, like a beat in his chest that matched the beat of the whole house. The hallway was wrong—shadows dancing, light flickering—but Hansel wasn't scared. He knew his power now. The rhythm inside him was ready. He clutched his bottle tight and pushed forward. The sun room was waiting, and so was he.
 
 objects: []

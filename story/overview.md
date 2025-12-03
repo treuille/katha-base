@@ -171,14 +171,14 @@ At the highest altitude, each book goes through these phases:
    - All kids gather, the ornament is identified (Regan identifies it as Dorje Legpa, a Gyalpo trickster deity), and the spirit erupts.
    - Each child uses what they learned in their room in a joint, big-scene sequence.
    - The boys realize the spirit is furious because it's cramped inside the house—too big for a bedroom, it needs sky.
-   - They contain the spirit (still blazing red and hilarious, complaining and wiggling) and tie it onto the bright red sled. Very funny.
+   - They contain the spirit (still blazing red and hilarious, complaining and wiggling) and tie it onto the bright red wagon. Very funny.
 
 7. **The Sky Procession & Spirit Transformation**
    - **Henry** jumps into the toy airplane, which becomes the "vehicle of sky."
-   - **James** acts as air traffic controller on the ground: "Spirit Sled Three-Seven-Red, cleared for takeoff!"
-   - **Cullan and Arthur** ride in the sled being dragged by the airplane, holding the deity in a box.
+   - **James** acts as air traffic controller on the ground: "Spirit Wagon Three-Seven-Red, cleared for takeoff!"
+   - **Cullan and Arthur** ride in the wagon being dragged by the airplane, holding the deity in a box.
    - **Emer** trails behind on a tricycle with **Hansel** on the handlebars, pointing exultantly at the sky with his bottle.
-   - The plane lifts the sled into the air—not too high, just enough for comedic effect—dragging the spirit across the lawn, up over a little bump, maybe through some clouds.
+   - The plane lifts the wagon into the air—not too high, just enough for comedic effect—dragging the spirit across the lawn, up over a little bump, maybe through some clouds.
    - The moment the spirit is pulled into **open space**, it transforms:
      - His flames soften into wind
      - His weapons turn into sparkles

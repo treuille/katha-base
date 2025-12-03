@@ -8,14 +8,15 @@ characters:
 location: library
 
 story_beat: Instead of trying to fix the piano, Henry decides to work with it. He
-  starts experimenting, finding notes that sound good together despite being in wrong
-  places. He begins to invent a strange new melody—beautiful in its own way.
+  starts experimenting, pressing crooked keys and hovering keys, finding notes that sound good
+  together despite the chaos. He begins to invent a strange new melody—beautiful in its own way.
 
 visual:
-  - Henry seated at the scrambled piano, leaning forward with interest instead of frustration
-  - His fingers exploring the chaos of keys, finding unexpected harmonies
+  - The piano is a traditional UPRIGHT WOODEN PIANO—vertical body with warm wooden casing, standing against the library wall (NOT a grand piano, NOT electronic)
+  - Henry seated at this old wooden upright, leaning forward with interest instead of frustration
+  - His fingers exploring the chaos—pressing tilted keys, tapping hovering keys, working around gaps
   - A look of dawning discovery on his face—this is working
-  - The scrambled keyboard still wrong, but Henry adapting to it
+  - The keyboard still impossibly wrong—keys at crooked angles, black and white unevenly distributed—but Henry adapting to it
   - Notes seeming to float in the air around him—some discordant, but some surprisingly beautiful
   - The cold blue still dominant, but small hints of warmth beginning at the edges
   - His posture shifting from tense to creative, experimental
@@ -24,6 +25,6 @@ visual:
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette among books on a high shelf - frozen crimson figurine watching intently
 
 text: |
-  Henry's fingers hovered over the scrambled keys. Trying to play normal music was useless—the notes were all in wrong places. But what if he didn't try to play normal music? He pressed a random key. Then another. And another. Some combinations sounded terrible. But some... some sounded interesting. Strange. New. He leaned forward and started experimenting. Maybe this broken piano could teach him a melody no one had ever heard before.
+  Henry's fingers hovered over the chaos. Keys stuck out at crooked angles. Some trembled in mid-air. Trying to play normal music on this mad wooden upright was useless. But what if he didn't try to play normal music? He pressed a tilted key. Then a hovering one. Then another. Some combinations sounded terrible. But some... some sounded interesting. Strange. New. He leaned forward and started experimenting. Maybe this broken piano could teach him a melody no one had ever heard before.
 
 objects: []
