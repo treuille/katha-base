@@ -26,6 +26,7 @@ Requirements:
 
 import sys
 import time
+import asyncio
 import argparse
 import yaml
 from pathlib import Path
@@ -36,7 +37,7 @@ from google.genai.errors import ClientError
 from PIL import Image
 
 # Public API
-__all__ = ["build_prompt", "generate_image", "generate_image_from_prompt", "show_prompt", "frame_image", "frame_image_for_pdf", "get_default_style"]
+__all__ = ["build_prompt", "generate_image", "generate_image_from_prompt", "generate_image_from_prompt_async", "show_prompt", "frame_image", "frame_image_for_pdf", "get_default_style"]
 
 # Target dimensions for final output
 # The actual generation uses 3:2 aspect ratio which closely matches this ~1.5 ratio
@@ -171,14 +172,20 @@ def _collect_reference_images(page_data, style_id):
         char_images = sorted(Path("ref/characters").glob(f"{char_id}-*.jpg"))[:MAX_CHARACTER_IMAGES]
         for img_path in char_images:
             images.append(str(img_path))
-            # Extract the display name from the character YAML
+            # Extract the display name and hair from the character YAML
             char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
                 char_data = _load_yaml_file(char_file)
                 char_name = char_data.get("name", char_id.title())
+                char_hair = char_data.get("hair", "")
             else:
                 char_name = char_id.title()
-            image_labels.append(f"A reference picture of {char_name}")
+                char_hair = ""
+            # Include hair description in label to reinforce character identity
+            if char_hair:
+                image_labels.append(f"Reference picture of {char_name} who has {char_hair.upper()}")
+            else:
+                image_labels.append(f"A reference picture of {char_name}")
 
     # Collect location images
     location = page_data.get("location")
@@ -243,23 +250,49 @@ def build_prompt(page_data, style_id):
     for char_id in characters:
         char_visual = _load_character_visual(char_id)
         if char_visual:
-            # Get character name and age
+            # Get character name, age, and hair
             char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
                 char_data = _load_yaml_file(char_file)
                 char_name = char_data.get("name", char_id.title())
                 char_age = char_data.get("age")
+                char_hair = char_data.get("hair", "")
             else:
                 char_name = char_id.title()
                 char_age = None
+                char_hair = ""
 
-            # Format header with age (e.g., "Emer (age 5):" or "Dorje Legpa (ageless):")
+            # Format header with age descriptor and HAIR COLOR
+            # Use "child" for children, "baby" for age 1, preserve specific age for adults/ageless
+            # e.g., "Arthur (child with BROWN HAIR):" or "Dorje Legpa (ageless):"
+            hair_summary = char_hair.upper() if char_hair else ""
+
             if char_age == "ageless":
-                char_desc = f"\n{char_name} (ageless):\n"
+                if hair_summary:
+                    char_desc = f"\n{char_name} (ageless with {hair_summary}):\n"
+                else:
+                    char_desc = f"\n{char_name} (ageless):\n"
+            elif char_age == 1:
+                if hair_summary:
+                    char_desc = f"\n{char_name} (baby with {hair_summary}):\n"
+                else:
+                    char_desc = f"\n{char_name} (baby):\n"
+            elif char_age and isinstance(char_age, int) and char_age >= 18:
+                if hair_summary:
+                    char_desc = f"\n{char_name} (age {char_age} with {hair_summary}):\n"
+                else:
+                    char_desc = f"\n{char_name} (age {char_age}):\n"
             elif char_age:
-                char_desc = f"\n{char_name} (age {char_age}):\n"
+                if hair_summary:
+                    char_desc = f"\n{char_name} (child with {hair_summary}):\n"
+                else:
+                    char_desc = f"\n{char_name} (child):\n"
             else:
                 char_desc = f"\n{char_name}:\n"
+
+            # Put hair description FIRST in the visual list (identity anchoring)
+            if char_hair:
+                char_desc += f"  - IMPORTANT: {char_name} has {char_hair}\n"
             for item in char_visual:
                 char_desc += f"  - {item}\n"
             char_descriptions.append(char_desc)
@@ -504,6 +537,123 @@ def generate_image_from_prompt(
     return output_file
 
 
+async def generate_image_from_prompt_async(
+    prompt: str,
+    ref_images: list[str],
+    ref_labels: list[str],
+    page_stem: str,
+    prompt_hash: str,
+    seed: int | None = None
+) -> Path:
+    """Async version of generate_image_from_prompt.
+
+    Uses client.aio for non-blocking API calls, suitable for parallel generation.
+
+    Args:
+        prompt: The complete text prompt for image generation
+        ref_images: List of paths to reference images
+        ref_labels: List of labels describing each reference image
+        page_stem: The page identifier (e.g., "p09-arthur-cullan")
+        prompt_hash: The 5-char prompt hash
+        seed: Optional seed for reproducible generation
+
+    Returns:
+        Path to the generated image file (in out/images/)
+    """
+    from scripts import versioning
+
+    # Check for existing image in shared storage
+    existing = versioning.find_existing_image(page_stem, prompt_hash)
+    if existing:
+        print(f"[{page_stem}] Image already exists: {existing.name}")
+        return existing
+
+    # Ensure output directory exists
+    versioning.IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Initialize the Gemini client via Vertex AI
+    client = genai.Client(
+        vertexai=True,
+        project=VERTEX_PROJECT,
+        location=VERTEX_LOCATION,
+    )
+
+    print(f"[{page_stem}] Generating image ({len(ref_images)} refs, {len(prompt)} chars)...")
+
+    # Build multimodal contents by interleaving images with their labels
+    contents = []
+    for img_path, label in zip(ref_images, ref_labels):
+        img = Image.open(img_path)
+        contents.append(img)
+        contents.append(label)
+
+    # Add the main prompt at the end
+    contents.append(prompt)
+
+    aspect_ratio = "3:2"
+
+    # Build config with optional seed
+    config_kwargs = {
+        "response_modalities": ["IMAGE"],
+        "image_config": types.ImageConfig(aspect_ratio=aspect_ratio),
+    }
+    if seed is not None:
+        config_kwargs["seed"] = seed
+
+    # Retry loop for rate limiting errors (using async sleep)
+    response = None
+    for attempt in range(1, RETRY_MAX_ATTEMPTS + 1):
+        try:
+            # Use the async API
+            response = await client.aio.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=contents,
+                config=types.GenerateContentConfig(**config_kwargs),
+            )
+            break  # Success, exit retry loop
+        except ClientError as e:
+            if "RESOURCE_EXHAUSTED" not in str(e):
+                raise  # Re-raise non-rate-limit errors
+            if attempt == RETRY_MAX_ATTEMPTS:
+                print(f"[{page_stem}] Rate limit exceeded after {RETRY_MAX_ATTEMPTS} attempts.")
+                raise
+            wait_time = RETRY_BASE_WAIT_SECONDS * (RETRY_BACKOFF_MULTIPLIER ** (attempt - 1))
+            print(f"[{page_stem}] Rate limit hit (attempt {attempt}/{RETRY_MAX_ATTEMPTS}). Waiting {wait_time}s...")
+            await asyncio.sleep(wait_time)
+
+    # Handle response errors
+    if response.parts is None:
+        print(f"[{page_stem}] WARNING: response.parts is None")
+        if hasattr(response, 'prompt_feedback'):
+            print(f"[{page_stem}] Prompt feedback: {response.prompt_feedback}")
+        raise RuntimeError(f"[{page_stem}] API returned no parts - likely content filtering or rate limiting")
+
+    # Extract images from response parts
+    generated_images = []
+    for part in response.parts:
+        if part.inline_data:
+            generated_images.append(part)
+
+    if not generated_images:
+        raise RuntimeError(f"[{page_stem}] No images were generated in the response")
+
+    # Save the generated image(s) to shared out/images/ directory
+    output_file = None
+    for idx, image_part in enumerate(generated_images):
+        img_obj = image_part.as_image()
+        pil_image = img_obj._pil_image
+
+        if len(generated_images) == 1:
+            output_file = versioning.get_image_path(page_stem, prompt_hash)
+        else:
+            output_file = versioning.IMAGES_DIR / f"{page_stem}-{prompt_hash}_{idx + 1}.jpg"
+
+        pil_image.save(output_file, format="JPEG", quality=95)
+        print(f"[{page_stem}] Saved: {output_file.name}")
+
+    return output_file
+
+
 def generate_image(page_file, style_id, version: int | None = None):
     """Generate image using Gemini.
 
@@ -526,7 +676,7 @@ def generate_image(page_file, style_id, version: int | None = None):
 
     # Compute prompt hash
     page_stem = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    prompt_hash = versioning.compute_prompt_hash(prompt)
+    prompt_hash = versioning.compute_prompt_hash(prompt, ref_images=ref_images)
 
     # Load style info for logging
     style = _load_style(style_id)

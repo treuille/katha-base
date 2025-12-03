@@ -7,10 +7,14 @@ and reading/writing manifests.
 
 import hashlib
 import subprocess
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
+
+# Module-level lock for thread-safe manifest updates
+_manifest_lock = threading.Lock()
 
 __all__ = [
     'OUT_DIR',
@@ -57,12 +61,30 @@ def get_version_path(version: int) -> Path:
     return VERSIONS_DIR / f'{version:02d}'
 
 
-def compute_prompt_hash(prompt: str) -> str:
-    """Compute a 5-character hash from prompt text.
+def compute_prompt_hash(prompt: str, seed: int | None = None, ref_images: list[str] | None = None) -> str:
+    """Compute a 5-character hash from prompt text, optional seed, and reference images.
 
     Uses SHA-256 and takes first 5 hex characters.
+    If seed is provided, it's included in the hash to ensure different
+    seeds produce different hashes (and thus different cached images).
+    If ref_images is provided, the sorted list of image paths is included
+    to ensure different reference images produce different hashes.
+
+    Args:
+        prompt: The prompt text
+        seed: Optional seed for reproducible generation
+        ref_images: Optional list of reference image paths
+
+    Returns:
+        5-character hex hash
     """
-    return hashlib.sha256(prompt.encode()).hexdigest()[:5]
+    content = prompt
+    if seed is not None:
+        content = f"{content}|seed={seed}"
+    if ref_images:
+        # Sort to ensure consistent ordering
+        content = f"{content}|refs={','.join(sorted(ref_images))}"
+    return hashlib.sha256(content.encode()).hexdigest()[:5]
 
 
 def get_prompt_path(page_stem: str, prompt_hash: str) -> Path:
@@ -180,26 +202,28 @@ def create_new_version(message: str, style: str) -> int:
 
 
 def update_manifest_image(version: int, page_stem: str, filename: str, prompt_hash: str) -> None:
-    """Add or update an image entry in the manifest."""
-    manifest = read_manifest(version)
-    if manifest is None:
-        raise ValueError(f"No manifest found for version {version}")
+    """Add or update an image entry in the manifest (thread-safe)."""
+    with _manifest_lock:
+        manifest = read_manifest(version)
+        if manifest is None:
+            raise ValueError(f"No manifest found for version {version}")
 
-    manifest['images'][page_stem] = {
-        'file': filename,
-        'prompt_hash': prompt_hash,
-    }
+        manifest['images'][page_stem] = {
+            'file': filename,
+            'prompt_hash': prompt_hash,
+        }
 
-    write_manifest(version, manifest)
+        write_manifest(version, manifest)
 
 
 def update_manifest_book(version: int, book_filename: str) -> None:
-    """Add a book to the manifest if not already present."""
-    manifest = read_manifest(version)
-    if manifest is None:
-        raise ValueError(f"No manifest found for version {version}")
+    """Add a book to the manifest if not already present (thread-safe)."""
+    with _manifest_lock:
+        manifest = read_manifest(version)
+        if manifest is None:
+            raise ValueError(f"No manifest found for version {version}")
 
-    if book_filename not in manifest['books']:
-        manifest['books'].append(book_filename)
+        if book_filename not in manifest['books']:
+            manifest['books'].append(book_filename)
 
-    write_manifest(version, manifest)
+        write_manifest(version, manifest)

@@ -3,19 +3,25 @@
 Generate a picture book for a specific character in a specific visual style.
 
 Usage:
-    uv run scripts/gen_book.py <character_id> [--style STYLE] [--message MESSAGE]
+    uv run scripts/gen_book.py <character_id> [--style STYLE] [--message MESSAGE] [--seed N]
+    uv run scripts/gen_book.py all [--style STYLE] [--message MESSAGE] [--seed N]
 
 Arguments:
     character_id - The character to generate a book for (e.g., cullan, arthur)
+                   Use "all" to generate all pages and create per-character PDFs
 
 Options:
     --style STYLE     - The visual style to use (default: from story/template.yaml)
     --message MESSAGE - Commit message for a new version (required if prompts changed)
+    --seed N          - Seed for reproducible generation (included in prompt hash)
+    --workers N       - Number of concurrent image generation tasks (default: 10)
 
 Example:
     uv run scripts/gen_book.py cullan
     uv run scripts/gen_book.py cullan --message "Updated story text"
     uv run scripts/gen_book.py arthur --style red_tree
+    uv run scripts/gen_book.py all --message "Generate all books"
+    uv run scripts/gen_book.py cullan --seed 42 --message "Test with seed"
 
 This will:
 1. Build all prompts upfront (in memory)
@@ -27,10 +33,13 @@ This will:
 
 Images are stored in a shared out/images/ directory (not per-version).
 This allows reusing images across versions when prompts are unchanged.
+The --seed parameter is included in the prompt hash, so different seeds
+produce different cached images.
 """
 
 import sys
 import re
+import asyncio
 import argparse
 from pathlib import Path
 
@@ -44,6 +53,12 @@ from scripts import versioning
 __all__ = ['generate_book']
 
 STORY_DIR = Path('out/story')
+
+# The six children characters (for "all" mode PDF generation)
+CHILDREN = ['arthur', 'cullan', 'emer', 'hansel', 'henry', 'james']
+
+# Default concurrent image generation tasks
+DEFAULT_WORKERS = 10
 
 
 def _get_pages_for_character(character_id: str) -> list[Path]:
@@ -75,12 +90,28 @@ def _get_all_pages() -> list[Path]:
     return sorted(STORY_DIR.glob('p*.yaml'))
 
 
-def _build_all_prompts(page_files: list[Path], style_id: str) -> dict[str, tuple[str, list[str], list[str], str]]:
+def _get_characters_from_stem(page_stem: str) -> list[str]:
+    """Extract character IDs from a page stem.
+
+    Args:
+        page_stem: e.g., "p09-arthur-cullan"
+
+    Returns:
+        List of character IDs, e.g., ["arthur", "cullan"]
+    """
+    match = re.match(r'p\d+-(.+)$', page_stem)
+    if match:
+        return match.group(1).split('-')
+    return []
+
+
+def _build_all_prompts(page_files: list[Path], style_id: str, seed: int | None = None) -> dict[str, tuple[str, list[str], list[str], str]]:
     """Build prompts for all pages upfront.
 
     Args:
         page_files: List of page YAML file paths to process
         style_id: The style identifier (e.g., 'genealogy_witch')
+        seed: Optional seed for reproducible generation
 
     Returns:
         dict mapping page_stem to tuple of (prompt, ref_images, ref_labels, prompt_hash)
@@ -92,7 +123,7 @@ def _build_all_prompts(page_files: list[Path], style_id: str) -> dict[str, tuple
         with open(page_file) as f:
             page_data = yaml.safe_load(f)
         prompt, ref_images, ref_labels = gen_image.build_prompt(page_data, style_id)
-        prompt_hash = versioning.compute_prompt_hash(prompt)
+        prompt_hash = versioning.compute_prompt_hash(prompt, seed, ref_images)
         prompts[page_file.stem] = (prompt, ref_images, ref_labels, prompt_hash)
 
     return prompts
@@ -152,11 +183,15 @@ def _check_version_needed(current_hashes: dict[str, str], style_id: str, message
     # Compare current hashes against stored hashes
     stored_hashes = {k: v.get('prompt_hash') for k, v in manifest.get('images', {}).items()}
 
-    # Check if any page's prompt has changed
+    # Check if any page's prompt has changed or is missing from manifest
     prompts_changed = False
     for page_stem, current_hash in current_hashes.items():
         stored_hash = stored_hashes.get(page_stem)
-        if stored_hash and stored_hash != current_hash:
+        if stored_hash is None:
+            # Page not in manifest - this is a new page or manifest was incomplete
+            prompts_changed = True
+            print(f"New page (not in manifest): {page_stem} [{current_hash}]")
+        elif stored_hash != current_hash:
             prompts_changed = True
             print(f"Prompt changed for {page_stem}: {stored_hash} -> {current_hash}")
 
@@ -215,21 +250,140 @@ def _save_prompts(prompts: dict[str, tuple[str, list[str], list[str], str]]) -> 
             print(f"Saved prompt: {prompt_path}")
 
 
-def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], version: int) -> Path:
+async def _generate_images_parallel(prompts: dict[str, tuple], version: int, seed: int | None = None, workers: int = DEFAULT_WORKERS) -> dict[str, Path]:
+    """Generate images for all pages in parallel.
+
+    Uses asyncio.Semaphore to limit concurrent API calls.
+    Updates the manifest immediately after each image completes (thread-safe).
+
+    Args:
+        prompts: Pre-built prompts from _build_all_prompts()
+        version: The version number to update manifest for
+        seed: Optional seed for reproducible generation
+        workers: Number of concurrent workers
+
+    Returns:
+        dict mapping page_stem to generated image path
+    """
+    semaphore = asyncio.Semaphore(workers)
+    total = len(prompts)
+
+    async def generate_one(page_stem: str, data: tuple) -> tuple[str, Path]:
+        prompt, ref_images, ref_labels, prompt_hash = data
+        async with semaphore:
+            image_path = await gen_image.generate_image_from_prompt_async(
+                prompt=prompt,
+                ref_images=ref_images,
+                ref_labels=ref_labels,
+                page_stem=page_stem,
+                prompt_hash=prompt_hash,
+                seed=seed
+            )
+            # Update manifest immediately (thread-safe)
+            versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
+            return page_stem, image_path
+
+    # Create tasks for all pages
+    tasks = [generate_one(stem, data) for stem, data in prompts.items()]
+
+    print(f"Starting parallel generation with {workers} workers for {total} pages...")
+
+    # Run all tasks concurrently
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    # Process results
+    generated_images = {}
+    errors = []
+    for result in results:
+        if isinstance(result, Exception):
+            errors.append(result)
+        else:
+            page_stem, image_path = result
+            generated_images[page_stem] = image_path
+
+    if errors:
+        print(f"\n{len(errors)} error(s) during generation:")
+        for err in errors[:5]:  # Show first 5 errors
+            print(f"  - {err}")
+        if len(errors) > 5:
+            print(f"  ... and {len(errors) - 5} more")
+
+    return generated_images
+
+
+def _create_character_pdfs(
+    generated_images: dict[str, Path],
+    version: int,
+    characters: list[str] | None = None
+) -> list[Path]:
+    """Create per-character PDFs from generated images.
+
+    Args:
+        generated_images: dict mapping page_stem to image path
+        version: The version number
+        characters: List of character IDs to create PDFs for.
+                   If None, uses CHILDREN constant.
+
+    Returns:
+        List of paths to created PDF files
+    """
+    if characters is None:
+        characters = CHILDREN
+
+    version_path = versioning.get_version_path(version)
+    version_path.mkdir(parents=True, exist_ok=True)
+
+    pdf_paths = []
+    for character_id in characters:
+        # Filter images to pages containing this character
+        char_images = []
+        for page_stem, image_path in generated_images.items():
+            page_characters = _get_characters_from_stem(page_stem)
+            if character_id in page_characters:
+                char_images.append((page_stem, image_path))
+
+        if not char_images:
+            continue
+
+        # Sort by page stem to maintain order
+        char_images.sort(key=lambda x: x[0])
+        image_paths = [img for _, img in char_images]
+
+        # Create PDF
+        pdf_path = version_path / f'{character_id}-book.pdf'
+        print(f"Creating {character_id}-book.pdf with {len(image_paths)} page(s)...")
+        _create_pdf_from_images(image_paths, pdf_path)
+        print(f"Saved: {pdf_path}")
+
+        # Update manifest
+        versioning.update_manifest_book(version, pdf_path.name)
+        pdf_paths.append(pdf_path)
+
+    return pdf_paths
+
+
+def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], version: int, seed: int | None = None, workers: int = DEFAULT_WORKERS) -> Path | list[Path]:
     """Generate a picture book for a specific character in a specific style.
 
     Args:
-        character_id: The character ID (e.g., 'cullan', 'arthur')
+        character_id: The character ID (e.g., 'cullan', 'arthur') or 'all'
         style_id: The style ID (e.g., 'genealogy_witch', 'red_tree')
         prompts: Pre-built prompts from _build_all_prompts()
         version: The version number to generate into
+        seed: Optional seed for reproducible generation
+        workers: Number of concurrent workers for image generation
 
     Returns:
-        Path to the generated PDF file
+        Path to the generated PDF file, or list of paths if character_id is 'all'
     """
-    print(f"Character: {character_id}")
+    if character_id == 'all':
+        print(f"Mode: all (generating {len(CHILDREN)} character books)")
+    else:
+        print(f"Character: {character_id}")
     print(f"Style: {style_id}")
     print(f"Version: {version:02d}")
+    if seed is not None:
+        print(f"Seed: {seed}")
     print(f"Pages: {len(prompts)}")
     print()
 
@@ -238,69 +392,88 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
     _save_prompts(prompts)
     print()
 
-    # Generate images for each page (skips if hash matches existing)
-    generated_images = []
-
-    for i, (page_stem, (prompt, ref_images, ref_labels, prompt_hash)) in enumerate(prompts.items(), 1):
-        print(f"[{i}/{len(prompts)}] Processing {page_stem}...")
-        image_path = gen_image.generate_image_from_prompt(
-            prompt=prompt,
-            ref_images=ref_images,
-            ref_labels=ref_labels,
-            page_stem=page_stem,
-            prompt_hash=prompt_hash
-        )
-        generated_images.append(image_path)
-
-        # Update manifest with image info
-        versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
-        print()
-
-    # Create PDF in version folder
-    version_path = versioning.get_version_path(version)
-    version_path.mkdir(parents=True, exist_ok=True)
-    pdf_path = version_path / f'{character_id}-book.pdf'
-
-    print("=" * 60)
-    print(f"Creating PDF with {len(generated_images)} page(s)...")
-    print("Framing images for print...")
-    _create_pdf_from_images(generated_images, pdf_path)
-    print(f"Saved book to: {pdf_path}")
-
-    # Update manifest with book info
-    versioning.update_manifest_book(version, pdf_path.name)
+    # Generate images in parallel (manifest updated as each completes)
+    generated_images = asyncio.run(_generate_images_parallel(prompts, version, seed, workers))
 
     print()
     print("=" * 60)
-    print(f"Generation complete: {len(prompts)}/{len(prompts)} pages succeeded")
+    print("Creating PDFs...")
+    print("Framing images for print...")
 
-    return pdf_path
+    if character_id == 'all':
+        # Create per-character PDFs
+        pdf_paths = _create_character_pdfs(generated_images, version)
+        print()
+        print("=" * 60)
+        print(f"Generation complete: {len(prompts)} pages, {len(pdf_paths)} books")
+        return pdf_paths
+    else:
+        # Single character PDF
+        version_path = versioning.get_version_path(version)
+        version_path.mkdir(parents=True, exist_ok=True)
+        pdf_path = version_path / f'{character_id}-book.pdf'
+
+        # Sort images by page stem
+        sorted_images = sorted(generated_images.items(), key=lambda x: x[0])
+        image_paths = [img for _, img in sorted_images]
+
+        print(f"Creating PDF with {len(image_paths)} page(s)...")
+        _create_pdf_from_images(image_paths, pdf_path)
+        print(f"Saved book to: {pdf_path}")
+
+        # Update manifest with book info
+        versioning.update_manifest_book(version, pdf_path.name)
+
+        print()
+        print("=" * 60)
+        print(f"Generation complete: {len(prompts)}/{len(prompts)} pages succeeded")
+
+        return pdf_path
 
 
 def main():
     """Main entry point."""
     default_style = gen_image.get_default_style()
 
+    epilog = f"""
+Characters:
+  {', '.join(CHILDREN)}
+  all                 Generate books for all characters
+
+Examples:
+  %(prog)s cullan                          Generate Cullan's book
+  %(prog)s all                             Generate all character books
+  %(prog)s cullan --style red_tree         Use a different style
+  %(prog)s all --seed 42 -m "Test seed"    Reproducible generation
+
+Default style: {default_style}
+"""
+
     parser = argparse.ArgumentParser(
         description="Generate a picture book for a specific character.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=f"Default style: {default_style}"
+        epilog=epilog
     )
-    parser.add_argument("character_id", help="The character to generate a book for (e.g., cullan, arthur)")
+    parser.add_argument("character_id", metavar="CHARACTER",
+                        help="character name or 'all' (see below)")
     parser.add_argument("--style", default=default_style, help=f"The visual style to use (default: {default_style})")
     parser.add_argument("--message", "-m", help="Commit message for a new version (required if prompts changed)")
+    parser.add_argument("--seed", type=int, help="Seed for reproducible generation")
+    parser.add_argument("--workers", "-w", type=int, default=DEFAULT_WORKERS, help=f"Number of concurrent workers (default: {DEFAULT_WORKERS})")
 
     args = parser.parse_args()
 
     character_id = args.character_id
     style_id = args.style
     message = args.message
+    seed = args.seed
+    workers = args.workers
 
-    # Validate character_id format (lowercase, underscores allowed)
-    if not re.match(r'^[a-z_]+$', character_id):
+    # Validate character_id format (lowercase, underscores allowed, or "all")
+    if character_id != 'all' and not re.match(r'^[a-z_]+$', character_id):
         parser.error(
             f"Invalid character ID '{character_id}'. "
-            "Character IDs should be lowercase letters and underscores only"
+            "Character IDs should be lowercase letters and underscores only (or 'all')"
         )
 
     # Validate style_id format (lowercase, underscores allowed)
@@ -310,18 +483,25 @@ def main():
             "Style IDs should be lowercase letters and underscores only"
         )
 
-    # Step 1: Find pages for this character
-    page_files = _get_pages_for_character(character_id)
-    if not page_files:
-        parser.error(f"No pages found for character '{character_id}' in {STORY_DIR}")
-
-    print(f"Found {len(page_files)} page(s) for {character_id}")
+    # Step 1: Find pages
+    if character_id == 'all':
+        page_files = _get_all_pages()
+        if not page_files:
+            parser.error(f"No pages found in {STORY_DIR}")
+        print(f"Found {len(page_files)} total page(s)")
+    else:
+        page_files = _get_pages_for_character(character_id)
+        if not page_files:
+            parser.error(f"No pages found for character '{character_id}' in {STORY_DIR}")
+        print(f"Found {len(page_files)} page(s) for {character_id}")
 
     # Step 2: Build all prompts upfront (in memory)
     print("Building prompts...")
-    prompts = _build_all_prompts(page_files, style_id)
+    prompts = _build_all_prompts(page_files, style_id, seed)
     current_hashes = _get_hashes_from_prompts(prompts)
     print(f"Built {len(prompts)} prompt(s)")
+    if seed is not None:
+        print(f"Using seed: {seed}")
     print()
 
     # Step 3: Check version requirements (uses pre-computed hashes)
@@ -329,7 +509,7 @@ def main():
     print()
 
     # Step 4: Generate book (saves prompts, generates images, creates PDF)
-    generate_book(character_id, style_id, prompts, version)
+    generate_book(character_id, style_id, prompts, version, seed, workers)
 
 
 if __name__ == '__main__':
