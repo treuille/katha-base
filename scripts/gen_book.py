@@ -14,6 +14,7 @@ Options:
     --style STYLE     - The visual style to use (default: from story/template.yaml)
     --message MESSAGE - Commit message for a new version (required if prompts changed)
     --seed N          - Seed for reproducible generation (included in prompt hash)
+    --workers N       - Number of concurrent image generation tasks (default: 10)
 
 Example:
     uv run scripts/gen_book.py cullan
@@ -56,8 +57,8 @@ STORY_DIR = Path('out/story')
 # The six children characters (for "all" mode PDF generation)
 CHILDREN = ['arthur', 'cullan', 'emer', 'hansel', 'henry', 'james']
 
-# Concurrent image generation tasks
-MAX_WORKERS = 10
+# Default concurrent image generation tasks
+DEFAULT_WORKERS = 10
 
 
 def _get_pages_for_character(character_id: str) -> list[Path]:
@@ -249,19 +250,20 @@ def _save_prompts(prompts: dict[str, tuple[str, list[str], list[str], str]]) -> 
             print(f"Saved prompt: {prompt_path}")
 
 
-async def _generate_images_parallel(prompts: dict[str, tuple], seed: int | None = None) -> dict[str, Path]:
+async def _generate_images_parallel(prompts: dict[str, tuple], seed: int | None = None, workers: int = DEFAULT_WORKERS) -> dict[str, Path]:
     """Generate images for all pages in parallel.
 
-    Uses asyncio.Semaphore to limit concurrent API calls to MAX_WORKERS.
+    Uses asyncio.Semaphore to limit concurrent API calls.
 
     Args:
         prompts: Pre-built prompts from _build_all_prompts()
         seed: Optional seed for reproducible generation
+        workers: Number of concurrent workers
 
     Returns:
         dict mapping page_stem to generated image path
     """
-    semaphore = asyncio.Semaphore(MAX_WORKERS)
+    semaphore = asyncio.Semaphore(workers)
     total = len(prompts)
 
     async def generate_one(page_stem: str, data: tuple) -> tuple[str, Path]:
@@ -280,7 +282,7 @@ async def _generate_images_parallel(prompts: dict[str, tuple], seed: int | None 
     # Create tasks for all pages
     tasks = [generate_one(stem, data) for stem, data in prompts.items()]
 
-    print(f"Starting parallel generation with {MAX_WORKERS} workers for {total} pages...")
+    print(f"Starting parallel generation with {workers} workers for {total} pages...")
 
     # Run all tasks concurrently
     results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -356,7 +358,7 @@ def _create_character_pdfs(
     return pdf_paths
 
 
-def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], version: int, seed: int | None = None) -> Path | list[Path]:
+def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], version: int, seed: int | None = None, workers: int = DEFAULT_WORKERS) -> Path | list[Path]:
     """Generate a picture book for a specific character in a specific style.
 
     Args:
@@ -365,6 +367,7 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
         prompts: Pre-built prompts from _build_all_prompts()
         version: The version number to generate into
         seed: Optional seed for reproducible generation
+        workers: Number of concurrent workers for image generation
 
     Returns:
         Path to the generated PDF file, or list of paths if character_id is 'all'
@@ -386,7 +389,7 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
     print()
 
     # Generate images in parallel
-    generated_images = asyncio.run(_generate_images_parallel(prompts, seed))
+    generated_images = asyncio.run(_generate_images_parallel(prompts, seed, workers))
 
     # Update manifest with all generated images (after parallel completion)
     print("\nUpdating manifest...")
@@ -457,6 +460,7 @@ Default style: {default_style}
     parser.add_argument("--style", default=default_style, help=f"The visual style to use (default: {default_style})")
     parser.add_argument("--message", "-m", help="Commit message for a new version (required if prompts changed)")
     parser.add_argument("--seed", type=int, help="Seed for reproducible generation")
+    parser.add_argument("--workers", "-w", type=int, default=DEFAULT_WORKERS, help=f"Number of concurrent workers (default: {DEFAULT_WORKERS})")
 
     args = parser.parse_args()
 
@@ -464,6 +468,7 @@ Default style: {default_style}
     style_id = args.style
     message = args.message
     seed = args.seed
+    workers = args.workers
 
     # Validate character_id format (lowercase, underscores allowed, or "all")
     if character_id != 'all' and not re.match(r'^[a-z_]+$', character_id):
@@ -505,7 +510,7 @@ Default style: {default_style}
     print()
 
     # Step 4: Generate book (saves prompts, generates images, creates PDF)
-    generate_book(character_id, style_id, prompts, version, seed)
+    generate_book(character_id, style_id, prompts, version, seed, workers)
 
 
 if __name__ == '__main__':
