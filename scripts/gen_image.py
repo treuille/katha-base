@@ -171,14 +171,20 @@ def _collect_reference_images(page_data, style_id):
         char_images = sorted(Path("ref/characters").glob(f"{char_id}-*.jpg"))[:MAX_CHARACTER_IMAGES]
         for img_path in char_images:
             images.append(str(img_path))
-            # Extract the display name from the character YAML
+            # Extract the display name and hair from the character YAML
             char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
                 char_data = _load_yaml_file(char_file)
                 char_name = char_data.get("name", char_id.title())
+                char_hair = char_data.get("hair", "")
             else:
                 char_name = char_id.title()
-            image_labels.append(f"A reference picture of {char_name}")
+                char_hair = ""
+            # Include hair description in label to reinforce character identity
+            if char_hair:
+                image_labels.append(f"Reference picture of {char_name} who has {char_hair.upper()}")
+            else:
+                image_labels.append(f"A reference picture of {char_name}")
 
     # Collect location images
     location = page_data.get("location")
@@ -243,23 +249,34 @@ def build_prompt(page_data, style_id):
     for char_id in characters:
         char_visual = _load_character_visual(char_id)
         if char_visual:
-            # Get character name and age
+            # Get character name, age, and hair
             char_file = Path("characters") / f"{char_id}.yaml"
             if char_file.exists():
                 char_data = _load_yaml_file(char_file)
                 char_name = char_data.get("name", char_id.title())
                 char_age = char_data.get("age")
+                char_hair = char_data.get("hair", "")
             else:
                 char_name = char_id.title()
                 char_age = None
+                char_hair = ""
 
-            # Format header with age (e.g., "Emer (age 5):" or "Dorje Legpa (ageless):")
+            # Format header with HAIR COLOR first (for identity anchoring), then age
+            # e.g., "Arthur (BROWN HAIR, age 13):" or "Dorje Legpa (ageless):"
             if char_age == "ageless":
                 char_desc = f"\n{char_name} (ageless):\n"
+            elif char_hair and char_age:
+                # Extract just the color portion for the header (uppercase for emphasis)
+                hair_summary = char_hair.upper()
+                char_desc = f"\n{char_name} ({hair_summary}, age {char_age}):\n"
             elif char_age:
                 char_desc = f"\n{char_name} (age {char_age}):\n"
             else:
                 char_desc = f"\n{char_name}:\n"
+
+            # Put hair description FIRST in the visual list (identity anchoring)
+            if char_hair:
+                char_desc += f"  - IMPORTANT: {char_name} has {char_hair}\n"
             for item in char_visual:
                 char_desc += f"  - {item}\n"
             char_descriptions.append(char_desc)
