@@ -433,6 +433,12 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
 
 def main():
     """Main entry point."""
+    # Validate required directories exist (symlinks are fine)
+    if not versioning.VERSIONS_DIR.exists():
+        print(f"Error: Output directory '{versioning.VERSIONS_DIR}' does not exist.", file=sys.stderr)
+        print("Please create it (or create a symlink) before running this script.", file=sys.stderr)
+        sys.exit(1)
+
     default_style = gen_image.get_default_style()
 
     epilog = f"""

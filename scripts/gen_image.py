@@ -840,6 +840,14 @@ def main():
 
     args = parser.parse_args()
 
+    # Validate output directory exists for modes that write images (symlinks are fine)
+    if args.mode in ("frame", "gemini"):
+        images_dir = Path("out/images")
+        if not images_dir.exists():
+            print(f"Error: Output directory '{images_dir}' does not exist.", file=sys.stderr)
+            print("Please create it (or create a symlink) before running this script.", file=sys.stderr)
+            sys.exit(1)
+
     # Frame mode
     if args.mode == "frame":
         if not Path(args.image_file).exists():
