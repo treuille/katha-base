@@ -255,6 +255,7 @@ async def _generate_images_parallel(prompts: dict[str, tuple], version: int, see
 
     Uses asyncio.Semaphore to limit concurrent API calls.
     Updates the manifest immediately after each image completes (thread-safe).
+    Individual failures are logged but don't stop other workers.
 
     Args:
         prompts: Pre-built prompts from _build_all_prompts()
@@ -263,50 +264,54 @@ async def _generate_images_parallel(prompts: dict[str, tuple], version: int, see
         workers: Number of concurrent workers
 
     Returns:
-        dict mapping page_stem to generated image path
+        dict mapping page_stem to generated image path (only successful generations)
     """
     semaphore = asyncio.Semaphore(workers)
     total = len(prompts)
+    failed_pages = []
 
-    async def generate_one(page_stem: str, data: tuple) -> tuple[str, Path]:
+    async def generate_one(page_stem: str, data: tuple) -> tuple[str, Path | None]:
         prompt, ref_images, ref_labels, prompt_hash = data
         async with semaphore:
-            image_path = await gen_image.generate_image_from_prompt_async(
-                prompt=prompt,
-                ref_images=ref_images,
-                ref_labels=ref_labels,
-                page_stem=page_stem,
-                prompt_hash=prompt_hash,
-                seed=seed
-            )
-            # Update manifest immediately (thread-safe)
-            versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
-            return page_stem, image_path
+            try:
+                image_path = await gen_image.generate_image_from_prompt_async(
+                    prompt=prompt,
+                    ref_images=ref_images,
+                    ref_labels=ref_labels,
+                    page_stem=page_stem,
+                    prompt_hash=prompt_hash,
+                    seed=seed
+                )
+                # Update manifest immediately (thread-safe)
+                versioning.update_manifest_image(version, page_stem, image_path.name, prompt_hash)
+                return page_stem, image_path
+            except Exception as e:
+                # Log the error but don't crash - return None to indicate failure
+                print(f"[{page_stem}] FAILED: {e}")
+                failed_pages.append((page_stem, str(e)))
+                return page_stem, None
 
     # Create tasks for all pages
     tasks = [generate_one(stem, data) for stem, data in prompts.items()]
 
     print(f"Starting parallel generation with {workers} workers for {total} pages...")
 
-    # Run all tasks concurrently
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    # Run all tasks concurrently - no exceptions will propagate since we catch them in generate_one
+    results = await asyncio.gather(*tasks)
 
-    # Process results
+    # Process results - filter out failed generations (None values)
     generated_images = {}
-    errors = []
-    for result in results:
-        if isinstance(result, Exception):
-            errors.append(result)
-        else:
-            page_stem, image_path = result
+    for page_stem, image_path in results:
+        if image_path is not None:
             generated_images[page_stem] = image_path
 
-    if errors:
-        print(f"\n{len(errors)} error(s) during generation:")
-        for err in errors[:5]:  # Show first 5 errors
-            print(f"  - {err}")
-        if len(errors) > 5:
-            print(f"  ... and {len(errors) - 5} more")
+    # Summary of failures
+    if failed_pages:
+        print(f"\n{'=' * 60}")
+        print(f"SUMMARY: {len(failed_pages)}/{total} page(s) failed to generate:")
+        for page_stem, error in failed_pages:
+            print(f"  - {page_stem}: {error[:80]}...")
+        print(f"{'=' * 60}\n")
 
     return generated_images
 
@@ -400,12 +405,17 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
     print("Creating PDFs...")
     print("Framing images for print...")
 
+    succeeded = len(generated_images)
+    failed = len(prompts) - succeeded
+
     if character_id == 'all':
         # Create per-character PDFs
         pdf_paths = _create_character_pdfs(generated_images, version)
         print()
         print("=" * 60)
-        print(f"Generation complete: {len(prompts)} pages, {len(pdf_paths)} books")
+        print(f"Generation complete: {succeeded}/{len(prompts)} pages succeeded, {len(pdf_paths)} books")
+        if failed > 0:
+            print(f"WARNING: {failed} page(s) failed to generate and are missing from PDFs")
         return pdf_paths
     else:
         # Single character PDF
@@ -426,7 +436,9 @@ def generate_book(character_id: str, style_id: str, prompts: dict[str, tuple], v
 
         print()
         print("=" * 60)
-        print(f"Generation complete: {len(prompts)}/{len(prompts)} pages succeeded")
+        print(f"Generation complete: {succeeded}/{len(prompts)} pages succeeded")
+        if failed > 0:
+            print(f"WARNING: {failed} page(s) failed to generate and are missing from PDF")
 
         return pdf_path
 
