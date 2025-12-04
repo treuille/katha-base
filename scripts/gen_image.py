@@ -676,7 +676,7 @@ def generate_image(page_file, style_id, version: int | None = None):
 
     # Compute prompt hash
     page_stem = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    prompt_hash = versioning.compute_prompt_hash(prompt)
+    prompt_hash = versioning.compute_prompt_hash(prompt, ref_images=ref_images)
 
     # Load style info for logging
     style = _load_style(style_id)

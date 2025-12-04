@@ -501,7 +501,7 @@ pages:
     story_beat: Outside, the kids move together like a perfect team. Henry is in
       a small WWII-style biplane with an open cockpit. James directs traffic from below.
       Everyone's faces show pure delight at what they're about to do.
-    dorje_legpa_form: IN BOX ON SLED - glowing box with light coming through cracks,
+    dorje_legpa_form: IN BOX ON WAGON - glowing box with light coming through cracks,
       held by Arthur and Cullan, deity contained but visible through gaps.
 
    # page 27
@@ -513,7 +513,7 @@ pages:
     characters: [arthur, cullan, emer, hansel, henry, james, dorje_legpa]
     location_mode: fixed
     location: driveway
-    story_beat: This is the big payoff image. The plane pulls the sled with Cullan
+    story_beat: This is the big payoff image. The plane pulls the wagon with Cullan
       and Arthur holding the box. James underneath traffic controlling. Huge rainbows
       and dramatic elements behind them, hint at snowy woods of upstate New York.
       Keep words to minimum - this is the CLIMAX image.

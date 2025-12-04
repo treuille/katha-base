@@ -13,8 +13,10 @@ story_beat: As Henry plays faster and faster, something magical happens. The pia
   music, grinning with joy.
 
 visual:
-  - Henry playing the piano with pure joy, fingers flying across the keys
-  - The keyboard visibly CORRECTING itself—black and white keys sliding smoothly back into proper positions
+  - Henry playing the old wooden upright piano with pure joy, fingers flying across the keys
+  - A blue binder of sheet music open on the music stand, messy stacks of books piled on top of the piano
+  - An upright cello on a stand next to the piano
+  - The keyboard visibly CORRECTING itself—crooked keys straightening, hovering keys settling down, black and white keys sliding smoothly back into proper positions
   - Musical notes swirling around him in warm golden light
   - The cold blue retreating from the room, replaced by warm golden tones
   - Shadows dissolving, the geometry of the room straightening
@@ -28,4 +30,5 @@ visual:
 text: |
   The melody built faster and faster. Henry's fingers flew across the keys, finding harmonies he'd never imagined. And something strange was happening—the keys were moving. Sliding. Rearranging themselves under his hands, slipping back into their proper places. But Henry barely noticed. He was lost in the music, lost in the pure joy of creation. The cold blue light melted away. Warmth flooded the library. The room was de-haunting around him, but all Henry felt was the music pouring through his fingertips.
 
-objects: []
+objects:
+  - piano

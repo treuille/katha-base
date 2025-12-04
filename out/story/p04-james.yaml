@@ -5,27 +5,28 @@ haunting_level: medium
 characters:
   - james
   - dorje_legpa
-location: hallway
+location: sun_room
 
-story_beat: James walks toward the glass doors leading to the sunroom. Something feels
-  off—the light through the glass is strange, and they can hear an odd rustling from
-  inside. The plants seem to be moving. James has always been good at solving things.
-  Whatever awaits them, they'll figure it out.
+story_beat: James has stepped down into the sunroom and immediately senses something wrong.
+  The house is becoming haunted around them. The plants are moving strangely, reaching toward
+  nothing, and there's a wrongness in the air that makes James's stomach twist with worry.
 
 visual:
-  - James walking toward the glass doors that lead down into the sunroom
-  - A single step down visible through the glass—the boundary between hallway and sunroom
-  - Strange light filtering through the doors, greenish and shifting
-  - The silhouettes of plants visible through the glass, seeming to sway despite no wind
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a side table near the doors—frozen crimson figurine with gold crown, watching
-  - EASTER EGG: A viola case leaning against the wall near the glass doors—part of James's daily routine left waiting in the hallway
-  - James's expression curious but confident—they're good at puzzles
+  - James standing INSIDE the sunroom, having just stepped down through the glass doors
+  - James is IN the room now—surrounded by Graminy's plants on all sides
+  - The plants are MOVING STRANGELY—ferns reaching toward nothing, succulents trembling, vines curling in wrong directions
+  - The air feels WRONG—visible distortion, a sense of the house becoming haunted
+  - James's expression is WORRIED—brow furrowed, eyes wide with concern, not confident but unsettled
+  - The light in the room is strange—greenish, shifting, unnatural
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette visible on a plant shelf—frozen crimson figurine watching from among the leaves
+  - EASTER EGG: James's viola case visible through the glass doors behind them—left in the hallway
   - White graphic t-shirt with neon cyan, magenta, yellow design
-  - Santa hat still on, ginger hair with blonde streak, freckles visible
-  - Cold blue light beginning to creep in at the edges, mixing with the greenish sunroom glow
-  - James's hand reaching toward the door handle
+  - Santa hat still on, ginger hair with blonde streak, freckles visible on worried face
+  - Cold blue light creeping in at the edges of the room, mixing with the eerie green
+  - The glass doors behind James, the hallway visible through them—but James is clearly INSIDE the sunroom now
+  - Shadows pooling in corners that shouldn't have shadows
 
 text: |
-  James walked toward the sunroom. Through the glass doors, they could see the plants—Graminy's ferns and succulents and that orchid she loved. But something was wrong. The plants were moving, swaying without any wind. And was that... whispering? James reached for the door handle. They were good at solving things. Math puzzles, word games, strategy—their brain loved a challenge. Whatever was happening in that sunroom, they'd figure it out.
+  James stepped down into the sunroom and froze. The plants were wrong. Graminy's ferns reached toward nothing. The succulents trembled. That orchid she loved was twisting slowly, its petals opening and closing like a mouth. The air felt thick, heavy—like the house itself was holding its breath. James's stomach twisted. This wasn't a puzzle. This was something else. Something was happening to Graminy's house, and it was happening right now, all around them.
 
 objects: []

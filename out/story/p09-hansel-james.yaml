@@ -8,21 +8,20 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: James explains the sun room problems. Hansel listens intently with that
-  cute, serious baby expression. When James mentions the house being "haunted,"
-  Hansel points intently at the stairs with his bottle—he's seen something there.
+story_beat: James explains the sun room problems, his concern focused on figuring out what's happening. Hansel listens intently with that cute, serious baby expression. When James mentions the house being "haunted," Hansel points intently at the stairs with his bottle—he's seen something there. James responds protectively, staying close to his little cousin.
 
 visual:
   - James gesturing, describing the chaos
-  - James crouching down to talk to baby Hansel
+  - James crouching down to Hansel's level, expression worried but gentle—concerned about the situation, protective of his baby cousin
+  - James is much taller than baby Hansel, but positioned close, keeping him safe
   - Hansel's face showing that cute, intent expression—big eyes, serious focus
   - Hansel pointing intently with his bottle toward the stairs
   - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a side table beside a lamp—frozen crimson figurine almost invisible in blue shadows
   - EASTER EGG: A kids bike helmet hanging on a hook in the hallway—a reminder of James's long bike rides with their mom
   - The hallway frozen around them, light harsh and wrong
-  - A moment of communication between Hansel and James
+  - A moment of trust and communication between baby and older cousin
 
 text: |
-  "Something's wrong with the sun room," James said. "The plants keep growing wild. It's like the whole house is... haunted." At that word, Hansel's eyes went wide. He pointed his bottle intently toward the stairs. He'd seen something there too.
+  "Something's wrong with the sun room," James said gently, keeping close to Hansel. "The plants keep growing wild. It's like the whole house is... haunted." At that word, Hansel's eyes went wide. He pointed his bottle intently toward the stairs. James followed his gaze, one hand resting protectively on Hansel's shoulder. "You've seen something too, haven't you, buddy?"
 
 objects: []

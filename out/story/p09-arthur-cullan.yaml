@@ -12,7 +12,8 @@ story_beat: Arthur describes what happened in his room—the Scrabble board that
   twisted his words. He played SYZYGY and the letters changed. The hallway around
   them feels frozen, light harsh and wrong.
 
-visual: |
+visual:
+  - "IMPORTANT: Show CULLAN on the LEFT side of frame with his tousled curly DARK BLONDE hair. Show ARTHUR on the RIGHT side of frame with his messy curly BROWN hair."
   - Arthur now gesturing, describing his experience
   - Cullan listening, nodding with recognition
   - Arthur and Cullan are the same height, eye-to-eye

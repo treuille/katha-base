@@ -11,21 +11,21 @@ characters:
   - dorje_legpa
 location: driveway
 
-story_beat: THIS IS THE BIG PAYOFF CLIMAX IMAGE. Henry's plane pulls the sled with
+story_beat: THIS IS THE BIG PAYOFF CLIMAX IMAGE. Henry's plane pulls the wagon with
   Cullan and Arthur holding the glowing box. James underneath traffic controlling.
   Spectacular image of fun. Huge rainbows and dramatic elements. Keep words minimal.
 
 visual: |
   - THIS IS THE CLIMAX IMAGE - spectacular image of pure fun and joy
-  - Henry's WWII-style biplane pulling the red sled through the air
-  - Cullan and Arthur in the sled, holding the glowing box containing the spirit
+  - Henry's WWII-style biplane pulling the red wagon through the air
+  - Cullan and Arthur in the wagon, holding the glowing box containing the spirit
   - James underneath/on the ground, traffic controlling them with hand signals
   - HUGE RAINBOWS and other dramatic elements behind them filling the sky
   - Still clearly in the snowy woods of upstate New York (snow-covered trees visible)
-  - The sled lifting off the ground—magical and joyful
+  - The wagon lifting off the ground—magical and joyful
   - Pure delight and triumph on everyone's faces
 
 text: |
   Up they went.
 
-objects: []
+objects: [wagon, plane]

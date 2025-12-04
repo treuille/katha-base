@@ -7,23 +7,24 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Arthur walks toward the dining room with new understanding. From ahead,
+story_beat: Arthur rushes toward the dining room with new understanding and newfound power. From ahead,
   he sees flickering orange light, smells heat. His pattern-brain is already working
   on what he'll find—Cullan described clustered candles, fire danger. But Arthur
-  sees problems differently.
+  sees problems differently now. Something has awakened in him.
 
 visual: |
-  - Arthur striding down the hallway toward the dining room - IMPORTANT: Arthur must be walking TOWARD the dining room (into the frame), not away from it
-  - His posture determined, analytical, knowing what awaits
+  - Arthur RUNNING down the hallway toward the dining room with URGENCY - IMPORTANT: Arthur must be moving TOWARD the dining room (into the frame), not away from it
+  - His body in dynamic motion—legs striding fast, arms pumping, moving with PURPOSE and SPEED
+  - His face shows RESOLVE—jaw set, eyes blazing with determination, not just focused but FIERCE
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—something awakened from his first room victory
   - Flickering orange light spilling from the dining room doorway ahead
-  - The hallway still at peak wrongness—cold, tilted, shadows pooling
-  - His expression focused, mind already working on the problem
+  - The hallway still at peak wrongness—cold, tilted, shadows pooling—but Arthur is UNFAZED
   - Contrast: cold blue hallway vs. warm orange glow from dining room
-  - His Rubik's cube visible in pocket, a reminder of his pattern-skills
-  - Shadows on walls, but Arthur walking with purpose
+  - His Rubik's cube visible in pocket, a reminder of his pattern-skills now AMPLIFIED
+  - Shadows on walls recoiling slightly from his determined advance
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside a hallway lamp - frozen crimson figurine casting a small shadow, unnoticed by Arthur
 
 text: |
-  Arthur walked toward the dining room, but differently this time. He knew what waited—Cullan had described the clustered candles, the fire danger. But where Cullan saw chaos, Arthur saw a puzzle. The flickering orange light ahead was just another pattern waiting to be solved. His mind was already working: how do you balance something that refuses to stay balanced?
+  Arthur ran toward the dining room. Not walked—ran. Something had changed in the playroom. The patterns he'd always seen were sharper now, brighter, like a power awakening inside him. He knew what waited—Cullan had described the clustered candles, the fire danger. But where Cullan saw chaos, Arthur saw a puzzle that was already solving itself in his mind. The flickering orange light ahead didn't scare him. He could feel the solution building inside him like electricity. This time, he was ready.
 
 objects: []

@@ -12,7 +12,8 @@ story_beat: They compare notes, realizing the connections between their experien
   A dawning understanding begins—something is very wrong with this house. The visual
   wrongness is at its peak around them.
 
-visual: |
+visual:
+  - "IMPORTANT: Show CULLAN on the LEFT side of frame with his tousled curly DARK BLONDE hair. Show ARTHUR on the RIGHT side of frame with his messy curly BROWN hair."
   - Both boys facing each other, expressions shifting from fear to thought
   - Arthur and Cullan are the same height, standing eye-to-eye
   - The cold blue hallway surrounding them, geometry still warped

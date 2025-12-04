@@ -7,22 +7,24 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Henry approaches the kitchen, hearing chaos within. Something is mixing
+story_beat: Henry rushes toward the kitchen with newfound power, hearing chaos within. Something is mixing
   ingredients recklessly—no measuring, no recipes, just wild experimentation. He
-  can smell the disaster. But Henry knows exactly what this kitchen needs. He's ready.
+  can smell the disaster. But something has awakened in Henry. His precision-sense is sharper now, almost magical.
 
 visual:
-  - Henry striding purposefully down the hallway toward the kitchen
-  - His posture confident from his piano victory—determination on his face
+  - Henry RUNNING down the hallway toward the kitchen with URGENCY and PURPOSE
+  - His body in dynamic motion—tall figure striding fast, moving with speed and determination
+  - His face shows RESOLVE—not just confident but FIERCE, eyes blazing with awakened power
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—his precision-sense glowing from his piano victory
   - Strange flickering light spilling from the kitchen doorway ahead
-  - Sounds of splashing, mixing, things being dumped together carelessly
+  - Sounds of splashing, mixing, things being dumped together carelessly—but Henry is READY
   - Grey Aviator Nation tracksuit, Santa hat in place properly
-  - Hallway still cold, but Henry radiating warmth from his library success
-  - His tall figure casting a long shadow toward the kitchen door
-  - Hands slightly raised, ready—like a chef approaching his station
+  - Hallway still cold, but Henry radiating warmth and POWER from his library success
+  - His tall figure casting a long shadow toward the kitchen door—the shadow of someone who KNOWS
+  - Hands slightly raised, ready—like a chef approaching his station with absolute confidence
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine watching Henry approach his next challenge
 
 text: |
-  Henry walked toward the kitchen. He could hear the chaos from here—splashing, sloshing, the sound of ingredients being dumped together without any care at all. Something in there was cooking without measuring. Without following recipes. Without any of the things that made baking actually work. Henry smiled. The piano had needed creativity. The kitchen needed precision. He knew exactly what to do.
+  Henry ran toward the kitchen. Something had awakened in the library—a power he'd never felt before. His hands still tingled with it. He could hear the chaos ahead—splashing, sloshing, ingredients being dumped together without care. Something in there was destroying the rules of baking. But Henry's precision-sense was sharper now, almost electric. He could feel the right measurements, the correct temperatures, the perfect timing—all of it humming inside him like music. He burst through the doorway ready to bring order to chaos.
 
 objects: []

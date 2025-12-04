@@ -123,7 +123,7 @@ def _build_all_prompts(page_files: list[Path], style_id: str, seed: int | None =
         with open(page_file) as f:
             page_data = yaml.safe_load(f)
         prompt, ref_images, ref_labels = gen_image.build_prompt(page_data, style_id)
-        prompt_hash = versioning.compute_prompt_hash(prompt, seed)
+        prompt_hash = versioning.compute_prompt_hash(prompt, seed, ref_images)
         prompts[page_file.stem] = (prompt, ref_images, ref_labels, prompt_hash)
 
     return prompts

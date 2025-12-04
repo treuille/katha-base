@@ -7,19 +7,20 @@ characters:
   - dorje_legpa
 location: hallway
 story_beat: |
-  Henry excitedly tells Emer about his piano discovery. The keys were all scrambled,
-  so he invented a new melody that worked with the chaos—and the room fixed itself!
-  Emer listens with wide eyes.
+  Henry excitedly tells Emer about his piano discovery. The keys were flying off at crooked
+  angles, hovering and tilted—complete madness—so he invented a new melody that worked with
+  the chaos—and the room fixed itself! Emer listens with wide eyes.
 
 visual:
   - Henry gesturing excitedly as he describes his piano victory
-  - Ghost-like transparent overlays showing piano keys rearranging, musical notes swirling
+  - Ghost-like transparent overlays showing the old wooden upright piano with keys at crooked angles, some hovering, then sliding back into place—a blue binder of sheet music on the stand, messy stacks of books on top, an upright cello on a stand beside it
   - Emer's eyes wide with amazement, hugging her pony doll tight—Henry figured something out!
   - Henry's expression excited and proud
   - The hallway around them, slightly warmer than before
   - Tiny Dorje Legpa statuette visible on a side table
 
 text: |
-  "The library piano was all scrambled," Henry said excitedly. "The keys were in completely wrong places! But I didn't try to fix it—I played WITH it. I invented a new melody, and the faster I played, the more the piano fixed ITSELF!" He grinned. "The whole room went back to normal!" He paused. "But the bookshelves did seem a bit weird…" Emer's eyes went wide.
+  "The library piano had gone completely mad," Henry said excitedly. "Keys were sticking out at crazy angles—some hovering in the air, black and white keys all jumbled together! But I didn't try to fix it—I played WITH it. I invented a new melody, and the faster I played, the more the piano fixed ITSELF!" He grinned. "The whole room went back to normal!" He paused. "But the bookshelves did seem a bit weird…" Emer's eyes went wide.
 
-objects: []
+objects:
+  - piano

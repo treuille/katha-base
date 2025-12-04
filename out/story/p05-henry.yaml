@@ -7,16 +7,21 @@ characters:
   - dorje_legpa
 location: library
 
-story_beat: Henry enters the library and discovers something wrong with the old wooden
-  upright piano. The black and white keys have rearranged themselves—seemingly at
-  random, with no pattern. He sits down and tries to play, but it sounds horrible.
+story_beat: Henry enters the library and discovers something impossibly wrong with the old wooden
+  upright piano. Keys are flying off the keyboard at crooked angles, black and white keys unevenly
+  distributed in chaotic clusters, some keys tilted sideways or sticking straight up. He sits down
+  and tries to play, but it sounds horrible.
 
 visual:
-  - Henry standing before the old wooden upright piano, staring in confusion
-  - The piano keyboard is completely wrong—black keys where white keys should be, white keys scattered randomly, no logical pattern at all
-  - Some keys are doubled, some gaps are too wide, the entire keyboard looks like it's been shuffled
-  - Henry's hands hovering over the keys, hesitant
-  - Sheet music on the stand, but it won't help with keys in wrong places
+  - Henry standing before the old wooden upright piano, staring in disbelief
+  - A blue binder of sheet music open on the music stand, messy stacks of books piled on top of the piano
+  - An upright cello on a stand next to the piano
+  - The piano keyboard is impossibly wrong—keys flying off at crooked angles, some tilted sideways, others sticking straight up
+  - Black and white keys unevenly distributed in chaotic clusters—five black keys bunched together here, a long stretch of only white keys there
+  - Some keys hovering slightly above the keyboard, others sunken deep into the wood
+  - Gaps where keys should be, doubled-up keys jammed together at odd angles
+  - Henry's hands hovering over the chaos, unsure where to even begin
+  - The blue binder of sheet music on the stand, completely useless for this madness
   - The library still cold and blue, harsh shadows pooling strangely
   - Books on shelves behind him, Graminy's aviation shelf visible
   - Cold blue light streaming through windows
@@ -26,6 +31,7 @@ visual:
   - 'EASTER EGG: A well-worn cookbook titled "The Pilot''s Kitchen: High-Altitude Baking" visible on the reading table next to his flight manual'
 
 text: |
-  The library's old upright piano was wrong. Henry stared at the keyboard—the black and white keys had scrambled themselves into complete chaos. Two white keys here, four black keys there, gaps in impossible places. He sat down and tried a scale. The sound that came out was awful. Every note was in the wrong place. The piano had forgotten how to be a piano.
+  The library's old wooden upright piano had gone completely mad. Henry stared at the keyboard—keys were flying off at crooked angles, some tilted sideways, others sticking straight up like broken teeth. Black and white keys had redistributed themselves in impossible clusters—five black keys bunched together here, a long lonely stretch of white keys there. Some keys hovered above the keyboard, trembling. He sat down and tried a scale. The sound that came out was awful. The piano had forgotten how to be a piano.
 
-objects: []
+objects:
+  - piano
