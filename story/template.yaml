@@ -523,3 +523,39 @@ pages:
       Christmas colors restored.
     notes: Closing exterior shot bookending page 1. Guardian spirit implied in cloud
       shapes above.
+
+   # page 30 - Cover
+  - id: p30
+    index: 30
+    section: Cover
+    page_type: individual
+    haunting_level: low
+    characters: [main_character]
+    location_mode: fixed
+    location: exterior
+    objects: [cover_layout, wagon, tricycle, plane]
+    story_beat: Book cover showing the main character standing in a hero pose in front
+      of the house. Back cover shows a snowy path leading into the distance through
+      the woods of upstate New York.
+    notes: 'Cover page for each character''s book.
+      LAYOUT: Create a flat, full-spread book cover design layout set against a solid
+      black background. The composition is divided into three distinct vertical rectangular
+      zones separated by thin gaps. The left-hand rectangular panel represents the back
+      cover of the book (solid red in reference). The right-hand rectangular panel
+      represents the front cover of the book (solid blue in reference). The center panel
+      is a narrow vertical strip representing the book spine (solid green in reference).
+      The spine section has solid black background with white gothic lettering rotated
+      90 degrees.
+      FRONT COVER (right panel): Title "[Name] and the Christmas Spirit" prominently
+      displayed in top 1/3. Authors "Adrien, Graminy, Henry, and Claude" shown in
+      bottom 1/5. Main character in full body hero pose, standing IN FRONT of the house,
+      filling the entire cover between title and authors. Character is smiling, confident,
+      looking directly out of frame at the reader. The house is behind them as a secondary
+      but important element. Setting is snowy upstate New York woods surrounding the house.
+      BACK COVER (left panel): A snowy path leading into the distance through the woods.
+      Include text "If you liked this book, you will love:" followed by the five other
+      book titles (one line per title) - all titles except the current character book.
+      EASTER EGGS (subtle, do not change back cover composition): On the back cover,
+      the wagon and tricycle should be shown partially buried in the snow near the path.
+      In the sky on the left side, a tiny silhouette of the plane flying happily through
+      the clouds - no details about the pilot visible, just a small distant shape.'

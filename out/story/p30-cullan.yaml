@@ -1,0 +1,43 @@
+id: p30
+section: Cover
+page_type: individual
+haunting_level: low
+characters:
+  - cullan
+location: exterior
+
+story_beat: Book cover showing Cullan standing in a hero pose in front of the house.
+  Back cover shows a snowy path leading into the distance through the woods of
+  upstate New York.
+
+visual:
+  - LAYOUT - Full-spread book cover with solid black background, three vertical panels separated by thin gaps
+  - LEFT PANEL (back cover) - Snowy path leading into the distance through woods
+  - CENTER PANEL (spine) - Narrow vertical strip, solid black background with white gothic lettering rotated 90 degrees
+  - RIGHT PANEL (front cover) - Cullan in hero pose in front of the house
+  - FRONT COVER - Title "Cullan and the Christmas Spirit" prominently in top 1/3
+  - FRONT COVER - Authors "Adrien, Graminy, Henry, and Claude" in bottom 1/5
+  - FRONT COVER - Cullan full body hero pose, standing IN FRONT of the house, filling entire cover between title and authors
+  - FRONT COVER - Cullan smiling, confident, looking directly out of frame at the reader
+  - FRONT COVER - The house behind him as secondary but important element
+  - FRONT COVER - Setting is snowy upstate New York woods surrounding the house
+  - BACK COVER - Text "If you liked this book, you will love:" followed by five titles on separate lines
+  - BACK COVER - Arthur and the Christmas Spirit
+  - BACK COVER - Emer and the Christmas Spirit
+  - BACK COVER - Hänsel and the Christmas Spirit
+  - BACK COVER - Henry and the Christmas Spirit
+  - BACK COVER - James and the Christmas Spirit
+  - EASTER EGG (subtle, left back) - Wagon and tricycle partially buried in snow near path
+  - EASTER EGG (subtle, left back) - Tiny silhouette of plane flying through clouds in sky, no pilot details
+  - EASTER EGG (subtle, right front) - Corner of a black gaming laptop with colorful RGB glowing keys barely visible, partially buried in snow near Cullan's feet
+
+text: |
+  Cullan and the Christmas Spirit
+
+  By Adrien, Graminy, Henry, and Claude
+
+objects:
+  - cover_layout
+  - wagon
+  - tricycle
+  - plane
