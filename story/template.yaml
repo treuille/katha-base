@@ -104,14 +104,14 @@ pages:
     index: 5
     section: First Attempt
     page_type: individual
-    haunting_level: medium
+    haunting_level: high
     characters: [main_character, dorje_legpa]
     location_mode: by_role
     room_role: first_attempt
     story_beat: The main character enters a room and discovers something dangerously wrong.
     notes: Location depends on character's first attempt location (attempt_locations[0]).
-      Physical danger stakes - fire risk to the house. Cold blue light from windows
-      contrasts with warm but threatening candle flames.
+      Physical danger stakes - fire risk to the house. Peak visual haunting - cold harsh
+      light, pools of darkness, proportions warped, uncanny.
     dorje_legpa_easter_egg: Tiny 6-inch statuette on sideboard or shelf - frozen
       crimson figurine watching the chaos unfold.
 
@@ -135,13 +135,13 @@ pages:
     index: 7
     section: First Attempt
     page_type: individual
-    haunting_level: high
+    haunting_level: medium
     characters: [main_character, dorje_legpa]
     location_mode: by_role
     room_role: first_attempt
     story_beat: The character realizes their obvious approach won't solve this problem.
     notes: 'First attempt: partial success only. Character realizes the problem is
-      about fairness, not speed. Visual haunting remains high as they exit.'
+      about fairness, not speed. Medium haunting - cold tones, geometry slightly off.'
     dorje_legpa_easter_egg: Tiny 6-inch statuette behind a crystal vase on mantel -
       frozen crimson figurine silently watching the character leave.
 
@@ -150,7 +150,7 @@ pages:
     index: 8
     section: Crossover / Pair
     page_type: pair
-    haunting_level: high
+    haunting_level: medium
     characters: [main_character, pair_partner, dorje_legpa]
     location_mode: fixed
     location: hallway
@@ -163,7 +163,7 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: First of four pair pages. Main character speaks, partner listens.
+    notes: First of four pair pages. Main character speaks, partner listens. Medium haunting - cold tones emerging, geometry slightly off.
     dorje_legpa_easter_egg: Tiny 6-inch statuette on a narrow shelf behind the pair -
       frozen crimson figurine watching them unseen.
 
@@ -172,7 +172,7 @@ pages:
     index: 9
     section: Crossover / Pair
     page_type: pair
-    haunting_level: high
+    haunting_level: medium
     characters: [main_character, pair_partner, dorje_legpa]
     location_mode: fixed
     location: hallway
@@ -184,7 +184,7 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: Second of four pair pages. Partner speaks, main character listens.
+    notes: Second of four pair pages. Partner speaks, main character listens. Medium haunting - cold blue tones, harsh shadows.
     dorje_legpa_easter_egg: Tiny 6-inch statuette on a side table beside a lamp -
       frozen crimson figurine almost invisible in blue shadows.
 

@@ -1,6 +1,7 @@
 id: p07
 section: First Attempt
 page_type: individual
+haunting_level: medium
 characters:
   - emer
   - dorje_legpa
@@ -17,7 +18,11 @@ visual:
   - But around her, the kitchen remains chaotic—jars still mislabeled, recipe cards still shuffling
   - The contrast between her small victory (the perfect cup) and the larger unsolved problem
   - She looks troubled, realizing this room needs something she doesn't have
-  - Warm brown cocoa steam rises against the cold blue background
+  - Visibly warmer atmosphere than before—golden light returning around Emer, the harsh cold receding
+  - Medium haunting lingers at the edges—hints of blue at the corners, geometry still slightly off
+  - A thin line of frost remains on the far window, but melting near where Emer sits
+  - Warm brown cocoa steam rises prominently, bringing color back to the scene
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette behind a mixing bowl—frozen crimson figurine watching her partial success
 
 text: |
   Emer closed her eyes and remembered. Mommy's hands guiding hers. The exact order. She made one perfect cup of cocoa—she could taste it was right. But the kitchen still churned around her. Love and memory helped—but something else was needed here. Something more... organized.
