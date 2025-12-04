@@ -22,4 +22,5 @@ visual:
 text: |
   "The library piano had gone completely mad," Henry said excitedly. "Keys were sticking out at crazy angles—some hovering in the air, black and white keys all jumbled together! But I didn't try to fix it—I played WITH it. I invented a new melody, and the faster I played, the more the piano fixed ITSELF!" He grinned. "The whole room went back to normal!" He paused. "But the bookshelves did seem a bit weird…" Emer's eyes went wide.
 
-objects: []
+objects:
+  - piano

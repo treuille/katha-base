@@ -727,10 +727,7 @@ def frame_image(image_path):
     # Create white canvas at full dimensions (with bleed)
     canvas = Image.new("RGB", (FULL_WIDTH, FULL_HEIGHT), "white")
 
-    # Paste content centered on canvas (offset by bleed)
-    canvas.paste(img_resized, (BLEED, BLEED))
-
-    # Draw guide lines
+    # Draw guide lines FIRST (so image appears on top)
     draw = ImageDraw.Draw(canvas)
     guide_color = (200, 200, 200)  # Light gray
 
@@ -744,6 +741,9 @@ def frame_image(image_path):
 
     # Center gutter line (for two-page spread fold)
     draw.line([(CENTER_GUTTER, 0), (CENTER_GUTTER, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    # Paste content AFTER guidelines (so image appears on top)
+    canvas.paste(img_resized, (BLEED, BLEED))
 
     # Save output
     output_dir = Path("out/images")
@@ -781,10 +781,7 @@ def frame_image_for_pdf(image_path):
     # Create white canvas at full dimensions (with bleed)
     canvas = Image.new("RGB", (FULL_WIDTH, FULL_HEIGHT), "white")
 
-    # Paste content centered on canvas (offset by bleed)
-    canvas.paste(img_resized, (BLEED, BLEED))
-
-    # Draw guide lines
+    # Draw guide lines FIRST (so image appears on top)
     draw = ImageDraw.Draw(canvas)
     guide_color = (200, 200, 200)  # Light gray
 
@@ -798,6 +795,9 @@ def frame_image_for_pdf(image_path):
 
     # Center gutter line (for two-page spread fold)
     draw.line([(CENTER_GUTTER, 0), (CENTER_GUTTER, FULL_HEIGHT)], fill=guide_color, width=1)
+
+    # Paste content AFTER guidelines (so image appears on top)
+    canvas.paste(img_resized, (BLEED, BLEED))
 
     return canvas
 
