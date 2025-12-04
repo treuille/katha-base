@@ -70,9 +70,9 @@ MAX_CHARACTER_IMAGES = 1
 CENTER_GUTTER = 1789   # Center line for two-page spread fold
 
 # Retry configuration for rate limiting
-RETRY_MAX_ATTEMPTS = 3
+RETRY_MAX_ATTEMPTS = 10
 RETRY_BASE_WAIT_SECONDS = 60      # Start with 1 minute
-RETRY_BACKOFF_MULTIPLIER = 2      # Double wait time each retry
+RETRY_BACKOFF_MULTIPLIER = 1.2    # 1.2x wait time each retry (10th attempt waits ~5 min)
 
 
 def _load_yaml_file(file_path):
