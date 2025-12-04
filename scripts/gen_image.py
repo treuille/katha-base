@@ -30,6 +30,9 @@ import asyncio
 import argparse
 import yaml
 from pathlib import Path
+
+# Add parent directory to path so we can import from scripts package
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from collections import defaultdict
 from google import genai
 from google.genai import types

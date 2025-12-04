@@ -8,15 +8,15 @@ characters:
 location: dining_room
 
 story_beat: Cullan enters the dining room and sees something terrifying—all the candles
-  have clustered together in one corner, flames burning too high. The velvet curtains
+  have clustered together in one corner, flames burning too high. The brocade curtains
   have already caught fire, flames licking up the fabric. The house is burning! Yet
   the room feels freezing cold despite the flames.
 
 visual: |
   - FOCUS ON THE CANDLES AND BURNING CURTAINS for dramatic effect
-  - All Christmas candles have CLUSTERED in the far right corner of the room near the velvet curtains
+  - All Christmas candles have CLUSTERED in the far right corner of the room near the brocade curtains
   - Candles appear DYNAMIC and ALIVE - growing, moving, leaning toward curtains
-  - THE VELVET CURTAINS ARE ON FIRE - flames climbing up the fabric, spreading
+  - THE BROCADE CURTAINS ARE ON FIRE - flames climbing up the fabric, spreading
   - Dramatic lighting from candle flames and burning curtains casting long, harsh shadows
   - Cullan visible in the BACKGROUND, face showing HORROR as he sees the house burning
   - Despite the flames, cold blue light seeping through the windows
@@ -26,6 +26,6 @@ visual: |
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the sideboard - frozen crimson figurine with gold crown, positioned as if watching the chaos unfold
 
 text: |
-  Cullan pushed open the dining room door and gasped. Every candle in the room had somehow clustered into one corner—dozens of flames burning dangerously high. And the velvet curtains had already caught fire! Flames climbed up the fabric, spreading fast. The house was burning! Waves of scorching heat and icy cold currents swirled around Cullan, frost creeping across the windows even as flames licked higher. His face went pale, his eyes wide with disbelief.
+  Cullan pushed open the dining room door and gasped. Every candle in the room had somehow clustered into one corner—dozens of flames burning dangerously high. And the brocade curtains had already caught fire! Flames climbed up the fabric, spreading fast. The house was burning! Waves of scorching heat and icy cold currents swirled around Cullan, frost creeping across the windows even as flames licked higher. His face went pale, his eyes wide with disbelief.
 
 objects: []

@@ -10,22 +10,25 @@ characters:
   - james
   - dorje_legpa
 location: driveway
-
 story_beat: THIS IS THE BIG PAYOFF CLIMAX IMAGE. Henry's plane pulls the wagon with
   Cullan and Arthur holding the glowing box. James underneath traffic controlling.
   Spectacular image of fun. Huge rainbows and dramatic elements. Keep words minimal.
-
 visual: |
   - THIS IS THE CLIMAX IMAGE - spectacular image of pure fun and joy
-  - Henry's WWII-style biplane pulling the red wagon through the air
-  - Cullan and Arthur in the wagon, holding the glowing box containing the spirit
-  - James underneath/on the ground, traffic controlling them with hand signals
-  - HUGE RAINBOWS and other dramatic elements behind them filling the sky
+  - All characters are at the same depth and viewed from the side, moving exactly to the right in the image plane
+  - In the right third of the frame, Henry's WWI-style biplane is flying about 10 ft off the ground, and flying to the right.
+  - Henry is wearing WWI aviator goggles.
+  - Also in the right third, James is under the biplane, dressed like a ground controller, wearing huge hearing protection earmuffs and directing the plan to the right with his glowing rods.
+  - In the middle of the frame Cullan and Arthur are in the red wagon which is bouncing down the driveay, being pulled by the airplane by a 15 ft length of string.
+  - Henry is happily and confidently looking over his shoulder at the glowing box.
+  - The front wheels of the wagon are slight lifted, because of the pull of the airplan, but they're safely on the ground
+  - Cullan and Arthur in the wagon, holding the glowing box containing the spirit.
+  - In the left third of the frame, Emer following behind the red wagon on her tricycle, Hansel perched on her handlebars
+  - All characters are smiling with pure joy, and looking at the glowing box.
+  - Hansel POINTING HIS BOTTLE determinedly at the wagon-—guiding them onward
+  - The box has burst open opening and out come HUGE RAINBOWS and other dramatic elements behind them filling the sky, the clouds form lotuses and other geometric tibetan imagery.
   - Still clearly in the snowy woods of upstate New York (snow-covered trees visible)
-  - The wagon lifting off the ground—magical and joyful
   - Pure delight and triumph on everyone's faces
-
 text: |
-  Up they went.
-
-objects: [wagon]
+  They were setting the spirit free!
+objects: [wagon, tricycle, plane]

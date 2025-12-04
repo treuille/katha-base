@@ -11,21 +11,23 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: Nervous but determined, the group talks, masters their fears, and
-  decides they must face whatever is in the living room together.
+story_beat: Determined and brave, the cousins DASH toward the living room together—
+  running with urgency, power, and resolve to face whatever awaits them.
 
 visual: |
-  - The six cousins huddled together in the hallway
-  - Height order: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
-  - Nervous but determined expressions on every face
-  - Cullan and Arthur standing close but not touching or holding hands
-  - Hansel held protectively by Emer - Emer has messy flowing blonde hair
-  - All eyes turning toward the living room doorway together
+  - IMPORTANT: Only render a single deity (Dorje Legpa)—do not show multiple deities
+  - The six cousins RUNNING down the hallway toward the living room—dynamic action, bodies in motion
+  - Henry leading the charge, tall figure sprinting with determination
+  - James running with Hansel riding piggyback on his back—Hansel clinging on, bouncing with each stride
+  - Emer dashing alongside, her messy flowing blonde hair streaming behind her, clutching her My Little Pony doll tight as she runs
+  - Cullan and Arthur moving separately, distinctly apart from each other—NOT close together, each running on their own with space between them
+  - Every face shows fierce determination—no hesitation, only resolve
+  - Legs in mid-stride, arms pumping, the urgency of movement in every figure
+  - The hallway blurring past them as they rush toward the living room doorway
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette perched at the edge of the living room doorway - frozen crimson figurine seeming to beckon them toward the final confrontation
 
 text: |
-  "We have to go back to the living room," Emer said.
-  "Together," Arthur added.
-  Cullan nodded. James straightened his shoulders. Henry took a deep breath. Even little Hansel seemed to understand. Whatever was in there, they'd face it as a team.
+  "We have to go back to the living room," Emer said. "NOW."
+  "Together," Arthur added—and they ran. All six of them, dashing down the hallway. James scooped up Hansel onto his back. Emer clutched her pony and sprinted. Henry led the way, his long legs eating up the distance. Cullan and Arthur ran side by side but apart, each powering forward on their own. Whatever was in there, they'd face it as a team—and they weren't walking. They were charging.
 
 objects: []

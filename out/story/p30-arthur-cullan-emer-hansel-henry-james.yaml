@@ -1,23 +1,20 @@
 id: p30
 section: Epilogue
 page_type: joint
-characters:
-  - arthur
-  - cullan
-  - emer
-  - hansel
-  - henry
-  - james
+characters: []
 location: exterior
 
 story_beat: Outside, the house glows gently in the snowy woods, protected by
   a guardian who finally found his sky. Peace settles over Millbrook.
 
 visual: |
+  - DO NOT SHOW ANY CHARACTERS—no children visible in this scene
   - Wide shot of Millbrook house in snowy woods at dusk
   - The house glowing with gentle PROTECTIVE golden aura
   - Snow-covered trees surrounding the cozy home
-  - The sky above soft and peaceful, guardian spirit implied in cloud shapes
+  - DORJE LEGPA VISIBLE IN THE SKY above the house—the KIND TIBETAN PROTECTOR SPIRIT in his peaceful, benevolent form (no longer wrathful)
+  - The spirit is clearly visible in the clouds/sky, serene and guardian-like, peacefully watching over the home
+  - Dorje Legpa appears as a gentle protector now—same crimson deity with gold crown, but his expression is calm, wise, and loving rather than fierce
   - A sense of peace, protection, and story's end—bookending page 1
 
 text: |
