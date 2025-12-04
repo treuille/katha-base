@@ -1,5 +1,5 @@
 id: p26
-section: Sky Procession
+section: Climax
 page_type: joint
 characters:
   - arthur
@@ -11,22 +11,23 @@ characters:
   - dorje_legpa
 location: driveway
 
-story_beat: Outside, the kids move together like a perfect team. Henry is in his
-  plane, ready for takeoff. James directs from below. Everyone's faces show pure
-  delight at what they're about to do together.
+story_beat: Anticipation beat. Outside in the snowy driveway, Henry's legs are visible
+  running off-frame. The other kids are setting up—Arthur and Cullan struggle to load
+  the glowing box onto the wagon, Emer lovingly places Hansel on her tricycle handlebars.
+  Everyone is puzzled about Henry's plan but triumphant that they captured the spirit.
 
 visual: |
-  - Snowy driveway scene showing clearly FROM LEFT TO RIGHT: tricycle, wagon, then biplane - all moving toward the right
-  - Emer's tricycle on the FAR LEFT with Hansel on the handlebars
-  - The red wagon in the MIDDLE with Arthur and Cullan holding a glowing box (light coming out through cracks), struggling but gleeful
-  - Henry's small WWI-style biplane on the FAR RIGHT with OPEN COCKPIT, single wing, propeller in front
-  - Henry inside the plane wearing his Santa hat
-  - James underneath/near the plane dressed as an air marshal, signaling the plane forward
-  - Looks of pure delight on everyone's faces as they realize what they're about to do
+  - Snowy driveway scene - ANTICIPATION BEAT before the big payoff
+  - On the RIGHT edge of frame: Henry's LEGS AND FEET ONLY visible, running OFF-FRAME to the right (rest of him cut off)
+  - James in the middle-right, watching Henry run off with a PUZZLED expression
+  - Arthur and Cullan STRUGGLING to lift/load the glowing, crackling box onto the red wagon—rainbow light blazing through cracks
+  - Emer on the left, LOVINGLY placing baby Hansel onto the handlebars of her tricycle
+  - Expressions on everyone: PUZZLED about Henry's plan, but also TRIUMPHANT—they got the spirit in the box!
+  - NO PLANE VISIBLE—that's the surprise for the next page
   - EVERYONE wearing Santa hats
-  - The whole procession moving toward the RIGHT side of the image
+  - Snowy woods of upstate New York visible in background
 
 text: |
-  Outside in the snow, they moved together like a perfect team.
+  Outside, they wrestled the glowing box toward the wagon. What was Henry up to? Why did he need pilot goggles?
 
-objects: [wagon]
+objects: [wagon, tricycle]

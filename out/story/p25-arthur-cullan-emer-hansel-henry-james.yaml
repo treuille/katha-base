@@ -12,21 +12,24 @@ characters:
 location: living_room
 
 story_beat: The kids look at the shaking, glowing box and realize it won't hold
-  for long. Henry has an idea - he remembers pulling a little red wagon to Millbrook
-  last summer, but he has something better in mind. He asks where his pilot goggles are.
+  for long. Henry has an idea and takes charge - he tells the others to get the box
+  in the wagon and take it outside. He's going to run and get his pilot goggles.
+  The others are puzzled but start to act.
 
 visual: |
   - NOTE: Ensure this is ONE box, the SAME box from p24—not multiple boxes
   - The living room with all six cousins gathered around the single wooden box CRACKLING WITH RAINBOW ENERGY—visible rainbow-colored magical energy arcing and sparking from every crack
   - The box shaking violently, rainbow light blazing through every gap, the spirit contained but furious
   - Height order visible: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
-  - Henry's face lighting up with sudden inspiration—he has an idea!
-  - James with his mind BLOWN—eyes wide, jaw dropped, amazed and excited by Henry's plan, the lightbulb moment hitting him
-  - Hansel sucking on his bottle intently, eyes wide and following everything, focused on the situation despite being a baby, ready to help
-  - The other kids' faces shifting from worry to excitement as they realize what Henry is proposing
+  - Henry TAKING CHARGE—pointing, giving instructions, about to run off (still in scene but clearly about to bolt)
+  - The other kids look PUZZLED but are starting to act on his instructions
+  - Arthur and Cullan moving toward the box, ready to lift it
+  - Emer picking up Hansel, preparing to move
+  - James looking at Henry with a mix of confusion and trust
+  - Sense of URGENCY—they need to move fast
   - EVERYONE wearing Santa hats
 
 text: |
-  The box shook and rattled. Light blazed through every crack. "This won't hold!" someone said. They all looked at each other, uncertain. Then Henry's eyes lit up. "Remember when I pulled the little red wagon all the way to Millbrook last summer? Well, I have a better idea." He grinned. "Where are my pilot goggles?"
+  The box shook and rattled. Light blazed through every crack. "This won't hold!" someone said. Then Henry's eyes lit up. "Get the box in the wagon! Take it outside—I have an idea!" He was already moving toward the door. "I need to get my pilot goggles!" The others stared after him. Pilot goggles?
 
 objects: []

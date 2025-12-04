@@ -3,18 +3,15 @@ section: Ordinary World
 page_type: joint
 characters: []
 location: exterior
-
-story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house
-  glowing in the distance.
-
+story_beat: A beautiful snowy Christmas Day in Millbrook, with the cozy house glowing
+  in the distance.
 visual: |
   - Wide establishing shot of Millbrook house nestled in snowy woods
   - White aluminum siding, warm golden light glowing from windows
   - Fresh snow blanketing the grounds, trees heavy with white
   - A sense of warmth and welcome beckoning from the cozy house
   - Peaceful winter morning atmosphere
-
+  - Text should be on the RIGHT half of the page, and not cross the vertical center line.
 text: |
   Christmas morning at Millbrook. Snow lay thick on the woods, and Graminy's old house glowed warm against the cold. Inside, six cousins were about to have the strangest Christmas of their lives.
-
 objects: []
