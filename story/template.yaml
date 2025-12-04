@@ -154,7 +154,8 @@ pages:
     characters: [main_character, pair_partner, dorje_legpa]
     location_mode: fixed
     location: hallway
-    story_beat: The main character meets their pair partner and describes their room.
+    story_beat: The main character runs into their pair partner in the hallway and
+      describes what happened in their room.
     pair_groups:
       -   - arthur
           - cullan
@@ -162,7 +163,7 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: First of five pair pages. Main character speaks, partner listens.
+    notes: First of four pair pages. Main character speaks, partner listens.
     dorje_legpa_easter_egg: Tiny 6-inch statuette on a narrow shelf behind the pair -
       frozen crimson figurine watching them unseen.
 
@@ -183,7 +184,7 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: Second pair page. Partner speaks, main character listens.
+    notes: Second of four pair pages. Partner speaks, main character listens.
     dorje_legpa_easter_egg: Tiny 6-inch statuette on a side table beside a lamp -
       frozen crimson figurine almost invisible in blue shadows.
 
@@ -196,7 +197,8 @@ pages:
     characters: [main_character, pair_partner, dorje_legpa]
     location_mode: fixed
     location: hallway
-    story_beat: They compare notes and realize something bigger is wrong with this house.
+    story_beat: Both realize simultaneously—"This house is haunted." A visual beat
+      showing their dawning realization and rising concern.
     pair_groups:
       -   - arthur
           - cullan
@@ -204,9 +206,10 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: Third pair page. Dawning realization begins.
-    dorje_legpa_easter_egg: Tiny 6-inch statuette tucked behind a potted plant in
-      corner - frozen crimson figurine barely visible between leaves.
+    notes: Third of four pair pages. Visual/emotional beat—minimal text (~1 sentence).
+      Show the moment of shared realization on their faces.
+    dorje_legpa_easter_egg: Tiny 6-inch statuette on window ledge behind them -
+      frozen crimson figurine silhouetted against frosty glass.
 
    # page 11
   - id: p11
@@ -217,7 +220,8 @@ pages:
     characters: [main_character, pair_partner, dorje_legpa]
     location_mode: fixed
     location: hallway
-    story_beat: The realization crystallizes—"This house is haunted."
+    story_beat: They agree to swap rooms and explain why—each will try the other's
+      challenge using their own strengths.
     pair_groups:
       -   - arthur
           - cullan
@@ -225,30 +229,27 @@ pages:
           - hansel
       -   - emer
           - henry
-    notes: Fourth pair page. Full realization of haunting.
-    dorje_legpa_easter_egg: Tiny 6-inch statuette on window ledge behind them -
-      frozen crimson figurine silhouetted against frosty glass.
+    notes: Fourth of four pair pages. Decision to swap rooms with brief reasoning.
+    dorje_legpa_easter_egg: Tiny 6-inch statuette peeking from behind a doorframe -
+      frozen crimson figurine almost hidden but watching.
 
    # page 12
   - id: p12
     index: 12
-    section: Crossover / Pair
-    page_type: pair
+    section: Second Attempt
+    page_type: individual
     haunting_level: high
-    characters: [main_character, pair_partner, dorje_legpa]
+    characters: [main_character, dorje_legpa]
     location_mode: fixed
     location: hallway
-    story_beat: They agree to swap rooms—each will try the other's challenge.
-    pair_groups:
-      -   - arthur
-          - cullan
-      -   - james
-          - hansel
-      -   - emer
-          - henry
-    notes: Fifth pair page. Decision to swap rooms.
-    dorje_legpa_easter_egg: Tiny 6-inch statuette peeking from behind a doorframe -
-      frozen crimson figurine almost hidden but watching.
+    story_beat: The character heads toward their second room with new determination.
+    notes: SHORT TRANSITIONAL PAGE - 1 sentence of text only. Focus on movement
+      and the character's newfound determination/power. DO NOT reveal or describe
+      the challenge ahead - that happens on p13. Atmospheric hints only (shadow,
+      light, temperature shift) - NO specific room details, hazards, or descriptions
+      of what's wrong. Haunting still high but determination growing.
+    dorje_legpa_easter_egg: Tiny 6-inch statuette on a narrow wall shelf or beside
+      a lamp - frozen crimson figurine watching approach to final challenge.
 
    # page 13
   - id: p13
@@ -257,32 +258,19 @@ pages:
     page_type: individual
     haunting_level: high
     characters: [main_character, dorje_legpa]
-    location_mode: fixed
-    location: hallway
-    story_beat: The character heads toward their second room with new determination.
-    notes: Build anticipation again. The character should sense something specific
-      from the room ahead. Haunting still high but determination growing.
-    dorje_legpa_easter_egg: Tiny 6-inch statuette on a narrow wall shelf or beside
-      a lamp - frozen crimson figurine watching approach to final challenge.
+    location_mode: by_role
+    room_role: second_attempt
+    story_beat: The second room presents a different kind of challenge.
+    notes: THE REVEAL PAGE - This is where the specific challenge is first described.
+      Show the character entering and discovering what's wrong. The horror here is
+      about false accusation, being framed, being made into the bad guy. Harsh cold
+      light, shadows that seem to point accusingly.
+    dorje_legpa_easter_egg: Tiny 6-inch statuette on low bookshelf or buffet -
+      frozen crimson figurine watching the false accusations unfold.
 
    # page 14
   - id: p14
     index: 14
-    section: Second Attempt
-    page_type: individual
-    haunting_level: high
-    characters: [main_character, dorje_legpa]
-    location_mode: by_role
-    room_role: second_attempt
-    story_beat: The second room presents a different kind of challenge.
-    notes: The horror here is about false accusation, being framed, being made into
-      the bad guy. Harsh cold light, shadows that seem to point accusingly.
-    dorje_legpa_easter_egg: Tiny 6-inch statuette on low bookshelf or buffet -
-      frozen crimson figurine watching the false accusations unfold.
-
-   # page 15
-  - id: p15
-    index: 15
     section: Second Attempt
     page_type: individual
     haunting_level: medium
@@ -295,9 +283,9 @@ pages:
     dorje_legpa_easter_egg: Tiny 6-inch statuette on a shelf - frozen crimson figurine
       seeming to lean back as character's authority fills room.
 
-   # page 16
-  - id: p16
-    index: 16
+   # page 15
+  - id: p15
+    index: 15
     section: Second Attempt
     page_type: individual
     haunting_level: medium
@@ -310,9 +298,9 @@ pages:
     dorje_legpa_easter_egg: Tiny 6-inch statuette on windowsill or mantelpiece -
       frozen crimson figurine diminished in warm golden light.
 
-   # page 17
-  - id: p17
-    index: 17
+   # page 16
+  - id: p16
+    index: 16
     section: Second Attempt
     page_type: individual
     haunting_level: medium
@@ -325,9 +313,9 @@ pages:
     dorje_legpa_easter_egg: Tiny 6-inch statuette on decorative shelf near doorway -
       frozen crimson figurine still watching even as haunting fades.
 
-   # page 18
-  - id: p18
-    index: 18
+   # page 17
+  - id: p17
+    index: 17
     section: Realizing the Bigger Problem
     page_type: joint
     haunting_level: medium
@@ -340,9 +328,9 @@ pages:
     dorje_legpa_easter_egg: Tiny 6-inch statuette on high shelf above kids - frozen
       crimson figurine looking down at them all unnoticed.
 
-   # page 19
-  - id: p19
-    index: 19
+   # page 18
+  - id: p18
+    index: 18
     section: Realizing the Bigger Problem
     page_type: joint
     haunting_level: medium
@@ -354,9 +342,9 @@ pages:
     dorje_legpa_easter_egg: Tiny 6-inch statuette at edge of living room doorway -
       frozen crimson figurine seeming to beckon them toward confrontation.
 
-   # page 20
-  - id: p20
-    index: 20
+   # page 19
+  - id: p19
+    index: 19
     section: Realizing the Bigger Problem
     page_type: joint
     haunting_level: medium
@@ -368,9 +356,9 @@ pages:
     dorje_legpa_easter_egg: Ornament on tree hanging prominently - crimson deity
       figurine with gold crown, the source of all wrongness.
 
-   # page 21
-  - id: p21
-    index: 21
+   # page 20
+  - id: p20
+    index: 20
     section: Realizing the Bigger Problem
     page_type: joint
     haunting_level: medium
@@ -382,9 +370,9 @@ pages:
     dorje_legpa_easter_egg: THE ornament Henry points at - crimson deity figurine
       glowing with unsettling inner light, pulsing with energy.
 
-   # page 22
-  - id: p22
-    index: 22
+   # page 21
+  - id: p21
+    index: 21
     section: Realizing the Bigger Problem
     page_type: joint
     haunting_level: medium
@@ -407,9 +395,9 @@ pages:
     dorje_legpa_easter_egg: Ornament IDENTIFIED - crimson deity figurine reflected
       in Regan's eyes, Buddhist imagery shimmering around it.
 
-   # page 23
-  - id: p23
-    index: 23
+   # page 22
+  - id: p22
+    index: 22
     section: Climax
     page_type: joint
     haunting_level: medium
@@ -423,9 +411,9 @@ pages:
     dorje_legpa_form: FULL MANIFESTATION - erupting huge from ornament, deep crimson
       skin, rainbow light and ice, weapons spinning, too big for the room.
 
-   # page 24
-  - id: p24
-    index: 24
+   # page 23
+  - id: p23
+    index: 23
     section: Climax
     page_type: joint
     haunting_level: low
@@ -440,9 +428,9 @@ pages:
     dorje_legpa_form: BEING CONTAINED - children wrestling furious deity into box,
       rainbow light blazing through cracks, hilariously indignant.
 
-   # page 25
-  - id: p25
-    index: 25
+   # page 24
+  - id: p24
+    index: 24
     section: Climax
     page_type: joint
     haunting_level: low
@@ -455,9 +443,9 @@ pages:
     dorje_legpa_form: IN SHAKING BOX - glowing box with light blazing through cracks,
       the spirit contained but furious and rattling.
 
-   # page 26
-  - id: p26
-    index: 26
+   # page 25
+  - id: p25
+    index: 25
     section: Sky Procession
     page_type: joint
     haunting_level: low
@@ -470,9 +458,9 @@ pages:
     dorje_legpa_form: IN BOX ON WAGON - glowing box with light coming through cracks,
       held by Arthur and Cullan, deity contained but visible through gaps.
 
-   # page 27
-  - id: p27
-    index: 27
+   # page 26
+  - id: p26
+    index: 26
     section: Sky Procession
     page_type: joint
     haunting_level: low
@@ -486,9 +474,9 @@ pages:
     dorje_legpa_form: BEGINNING TO TRANSFORM - deity in box becoming kind/benevolent,
       frosty Tibetan imagery (lotuses, rainbows) filling the air.
 
-   # page 28
-  - id: p28
-    index: 28
+   # page 27
+  - id: p27
+    index: 27
     section: Sky Procession
     page_type: joint
     haunting_level: none
@@ -504,9 +492,9 @@ pages:
     dorje_legpa_form: TRANSFORMED/PEACEFUL - fury softened to wind, weapons to sparkles,
       benevolent expression, seeing reflection in sky, sky guardian remembered.
 
-   # page 29
-  - id: p29
-    index: 29
+   # page 28
+  - id: p28
+    index: 28
     section: Epilogue
     page_type: individual
     haunting_level: none
@@ -519,11 +507,11 @@ pages:
       This is the main character's personal moment of resolution.
     notes: Individual interior moment of resolution for each character. Each character
       reflects on their own journey and what they discovered about themselves.
-      EXCEPTION - Emer's p29 includes Regan (her mother) snuggling together with hot chocolate.
+      EXCEPTION - Emer's p28 includes Regan (her mother) snuggling together with hot chocolate.
 
-   # page 30
-  - id: p30
-    index: 30
+   # page 29
+  - id: p29
+    index: 29
     section: Epilogue
     page_type: joint
     haunting_level: none

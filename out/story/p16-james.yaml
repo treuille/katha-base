@@ -5,28 +5,27 @@ haunting_level: medium
 characters:
   - james
   - dorje_legpa
-location: stairs
+location: hallway
 
-story_beat: James raises their hands and points. Magic flows through them—real magic,
-  power they never knew they had. "UP is UP!" they command, pointing toward the ceiling.
-  "DOWN is DOWN!" pointing at the floor. The impossible stairs shudder, twist, and
-  slowly begin to straighten. James is leading the stairs back to normal.
+story_beat: The stairs are fixed—perfectly normal now. James stands triumphant at the
+  top, still feeling the magic tingling in their fingertips. They did it. They led
+  the stairs back to reality. But even in victory, something feels unresolved. A
+  hint of cold still pulses through the house. There's more to do.
 
 visual:
-  - James standing with urgent intensity on the stairs, both arms raised, pointing in different directions
-  - One hand pointing UP toward the ceiling, golden light streaming from their fingers
-  - Other hand pointing DOWN toward the floor, more golden light
-  - Magic visibly flowing through James—they're glowing with power
-  - The Escher stairs UNTWISTING—steps rotating back into proper position
-  - Geometry slowly correcting itself as James commands with fierce determination
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette tumbling on a step as reality reshapes
-  - Warm golden light pushing in, but cold blue still fighting back
-  - James's expression: fierce, worried, resolved—they're winning but must keep fighting
-  - Neon graphic shirt glowing bright in the magical light
-  - Santa hat, ginger hair with blonde streak flying with power, freckles visible
-  - The sense of urgent leadership and determined command radiating from James
+  - James standing triumphantly at the top of the now-normal stairs
+  - The staircase completely fixed—proper geometry, steps going the right way
+  - James's hands still faintly glowing with residual magic
+  - Triumphant expression, but eyes showing awareness of something more
+  - The stairs behind them looking ordinary and safe
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a shelf—smaller now, diminished but still watching
+  - Mostly warm golden light, but a thread of cold blue visible deeper in the house
+  - A subtle pulse of wrongness in the air—the challenge is won but the war continues
+  - Neon graphic shirt vibrant, Santa hat proud on their head
+  - Ginger hair with blonde streak, freckles on their triumphant but vigilant face
+  - James's posture confident—they know their power now
 
 text: |
-  James raised their hands. They didn't know what they were doing—it just felt right. They pointed up with one hand, down with the other. "UP is UP!" their voice rang out, stronger than they'd ever heard it. "DOWN is DOWN!" Something happened. Magic—real magic—poured through their fingers like golden light. The stairs shuddered. Groaned. And slowly, impossibly, they began to straighten. Steps untwisted. The Escher maze unwound. James felt power surging through them, power they never knew they had. They were leading the stairs. And the stairs were listening.
+  The stairs were fixed. James stood at the top, breathing hard, and looked back. Normal stairs. Regular steps going regular directions. They'd done it. Magic still tingled in their fingertips—real magic, their magic. They were more powerful than they'd ever known. But even as warmth flooded back into the stairwell, James felt something else. A cold thread still running through the house. A pulse of wrongness, deeper inside. This wasn't over. But James knew something now: whatever came next, they could lead their way through it.
 
 objects: []

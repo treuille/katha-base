@@ -1,30 +1,30 @@
 id: p14
 section: Second Attempt
 page_type: individual
-haunting_level: high
+haunting_level: medium
 characters:
   - arthur
   - dorje_legpa
 location: dining_room
 
-story_beat: |
-  Arthur enters and sees the clustered candles—fire hazard, just like
-  Cullan described. But Arthur sees something else: the PATTERN of how they cluster.
-  It's like a Rubik's cube mid-solve. There's an order underneath the chaos, and
-  he can see it.
+story_beat: Arthur races against the spreading cold, snatching candles and placing
+  them with frantic precision. He sees the pattern—the solution—but time is running
+  out. His feet pound the floorboards as he rushes from spot to spot, each candle
+  placed exactly where it belongs. The warmth fights back.
 
-visual: |
-  - Arthur stepping into the dining room, eyes widening with recognition
-  - All Christmas candles CLUSTERED dangerously in one corner
-  - Flames burning too high, too close to brocade curtains
-  - But Arthur's expression is analytical, not panicked
-  - Faint overlay effect: ghostly lines showing where candles SHOULD be
-  - Like seeing a Rubik's cube solution overlaid on scrambled colors
-  - Cold blue light from windows despite the dangerous flames
-  - His quiet confidence returning—he sees the pattern others miss
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the buffet table - frozen crimson figurine with gold crown, watching Arthur survey the chaos
+visual:
+  - Arthur RUNNING around the dining room, actively moving candles with urgent intensity
+  - His body in dynamic motion—reaching, placing, spinning to the next spot with desperate speed
+  - OVERLAY: A complex DA VINCI-LIKE MATHEMATICAL PATTERN visible over the scene—intersecting lines, angles, golden ratio spirals, geometric guides showing where each candle belongs
+  - The pattern emanates from Arthur's perspective, as if we see the world through his brilliant mathematical mind
+  - Candles being placed at precise intersection points of the geometric overlay
+  - His expression: intense, worried but resolved—he sees the solution and must execute it before time runs out
+  - Warm golden light blooming as each candle finds its mathematically perfect position
+  - Cold blue still threatening from the edges, not fully retreated
+  - Energy and brilliance radiating from him—very active, very smart, racing against danger
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside the china cabinet - frozen crimson figurine partially obscured as order returns to the room
 
 text: |
-  The candles were exactly as Cullan described—clustered in one corner, flames licking toward the curtains. But Arthur didn't see chaos. He saw a Rubik's cube, three moves from solved. The candles weren't random—they'd been pushed out of balance, and balance had a pattern. He could see where each one belonged, like ghost-images hovering in the air. This was about seeing patterns and restoring balance.
+  Arthur's heart pounded. He could see it—the pattern, the solution—but the cold was spreading fast. He grabbed a candle and slammed it into place. Then he was running, snatching the next one, feet skidding on the wooden floor. "There—and there—and THERE!" Each piece of the puzzle clicking into place like a Rubik's cube in fast-forward. The flames steadied. Warmth surged back. He was going to solve this room.
 
 objects: []

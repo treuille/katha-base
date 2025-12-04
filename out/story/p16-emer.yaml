@@ -3,28 +3,24 @@ section: Second Attempt
 page_type: individual
 characters:
   - emer
-  - dorje_legpa
-location: library
+location: hallway
 story_beat: |
-  Emer climbs onto the unicorn and rises up triumphant. She's powerful now—she has
-  magic! Riding her unicorn through the library, she can see everything. She becomes
-  the director, pointing and calling out, guiding characters home with authority.
-  The library yields to her power. This is her triumph.
+  Despite the library's surrender, Emer senses the haunting isn't fully resolved—
+  something bigger pulses through the house. The unicorn fades back to wherever
+  it came from, but she carries its magic with her. She needs to find her
+  cousins.
 
 visual:
-  - Emer riding her one unicorn through the library with joyous triumph, elevated above everything
-  - She's powerful—magic sparkles around her fingertips as she directs with fierce determination
-  - Her santa hat flying back, arms commanding, pointing with authority and urgency
-  - Pure joy and triumph on her face—this is everything she ever dreamed
-  - She's calling out commands with intensity—"You go HERE! She belongs in THAT book!"
-  - Story characters following her magical commands, finding their way home
-  - The chaos still swirling, being organized by her will but resisting
-  - Warm golden light returning to the library but shadows still lurking
-  - This is her moment of power—joyous, magical, triumphant
-  - NOTE: There is only ONE unicorn total in Emer's story—the one she is riding
+  - Emer back in the hallway, the library peaceful behind her
+  - The unicorn fading back through the doorway, turning to nod at her
+  - Emer touching her heart where the magic still glows
+  - Her expression shifted—still joyful but aware that something bigger remains
+  - The hallway warming but still not quite right
+  - She's already moving, urgent, toward finding the others
+  - Her My Little Pony doll tucked under her arm—toy and real magic, connected now
+  - NOTE: Only ONE unicorn—the same one from pages 15-16
 
 text: |
-  Emer climbed onto her unicorn. It rose—and suddenly she was powerful. Magic sparkled at her fingertips. She could see everything! "You go HERE!" she commanded. "She belongs in THAT book!" The characters obeyed. She was riding a unicorn and she had magic. This was her triumph.
+  The unicorn faded back to wherever stories live, but Emer felt its magic still glowing in her chest. The library was peaceful now. But something else pulsed through the house—bigger, deeper. "I need to find my cousins," she said, and started running.
 
-objects:
-  - unicorn
+objects: []

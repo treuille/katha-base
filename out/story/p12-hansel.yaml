@@ -1,0 +1,26 @@
+id: p12
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - hansel
+  - dorje_legpa
+location: hallway
+
+story_beat: Hansel crawls with URGENCY through the hallway toward the sun room. Something has awakened
+  in him from his first room victory—his happiness is sharper, stronger, almost magical.
+
+visual:
+  - Hansel crawling FAST through the hallway toward the sun room with URGENCY—arms and legs pumping with purpose
+  - His face shows RESOLVE—not just curious but DETERMINED, eyes bright with newfound understanding
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—his happiness awakened and glowing
+  - The hallway at peak wrongness—shadows moving, light flickering—but Hansel pushes through UNDETERRED
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching
+  - Hansel's body in dynamic motion—crawling with speed and purpose like a baby on a mission
+  - His nautical-print sleeper visible, Santa hat firmly on, bottle clutched like a talisman of power
+  - His whole posture radiating determination—this baby knows exactly what he can do
+
+text: |
+  Hansel crawled fast, the warm glow in his chest ready for whatever waited ahead.
+
+objects: []

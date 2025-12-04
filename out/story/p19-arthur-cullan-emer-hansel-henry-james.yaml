@@ -9,25 +9,21 @@ characters:
   - henry
   - james
   - dorje_legpa
-location: hallway
+location: living_room
 
-story_beat: Determined and brave, the cousins DASH toward the living room together—
-  running with urgency, power, and resolve to face whatever awaits them.
+story_beat: All the kids gather under the tree, sharing quick snapshots of what
+  happened in their rooms, and realize everything traces back to the tree.
 
 visual: |
-  - IMPORTANT: Only render a single deity (Dorje Legpa)—do not show multiple deities
-  - The six cousins RUNNING down the hallway toward the living room—dynamic action, bodies in motion
-  - Henry leading the charge, tall figure sprinting with determination
-  - James running with Hansel riding piggyback on his back—Hansel clinging on, bouncing with each stride
-  - Emer dashing alongside, her messy flowing blonde hair streaming behind her, clutching her My Little Pony doll tight as she runs
-  - Cullan and Arthur moving separately, distinctly apart from each other—NOT close together, each running on their own with space between them
-  - Every face shows fierce determination—no hesitation, only resolve
-  - Legs in mid-stride, arms pumping, the urgency of movement in every figure
-  - The hallway blurring past them as they rush toward the living room doorway
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette perched at the edge of the living room doorway - frozen crimson figurine seeming to beckon them toward the final confrontation
+  - All six cousins gathered around the Christmas tree
+  - Height order: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
+  - Each gesturing as they share their room experiences
+  - Ghostly overlays showing glimpses of each haunting: candles, games, other rooms
+  - The tree looming large in the frame, ornaments glinting ominously
+  - Growing realization on their faces as patterns connect
+  - EASTER EGG: Among the ornaments, the Dorje Legpa figurine hangs prominently - crimson-red deity with gold crown, turquoise sash, tiny raised sword - the source of all the wrongness
 
 text: |
-  "We have to go back to the living room," Emer said. "NOW."
-  "Together," Arthur added—and they ran. All six of them, dashing down the hallway. James scooped up Hansel onto his back. Emer clutched her pony and sprinted. Henry led the way, his long legs eating up the distance. Cullan and Arthur ran side by side but apart, each powering forward on their own. Whatever was in there, they'd face it as a team—and they weren't walking. They were charging.
+  Under the tree, stories tumbled out. Candles that kept clustering dangerously. Games with impossible rules. Each room had been scrambled in its own way, but now they saw it—all the wrongness radiated from here. From the tree. From something on it.
 
 objects: []

@@ -5,25 +5,24 @@ haunting_level: medium
 characters:
   - arthur
   - dorje_legpa
-location: dining_room
+location: hallway
 
-story_beat: The final candle placed. The pattern HOLDS. The candles don't slide
-  back—they stay in perfect balance. Arthur realizes he doesn't just see patterns.
-  He can RESTORE harmony. Quiet pride, like finishing a perfect solve.
+story_beat: Despite the room's surrender, Arthur senses the haunting isn't fully
+  resolved—something bigger pulses through the house. "This house is completely
+  haunted. I need to find my cousins." He starts running.
 
-visual:
-  - Arthur placing the final candle with intense, urgent precision
-  - All candles now arranged in perfect balance around the room
-  - The dining room filling with warm golden light, pushing back the cold
-  - Candles staying exactly where placed—no sliding, no clustering
-  - FOCUS ON EXPRESSION AND POSTURE: Arthur standing with triumphant resolve—shoulders back, chin lifted
-  - His expression: intense triumph mixed with worried awareness—he did it but it's not over yet
-  - A clear sense that this battle is won but the war continues
-  - The formal dining table beautiful again, properly lit
-  - Geometry of the room normalized, but hints of wrongness still at the edges
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the mantelpiece - frozen crimson figurine still present but diminished in the restored harmony
+visual: |
+  - Arthur stepping out of the dining room into the hallway
+  - His expression shifting from triumph to concern
+  - The hallway still wrong but warming—medium haunting level
+  - Some warm golden tones returning, but cold still present
+  - His posture shifting to urgency, about to run
+  - Looking down the hallway toward where the others might be
+  - The sense that his individual victory isn't enough
+  - Ready to sprint, needing to reunite with cousins
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette tucked behind a vase on a hallway console - frozen crimson figurine with tiny sword, still present even as warmth returns
 
 text: |
-  The last candle clicked into place. Arthur stepped back and watched. The candles didn't slide. They didn't cluster. They stayed exactly where he'd put them, burning steady and calm, the room glowing with warm, balanced light. He'd done it—with clarity and confidence, by seeing where everything belonged. He didn't just notice patterns. He could restore them. That was his power.
+  Arthur stepped into the hallway, still warm from his victory. The dining room was peaceful now. But something still pulsed through the walls—a wrongness bigger than any one room. The hallway was warmer than before, but not warm enough. Not safe enough. "This house is completely haunted," he muttered. "I need to find my cousins." And then he ran.
 
 objects: []

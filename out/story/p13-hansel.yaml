@@ -5,24 +5,23 @@ haunting_level: high
 characters:
   - hansel
   - dorje_legpa
-location: hallway
+location: sun_room
 
-story_beat: Hansel crawls with URGENCY through the hallway toward the sun room. Something has awakened
-  in him from his first room victory—his happiness is sharper, stronger, almost magical.
-  The sun room waits ahead, but this time Hansel knows his power.
+story_beat: The sun room has become a jungle. The plants have grown huge and wild,
+  their leaves and vines stretching toward the ceiling, blocking out the light. The
+  room is cast in deep shadow. Hansel stops in the doorway, frightened.
 
 visual:
-  - Hansel crawling FAST through the hallway toward the sun room with URGENCY—arms and legs pumping with purpose
-  - His face shows RESOLVE—not just curious but DETERMINED, eyes bright with newfound understanding
-  - A sense of NEWFOUND MAGICAL POWER radiating from him—his happiness awakened and glowing
-  - The hallway at peak wrongness—shadows moving, light flickering—but Hansel pushes through UNDETERRED
-  - Strange flickering light visible from the sun room doorway ahead
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf beside a lamp—frozen crimson figurine watching
-  - Hansel's body in dynamic motion—crawling with speed and purpose like a baby on a mission
-  - His nautical-print sleeper visible, Santa hat firmly on, bottle clutched like a talisman of power
-  - His whole posture radiating determination—this baby knows exactly what he can do
+  - Hansel in the sun room doorway, frozen with fear
+  - Plants grown enormous—ferns towering, vines stretching across the ceiling like a jungle
+  - The jungle of vegetation threatening to block the windows, casting the room in darkness
+  - Only slivers of light visible through gaps in the dense foliage
+  - A wooden table in the center with the board game "Ravine" visible on it
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette barely visible through the jungle growth—frozen crimson figurine watching from the shadows
+  - Dark, threatening atmosphere—the familiar sun room transformed into wilderness
+  - Hansel's face showing genuine fear—this is overwhelming
 
 text: |
-  Hansel crawled fast—faster than he'd ever crawled before. Something had changed in him after the stairs. He could feel it now, like a warm glow in his chest. The hallway was wrong—shadows dancing, light flickering—but Hansel wasn't scared. He knew his power now. The happiness inside him was ready. He clutched his bottle tight and pushed forward. The sun room was waiting, and so was he.
+  The sun room had become a jungle. Plants towered to the ceiling, their leaves blocking all the windows. Vines stretched everywhere. The room was dark and shadowy. Hansel stopped. His lip trembled. It was so big and scary.
 
 objects: []

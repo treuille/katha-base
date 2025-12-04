@@ -1,0 +1,27 @@
+id: p12
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - henry
+  - dorje_legpa
+location: hallway
+
+story_beat: Henry rushes toward the kitchen with newfound power. Something has awakened in Henry
+  from his library victory—his precision-sense is sharper now, almost magical.
+
+visual:
+  - Henry RUNNING down the hallway toward the kitchen with URGENCY and PURPOSE
+  - His body in dynamic motion—tall figure striding fast, moving with speed and determination
+  - His face shows RESOLVE—not just confident but FIERCE, eyes blazing with awakened power
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—his precision-sense glowing from his piano victory
+  - Grey Aviator Nation tracksuit, Santa hat in place properly
+  - Hallway still cold, but Henry radiating warmth and POWER from his library success
+  - His tall figure casting a long shadow toward the kitchen door—the shadow of someone who KNOWS
+  - Hands slightly raised, ready—like a chef approaching his station with absolute confidence
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine watching Henry approach his next challenge
+
+text: |
+  Henry ran toward the kitchen, his precision-sense humming inside him like music.
+
+objects: []

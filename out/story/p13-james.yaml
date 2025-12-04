@@ -5,27 +5,29 @@ haunting_level: high
 characters:
   - james
   - dorje_legpa
-location: hallway
+location: stairs
 
-story_beat: After swapping challenges with another cousin, James rushes toward the stairs with newfound power.
-  The hallway doesn't make sense—doors on wrong sides, the bathroom where the closet should be.
-  But something has awakened in James. Their direction-sense is sharper now, almost magical.
+story_beat: |
+  James reaches the stairs and they've become impossible—an Escher-like maze
+  where up leads down and down leads up. Steps twist and fold in on themselves.
+  There's no longer any sense of direction. James tries to climb but ends up
+  going sideways, tries to go down but winds up higher. Complete confusion.
 
 visual:
-  - James RUNNING down the hallway toward the stairs with URGENCY and SPEED
-  - Their body in dynamic motion—legs pumping, arms swinging, moving with fierce PURPOSE
-  - Their face shows RESOLVE—not puzzled but DETERMINED, eyes blazing with newfound power
-  - A sense of NEWFOUND MAGICAL POWER radiating from them—their direction-sense awakened and glowing
-  - The hallway is wrong—doors on wrong sides, proportions off—but James pushes through UNDETERRED
-  - The bathroom door where the coat closet should be—James doesn't slow down
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a narrow wall shelf—frozen crimson figurine watching
-  - Cold blue light seeping through, shadows pooling in wrong places—but James cuts through them
-  - The stairs visible at the end of the hall, already looking strange—but James is READY
-  - White graphic t-shirt with neon colors visible
-  - Santa hat, ginger hair with blonde streak, freckles on fierce, determined face
-  - James moving forward with the certainty of a leader who knows their power
+  - James standing on the impossible stairs, looking utterly confused
+  - The staircase has become Escher-like—steps going in all directions at once
+  - Some stairs lead up but arrive down, others twist sideways into nowhere
+  - Steps folding over each other, geometry completely broken
+  - James trying to climb but their body tilted at impossible angles
+  - No clear up or down visible—all directions equally wrong
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a step—but which way is it facing? Impossible to tell
+  - EASTER EGG: A Jellycat plushie sitting on one of the impossible steps, looking equally confused about which way is up
+  - Peak haunting visuals—cold harsh light, deep shadows, warped space
+  - James's expression frustrated and lost—for once, they don't know the way
+  - Neon graphic shirt looking distorted in the twisted space
+  - Santa hat, ginger hair with blonde streak, freckles visible on their confused face
 
 text: |
-  James ran. The hallway was wrong—bathroom on the wrong side, coat closet moved, pictures tilting like they were watching—but James didn't care anymore. Something had awakened in the sun room. A power. They could feel it now: the ability to see through chaos, to find the path when there wasn't one. The stairs ahead looked impossible, twisting in ways stairs shouldn't twist. James smiled. "I'm a leader," they thought, feet pounding the floor. "And leaders don't stop. Leaders find the way." The power hummed inside them, ready.
+  The stairs were impossible. James put their foot on the first step and somehow ended up three steps down. They tried to climb and found themselves going sideways. The whole staircase had become a maze—steps folding over steps, up becoming down becoming nowhere. James turned in a circle, but every direction looked wrong. "Which way?" they whispered. But there was no up. No down. Just endless twisting. For the first time, James had no idea where to go.
 
 objects: []

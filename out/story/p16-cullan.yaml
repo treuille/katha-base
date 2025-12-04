@@ -5,22 +5,24 @@ haunting_level: medium
 characters:
   - cullan
   - dorje_legpa
-location: play_room
+location: hallway
 
-story_beat: The Scrabble board BOWS to Cullan. The accusations stop. The tiles settle
-  peacefully. He stands in the peaceful space and realizes—he doesn't just sense
-  fairness. He can COMMAND it. That's real power.
+story_beat: Despite the room's surrender, Cullan senses the haunting isn't fully
+  resolved—something bigger pulses through the house. "This house is completely
+  haunted. I need to find my cousins." He starts running.
 
-visual:
-  - Cullan standing with fierce resolve, arms at his sides, radiating urgent authority
-  - Scrabble tiles settled flat on the board, no longer spelling accusations
-  - Some tiles oriented toward him in respect, like a small audience
-  - The room filling with warm golden light, but cold still lurking at the edges
-  - His ice-blue eyes glowing with intensity and worried resolve
-  - His expression: triumph mixed with awareness that more challenges lie ahead
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the windowsill - frozen crimson figurine still present but diminished in the warm golden light
+visual: |
+  - Cullan stepping out of the playroom into the hallway
+  - His expression shifting from triumph to concern
+  - The hallway still wrong but warming—medium haunting level
+  - Some warm golden tones returning, but cold still present
+  - His posture shifting to urgency, about to run
+  - Looking down the hallway toward where the others might be
+  - The sense that his individual victory isn't enough
+  - His runner's stance, ready to sprint
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a decorative shelf near the doorway - frozen crimson figurine with gold crown, still watching even as the haunting fades
 
 text: |
-  The Scrabble tiles settled. They lay flat and still, no longer spelling accusations—just letters, waiting for honest words. The board that had twisted Arthur's vocabulary and tried to frame Cullan now sat peaceful and fair. Cullan stood in the warm room, breathing hard, and realized something huge: he didn't just sense what was fair. He could command it. The world had to listen when he spoke the truth. That was power. Real power.
+  Cullan stepped into the hallway, still breathing hard from his victory. The playroom was peaceful now. But something still felt wrong—a pulse of strangeness running through the whole house. The hallway was warmer than before, but not warm enough. "This house is completely haunted," he muttered. "I need to find my cousins." And then he ran.
 
 objects: []

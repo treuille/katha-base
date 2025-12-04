@@ -7,24 +7,23 @@ characters:
   - dorje_legpa
 location: dining_room
 
-story_beat: Arthur races against the spreading cold, snatching candles and placing
-  them with frantic precision. He sees the pattern—the solution—but time is running
-  out. His feet pound the floorboards as he rushes from spot to spot, each candle
-  placed exactly where it belongs. The warmth fights back.
+story_beat: The final candle placed. The pattern HOLDS. The candles don't slide
+  back—they stay in perfect balance. Arthur realizes he doesn't just see patterns.
+  He can RESTORE harmony. Quiet pride, like finishing a perfect solve.
 
 visual:
-  - Arthur RUNNING around the dining room, actively moving candles with urgent intensity
-  - His body in dynamic motion—reaching, placing, spinning to the next spot with desperate speed
-  - OVERLAY: A complex DA VINCI-LIKE MATHEMATICAL PATTERN visible over the scene—intersecting lines, angles, golden ratio spirals, geometric guides showing where each candle belongs
-  - The pattern emanates from Arthur's perspective, as if we see the world through his brilliant mathematical mind
-  - Candles being placed at precise intersection points of the geometric overlay
-  - His expression: intense, worried but resolved—he sees the solution and must execute it before time runs out
-  - Warm golden light blooming as each candle finds its mathematically perfect position
-  - Cold blue still threatening from the edges, not fully retreated
-  - Energy and brilliance radiating from him—very active, very smart, racing against danger
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside the china cabinet - frozen crimson figurine partially obscured as order returns to the room
+  - Arthur placing the final candle with intense, urgent precision
+  - All candles now arranged in perfect balance around the room
+  - The dining room filling with warm golden light, pushing back the cold
+  - Candles staying exactly where placed—no sliding, no clustering
+  - FOCUS ON EXPRESSION AND POSTURE: Arthur standing with triumphant resolve—shoulders back, chin lifted
+  - His expression: intense triumph mixed with worried awareness—he did it but it's not over yet
+  - A clear sense that this battle is won but the war continues
+  - The formal dining table beautiful again, properly lit
+  - Geometry of the room normalized, but hints of wrongness still at the edges
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the mantelpiece - frozen crimson figurine still present but diminished in the restored harmony
 
 text: |
-  Arthur's heart pounded. He could see it—the pattern, the solution—but the cold was spreading fast. He grabbed a candle and slammed it into place. Then he was running, snatching the next one, feet skidding on the wooden floor. "There—and there—and THERE!" Each piece of the puzzle clicking into place like a Rubik's cube in fast-forward. The flames steadied. Warmth surged back. He was going to solve this room.
+  The last candle clicked into place. Arthur stepped back and watched. The candles didn't slide. They didn't cluster. They stayed exactly where he'd put them, burning steady and calm, the room glowing with warm, balanced light. He'd done it—with clarity and confidence, by seeing where everything belonged. He didn't just notice patterns. He could restore them. That was his power.
 
 objects: []

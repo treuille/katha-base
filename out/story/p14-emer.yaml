@@ -6,23 +6,24 @@ characters:
   - dorje_legpa
 location: library
 story_beat: |
-  Emer enters the library and is overwhelmed by the chaos—characters wandering
-  between books, pages fluttering everywhere, stories bleeding into each other.
-  She tries to catch them, to help, but she's too small and there are too many.
-  The room seems to accuse her—you can't fix this, you're just a little girl.
+  Emer reaches for the glowing unicorn book. As she touches it, a unicorn emerges
+  from its pages—rising up to join all the other characters floating around the
+  library. A real unicorn, a dream come true. Emer is entranced, enraptured,
+  reaching up to touch it.
 
 visual:
-  - Emer in the center of the library, surrounded by swirling chaos
-  - Story characters float between bookshelves—a knight in a fairy tale, a princess in a mystery
-  - Pages flutter through the air like confused birds
-  - Emer reaching up, trying to catch characters, guide them home, but overwhelmed
-  - Her expression shifting from determination to distress
-  - She's too small, there are too many, it's all too much
-  - Harsh cold light, shadows pointing at her accusingly
-  - Tiny Dorje Legpa statuette tucked between books on a high shelf
-  - A glimmer of hope—a unicorn book glowing faintly on a nearby shelf, catching her eye
+  - Emer reaching urgently toward a glowing unicorn book on a shelf
+  - A magnificent unicorn emerging from the open pages—white and silver, mane flowing like starlight
+  - The unicorn rising up to join the other story characters floating through the library
+  - Emer's face showing intense wonder mixed with worry—she knows this is important, she must get this right
+  - She's reaching up to touch the unicorn with urgency and resolve, fingers trembling
+  - Light shifting—warm magical glow emanating from the book and unicorn
+  - Other story characters floating chaotically around them—the danger isn't over yet
+  - Her My Little Pony doll clutched tightly in her other hand—a source of courage
+  - NOTE: Only one deity (Dorje Legpa) exists in this story—do not show multiple deities
 
 text: |
-  The library was chaos. Characters wandered between books—a princess lost in a mystery, a dragon in a love story. Pages flew everywhere. Emer reached for them, tried to help, but there were too many. She was too small. "I can't—" Her voice broke. "I can't do this alone." Then she saw it—a unicorn book glowing faintly on a shelf. A tiny spark of hope flickered in her chest.
+  Emer reached for the glowing book. The moment she touched it, a unicorn rose from the pages—white and silver, mane flowing like starlight. A real unicorn. She was entranced, enraptured, trembling. It was everything she'd ever dreamed. She reached up, fingers stretching toward its shimmering coat. "You're real," she whispered. "You're actually real."
 
-objects: []
+objects:
+  - unicorn

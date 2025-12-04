@@ -5,26 +5,26 @@ haunting_level: high
 characters:
   - arthur
   - dorje_legpa
-location: hallway
+location: dining_room
 
-story_beat: Arthur rushes toward the dining room with new understanding and newfound power. From ahead,
-  he sees flickering orange light, smells heat. His pattern-brain is already working
-  on what he'll find—Cullan described clustered candles, fire danger. But Arthur
-  sees problems differently now. Something has awakened in him.
+story_beat: |
+  Arthur enters and sees the clustered candles—fire hazard, just like
+  Cullan described. But Arthur sees something else: the PATTERN of how they cluster.
+  It's like a Rubik's cube mid-solve. There's an order underneath the chaos, and
+  he can see it.
 
 visual: |
-  - Arthur RUNNING down the hallway toward the dining room with URGENCY - IMPORTANT: Arthur must be moving TOWARD the dining room (into the frame), not away from it
-  - His body in dynamic motion—legs striding fast, arms pumping, moving with PURPOSE and SPEED
-  - His face shows RESOLVE—jaw set, eyes blazing with determination, not just focused but FIERCE
-  - A sense of NEWFOUND MAGICAL POWER radiating from him—something awakened from his first room victory
-  - Flickering orange light spilling from the dining room doorway ahead
-  - The hallway still at peak wrongness—cold, tilted, shadows pooling—but Arthur is UNFAZED
-  - Contrast: cold blue hallway vs. warm orange glow from dining room
-  - His Rubik's cube visible in pocket, a reminder of his pattern-skills now AMPLIFIED
-  - Shadows on walls recoiling slightly from his determined advance
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside a hallway lamp - frozen crimson figurine casting a small shadow, unnoticed by Arthur
+  - Arthur stepping into the dining room, eyes widening with recognition
+  - All Christmas candles CLUSTERED dangerously in one corner
+  - Flames burning too high, too close to brocade curtains
+  - But Arthur's expression is analytical, not panicked
+  - Faint overlay effect: ghostly lines showing where candles SHOULD be
+  - Like seeing a Rubik's cube solution overlaid on scrambled colors
+  - Cold blue light from windows despite the dangerous flames
+  - His quiet confidence returning—he sees the pattern others miss
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the buffet table - frozen crimson figurine with gold crown, watching Arthur survey the chaos
 
 text: |
-  Arthur ran toward the dining room. Not walked—ran. Something had changed in the playroom. The patterns he'd always seen were sharper now, brighter, like a power awakening inside him. He knew what waited—Cullan had described the clustered candles, the fire danger. But where Cullan saw chaos, Arthur saw a puzzle that was already solving itself in his mind. The flickering orange light ahead didn't scare him. He could feel the solution building inside him like electricity. This time, he was ready.
+  The candles were exactly as Cullan described—clustered in one corner, flames licking toward the curtains. But Arthur didn't see chaos. He saw a Rubik's cube, three moves from solved. The candles weren't random—they'd been pushed out of balance, and balance had a pattern. He could see where each one belonged, like ghost-images hovering in the air. This was about seeing patterns and restoring balance.
 
 objects: []

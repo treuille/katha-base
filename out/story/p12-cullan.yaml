@@ -1,0 +1,26 @@
+id: p12
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - cullan
+  - dorje_legpa
+location: hallway
+
+story_beat: |
+  Cullan rushes toward the playroom with new understanding and newfound power. Something has awakened in him—
+  a fierce sense of justice burning brighter than before.
+
+visual: |
+  - Cullan RUNNING down the hallway toward the playroom with URGENCY and PURPOSE
+  - His body in dynamic motion—striding fast with fierce determination, not wary but READY
+  - His face shows RESOLVE—ice-blue eyes blazing, jaw clenched, expression of someone who will NOT back down
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—his fairness superpower now awakened and burning bright
+  - Cold blue light spilling from the playroom doorway ahead, geometry warped
+  - His fists clenched at his sides as he moves—ready to fight for what's right
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine with gold crown, watching Cullan approach his challenge
+
+text: |
+  Cullan ran toward the playroom, the fire inside him burning brighter than before.
+
+objects: []

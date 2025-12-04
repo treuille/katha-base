@@ -7,22 +7,21 @@ characters:
   - dorje_legpa
 location: sun_room
 
-story_beat: Hansel is scared but then does something unexpected. He crawls into the
-  jungle room, lies down on his back among the massive plants, and looks up at the
-  tangle of leaves above him. He takes a deep breath.
+story_beat: Hansel starts to laugh. Not scared laughter—real, delighted laughter at
+  the absurdity and wonder of it all. His giggles echo through the jungle room.
+  The plants hear him and begin to respond, their tension easing.
 
 visual:
-  - Hansel lying on his back in the middle of the overgrown sun room, taking a brave action
-  - Looking up at the canopy of enormous leaves above him with intense focus
-  - His small body showing courage—this is a deliberate, resolved choice in the face of danger
-  - The massive plants still looming threateningly around him
+  - Hansel on his back, making brave sounds up at the jungle canopy—not quite laughter, more like determined baby courage
+  - His expression showing resolve and intensity even as a baby—he's doing something important
+  - The nearest plants beginning to respond—leaves uncurling slightly, vines loosening
+  - Sunlight starting to return as foliage parts from the windows
   - A wooden table nearby with the board game "Ravine" visible on it
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a shelf—frozen crimson figurine peering down at the small figure below
-  - Darkness still dominant, the threat not yet passed
-  - His Santa hat slightly askew, bottle beside him on the floor
-  - His baby face showing worried resolve—he's doing something important even though it's scary
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette visible—frozen crimson figurine diminished but still watching
+  - The atmosphere beginning to shift, but darkness still present at the edges
+  - Hansel's nautical-print sleeper visible, his small body showing worried but determined energy
 
 text: |
-  But then Hansel did something strange. He crawled right into the jungle. He lay down on his back and looked up at all the big leaves above him. He took a deep breath. The plants were so tall and wild. But lying here, looking up... it was kind of wonderful.
+  Hansel started to laugh. Not scared—just happy. It bubbled up from his tummy, real giggles that echoed through the jungle. The big fern above him seemed to pause. Its leaves uncurled just a little. The vine nearby loosened its grip on the window.
 
 objects: []

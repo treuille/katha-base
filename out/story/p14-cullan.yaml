@@ -1,29 +1,28 @@
 id: p14
 section: Second Attempt
 page_type: individual
-haunting_level: high
+haunting_level: medium
 characters:
   - cullan
   - dorje_legpa
 location: play_room
 
-story_beat: The Scrabble board attacks Cullan—not twisting his words like it did to
-  Arthur, but spelling out accusations. Tiles rearrange to spell UNFAIR, WRONG, UNTRUE.
-  The game is framing him, making him the villain.
+story_beat: Instead of playing by the rigged rules, Cullan stops and speaks with
+  authority. He DECLARES what fair means—not fighting, but stating truth. "A fair
+  game doesn't put words in your mouth." The Scrabble tiles begin to settle and listen.
 
-visual: |
-  - CAMERA ANGLE: Over-the-shoulder view from behind Cullan, looking down at the Scrabble board so letter tiles face the viewer
-  - Cullan seen from behind, head and shoulders visible, the board in front of him
-  - Tiles on the board rearranging themselves to spell UNFAIR (letters readable to viewer)
-  - More tiles sliding to form WRONG, UNTRUE, all oriented so viewer can read them
-  - The wooden tile rack spelling accusations, letters facing outward toward viewer
-  - Shadows pooling around him, isolating him as the "guilty one"
-  - His posture tense, shoulders raised in horror—he's being framed
-  - Cold harsh light, geometry deeply wrong
-  - The same board that attacked Arthur now attacking him differently
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a low bookshelf - frozen crimson figurine with gold crown, watching the false accusations unfold
+visual:
+  - Cullan standing tall over the Scrabble board, hands raised, SPEAKING with urgent authority
+  - His ice-blue eyes glowing with conviction and worried intensity
+  - The accusatory tiles beginning to SETTLE, words dissolving
+  - UNFAIR, WRONG, UNTRUE breaking apart, tiles going still
+  - Shadows starting to retreat from around him but still present
+  - Warm golden light beginning to seep back in at the edges
+  - His expression: intense, worried but resolved—he must speak truth before it's too late
+  - The geometry of the room starting to normalize
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a shelf - frozen crimson figurine seeming to lean back as Cullan's authority fills the room
 
 text: |
-  Cullan stepped toward the Scrabble board—the same one that had twisted Arthur's words. But it attacked him differently. The tiles slid and rearranged, spelling out words: UNFAIR. WRONG. UNTRUE. Every accusation pointed at him. He hadn't even touched the board, and already it was framing him as the villain. The room wasn't twisting his words. It was putting words in his mouth.
+  Cullan stopped trying to play. He stood up tall and spoke out loud: "A fair game is one where everyone can win." The tiles spelling UNFAIR wavered. "A fair game doesn't have hidden rules." The word WRONG broke apart. "A fair game doesn't put words in your mouth." His voice rang with authority—and slowly, tile by tile, the accusations dissolved. The Scrabble board was listening.
 
 objects: []

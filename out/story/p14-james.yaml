@@ -1,33 +1,31 @@
 id: p14
 section: Second Attempt
 page_type: individual
-haunting_level: high
+haunting_level: medium
 characters:
   - james
   - dorje_legpa
 location: stairs
 
-story_beat: |
-  James reaches the stairs and they've become impossible—an Escher-like maze
-  where up leads down and down leads up. Steps twist and fold in on themselves.
-  There's no longer any sense of direction. James tries to climb but ends up
-  going sideways, tries to go down but winds up higher. Complete confusion.
+story_beat: Lost in the impossible stairs, James hears a whisper. Not mocking this time—
+  gentle. "You're a leader." The words hit James like a flash of understanding. They've
+  been letting the stairs lead them. But they're supposed to lead. Leaders don't follow
+  the path—they make the path.
 
 visual:
-  - James standing on the impossible stairs, looking utterly confused
-  - The staircase has become Escher-like—steps going in all directions at once
-  - Some stairs lead up but arrive down, others twist sideways into nowhere
-  - Steps folding over each other, geometry completely broken
-  - James trying to climb but their body tilted at impossible angles
-  - No clear up or down visible—all directions equally wrong
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a step—but which way is it facing? Impossible to tell
-  - EASTER EGG: A Jellycat plushie sitting on one of the impossible steps, looking equally confused about which way is up
-  - Peak haunting visuals—cold harsh light, deep shadows, warped space
-  - James's expression frustrated and lost—for once, they don't know the way
-  - Neon graphic shirt looking distorted in the twisted space
-  - Santa hat, ginger hair with blonde streak, freckles visible on their confused face
+  - James standing with urgent intensity on the impossible stairs, head tilted as if hearing something
+  - A light beginning to appear around James—the whisper made visible
+  - The words "You're a leader" seeming to shimmer in the air
+  - James's expression: intense realization mixed with worried resolve—they understand what they must do
+  - The Escher stairs still impossible and threatening around them, but James's posture changing to action
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a twisted step—watching the moment of understanding
+  - Warm golden tones beginning to seep in at the edges, but danger still present
+  - James's face showing fierce determination—the puzzle solved but the execution still ahead
+  - Neon graphic shirt catching the first hints of warm light
+  - Santa hat, ginger hair with blonde streak, freckles visible
+  - The sense of urgent power building within James—no time to waste
 
 text: |
-  The stairs were impossible. James put their foot on the first step and somehow ended up three steps down. They tried to climb and found themselves going sideways. The whole staircase had become a maze—steps folding over steps, up becoming down becoming nowhere. James turned in a circle, but every direction looked wrong. "Which way?" they whispered. But there was no up. No down. Just endless twisting. For the first time, James had no idea where to go.
+  James stood still. Lost. And then they heard it—a whisper, but not like before. Not mocking. Gentle. "You're a leader." The words seemed to come from everywhere and nowhere. James felt something click in their brain, like solving a puzzle. They'd been trying to follow the stairs. Trying to figure out which way the stairs wanted to go. But that was backwards. Leaders don't follow. Leaders lead. The stairs weren't supposed to tell James where to go. James was supposed to tell the stairs.
 
 objects: []

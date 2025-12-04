@@ -8,21 +8,20 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: James realizes Hansel has been through something too. The baby keeps
-  pointing with his bottle—toward the stairs, then toward the sun room. There's
-  a connection. James decides to check the stairs while Hansel heads to the sun room.
+story_beat: Both realize simultaneously—"This house is haunted." A visual beat
+  showing their dawning realization and rising concern.
 
 visual:
-  - NOTE: Expressions should be INTENTLY CONCERNED, NOT angry—focused and worried, but not mad
-  - Hansel pointing with his bottle—first toward stairs, then toward sun room
-  - James kneeling to watch baby Hansel—his face intently concerned, not angry
-  - James's expression shifting to understanding—Hansel is communicating!
-  - Hansel's cute, intent face showing determination—focused but not upset
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette tucked behind a potted plant in corner—frozen crimson figurine barely visible between leaves
-  - The visual wrongness at peak around them, but a spark of understanding forming
-  - A moment of connection between the cousins
+  - James looking around at the warped hallway with new understanding
+  - Hansel's small hand gripping James's graphic t-shirt—a moment of connection
+  - Both their faces showing a mix of fear and determination
+  - The cold blue light and warped geometry emphasizing the weight of the moment
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on window ledge behind them—frozen crimson figurine silhouetted against frosty glass
+  - EASTER EGG: James standing in a subtly protective ninja-like stance over Hansel—their ninja training showing instinctively as they face the threat
+  - The wrongness visible all around them—tilted frames, pooling shadows
+  - United against the haunting, baby and eight-year-old standing together
 
 text: |
-  Hansel pointed his bottle at the stairs. Then at the sun room. Then back at the stairs. James watched, thinking. "You want me to check the stairs? And you'll go to the sun room?" Hansel bounced happily—yes! That was exactly it.
+  "This house is haunted," James said. Hansel grabbed James's shirt and held tight.
 
 objects: []

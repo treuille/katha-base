@@ -5,27 +5,24 @@ haunting_level: medium
 characters:
   - henry
   - dorje_legpa
-location: kitchen
+location: hallway
 
-story_beat: Henry bakes perfect cupcakes—one for each cousin. He follows the recipe
-  exactly, measures everything precisely, and the kitchen transforms around him. He
-  decorates each cupcake with a tiny airplane in the icing—his signature. The chaos
-  surrenders to proper procedure.
+story_beat: Henry leaves the kitchen carrying his tray of cupcakes. The kitchen and
+  library are both fixed now. But the house still feels wrong elsewhere. He needs
+  to find his cousins and share his cupcakes.
 
 visual:
-  - Henry placing the last cupcake on a beautiful tray with intense focus, piping bag in hand
-  - Six chocolate cupcakes arranged perfectly, each topped with a tiny airplane design in blue and white icing
-  - The airplanes are simple but recognizable—little 747 silhouettes, Henry's signature
-  - The kitchen transforming—warm golden light pushing back the cold, order returning
-  - Measuring cups cleaned and put away, recipe followed perfectly
-  - The fridge to the right of the dishwasher, both gleaming and orderly
-  - Henry's expression: triumphant but still worried—he's winning but the danger isn't fully passed
-  - Steam rising from the fresh cupcakes, filling the air with sweetness
-  - His Santa hat slightly dusted with flour, grey tracksuit with a smudge of cocoa—evidence of urgent work
-  - The disgusting chaos bowl nowhere to be seen—proper baking has replaced it
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette diminished in a far corner - frozen crimson figurine weakened but still present
+  - Henry in the hallway, carefully balancing the tray of six cupcakes with airplane decorations
+  - His expression proud but alert—two rooms fixed, but the house isn't done yet
+  - The hallway still slightly wrong—not as bad as before, but something lingers
+  - Warm light from the kitchen behind him, but cold blue still lurking ahead
+  - His tall figure moving with purpose, protective of the cupcakes
+  - Santa hat back in place, flour dust on his grey tracksuit
+  - The cupcakes glowing warm on the tray, little airplanes visible on each one
+  - His eyes looking toward where he senses the others might be
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a decorative shelf near a doorway - frozen crimson figurine still watching even as victories accumulate
 
 text: |
-  "One for Arthur." Henry piped a tiny airplane in blue icing—a little 747, just like his favorite. "One for Cullan. One for Emer. One for Hansel. One for James." He paused at the last one. "And one for me." Six cupcakes. Six airplanes. Six cousins. Each ingredient measured perfectly. Each step followed in order. The kitchen glowed warm and golden. The chaos was gone. Proper procedure had won.
+  Henry stepped into the hallway, cupcakes balanced carefully on the tray. The kitchen behind him felt warm and right again—just like the piano. Two rooms fixed. But something still pulsed through the rest of the house—a deeper wrongness in the walls, the floor, the too-cold air. He started walking, keeping the cupcakes steady. He needed to find his cousins. They were definitely going to need these cupcakes.
 
 objects: []

@@ -1,0 +1,26 @@
+id: p12
+section: Second Attempt
+page_type: individual
+haunting_level: high
+characters:
+  - arthur
+  - dorje_legpa
+location: hallway
+
+story_beat: Arthur rushes toward the dining room with new understanding and newfound power.
+  Something has awakened in him from his first room victory.
+
+visual: |
+  - Arthur RUNNING down the hallway toward the dining room with URGENCY - IMPORTANT: Arthur must be moving TOWARD the dining room (into the frame), not away from it
+  - His body in dynamic motion—legs striding fast, arms pumping, moving with PURPOSE and SPEED
+  - His face shows RESOLVE—jaw set, eyes blazing with determination, not just focused but FIERCE
+  - A sense of NEWFOUND MAGICAL POWER radiating from him—something awakened from his first room victory
+  - The hallway still at peak wrongness—cold, tilted, shadows pooling—but Arthur is UNFAZED
+  - His Rubik's cube visible in pocket, a reminder of his pattern-skills now AMPLIFIED
+  - Shadows on walls recoiling slightly from his determined advance
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette beside a hallway lamp - frozen crimson figurine casting a small shadow, unnoticed by Arthur
+
+text: |
+  Arthur ran toward the dining room, his newfound power humming inside him like electricity.
+
+objects: []

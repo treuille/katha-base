@@ -1,5 +1,5 @@
 id: p26
-section: Climax
+section: Sky Procession
 page_type: joint
 characters:
   - arthur
@@ -10,24 +10,25 @@ characters:
   - james
   - dorje_legpa
 location: driveway
-
-story_beat: Anticipation beat. Outside in the snowy driveway, Henry's legs are visible
-  running off-frame. The other kids are setting up—Arthur and Cullan struggle to load
-  the glowing box onto the wagon, Emer lovingly places Hansel on her tricycle handlebars.
-  Everyone is puzzled about Henry's plan but triumphant that they captured the spirit.
-
+story_beat: THIS IS THE BIG PAYOFF CLIMAX IMAGE. Henry's plane pulls the wagon with
+  Cullan and Arthur holding the glowing box. James underneath traffic controlling.
+  Spectacular image of fun. Huge rainbows and dramatic elements. Keep words minimal.
 visual: |
-  - Snowy driveway scene - ANTICIPATION BEAT before the big payoff
-  - On the RIGHT edge of frame: Henry's LEGS AND FEET ONLY visible, running OFF-FRAME to the right (rest of him cut off)
-  - James in the middle-right, watching Henry run off with a PUZZLED expression
-  - Arthur and Cullan STRUGGLING to lift/load the glowing, crackling box onto the red wagon—rainbow light blazing through cracks
-  - Emer on the left, LOVINGLY placing baby Hansel onto the handlebars of her tricycle
-  - Expressions on everyone: PUZZLED about Henry's plan, but also TRIUMPHANT—they got the spirit in the box!
-  - NO PLANE VISIBLE—that's the surprise for the next page
-  - EVERYONE wearing Santa hats
-  - Snowy woods of upstate New York visible in background
-
+  - THIS IS THE CLIMAX IMAGE - spectacular image of pure fun and joy
+  - All characters are at the same depth and viewed from the side, moving exactly to the right in the image plane
+  - In the right third of the frame, Henry's WWI-style biplane is flying about 10 ft off the ground, and flying to the right.
+  - Henry is wearing WWI aviator goggles.
+  - Also in the right third, James is under the biplane, dressed like a ground controller, wearing huge hearing protection earmuffs and directing the plan to the right with his glowing rods.
+  - In the middle of the frame Cullan and Arthur are in the red wagon which is bouncing down the driveay, being pulled by the airplane by a 15 ft length of string.
+  - Henry is happily and confidently looking over his shoulder at the glowing box.
+  - The front wheels of the wagon are slight lifted, because of the pull of the airplan, but they're safely on the ground
+  - Cullan and Arthur in the wagon, holding the glowing box containing the spirit.
+  - In the left third of the frame, Emer following behind the red wagon on her tricycle, Hansel perched on her handlebars
+  - All characters are smiling with pure joy, and looking at the glowing box.
+  - Hansel POINTING HIS BOTTLE determinedly at the wagon-—guiding them onward
+  - The box has burst open opening and out come HUGE RAINBOWS and other dramatic elements behind them filling the sky, the clouds form lotuses and other geometric tibetan imagery.
+  - Still clearly in the snowy woods of upstate New York (snow-covered trees visible)
+  - Pure delight and triumph on everyone's faces
 text: |
-  Outside, they wrestled the glowing box toward the wagon. What was Henry up to? Why did he need pilot goggles?
-
-objects: [wagon, tricycle]
+  They were setting the spirit free!
+objects: [wagon, tricycle, plane]

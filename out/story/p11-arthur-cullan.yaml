@@ -8,24 +8,24 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: The realization crystallizes—"This house is haunted." They look at each
-  other with a mix of fear and determination. The cold blue light and warped geometry
-  emphasize the moment's weight.
+story_beat: They realize each other's strengths fit the other room better and agree
+  to swap which room they will tackle next. A spark of hope despite the cold, wrong
+  hallway around them.
 
-visual:
-  - "IMPORTANT: Show CULLAN on the LEFT side of frame with his tousled curly DARK BLONDE hair. Show ARTHUR on the RIGHT side of frame with his messy curly BROWN hair."
-  - Close-up on both boys' faces as realization dawns
-  - Arthur and Cullan are the same height, faces level with each other
-  - Their expressions: fear mixed with determination
-  - The cold blue light casting harsh shadows across their features
-  - The warped geometry of the hallway framing them
-  - A moment of shared understanding between best friends
-  - Both standing straight despite the wrongness around them
-  - The weight of the realization visible in their eyes
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the window ledge behind them - frozen crimson figurine silhouetted against the frosty glass
+visual: |
+  - Both boys with sudden understanding dawning on their faces
+  - Arthur and Cullan are the same height, fist-bumping at eye level
+  - Arthur's Rubik's cube visible in his pocket, Cullan's smartwatch on wrist
+  - A spark of hope in their expressions despite the haunted hallway
+  - Fist bump frozen in the middle of the frame
+  - The cold blue hallway still wrong, but the boys standing strong together
+  - A moment of determination and friendship
+  - Their best-friend bond visible in how they face the challenge
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette peeking from behind a doorframe in the background - frozen crimson figurine almost hidden but watching
 
 text: |
-  Arthur looked at the frost creeping across the hallway window. At the shadows that didn't fall right. At the way the walls seemed to lean. "Cullan," he said quietly. "This house is haunted."
-  Cullan nodded, a chill running through him that had nothing to do with the cold. "Yeah. It really is."
+  "Wait," Arthur said. "Your room has candles that won't stay where they belong. And my room has a Scrabble game with rigged rules." He paused. "That's your thing—you hate unfair rules."
+  Cullan's eyes lit up. "And you're amazing at seeing patterns. Swap?"
+  They bumped fists. "Swap."
 
 objects: []

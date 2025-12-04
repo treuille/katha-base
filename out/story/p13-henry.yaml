@@ -5,26 +5,27 @@ haunting_level: high
 characters:
   - henry
   - dorje_legpa
-location: hallway
+location: kitchen
 
-story_beat: Henry rushes toward the kitchen with newfound power, hearing chaos within. Something is mixing
-  ingredients recklessly—no measuring, no recipes, just wild experimentation. He
-  can smell the disaster. But something has awakened in Henry. His precision-sense is sharper now, almost magical.
+story_beat: Henry enters the kitchen and finds absolute chaos. The haunted kitchen
+  is mixing ingredients together into an abominable concoction—no measuring, no
+  recipes, just random ingredients being dumped and stirred. The result looks and
+  smells disgusting.
 
 visual:
-  - Henry RUNNING down the hallway toward the kitchen with URGENCY and PURPOSE
-  - His body in dynamic motion—tall figure striding fast, moving with speed and determination
-  - His face shows RESOLVE—not just confident but FIERCE, eyes blazing with awakened power
-  - A sense of NEWFOUND MAGICAL POWER radiating from him—his precision-sense glowing from his piano victory
-  - Strange flickering light spilling from the kitchen doorway ahead
-  - Sounds of splashing, mixing, things being dumped together carelessly—but Henry is READY
-  - Grey Aviator Nation tracksuit, Santa hat in place properly
-  - Hallway still cold, but Henry radiating warmth and POWER from his library success
-  - His tall figure casting a long shadow toward the kitchen door—the shadow of someone who KNOWS
-  - Hands slightly raised, ready—like a chef approaching his station with absolute confidence
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a narrow wall shelf - frozen crimson figurine watching Henry approach his next challenge
+  - Henry standing in the kitchen doorway, staring at the chaos before him
+  - A massive mixing bowl on the counter, ingredients dumping themselves in randomly
+  - Flour pouring without measurement, eggs cracking at wrong times, sugar dumping in huge amounts
+  - The concoction in the bowl looks absolutely disgusting—brown, lumpy, wrong
+  - No measuring cups, no spoons, no recipe in sight—just chaos
+  - Ingredients flying through the air with no order whatsoever
+  - The fridge positioned to the right of the dishwasher
+  - Cold blue light dominant, the kitchen in supernatural disarray
+  - Henry's expression: dismay at first, then determination—he knows what's wrong here
+  - Santa hat and grey tracksuit standing out against the cold chaotic kitchen
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a high shelf behind jars - frozen crimson figurine watching the chaos
 
 text: |
-  Henry ran toward the kitchen. Something had awakened in the library—a power he'd never felt before. His hands still tingled with it. He could hear the chaos ahead—splashing, sloshing, ingredients being dumped together without care. Something in there was destroying the rules of baking. But Henry's precision-sense was sharper now, almost electric. He could feel the right measurements, the correct temperatures, the perfect timing—all of it humming inside him like music. He burst through the doorway ready to bring order to chaos.
+  The kitchen was a disaster. Ingredients were dumping themselves into a giant bowl—flour without measuring, eggs cracking at random, sugar pouring in huge uneven heaps. The concoction inside was brown and lumpy and smelled terrible. No one was following a recipe. No one was measuring anything. It was baking without any of the rules that made baking work. Henry shook his head. "That's not how you make anything."
 
 objects: []

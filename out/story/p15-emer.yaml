@@ -6,24 +6,25 @@ characters:
   - dorje_legpa
 location: library
 story_beat: |
-  Emer reaches for the glowing unicorn book. As she touches it, a unicorn emerges
-  from its pages—rising up to join all the other characters floating around the
-  library. A real unicorn, a dream come true. Emer is entranced, enraptured,
-  reaching up to touch it.
+  Emer climbs onto the unicorn and rises up triumphant. She's powerful now—she has
+  magic! Riding her unicorn through the library, she can see everything. She becomes
+  the director, pointing and calling out, guiding characters home with authority.
+  The library yields to her power. This is her triumph.
 
 visual:
-  - Emer reaching urgently toward a glowing unicorn book on a shelf
-  - A magnificent unicorn emerging from the open pages—white and silver, mane flowing like starlight
-  - The unicorn rising up to join the other story characters floating through the library
-  - Emer's face showing intense wonder mixed with worry—she knows this is important, she must get this right
-  - She's reaching up to touch the unicorn with urgency and resolve, fingers trembling
-  - Light shifting—warm magical glow emanating from the book and unicorn
-  - Other story characters floating chaotically around them—the danger isn't over yet
-  - Her My Little Pony doll clutched tightly in her other hand—a source of courage
-  - NOTE: Only one deity (Dorje Legpa) exists in this story—do not show multiple deities
+  - Emer riding her one unicorn through the library with joyous triumph, elevated above everything
+  - She's powerful—magic sparkles around her fingertips as she directs with fierce determination
+  - Her santa hat flying back, arms commanding, pointing with authority and urgency
+  - Pure joy and triumph on her face—this is everything she ever dreamed
+  - She's calling out commands with intensity—"You go HERE! She belongs in THAT book!"
+  - Story characters following her magical commands, finding their way home
+  - The chaos still swirling, being organized by her will but resisting
+  - Warm golden light returning to the library but shadows still lurking
+  - This is her moment of power—joyous, magical, triumphant
+  - NOTE: There is only ONE unicorn total in Emer's story—the one she is riding
 
 text: |
-  Emer reached for the glowing book. The moment she touched it, a unicorn rose from the pages—white and silver, mane flowing like starlight. A real unicorn. She was entranced, enraptured, trembling. It was everything she'd ever dreamed. She reached up, fingers stretching toward its shimmering coat. "You're real," she whispered. "You're actually real."
+  Emer climbed onto her unicorn. It rose—and suddenly she was powerful. Magic sparkled at her fingertips. She could see everything! "You go HERE!" she commanded. "She belongs in THAT book!" The characters obeyed. She was riding a unicorn and she had magic. This was her triumph.
 
 objects:
   - unicorn

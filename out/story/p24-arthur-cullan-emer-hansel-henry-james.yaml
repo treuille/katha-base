@@ -11,21 +11,25 @@ characters:
   - dorje_legpa
 location: living_room
 
-story_beat: Working together, the children grab the blazing deity and wrestle it
-  into a box. The spirit is furious, shining light through every crack, but
-  contained. Simple collective action, funny and chaotic.
+story_beat: The kids look at the shaking, glowing box and realize it won't hold
+  for long. Henry has an idea and takes charge - he tells the others to get the box
+  in the wagon and take it outside. He's going to run and get his pilot goggles.
+  The others are puzzled but start to act.
 
 visual: |
-  - Big chaotic action spread showing all six kids working together
+  - NOTE: Ensure this is ONE box, the SAME box from p24—not multiple boxes
+  - The living room with all six cousins gathered around the single wooden box CRACKLING WITH RAINBOW ENERGY—visible rainbow-colored magical energy arcing and sparking from every crack
+  - The box shaking violently, rainbow light blazing through every gap, the spirit contained but furious
   - Height order visible: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
-  - The children grabbing the icy, rainbow-emanating spirit with their bare hands
-  - The spirit has deep crimson red skin with RAINBOWS and ICE swirling around him - no fire
-  - Wrestling the furious deity into a large wooden box
-  - Rainbow light and frosty mist blazing out through every crack and gap in the box
-  - The spirit hilariously indignant, wiggling and complaining but contained
-  - Warmth returning to the room as the spirit is boxed
+  - Henry TAKING CHARGE—pointing, giving instructions, about to run off (still in scene but clearly about to bolt)
+  - The other kids look PUZZLED but are starting to act on his instructions
+  - Arthur and Cullan moving toward the box, ready to lift it
+  - Emer picking up Hansel, preparing to move
+  - James looking at Henry with a mix of confusion and trust
+  - Sense of URGENCY—they need to move fast
+  - EVERYONE wearing Santa hats
 
 text: |
-  "Grab him!" Everyone moved at once. Six pairs of hands seized the blazing, wiggling spirit and wrestled it toward a big wooden box. The deity complained loudly, but they got the lid closed.
+  The box shook and rattled. Light blazed through every crack. "This won't hold!" someone said. Then Henry's eyes lit up. "Get the box in the wagon! Take it outside—I have an idea!" He was already moving toward the door. "I need to get my pilot goggles!" The others stared after him. Pilot goggles?
 
 objects: []

@@ -1,27 +1,28 @@
 id: p14
 section: Second Attempt
 page_type: individual
-haunting_level: high
+haunting_level: medium
 characters:
   - hansel
   - dorje_legpa
 location: sun_room
 
-story_beat: The sun room has become a jungle. The plants have grown huge and wild,
-  their leaves and vines stretching toward the ceiling, blocking out the light. The
-  room is cast in deep shadow. Hansel stops in the doorway, frightened.
+story_beat: Hansel is scared but then does something unexpected. He crawls into the
+  jungle room, lies down on his back among the massive plants, and looks up at the
+  tangle of leaves above him. He takes a deep breath.
 
 visual:
-  - Hansel in the sun room doorway, frozen with fear
-  - Plants grown enormous—ferns towering, vines stretching across the ceiling like a jungle
-  - The jungle of vegetation threatening to block the windows, casting the room in darkness
-  - Only slivers of light visible through gaps in the dense foliage
-  - A wooden table in the center with the board game "Ravine" visible on it
-  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette barely visible through the jungle growth—frozen crimson figurine watching from the shadows
-  - Dark, threatening atmosphere—the familiar sun room transformed into wilderness
-  - Hansel's face showing genuine fear—this is overwhelming
+  - Hansel lying on his back in the middle of the overgrown sun room, taking a brave action
+  - Looking up at the canopy of enormous leaves above him with intense focus
+  - His small body showing courage—this is a deliberate, resolved choice in the face of danger
+  - The massive plants still looming threateningly around him
+  - A wooden table nearby with the board game "Ravine" visible on it
+  - EASTER EGG: Tiny 6-inch Dorje Legpa statuette on a shelf—frozen crimson figurine peering down at the small figure below
+  - Darkness still dominant, the threat not yet passed
+  - His Santa hat slightly askew, bottle beside him on the floor
+  - His baby face showing worried resolve—he's doing something important even though it's scary
 
 text: |
-  The sun room had become a jungle. Plants towered to the ceiling, their leaves blocking all the windows. Vines stretched everywhere. The room was dark and shadowy. Hansel stopped. His lip trembled. It was so big and scary.
+  But then Hansel did something strange. He crawled right into the jungle. He lay down on his back and looked up at all the big leaves above him. He took a deep breath. The plants were so tall and wild. But lying here, looking up... it was kind of wonderful.
 
 objects: []

@@ -1,0 +1,25 @@
+id: p12
+section: Second Attempt
+page_type: individual
+characters:
+  - emer
+  - dorje_legpa
+location: hallway
+story_beat: |
+  Emer rushes toward the library with new understanding and newfound power. Something has awakened in her.
+  She doesn't just know stories—she can COMMAND them now.
+
+visual:
+  - Emer RUNNING down the hallway toward the library door with URGENCY and SPEED
+  - Her body in dynamic motion—feet pounding the floor, moving with fierce PURPOSE
+  - Her face shows RESOLVE—chin up, eyes blazing with determination, expression of someone who knows her power
+  - A sense of NEWFOUND MAGICAL POWER radiating from her—her story-sense now awakened and glowing
+  - She clutches her My Little Pony doll like a WAND—a talisman of her awakened strength
+  - Her santa hat straight, her whole posture radiating confidence and power
+  - Haunting still high but Emer is UNFAZED—she's ready to rewrite this story
+  - Tiny Dorje Legpa statuette on a hallway shelf
+
+text: |
+  Emer ran toward the library, squeezing her pony tight like a wand—she was ready to rewrite this story.
+
+objects: []

@@ -6,21 +6,18 @@ characters:
   - henry
   - dorje_legpa
 location: hallway
-story_beat: |
-  They compare notes. Emer explains that the kitchen is mixing ingredients together
-  without measuring, making horrible concoctions. Henry realizes this sounds like
-  the opposite of following proper procedures.
+story_beat: Both realize simultaneously—"This house is haunted." A visual beat
+  showing their dawning realization and rising concern.
 
 visual:
-  - NOTE: Expressions should be INTENTLY CONCERNED, NOT angry—focused and worried, but not mad
-  - Emer and Henry leaning toward each other, comparing experiences
-  - Both have expressions of dawning realization—concerned but not angry
-  - Ghost overlays showing kitchen chaos—ingredients mixing wildly without measurement
-  - Emer bouncing slightly with nervous energy, Henry stroking his chin thoughtfully
-  - Henry's expression shifting to understanding—he knows how to fix this
-  - The hallway around them, tension building
+  - Emer and Henry facing each other, determination on their faces
+  - Emer gesturing emphatically, eyes locked on Henry, excited now rather than just scared
+  - Henry nodding confidently, hands at his sides—he already fixed one room
+  - The hallway still wrong around them, but they're not intimidated
+  - Urgent communication through eye contact and body language
+  - Their breath visible in the cold air, but they're standing tall and resolute
 
 text: |
-  "Everything in the kitchen is mixing itself together," Emer said. "No measuring cups, no recipes, just... gloop. It's making the most disgusting combinations!" Henry's eyes lit up. "No measuring? No following instructions?" He stood up straighter. That was exactly the kind of chaos he knew how to fix.
+  "This house is haunted," they said together.
 
 objects: []

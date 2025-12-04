@@ -9,27 +9,25 @@ characters:
   - henry
   - james
   - dorje_legpa
-location: living_room
+location: driveway
 
-story_beat: The kids look at the shaking, glowing box and realize it won't hold
-  for long. Henry has an idea and takes charge - he tells the others to get the box
-  in the wagon and take it outside. He's going to run and get his pilot goggles.
-  The others are puzzled but start to act.
+story_beat: Anticipation beat. Outside in the snowy driveway, Henry's legs are visible
+  running off-frame. The other kids are setting up—Arthur and Cullan struggle to load
+  the glowing box onto the wagon, Emer lovingly places Hansel on her tricycle handlebars.
+  Everyone is puzzled about Henry's plan but triumphant that they captured the spirit.
 
 visual: |
-  - NOTE: Ensure this is ONE box, the SAME box from p24—not multiple boxes
-  - The living room with all six cousins gathered around the single wooden box CRACKLING WITH RAINBOW ENERGY—visible rainbow-colored magical energy arcing and sparking from every crack
-  - The box shaking violently, rainbow light blazing through every gap, the spirit contained but furious
-  - Height order visible: Henry tallest, Cullan and Arthur same height, then James, then Emer, then baby Hansel
-  - Henry TAKING CHARGE—pointing, giving instructions, about to run off (still in scene but clearly about to bolt)
-  - The other kids look PUZZLED but are starting to act on his instructions
-  - Arthur and Cullan moving toward the box, ready to lift it
-  - Emer picking up Hansel, preparing to move
-  - James looking at Henry with a mix of confusion and trust
-  - Sense of URGENCY—they need to move fast
+  - Snowy driveway scene - ANTICIPATION BEAT before the big payoff
+  - On the RIGHT edge of frame: Henry's LEGS AND FEET ONLY visible, running OFF-FRAME to the right (rest of him cut off)
+  - James in the middle-right, watching Henry run off with a PUZZLED expression
+  - Arthur and Cullan STRUGGLING to lift/load the glowing, crackling box onto the red wagon—rainbow light blazing through cracks
+  - Emer on the left, LOVINGLY placing baby Hansel onto the handlebars of her tricycle
+  - Expressions on everyone: PUZZLED about Henry's plan, but also TRIUMPHANT—they got the spirit in the box!
+  - NO PLANE VISIBLE—that's the surprise for the next page
   - EVERYONE wearing Santa hats
+  - Snowy woods of upstate New York visible in background
 
 text: |
-  The box shook and rattled. Light blazed through every crack. "This won't hold!" someone said. Then Henry's eyes lit up. "Get the box in the wagon! Take it outside—I have an idea!" He was already moving toward the door. "I need to get my pilot goggles!" The others stared after him. Pilot goggles?
+  Outside, they wrestled the glowing box toward the wagon. What was Henry up to? Why did he need pilot goggles?
 
-objects: []
+objects: [wagon, tricycle]

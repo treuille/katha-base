@@ -11,23 +11,23 @@ characters:
   - dorje_legpa
 location: hallway
 
-story_beat: As each kid finishes their room, they drift into the hallway and
-  sense that a larger wrongness is still pulsing through the house.
+story_beat: Determined and brave, the cousins DASH toward the living room together—
+  running with urgency, power, and resolve to face whatever awaits them.
 
 visual: |
-  - All six cousins gathering in the hallway from different directions
-  - Height order from tallest to shortest: Henry, then Cullan and Arthur (same height), then James, then Emer, then baby Hansel
-  - Most cousins look CONCERNED and BREATHLESS—they just ran to find each other after solving their rooms, catching their breath, worried expressions
-  - EXCEPTION: Hansel retains a BABYLIKE CALM—a serene, wise expression despite the tension around him, intensely understanding the stakes but unruffled
-  - James is holding baby Hansel in his arms or on his hip
-  - Emer holding her My Little Pony doll tight
-  - Subtle visual distortions in the hallway—shadows at odd angles
-  - The kids drawing together instinctively
-  - A faint pulse of wrong-colored light from the direction of the living room
-  - Hansel waving his bottle in agreement from James's arms
-  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on a high shelf above the kids - frozen crimson figurine with gold crown, looking down at them all unnoticed
+  - IMPORTANT: Only render a single deity (Dorje Legpa)—do not show multiple deities
+  - The six cousins RUNNING down the hallway toward the living room—dynamic action, bodies in motion
+  - Henry leading the charge, tall figure sprinting with determination
+  - James running with Hansel riding piggyback on his back—Hansel clinging on, bouncing with each stride
+  - Emer dashing alongside, her messy flowing blonde hair streaming behind her, clutching her My Little Pony doll tight as she runs
+  - Cullan and Arthur moving separately, distinctly apart from each other—NOT close together, each running on their own with space between them
+  - Every face shows fierce determination—no hesitation, only resolve
+  - Legs in mid-stride, arms pumping, the urgency of movement in every figure
+  - The hallway blurring past them as they rush toward the living room doorway
+  - EASTER EGG: A tiny 6-inch Dorje Legpa statuette perched at the edge of the living room doorway - frozen crimson figurine seeming to beckon them toward the final confrontation
 
 text: |
-  One by one, the cousins found each other in the hallway. Each had discovered a problem in a different room, and they had managed to fix them using their superpowers. But something still felt wrong. The house itself seemed to pulse with a deeper unease. "It's not over," Emer said quietly. Hansel waved his bottle in agreement. They all knew she was right.
+  "We have to go back to the living room," Emer said. "NOW."
+  "Together," Arthur added—and they ran. All six of them, dashing down the hallway. James scooped up Hansel onto his back. Emer clutched her pony and sprinted. Henry led the way, his long legs eating up the distance. Cullan and Arthur ran side by side but apart, each powering forward on their own. Whatever was in there, they'd face it as a team—and they weren't walking. They were charging.
 
 objects: []
