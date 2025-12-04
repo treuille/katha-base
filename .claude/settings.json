@@ -8,6 +8,7 @@
       "Bash(/bin/ls:*)",
       "Bash(cat:*)",
       "Bash(uv run:*)",
+      "Bash(git add:*)",
       "WebSearch",
       "WebFetch(domain:docs.streamlit.io)"
     ]
