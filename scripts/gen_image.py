@@ -3,16 +3,17 @@
 Generate an image for a story page using AI image generation.
 
 Usage:
-    uv run scripts/gen_image.py <mode> <file> [--style STYLE]
+    uv run scripts/gen_image.py <mode> <file> [--style STYLE] [--seed N]
 
 Modes:
-    prompt <page_file> [--style STYLE] - Show the image gen prompt and list all referenced images
-    gemini <page_file> [--style STYLE] - Generate the image using Gemini
-    frame  <image_file>                - Frame an existing image for print with bleed and guide lines
+    prompt <page_file> [--style STYLE]          - Show the image gen prompt and list all referenced images
+    gemini <page_file> [--style STYLE] [--seed] - Generate the image using Gemini
+    frame  <image_file>                         - Frame an existing image for print with bleed and guide lines
 
 Examples:
     uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml
     uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml --style red_tree
+    uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml --seed 42
     uv run scripts/gen_image.py frame out/images/genealogy_witch/p09-arthur-cullan.jpg
 
 The default style is defined in story/template.yaml (currently 'genealogy_witch').
@@ -404,7 +405,8 @@ def generate_image_from_prompt(
     ref_images: list[str],
     ref_labels: list[str],
     page_stem: str,
-    prompt_hash: str
+    prompt_hash: str,
+    seed: int | None = None
 ) -> Path:
     """Generate image from pre-built prompt.
 
@@ -417,6 +419,7 @@ def generate_image_from_prompt(
         ref_labels: List of labels describing each reference image
         page_stem: The page identifier (e.g., "p09-arthur-cullan")
         prompt_hash: The 5-char prompt hash
+        seed: Optional seed for reproducible generation
 
     Returns:
         Path to the generated image file (in out/images/)
@@ -466,6 +469,16 @@ def generate_image_from_prompt(
 
     print(f"Calling {GEMINI_MODEL} with aspect ratio {aspect_ratio}...")
     print(f"Sending {num_images} reference images (interleaved with labels) + main prompt")
+    if seed is not None:
+        print(f"Using seed: {seed}")
+
+    # Build config with optional seed
+    config_kwargs = {
+        "response_modalities": ["IMAGE"],
+        "image_config": types.ImageConfig(aspect_ratio=aspect_ratio),
+    }
+    if seed is not None:
+        config_kwargs["seed"] = seed
 
     # Retry loop for rate limiting errors
     response = None
@@ -474,12 +487,7 @@ def generate_image_from_prompt(
             response = client.models.generate_content(
                 model=GEMINI_MODEL,
                 contents=contents,
-                config=types.GenerateContentConfig(
-                    response_modalities=["IMAGE"],
-                    image_config=types.ImageConfig(
-                        aspect_ratio=aspect_ratio,
-                    ),
-                ),
+                config=types.GenerateContentConfig(**config_kwargs),
             )
             break  # Success, exit retry loop
         except ClientError as e:
@@ -657,7 +665,7 @@ async def generate_image_from_prompt_async(
     return output_file
 
 
-def generate_image(page_file, style_id, version: int | None = None):
+def generate_image(page_file, style_id, version: int | None = None, seed: int | None = None):
     """Generate image using Gemini.
 
     This is a convenience wrapper that builds the prompt from a page file
@@ -667,6 +675,7 @@ def generate_image(page_file, style_id, version: int | None = None):
         page_file: Path to the page YAML file
         style_id: The style identifier (e.g., 'genealogy_witch')
         version: Version number (used for manifest updates only, images go to out/images/)
+        seed: Optional seed for reproducible generation
 
     Returns:
         Path to the generated image file
@@ -677,14 +686,16 @@ def generate_image(page_file, style_id, version: int | None = None):
     page_data = _load_yaml_file(page_file)
     prompt, ref_images, ref_labels = build_prompt(page_data, style_id)
 
-    # Compute prompt hash
+    # Compute prompt hash (includes seed if provided)
     page_stem = Path(page_file).stem  # e.g., "p09-arthur-cullan"
-    prompt_hash = versioning.compute_prompt_hash(prompt, ref_images=ref_images)
+    prompt_hash = versioning.compute_prompt_hash(prompt, seed, ref_images)
 
     # Load style info for logging
     style = _load_style(style_id)
     artist = style.get("artist", style_id)
     print(f"Style: {style_id} ({artist})")
+    if seed is not None:
+        print(f"Seed: {seed}")
 
     # Generate image (or return existing)
     output_file = generate_image_from_prompt(
@@ -692,7 +703,8 @@ def generate_image(page_file, style_id, version: int | None = None):
         ref_images=ref_images,
         ref_labels=ref_labels,
         page_stem=page_stem,
-        prompt_hash=prompt_hash
+        prompt_hash=prompt_hash,
+        seed=seed
     )
 
     # Update manifest if version provided
@@ -833,6 +845,7 @@ def main():
     gemini_parser = subparsers.add_parser("gemini", help="Generate the image using Gemini")
     gemini_parser.add_argument("page_file", help="Path to the page YAML file")
     gemini_parser.add_argument("--style", default=default_style, help=f"Style ID (default: {default_style})")
+    gemini_parser.add_argument("--seed", type=int, help="Seed for reproducible generation")
 
     # frame subcommand
     frame_parser = subparsers.add_parser("frame", help="Frame an existing image for print with bleed and guide lines")
@@ -871,7 +884,7 @@ def main():
     if args.mode == "prompt":
         show_prompt(page_file, style_id)
     elif args.mode == "gemini":
-        generate_image(page_file, style_id)
+        generate_image(page_file, style_id, seed=args.seed)
 
 
 if __name__ == "__main__":
