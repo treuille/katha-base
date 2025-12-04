@@ -9,7 +9,7 @@ location: dining_room
 
 story_beat: Cullan enters the dining room and sees something terrifying—all the candles
   have clustered together in one corner, flames burning too high. The brocade curtains
-  have already caught fire, flames licking up the fabric. The house is burning! Yet
+  have already caught fire, flames licking up the fabric. The room is burning! Yet
   the room feels freezing cold despite the flames.
 
 visual: |
@@ -18,7 +18,7 @@ visual: |
   - Candles appear DYNAMIC and ALIVE - growing, moving, leaning toward curtains
   - THE BROCADE CURTAINS ARE ON FIRE - flames climbing up the fabric, spreading
   - Dramatic lighting from candle flames and burning curtains casting long, harsh shadows
-  - Cullan visible in the BACKGROUND, face showing HORROR as he sees the house burning
+  - Cullan visible in the BACKGROUND, face showing HORROR as he sees the room burning
   - Despite the flames, cold blue light seeping through the windows
   - Frost on the windowpanes, room feeling freezing despite the active fire
   - The formal dining table with placesettings, candles all clustered in the far right corner
@@ -26,6 +26,6 @@ visual: |
   - EASTER EGG: A tiny 6-inch Dorje Legpa statuette on the sideboard - frozen crimson figurine with gold crown, positioned as if watching the chaos unfold
 
 text: |
-  Cullan pushed open the dining room door and gasped. Every candle in the room had somehow clustered into one corner—dozens of flames burning dangerously high. And the brocade curtains had already caught fire! Flames climbed up the fabric, spreading fast. The house was burning! Waves of scorching heat and icy cold currents swirled around Cullan, frost creeping across the windows even as flames licked higher. His face went pale, his eyes wide with disbelief.
+  Cullan pushed open the dining room door and gasped. Every candle in the room had somehow clustered into one corner—dozens of flames burning dangerously high. And the brocade curtains had already caught fire! Flames climbed up the fabric, spreading fast. The room was burning! Waves of scorching heat and icy cold currents swirled around Cullan, frost creeping across the windows even as flames licked higher. His face went pale, his eyes wide with disbelief.
 
 objects: []
