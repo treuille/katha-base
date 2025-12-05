@@ -16,7 +16,6 @@
 - **Flat structure**: All story content lives at root level (characters/, locations/, story/)
 - **Generated content**: AI-created content goes in `out/` (git-ignored) - versioned outputs in `out/versions/{xx}/`, stories in `out/story/`
 - **Reference images**: Visual references in `ref/` organized by type (characters/, locations/, objects/)
-- **Deprecated code**: Old system components in `deprecated/` - don't modify unless migrating back
 - **Empty directories**: Use `.gitkeep` files to preserve empty directories in git (e.g., `ref/.gitkeep`)
 
 ### File Naming Conventions
@@ -77,10 +76,12 @@ Style configuration lives in `story/styles.yaml`. Each style defines an artist, 
 **Available styles** (in priority order):
 - `genealogy_witch` - Benjamin Lacombe (Genealogy of a Witch)
 - `red_tree` - Shaun Tan (The Red Tree)
-- `gashlycrumb` - Edward Gorey (The Gashlycrumb Tinies)
-- `donothing_day` - Beatrice Alemagna (On a Magical Do-Nothing Day)
+- `gashlycrumb` - Edward Gorey (The Gashlycrumb Tinies) *
+- `donothing_day` - Beatrice Alemagna (On a Magical Do-Nothing Day) *
 - `ghost_hunt` - Cherie Zamazing (We're Going On A Ghost Hunt)
 - `ghost_easy` - Stephanie Laberis (It's Not Easy Being A Ghost)
+
+\* No reference images in `ref/styles/` for this style.
 
 Skipped/experimental styles are in `story/styles-skip.yaml`.
 
@@ -111,7 +112,7 @@ uv run scripts/gen_image.py prompt out/story/p09-arthur-cullan.yaml genealogy_wi
 uv run scripts/gen_image.py gemini out/story/p09-arthur-cullan.yaml red_tree
 
 # Frame a generated image for printing (legacy - framing now happens during PDF creation)
-uv run scripts/gen_image.py frame out/versions/04/p09-arthur-cullan-a1b2c.jpg
+uv run scripts/gen_image.py frame out/images/p09-arthur-cullan-a1b2c.jpg
 ```
 
 **How the Prompt is Assembled:**
@@ -131,8 +132,10 @@ The script automatically builds a comprehensive prompt by combining:
    - Object images: `ref/objects/{object_id}-*.jpg`
 
 **Output:**
-- Generated images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg` (raw, unframed)
+- Generated images saved to: `out/images/{page_stem}-{prompt_hash}.jpg` (raw, unframed)
+- Prompt text saved to: `out/images/{page_stem}-{prompt_hash}.txt`
 - Aspect ratio: 3:2 (maintains ~1.5 ratio, close to target 3507x2334)
+- Images are shared across versions (same prompt hash = same image)
 - Framing happens in-memory during PDF creation (no separate framed files)
 
 **Print Dimensions (frame mode):**
@@ -186,6 +189,7 @@ This enables:
 
 **Output:**
 - PDFs saved to: `out/versions/{xx}/{character}-book.pdf`
-- Images saved to: `out/versions/{xx}/{page_id}-{prompt_hash}.jpg`
-- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style)
+- Images saved to: `out/images/{page_stem}-{prompt_hash}.jpg` (shared across versions)
+- Prompts saved to: `out/images/{page_stem}-{prompt_hash}.txt`
+- Manifest: `out/versions/{xx}/manifest.yaml` (tracks metadata, git commit, style, references to shared images)
 

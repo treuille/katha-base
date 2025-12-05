@@ -1,6 +1,8 @@
 # Katha Base
 
-A picture book generation system for creating illustrated story pages.
+Six interlocking picture books for my children and nieces and nephews, built with Claude Code.
+
+**Takeaway:** Agentic coding tools excel at creating densely interconnected markdown structures—tracking relationships and maintaining consistency.
 
 **For the complete story world, characters, and narrative details, see [story/overview.md](story/overview.md).**
 
@@ -30,7 +32,6 @@ katha-base/
 │   │       ├── *-book.pdf
 │   │       └── manifest.yaml
 │   └── story/           # Generated story files
-├── deprecated/          # Archived old structure
 └── .streamlit/          # Streamlit configuration and secrets
 ```
 
@@ -40,7 +41,7 @@ katha-base/
 - **locations/** - Location and room definitions in YAML format
 - **story/template.yaml** - Shared page-by-page narrative template structure
 - **story/overview.md** - Complete story world description, narrative architecture, and character details
-- **ref/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
+- **ref/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`). Not checked into repo for privacy reasons.
   - **ref/styles/** - Visual style reference images (see Visual Styles section below)
   - **ref/characters/** - Character reference images
   - **ref/locations/** - Location reference images
@@ -61,10 +62,12 @@ Style configuration is defined in `story/styles.yaml`, with reference images in 
 **Active styles** (in priority order):
 1. `genealogy_witch` — **Benjamin Lacombe** — Genealogy of a Witch, Madame Butterfly
 2. `red_tree` — **Shaun Tan** — The Red Tree
-3. `gashlycrumb` — **Edward Gorey** — The Gashlycrumb Tinies
-4. `donothing_day` — **Beatrice Alemagna** — On a Magical Do-Nothing Day
+3. `gashlycrumb` — **Edward Gorey** — The Gashlycrumb Tinies *
+4. `donothing_day` — **Beatrice Alemagna** — On a Magical Do-Nothing Day *
 5. `ghost_hunt` — **Cherie Zamazing** — We're Going On A Ghost Hunt
 6. `ghost_easy` — **Stephanie Laberis** — It's Not Easy Being A Ghost
+
+\* No reference images in `ref/styles/` for this style.
 
 Skipped/experimental styles are in `story/styles-skip.yaml`.
 
@@ -125,8 +128,6 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ### Requirements
 
-- Authenticate with Google Cloud: `gcloud auth application-default login`
-- Set quota project: `gcloud auth application-default set-quota-project <PROJECT_ID>`
 - Reference images must follow naming convention: `{id}-{number}.jpg` (e.g., `arthur-01.jpg`, `genealogy_witch-02.jpg`)
 
 ## Book Generation

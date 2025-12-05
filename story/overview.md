@@ -17,9 +17,9 @@ This repository encodes a **single shared storyworld**:
 - During the **early Christmas season**, all of her grandchildren come to the house for the holidays.
 - The house becomes haunted after a strange ornament is hung on the Christmas tree.
 - **Characters** inhabiting this world:
-  - **Six children** (cousins and siblings: Arthur, Cullan, Emer, Hansel, Henry, and James - see `characters/*.yaml`), each with their own point of view and core strength
-  - **Dorje Legpa**, a Gyalpo trickster deity (see `characters/dorje_legpa.yaml`) whose magic is about *mismatch* and *scrambled roles*, not gore or horror
-  - **Regan** (see `characters/regan.yaml`), mother of Cullan and Emer, who identifies the spirit
+  - **Six children** (cousins and siblings: [Arthur](../characters/arthur.yaml), [Cullan](../characters/cullan.yaml), [Emer](../characters/emer.yaml), [Hansel](../characters/hansel.yaml), [Henry](../characters/henry.yaml), and [James](../characters/james.yaml)), each with their own point of view and core strength
+  - **[Dorje Legpa](../characters/dorje_legpa.yaml)**, a Gyalpo trickster deity whose magic is about *mismatch* and *scrambled roles*, not gore or horror
+  - **[Regan](../characters/regan.yaml)**, mother of Cullan and Emer, who identifies the spirit
 
 From this shared world, we generate **six parallel picture books**, each one:
 
@@ -33,11 +33,11 @@ In other words: it's **one story, six perspectives**, all tightly synchronized.
 
 ## 2. The House
 
-Graminy's house is a **large, cozy family home** with:
-- Social spaces (living room, dining room)
-- Functional spaces (kitchen, stairs)
-- "Magic-feeling" spaces (library, playroom, sun room)
-- The surrounding **driveway and yard** used for the sky procession finale
+Graminy's house is a **large, cozy family home** (see [`locations/`](../locations/)) with:
+- Social spaces ([living room](../locations/living_room.yaml), [dining room](../locations/dining_room.yaml))
+- Functional spaces ([kitchen](../locations/kitchen.yaml), [stairs](../locations/stairs.yaml))
+- "Magic-feeling" spaces ([library](../locations/library.yaml), [playroom](../locations/playroom.yaml), [sun room](../locations/sun_room.yaml))
+- The surrounding **driveway and yard** ([exterior](../locations/exterior.yaml)) used for the sky procession finale
 
 The tone is:
 

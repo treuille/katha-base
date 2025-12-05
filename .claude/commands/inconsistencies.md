@@ -21,12 +21,10 @@ This script automatically validates:
 
 After running the automated script, systematically check for the following:
 
-**IMPORTANT**: Skip and ignore all deprecated folders and any files within them. Do not check or report on deprecated content.
-
 Please perform the following manual checks:
 
 ## 1. File Inventory
-List all files in these directories (excluding any deprecated folders):
+List all files in these directories:
 - `characters/` - Character YAML files
 - `locations/` - Location YAML files
 - `story/` - Story template and overview
