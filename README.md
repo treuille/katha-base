@@ -34,19 +34,21 @@ katha-base/
 └── .streamlit/          # Streamlit configuration and secrets
 ```
 
-**Quick Links:** [`characters/`](characters/) | [`locations/`](locations/) | [`story/`](story/) | [`story/template.yaml`](story/template.yaml) | [`story/styles.yaml`](story/styles.yaml)
+**Quick Links:** [`characters/`](characters/) | [`locations/`](locations/) | [`story/`](story/) | [`story/template.yaml`](story/template.yaml) | [`story/page-template.yaml`](story/page-template.yaml) | [`story/styles.yaml`](story/styles.yaml) | [`scripts/`](scripts/)
 
 ## Directory Overview
 
 - **[`characters/`](characters/)** - Character definitions in YAML format ([Arthur](characters/arthur.yaml), [Cullan](characters/cullan.yaml), [Emer](characters/emer.yaml), [Hansel](characters/hansel.yaml), [Henry](characters/henry.yaml), [James](characters/james.yaml), [Dorje Legpa](characters/dorje_legpa.yaml), [Regan](characters/regan.yaml))
 - **[`locations/`](locations/)** - Location and room definitions in YAML format ([living room](locations/living_room.yaml), [dining room](locations/dining_room.yaml), [kitchen](locations/kitchen.yaml), [library](locations/library.yaml), [playroom](locations/play_room.yaml), [sun room](locations/sun_room.yaml), [hallway](locations/hallway.yaml), [stairs](locations/stairs.yaml), [driveway](locations/driveway.yaml), [exterior](locations/exterior.yaml))
 - **[`story/template.yaml`](story/template.yaml)** - Shared page-by-page narrative template structure
+- **[`story/page-template.yaml`](story/page-template.yaml)** - Template for individual page files
 - **[`story/overview.md`](story/overview.md)** - Complete story world description, narrative architecture, and character details
 - **[`ref/`](ref/)** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
   - **[`ref/styles/`](ref/styles/)** - Visual style reference images (see Visual Styles section below)
   - **[`ref/characters/`](ref/characters/)** - Character reference images
   - **[`ref/locations/`](ref/locations/)** - Location reference images
   - **[`ref/objects/`](ref/objects/)** - Object reference images
+- **[`scripts/`](scripts/)** - Python scripts for image and book generation ([gen_image.py](scripts/gen_image.py), [gen_book.py](scripts/gen_book.py), [merge_app.py](scripts/merge_app.py), [versioning.py](scripts/versioning.py))
 - **`out/`** - Generated outputs (not committed to repository)
   - **`out/images/`** - Shared storage for prompts and images (reused across versions)
     - Prompts: `{page_stem}-{prompt_hash}.txt`
@@ -55,6 +57,7 @@ katha-base/
     - Books: `{character}-book.pdf`
     - `manifest.yaml` with version metadata (references images in `out/images/`)
   - **`out/story/`** - Generated story files
+- **[`deprecated/`](deprecated/)** - Archived old structure
 
 ## Visual Styles
 
