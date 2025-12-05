@@ -17,9 +17,9 @@ This repository encodes a **single shared storyworld**:
 - During the **early Christmas season**, all of her grandchildren come to the house for the holidays.
 - The house becomes haunted after a strange ornament is hung on the Christmas tree.
 - **Characters** inhabiting this world:
-  - **Six children** (cousins and siblings: Arthur, Cullan, Emer, Hansel, Henry, and James - see `characters/*.yaml`), each with their own point of view and core strength
-  - **Dorje Legpa**, a Gyalpo trickster deity (see `characters/dorje_legpa.yaml`) whose magic is about *mismatch* and *scrambled roles*, not gore or horror
-  - **Regan** (see `characters/regan.yaml`), mother of Cullan and Emer, who identifies the spirit
+  - **Six children** (cousins and siblings: [Arthur](../characters/arthur.yaml), [Cullan](../characters/cullan.yaml), [Emer](../characters/emer.yaml), [Hansel](../characters/hansel.yaml), [Henry](../characters/henry.yaml), and [James](../characters/james.yaml) - see [`characters/`](../characters/)), each with their own point of view and core strength
+  - **[Dorje Legpa](../characters/dorje_legpa.yaml)**, a Gyalpo trickster deity whose magic is about *mismatch* and *scrambled roles*, not gore or horror
+  - **[Regan](../characters/regan.yaml)**, mother of [Cullan](../characters/cullan.yaml) and [Emer](../characters/emer.yaml), who identifies the spirit
 
 From this shared world, we generate **six parallel picture books**, each one:
 
@@ -34,10 +34,10 @@ In other words: it's **one story, six perspectives**, all tightly synchronized.
 ## 2. The House
 
 Graminy's house is a **large, cozy family home** with:
-- Social spaces (living room, dining room)
-- Functional spaces (kitchen, stairs)
-- "Magic-feeling" spaces (library, playroom, sun room)
-- The surrounding **driveway and yard** used for the sky procession finale
+- Social spaces ([living room](../locations/living_room.yaml), [dining room](../locations/dining_room.yaml))
+- Functional spaces ([kitchen](../locations/kitchen.yaml), [stairs](../locations/stairs.yaml))
+- "Magic-feeling" spaces ([library](../locations/library.yaml), [playroom](../locations/play_room.yaml), [sun room](../locations/sun_room.yaml))
+- The surrounding **[driveway](../locations/driveway.yaml)** and yard used for the sky procession finale
 
 The tone is:
 
@@ -51,7 +51,7 @@ The tone is:
 
 The main magical object is a **strange ornament** hung on the Christmas tree.
 
-- It contains **Dorje Legpa**, a Gyalpo trickster deity whose nature is to scramble things:
+- It contains **[Dorje Legpa](../characters/dorje_legpa.yaml)**, a Gyalpo trickster deity whose nature is to scramble things:
   - Wrong people in wrong seats
   - Wrong gifts for wrong kids
   - Wrong story endings, wrong game rules, wrong paths, wrong seasons
@@ -60,18 +60,18 @@ The main magical object is a **strange ornament** hung on the Christmas tree.
   - The rooms themselves become spaces where Dorje Legpa's influence is most concentrated.
   - The house as a whole feels subtly wrong, but each room expresses a different facet of the trickster's scrambling power.
 
-Later, Dorje Legpa is:
+Later, [Dorje Legpa](../characters/dorje_legpa.yaml) is:
 
 1. **Re-concentrated** in the living room during the climax
 2. **Captured** in a container
 3. **Carried outside** to a new, appropriate home, where the protective side can remain while the disruptive side is contained
 
-### Dorje Legpa Easter Egg
+### [Dorje Legpa](../characters/dorje_legpa.yaml) Easter Egg
 
-Throughout every interior shot (before the climax where he fully manifests), Dorje Legpa appears as a subtle **Easter egg** for attentive viewers to spot:
+Throughout every interior shot (before the climax where he fully manifests), [Dorje Legpa](../characters/dorje_legpa.yaml) appears as a subtle **Easter egg** for attentive viewers to spot:
 
-- **Living room scenes**: He appears as an **ornament hanging on the Christmas tree**—the strange ornament that contains him
-- **Other interior scenes** (hallway, dining room, library, etc.): He appears as a **tiny frozen statuette** (no more than 6 inches tall) hiding in a logical place—tucked behind a book, on the corner of a table, behind a chair leg, on a shelf, etc.
+- **[Living room](../locations/living_room.yaml) scenes**: He appears as an **ornament hanging on the Christmas tree**—the strange ornament that contains him
+- **Other interior scenes** ([hallway](../locations/hallway.yaml), [dining room](../locations/dining_room.yaml), [library](../locations/library.yaml), etc.): He appears as a **tiny frozen statuette** (no more than 6 inches tall) hiding in a logical place—tucked behind a book, on the corner of a table, behind a chair leg, on a shelf, etc.
 
 Visual characteristics of the Easter egg form:
 - He does NOT look alive—he appears as a completely still, frozen figurine
@@ -84,7 +84,7 @@ This Easter egg serves to:
 - Create a "hidden picture" game element for re-reads
 - Reinforce that his influence pervades every corner of the house
 
-When Dorje Legpa appears as an Easter egg in a scene, he should be included in the `characters` list for that page so his reference images can inform the illustration.
+When [Dorje Legpa](../characters/dorje_legpa.yaml) appears as an Easter egg in a scene, he should be included in the `characters` list for that page so his reference images can inform the illustration.
 
 ---
 
@@ -110,9 +110,9 @@ This creates a **branching-but-synchronized** structure:
 
 A coding agent should think of it like a **shared timeline with character-specific overlays**:
 
-- The YAML for **pages** (`story/template.yaml`) defines the shared timeline and the "role" of each slot (joint/pair/individual, symbolic room roles).
-- The YAML for **characters** (`characters/*.yaml`) defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
-- The YAML for **locations** (`locations/*.yaml`) defines how each location behaves and what it means to partially vs. fully fix it.
+- The YAML for **pages** ([`story/template.yaml`](template.yaml)) defines the shared timeline and the "role" of each slot (joint/pair/individual, symbolic room roles).
+- The YAML for **characters** ([`characters/`](../characters/)) defines, for each child, which rooms map onto those symbolic roles and who their pair partner is.
+- The YAML for **locations** ([`locations/`](../locations/)) defines how each location behaves and what it means to partially vs. fully fix it.
 
 ---
 
@@ -167,17 +167,17 @@ At the highest altitude, each book goes through these phases:
    - As all rooms settle, the children realize something is still wrong at the house level.
    - This points them back to the living room and the tree.
 
-6. **Living Room Confrontation & Spirit Containment**
-   - All kids gather, the ornament is identified (Regan identifies it as Dorje Legpa, a Gyalpo trickster deity), and the spirit erupts.
+6. **[Living Room](../locations/living_room.yaml) Confrontation & Spirit Containment**
+   - All kids gather, the ornament is identified ([Regan](../characters/regan.yaml) identifies it as [Dorje Legpa](../characters/dorje_legpa.yaml), a Gyalpo trickster deity), and the spirit erupts.
    - Each child uses what they learned in their room in a joint, big-scene sequence.
    - The boys realize the spirit is furious because it's cramped inside the house—too big for a bedroom, it needs sky.
    - They contain the spirit (still blazing red and hilarious, complaining and wiggling) and tie it onto the bright red wagon. Very funny.
 
 7. **The Sky Procession & Spirit Transformation**
-   - **Henry** jumps into the toy airplane, which becomes the "vehicle of sky."
-   - **James** acts as air traffic controller on the ground: "Spirit Wagon Three-Seven-Red, cleared for takeoff!"
-   - **Cullan and Arthur** ride in the wagon being dragged by the airplane, holding the deity in a box.
-   - **Emer** trails behind on a tricycle with **Hansel** on the handlebars, pointing exultantly at the sky with his bottle.
+   - **[Henry](../characters/henry.yaml)** jumps into the toy airplane, which becomes the "vehicle of sky."
+   - **[James](../characters/james.yaml)** acts as air traffic controller on the ground: "Spirit Wagon Three-Seven-Red, cleared for takeoff!"
+   - **[Cullan](../characters/cullan.yaml) and [Arthur](../characters/arthur.yaml)** ride in the wagon being dragged by the airplane, holding the deity in a box.
+   - **[Emer](../characters/emer.yaml)** trails behind on a tricycle with **[Hansel](../characters/hansel.yaml)** on the handlebars, pointing exultantly at the sky with his bottle.
    - The plane lifts the wagon into the air—not too high, just enough for comedic effect—dragging the spirit across the lawn, up over a little bump, maybe through some clouds.
    - The moment the spirit is pulled into **open space**, it transforms:
      - His flames soften into wind
@@ -196,18 +196,18 @@ At the highest altitude, each book goes through these phases:
 
 ## 7. How the Data Is Intended to Be Used
 
-A coding agent should treat the data files (characters, pages, locations) as **three complementary views** of the same system:
+A coding agent should treat the data files ([characters](../characters/), [pages](template.yaml), [locations](../locations/)) as **three complementary views** of the same system:
 
-- **Characters** (`characters/*.yaml`) describe:
-  - Who the eight characters are (six children, Dorje Legpa, and Regan)
+- **Characters** ([`characters/`](../characters/)) describe:
+  - Who the eight characters are (six children, [Dorje Legpa](../characters/dorje_legpa.yaml), and [Regan](../characters/regan.yaml))
   - For the six children: which symbolic roles they play (e.g., which room they "own" as their second attempt) and who their swap partner is during the pair section
 
-- **Locations** (`locations/*.yaml`) describe:
-  - How Dorje Legpa's influence manifests in each place
+- **Locations** ([`locations/`](../locations/)) describe:
+  - How [Dorje Legpa](../characters/dorje_legpa.yaml)'s influence manifests in each place
   - What it means for that room to be partially vs. fully resolved
   - Which child is ultimately the "hero" of that room
 
-- **Pages** (`story/template.yaml`) describe:
+- **Pages** ([`story/template.yaml`](template.yaml)) describe:
   - The global linear order of story beats.
   - For each slot: whether it's joint, pair, or individual.
   - Symbolic references to "first attempt location", "second attempt location", and "pair partner".

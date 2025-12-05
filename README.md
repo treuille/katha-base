@@ -34,29 +34,31 @@ katha-base/
 └── .streamlit/          # Streamlit configuration and secrets
 ```
 
+**Quick Links:** [`characters/`](characters/) | [`locations/`](locations/) | [`story/`](story/) | [`story/template.yaml`](story/template.yaml) | [`story/styles.yaml`](story/styles.yaml)
+
 ## Directory Overview
 
-- **characters/** - Character definitions in YAML format
-- **locations/** - Location and room definitions in YAML format
-- **story/template.yaml** - Shared page-by-page narrative template structure
-- **story/overview.md** - Complete story world description, narrative architecture, and character details
-- **ref/** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
-  - **ref/styles/** - Visual style reference images (see Visual Styles section below)
-  - **ref/characters/** - Character reference images
-  - **ref/locations/** - Location reference images
-  - **ref/objects/** - Object reference images
-- **out/** - Generated outputs (not committed to repository)
-  - **out/images/** - Shared storage for prompts and images (reused across versions)
+- **[`characters/`](characters/)** - Character definitions in YAML format ([Arthur](characters/arthur.yaml), [Cullan](characters/cullan.yaml), [Emer](characters/emer.yaml), [Hansel](characters/hansel.yaml), [Henry](characters/henry.yaml), [James](characters/james.yaml), [Dorje Legpa](characters/dorje_legpa.yaml), [Regan](characters/regan.yaml))
+- **[`locations/`](locations/)** - Location and room definitions in YAML format ([living room](locations/living_room.yaml), [dining room](locations/dining_room.yaml), [kitchen](locations/kitchen.yaml), [library](locations/library.yaml), [playroom](locations/play_room.yaml), [sun room](locations/sun_room.yaml), [hallway](locations/hallway.yaml), [stairs](locations/stairs.yaml), [driveway](locations/driveway.yaml), [exterior](locations/exterior.yaml))
+- **[`story/template.yaml`](story/template.yaml)** - Shared page-by-page narrative template structure
+- **[`story/overview.md`](story/overview.md)** - Complete story world description, narrative architecture, and character details
+- **[`ref/`](ref/)** - Visual reference images for style and character appearances (JPG format, named as `name-##.jpg`)
+  - **[`ref/styles/`](ref/styles/)** - Visual style reference images (see Visual Styles section below)
+  - **[`ref/characters/`](ref/characters/)** - Character reference images
+  - **[`ref/locations/`](ref/locations/)** - Location reference images
+  - **[`ref/objects/`](ref/objects/)** - Object reference images
+- **`out/`** - Generated outputs (not committed to repository)
+  - **`out/images/`** - Shared storage for prompts and images (reused across versions)
     - Prompts: `{page_stem}-{prompt_hash}.txt`
     - Images: `{page_stem}-{prompt_hash}.jpg` (raw, unframed)
-  - **out/versions/{xx}/** - Versioned output folders (e.g., `out/versions/01/`)
+  - **`out/versions/{xx}/`** - Versioned output folders (e.g., `out/versions/01/`)
     - Books: `{character}-book.pdf`
     - `manifest.yaml` with version metadata (references images in `out/images/`)
-  - **out/story/** - Generated story files
+  - **`out/story/`** - Generated story files
 
 ## Visual Styles
 
-Style configuration is defined in `story/styles.yaml`, with reference images in `ref/styles/` using the naming convention `{style_id}-{##}.jpg`.
+Style configuration is defined in [`story/styles.yaml`](story/styles.yaml), with reference images in [`ref/styles/`](ref/styles/) using the naming convention `{style_id}-{##}.jpg`.
 
 **Active styles** (in priority order):
 1. `genealogy_witch` — **Benjamin Lacombe** — Genealogy of a Witch, Madame Butterfly
@@ -66,18 +68,18 @@ Style configuration is defined in `story/styles.yaml`, with reference images in 
 5. `ghost_hunt` — **Cherie Zamazing** — We're Going On A Ghost Hunt
 6. `ghost_easy` — **Stephanie Laberis** — It's Not Easy Being A Ghost
 
-Skipped/experimental styles are in `story/styles-skip.yaml`.
+Skipped/experimental styles are in [`story/styles-skip.yaml`](story/styles-skip.yaml).
 
 ## Setup
 
 1. Install Google Cloud SDK: `curl https://sdk.cloud.google.com | bash`
 2. Authenticate: `gcloud auth application-default login`
 3. Set quota project: `gcloud auth application-default set-quota-project <PROJECT_ID>`
-4. Add reference images to `ref/` subdirectories (`characters/`, `locations/`, `objects/`)
+4. Add reference images to [`ref/`](ref/) subdirectories ([`characters/`](ref/characters/), [`locations/`](ref/locations/), [`objects/`](ref/objects/))
 
 ## Image Generation
 
-The `scripts/gen_image.py` script generates illustrations for story pages using AI image generation.
+The [`scripts/gen_image.py`](scripts/gen_image.py) script generates illustrations for story pages using AI image generation.
 
 ### Usage
 
@@ -107,13 +109,13 @@ uv run scripts/gen_image.py frame out/images/p09-arthur-cullan-a1b2c.jpg
 
 The script assembles a comprehensive image generation prompt by combining:
 
-1. **Style prompts** from `story/styles.yaml` (artist-specific visual characteristics)
-2. **Story setting** from `story/template.yaml` (house, Christmas atmosphere, etc.)
-3. **Character visual descriptions** from each character's YAML file
-4. **Location visual descriptions** from the location YAML file
+1. **Style prompts** from [`story/styles.yaml`](story/styles.yaml) (artist-specific visual characteristics)
+2. **Story setting** from [`story/template.yaml`](story/template.yaml) (house, Christmas atmosphere, etc.)
+3. **Character visual descriptions** from each character's YAML file (see [`characters/`](characters/))
+4. **Location visual descriptions** from the location YAML file (see [`locations/`](locations/))
 5. **Page-specific scene description** from the page YAML file (`visual` field)
 6. **Page text to display** from the page YAML file (`text` field)
-7. **Reference images** from `ref/styles/`, `ref/characters/`, `ref/locations/`, and `ref/objects/`
+7. **Reference images** from [`ref/styles/`](ref/styles/), [`ref/characters/`](ref/characters/), [`ref/locations/`](ref/locations/), and [`ref/objects/`](ref/objects/)
 
 ### Output
 
@@ -131,7 +133,7 @@ The script assembles a comprehensive image generation prompt by combining:
 
 ## Book Generation
 
-The `scripts/gen_book.py` script generates complete picture book PDFs for a character.
+The [`scripts/gen_book.py`](scripts/gen_book.py) script generates complete picture book PDFs for a character.
 
 ### Usage
 
@@ -140,7 +142,7 @@ uv run scripts/gen_book.py <character_id> [--style STYLE] [--message MESSAGE]
 ```
 
 **Options:**
-- `--style STYLE` - Visual style to use (default: from `story/template.yaml`)
+- `--style STYLE` - Visual style to use (default: from [`story/template.yaml`](story/template.yaml))
 - `--message MESSAGE` - Required when creating a new version (prompts changed)
 
 **Examples:**
