@@ -56,11 +56,14 @@ def load_all_versions() -> dict[int, dict]:
 
 
 def get_in_progress_merges(all_versions: dict[int, dict]) -> list[int]:
-    """Find versions that are in-progress merges (style=merged, books=[])."""
+    """Find versions that are merges (style=merged).
+
+    These can be resumed regardless of whether some PDFs have already been generated.
+    """
     return [
         v
         for v, manifest in all_versions.items()
-        if manifest.get("style") == "merged" and not manifest.get("books")
+        if manifest.get("style") == "merged"
     ]
 
 
@@ -311,6 +314,7 @@ def render_sidebar():
                 "Ver": f"{v:02d}",
                 "Message": (m.get("message", "") or "")[:20],
                 "Img": len(m.get("images", {})),
+                "PDF": len(m.get("books", [])),
                 "_version": v,  # Hidden column for lookup
             }
         )
@@ -319,7 +323,7 @@ def render_sidebar():
 
     # Use data_editor with checkbox column for selection
     edited_df = st.sidebar.data_editor(
-        df[["Select", "Ver", "Message", "Img"]],
+        df[["Select", "Ver", "Message", "Img", "PDF"]],
         column_config={
             "Select": st.column_config.CheckboxColumn(
                 "Select",
@@ -329,6 +333,7 @@ def render_sidebar():
             "Ver": st.column_config.TextColumn("Ver", disabled=True),
             "Message": st.column_config.TextColumn("Message", disabled=True),
             "Img": st.column_config.NumberColumn("Img", disabled=True),
+            "PDF": st.column_config.NumberColumn("PDF", disabled=True),
         },
         hide_index=True,
         use_container_width=True,
@@ -371,6 +376,29 @@ def render_sidebar():
 
     if character_disabled:
         st.sidebar.caption("Select 2+ source versions first")
+
+    # Preview settings (before progress so slider state is preserved on rerun)
+    st.sidebar.divider()
+    st.sidebar.subheader("Preview")
+    # Store width in a separate key to avoid widget key conflicts
+    if "saved_preview_width" not in st.session_state:
+        st.session_state.saved_preview_width = 400
+
+    def on_width_change():
+        st.session_state.saved_preview_width = st.session_state.preview_width_slider
+
+    st.sidebar.slider(
+        "Image width",
+        min_value=150,
+        max_value=800,
+        value=st.session_state.saved_preview_width,
+        step=5,
+        key="preview_width_slider",
+        on_change=on_width_change,
+        help="Width of each image preview in pixels",
+    )
+    # Update the key used elsewhere in the code
+    st.session_state.preview_width = st.session_state.saved_preview_width
 
     # Progress tracking in sidebar
     st.sidebar.divider()
@@ -452,19 +480,6 @@ def render_sidebar():
                 st.session_state.all_versions = load_all_versions()
             st.balloons()
             st.sidebar.success("All PDFs generated!")
-
-    # Preview settings
-    st.sidebar.divider()
-    st.sidebar.subheader("Preview")
-    preview_width = st.sidebar.slider(
-        "Image width",
-        min_value=150,
-        max_value=800,
-        value=400,
-        step=5,
-        key="preview_width",
-        help="Width of each image preview in pixels",
-    )
 
     # System commands at the bottom
     st.sidebar.divider()
